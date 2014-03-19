@@ -4,6 +4,9 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Aplicaci&#xf3;n de lectura"/>
+    <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+      <Rectangle value="[800, 600, 600, 600]"/>
+    </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[800, 600]"/>
     </Property>
@@ -114,6 +117,9 @@
           <Dimension value="[800, 600]"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanelCustom(&quot;/img/piramide.jpg&quot;)"/>
+      </AuxValues>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -123,14 +129,14 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="webButton3" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="boton_1A" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                          <Component id="webButton2" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="boton_profe1" min="-2" pref="124" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
@@ -142,36 +148,36 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="webLabel1" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="label_bienvenido" min="-2" pref="272" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="panel_login_profesor" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="webButton4" min="-2" pref="127" max="-2" attributes="0"/>
-                                      <Component id="webButton7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="boton_1B" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="boton_profe2" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="webButton5" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
-                                      <Component id="webButton8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="boton_2A" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="boton_profe3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="webButton9" min="-2" max="-2" attributes="0"/>
-                                      <Component id="webButton6" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="boton_profe4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="boton_2B" min="-2" pref="127" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                          <Component id="webLabel3" min="-2" pref="118" max="-2" attributes="0"/>
+                          <Component id="label_infantil" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="webLabel4" min="-2" pref="153" max="-2" attributes="0"/>
+                          <Component id="label_primaria" min="-2" pref="153" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="76" max="32767" attributes="0"/>
@@ -182,10 +188,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="webLabel1" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                      <Component id="label_bienvenido" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="panel_login_profesor" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -193,30 +199,30 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="webLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="label_infantil" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="webButton7" alignment="0" max="32767" attributes="0"/>
-                      <Component id="webButton2" pref="133" max="32767" attributes="0"/>
-                      <Component id="webButton8" alignment="0" max="32767" attributes="0"/>
-                      <Component id="webButton9" alignment="0" max="32767" attributes="0"/>
+                      <Component id="boton_profe2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="boton_profe1" max="32767" attributes="0"/>
+                      <Component id="boton_profe3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="boton_profe4" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="webLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="label_primaria" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="webButton3" min="-2" max="-2" attributes="0"/>
-                      <Component id="webButton4" min="-2" max="-2" attributes="0"/>
-                      <Component id="webButton5" min="-2" max="-2" attributes="0"/>
-                      <Component id="webButton6" min="-2" max="-2" attributes="0"/>
+                      <Component id="boton_1A" min="-2" max="-2" attributes="0"/>
+                      <Component id="boton_1B" min="-2" max="-2" attributes="0"/>
+                      <Component id="boton_2A" min="-2" max="-2" attributes="0"/>
+                      <Component id="boton_2B" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="134" max="32767" attributes="0"/>
+                  <EmptySpace pref="132" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="com.alee.laf.label.WebLabel" name="webLabel1">
+        <Component class="com.alee.laf.label.WebLabel" name="label_bienvenido">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -233,7 +239,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton2">
+        <Component class="com.alee.laf.button.WebButton" name="boton_profe1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/foto carnet.png"/>
@@ -256,7 +262,7 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.label.WebLabel" name="webLabel3">
+        <Component class="com.alee.laf.label.WebLabel" name="label_infantil">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -268,7 +274,7 @@
             </Property>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="panel_login_profesor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="e2" green="e2" red="c3" type="rgb"/>
@@ -357,14 +363,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="com.alee.laf.button.WebButton" name="webButton3">
+        <Component class="com.alee.laf.button.WebButton" name="boton_1A">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/1_A.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.label.WebLabel" name="webLabel4">
+        <Component class="com.alee.laf.label.WebLabel" name="label_primaria">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -390,54 +396,63 @@
             <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton_sonidoMouseReleased"/>
           </Events>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton4">
+        <Component class="com.alee.laf.button.WebButton" name="boton_1B">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/1_B.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton5">
+        <Component class="com.alee.laf.button.WebButton" name="boton_2A">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/2_A.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton6">
+        <Component class="com.alee.laf.button.WebButton" name="boton_2B">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/2_B.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton8">
+        <Component class="com.alee.laf.button.WebButton" name="boton_profe3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/carnet_prueba.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#xd3;scar Miranda"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="14" style="0"/>
+            </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton9">
+        <Component class="com.alee.laf.button.WebButton" name="boton_profe4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/carnet_prueba.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Profe Prueba"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="14" style="0"/>
+            </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="com.alee.laf.button.WebButton" name="webButton7">
+        <Component class="com.alee.laf.button.WebButton" name="boton_profe2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/carnet_prueba.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Juan Antonio"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="14" style="0"/>
+            </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>

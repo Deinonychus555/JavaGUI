@@ -1,5 +1,6 @@
 package ipo;
 
+import JPanelsCustom.JPanelCustom;
 import com.alee.laf.optionpane.WebOptionPane;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -19,13 +20,20 @@ import javax.swing.ImageIcon;
  * @author Javier
  */
 public class UI extends javax.swing.JFrame {
-
+    /*Variables Globales*/
     Cursor mickey;
     Font font_titulos, font_subtitulos;
     String fontName = "/img/GinSSB60.ttf";
     Font font;
     boolean musica_isActive;
+    
+    /* Varibles Javi */
     Profesor profesor;
+    ImageIcon fondo_inicio;
+    
+    /* Variables Juanan */
+    
+    /* Variables Oscar */
 
     /**
      * Creates new form UI
@@ -36,9 +44,7 @@ public class UI extends javax.swing.JFrame {
          */
         profesor = new Profesor("profesor", "pass");
 
-        /*
-         Fin creación de profesores
-         */
+      
         /**
          * RATON MICKEY
          */
@@ -58,14 +64,16 @@ public class UI extends javax.swing.JFrame {
             System.err.println(fontName + " No se cargo la fuente");
             font = new Font("Arial", Font.PLAIN, 14);
         }
-        /*FIN FUENTE*/
         /* Fuentes utilizadas */
         font_titulos = font.deriveFont(60f).deriveFont(Font.BOLD);
         font_subtitulos = font.deriveFont(40f).deriveFont(Font.BOLD);
 
+        /**
+         * INICIAMOS LOS COMPONENTES
+         */
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,26 +85,27 @@ public class UI extends javax.swing.JFrame {
 
         panel_profesor = new javax.swing.JPanel();
         atras_profesor = new javax.swing.JButton();
-        panel_inicio = new javax.swing.JPanel();
-        webLabel1 = new com.alee.laf.label.WebLabel();
-        webButton2 = new com.alee.laf.button.WebButton();
-        webLabel3 = new com.alee.laf.label.WebLabel();
-        jPanel2 = new javax.swing.JPanel();
+        panel_inicio = new JPanelCustom("/img/piramide.jpg");
+        label_bienvenido = new com.alee.laf.label.WebLabel();
+        boton_profe1 = new com.alee.laf.button.WebButton();
+        label_infantil = new com.alee.laf.label.WebLabel();
+        panel_login_profesor = new javax.swing.JPanel();
         nombre_profe = new com.alee.laf.text.WebTextField();
         password_profe = new com.alee.laf.text.WebPasswordField();
         boton_entrar = new com.alee.laf.button.WebButton();
-        webButton3 = new com.alee.laf.button.WebButton();
-        webLabel4 = new com.alee.laf.label.WebLabel();
+        boton_1A = new com.alee.laf.button.WebButton();
+        label_primaria = new com.alee.laf.label.WebLabel();
         boton_sonido = new javax.swing.JButton();
-        webButton4 = new com.alee.laf.button.WebButton();
-        webButton5 = new com.alee.laf.button.WebButton();
-        webButton6 = new com.alee.laf.button.WebButton();
-        webButton8 = new com.alee.laf.button.WebButton();
-        webButton9 = new com.alee.laf.button.WebButton();
-        webButton7 = new com.alee.laf.button.WebButton();
+        boton_1B = new com.alee.laf.button.WebButton();
+        boton_2A = new com.alee.laf.button.WebButton();
+        boton_2B = new com.alee.laf.button.WebButton();
+        boton_profe3 = new com.alee.laf.button.WebButton();
+        boton_profe4 = new com.alee.laf.button.WebButton();
+        boton_profe2 = new com.alee.laf.button.WebButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
+        setBounds(new java.awt.Rectangle(800, 600, 600, 600));
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
@@ -138,31 +147,31 @@ public class UI extends javax.swing.JFrame {
         panel_inicio.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_inicio.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        webLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        webLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        webLabel1.setText("Bienvenido");
-        webLabel1.setToolTipText("");
-        webLabel1.setFont(font_titulos);
-        webLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        webLabel1.setMargin(new java.awt.Insets(10, 0, 0, 0));
+        label_bienvenido.setForeground(new java.awt.Color(0, 0, 255));
+        label_bienvenido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_bienvenido.setText("Bienvenido");
+        label_bienvenido.setToolTipText("");
+        label_bienvenido.setFont(font_titulos);
+        label_bienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        label_bienvenido.setMargin(new java.awt.Insets(10, 0, 0, 0));
 
-        webButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/foto carnet.png"))); // NOI18N
-        webButton2.setText("Javier Cañadilla");
-        webButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        webButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        webButton2.setMaximumSize(new java.awt.Dimension(138, 130));
-        webButton2.setMinimumSize(new java.awt.Dimension(138, 130));
-        webButton2.setPreferredSize(new java.awt.Dimension(138, 130));
-        webButton2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        webButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        boton_profe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/foto carnet.png"))); // NOI18N
+        boton_profe1.setText("Javier Cañadilla");
+        boton_profe1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        boton_profe1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        boton_profe1.setMaximumSize(new java.awt.Dimension(138, 130));
+        boton_profe1.setMinimumSize(new java.awt.Dimension(138, 130));
+        boton_profe1.setPreferredSize(new java.awt.Dimension(138, 130));
+        boton_profe1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        boton_profe1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        webLabel3.setForeground(new java.awt.Color(0, 0, 255));
-        webLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        webLabel3.setText("Infantil");
-        webLabel3.setFont(font_subtitulos);
+        label_infantil.setForeground(new java.awt.Color(0, 0, 255));
+        label_infantil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_infantil.setText("Infantil");
+        label_infantil.setFont(font_subtitulos);
 
-        jPanel2.setBackground(new java.awt.Color(195, 226, 226));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 255)), "Profesor", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, null, new java.awt.Color(51, 102, 255)));
+        panel_login_profesor.setBackground(new java.awt.Color(195, 226, 226));
+        panel_login_profesor.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 255)), "Profesor", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, null, new java.awt.Color(51, 102, 255)));
 
         nombre_profe.setInputPrompt("Usuario");
         nombre_profe.setMaximumSize(new java.awt.Dimension(50, 20));
@@ -185,28 +194,28 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_login_profesorLayout = new javax.swing.GroupLayout(panel_login_profesor);
+        panel_login_profesor.setLayout(panel_login_profesorLayout);
+        panel_login_profesorLayout.setHorizontalGroup(
+            panel_login_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_login_profesorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panel_login_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_login_profesorLayout.createSequentialGroup()
                         .addGap(0, 1, Short.MAX_VALUE)
                         .addComponent(password_profe, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panel_login_profesorLayout.createSequentialGroup()
                         .addComponent(nombre_profe, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(panel_login_profesorLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(boton_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panel_login_profesorLayout.setVerticalGroup(
+            panel_login_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_login_profesorLayout.createSequentialGroup()
                 .addComponent(nombre_profe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(password_profe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -214,13 +223,13 @@ public class UI extends javax.swing.JFrame {
                 .addComponent(boton_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        webButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1_A.png"))); // NOI18N
+        boton_1A.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1_A.png"))); // NOI18N
 
-        webLabel4.setForeground(new java.awt.Color(0, 0, 255));
-        webLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        webLabel4.setText("Primaria");
-        webLabel4.setFont(font_subtitulos);
-        webLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        label_primaria.setForeground(new java.awt.Color(0, 0, 255));
+        label_primaria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_primaria.setText("Primaria");
+        label_primaria.setFont(font_subtitulos);
+        label_primaria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
         boton_sonido.setBorderPainted(false);
@@ -234,27 +243,30 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        webButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1_B.png"))); // NOI18N
+        boton_1B.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1_B.png"))); // NOI18N
 
-        webButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2_A.png"))); // NOI18N
+        boton_2A.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2_A.png"))); // NOI18N
 
-        webButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2_B.png"))); // NOI18N
+        boton_2B.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2_B.png"))); // NOI18N
 
-        webButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
-        webButton8.setText("Óscar Miranda");
-        webButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        webButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        boton_profe3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        boton_profe3.setText("Óscar Miranda");
+        boton_profe3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        boton_profe3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        boton_profe3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        webButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
-        webButton9.setText("Profe Prueba");
-        webButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        webButton9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        boton_profe4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        boton_profe4.setText("Profe Prueba");
+        boton_profe4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        boton_profe4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        boton_profe4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        webButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
-        webButton7.setText("Juan Antonio");
-        webButton7.setToolTipText("");
-        webButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        webButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        boton_profe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        boton_profe2.setText("Juan Antonio");
+        boton_profe2.setToolTipText("");
+        boton_profe2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        boton_profe2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        boton_profe2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout panel_inicioLayout = new javax.swing.GroupLayout(panel_inicio);
         panel_inicio.setLayout(panel_inicioLayout);
@@ -265,71 +277,71 @@ public class UI extends javax.swing.JFrame {
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
-                                .addComponent(webButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(boton_1A, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(7, 7, 7))
                             .addGroup(panel_inicioLayout.createSequentialGroup()
                                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panel_inicioLayout.createSequentialGroup()
                                         .addGap(75, 75, 75)
-                                        .addComponent(webButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(boton_profe1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(panel_inicioLayout.createSequentialGroup()
                                         .addGap(106, 106, 106)
                                         .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(6, 6, 6)))
                         .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
-                                .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label_bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(62, 62, 62)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(panel_login_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panel_inicioLayout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(webButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(webButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(boton_1B, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(boton_profe2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(49, 49, 49)
                                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(webButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(webButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(boton_2A, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(boton_profe3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(49, 49, 49)
                                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(webButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(webButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(boton_profe4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(webLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(label_infantil, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGap(57, 57, 57)
-                        .addComponent(webLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(label_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         panel_inicioLayout.setVerticalGroup(
             panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_inicioLayout.createSequentialGroup()
                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(panel_login_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(boton_sonido)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(webLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(label_infantil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(webButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(webButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                    .addComponent(webButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(webButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(boton_profe2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(boton_profe1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(boton_profe3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(boton_profe4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
-                .addComponent(webLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(label_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(webButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(webButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(webButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(webButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(134, Short.MAX_VALUE))
+                    .addComponent(boton_1A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boton_1B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boton_2A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -458,23 +470,23 @@ public class UI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atras_profesor;
+    private com.alee.laf.button.WebButton boton_1A;
+    private com.alee.laf.button.WebButton boton_1B;
+    private com.alee.laf.button.WebButton boton_2A;
+    private com.alee.laf.button.WebButton boton_2B;
     private com.alee.laf.button.WebButton boton_entrar;
+    private com.alee.laf.button.WebButton boton_profe1;
+    private com.alee.laf.button.WebButton boton_profe2;
+    private com.alee.laf.button.WebButton boton_profe3;
+    private com.alee.laf.button.WebButton boton_profe4;
     private javax.swing.JButton boton_sonido;
-    private javax.swing.JPanel jPanel2;
+    private com.alee.laf.label.WebLabel label_bienvenido;
+    private com.alee.laf.label.WebLabel label_infantil;
+    private com.alee.laf.label.WebLabel label_primaria;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;
+    private javax.swing.JPanel panel_login_profesor;
     private javax.swing.JPanel panel_profesor;
     private com.alee.laf.text.WebPasswordField password_profe;
-    private com.alee.laf.button.WebButton webButton2;
-    private com.alee.laf.button.WebButton webButton3;
-    private com.alee.laf.button.WebButton webButton4;
-    private com.alee.laf.button.WebButton webButton5;
-    private com.alee.laf.button.WebButton webButton6;
-    private com.alee.laf.button.WebButton webButton7;
-    private com.alee.laf.button.WebButton webButton8;
-    private com.alee.laf.button.WebButton webButton9;
-    private com.alee.laf.label.WebLabel webLabel1;
-    private com.alee.laf.label.WebLabel webLabel3;
-    private com.alee.laf.label.WebLabel webLabel4;
     // End of variables declaration//GEN-END:variables
 }
