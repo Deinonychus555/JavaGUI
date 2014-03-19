@@ -76,7 +76,6 @@ public class NivelesFase1 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setMaximumSize(new java.awt.Dimension(800, 600));
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
-        jPanel1.setSize(new java.awt.Dimension(800, 600));
 
         nivel1fase1.setFont(font_boton_niveles);
         nivel1fase1.setForeground(new java.awt.Color(255, 255, 255));

@@ -1,8 +1,8 @@
 package ipo;
 
+import com.alee.laf.optionpane.WebOptionPane;
 import java.awt.Cursor;
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
@@ -19,7 +19,7 @@ import javax.swing.ImageIcon;
  * @author Javier
  */
 public class UI extends javax.swing.JFrame {
-  
+
     Cursor mickey;
     Font font_titulos, font_subtitulos;
     String fontName = "/img/GinSSB60.ttf";
@@ -75,7 +75,8 @@ public class UI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panel_profesor = new javax.swing.JPanel();
+        atras_profesor = new javax.swing.JButton();
         panel_inicio = new javax.swing.JPanel();
         webLabel1 = new com.alee.laf.label.WebLabel();
         webButton2 = new com.alee.laf.button.WebButton();
@@ -100,18 +101,35 @@ public class UI extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(800, 600));
-        jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_profesor.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_profesor.setMinimumSize(new java.awt.Dimension(800, 600));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+        atras_profesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        atras_profesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras_profe.png"))); // NOI18N
+        atras_profesor.setBorderPainted(false);
+        atras_profesor.setContentAreaFilled(false);
+        atras_profesor.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        atras_profesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atras_profesorActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_profesorLayout = new javax.swing.GroupLayout(panel_profesor);
+        panel_profesor.setLayout(panel_profesorLayout);
+        panel_profesorLayout.setHorizontalGroup(
+            panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_profesorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(atras_profesor)
+                .addContainerGap(709, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+        panel_profesorLayout.setVerticalGroup(
+            panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_profesorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(atras_profesor)
+                .addContainerGap(532, Short.MAX_VALUE))
         );
 
         panel_inicio.setBackground(new java.awt.Color(195, 226, 226));
@@ -320,13 +338,13 @@ public class UI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -354,23 +372,49 @@ public class UI extends javax.swing.JFrame {
     private void boton_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_entrarActionPerformed
         boolean inicio = iniciarSesion(nombre_profe.getText(), password_profe.getPassword());
         System.err.println("Inicio de sesión: " + inicio);
+        if (!inicio) {
+            WebOptionPane.showMessageDialog(this, "Nombre o password incorrecto", "Error", WebOptionPane.ERROR_MESSAGE);
+        } else {
+            panel_profesor.setVisible(true);
+            panel_inicio.setVisible(false);
+            inicio = false;
+        }
     }//GEN-LAST:event_boton_entrarActionPerformed
 
     private void password_profeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_password_profeKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             boolean inicio = iniciarSesion(nombre_profe.getText(), password_profe.getPassword());
             System.err.println("Inicio de sesión: " + inicio);
+            if (!inicio) {
+                WebOptionPane.showMessageDialog(this, "Nombre o password incorrecto", "Error", WebOptionPane.ERROR_MESSAGE);
+
+            } else {
+                panel_profesor.setVisible(true);
+                panel_inicio.setVisible(false);
+                inicio = false;
+            }
         }    }//GEN-LAST:event_password_profeKeyPressed
+
+    private void atras_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atras_profesorActionPerformed
+        panel_profesor.setVisible(false);
+        panel_inicio.setVisible(true);
+        nombre_profe.clear();
+        password_profe.clear();
+    }//GEN-LAST:event_atras_profesorActionPerformed
 
     public boolean iniciarSesion(String nombre, char[] pass) {
 
         boolean nombre_ok = nombre.equals(profesor.getNombre());
         boolean pass_ok = true;
         String pass_profesor = profesor.getPassword();
-        for (int i = 0; i < pass.length; i++) {
-            if (pass[i] != pass_profesor.charAt(i)) {
-                pass_ok = false;
+        if (pass.length != 0) {
+            for (int i = 0; i < profesor.getPassword().length(); i++) {
+                if (pass[i] != pass_profesor.charAt(i)) {
+                    pass_ok = false;
+                }
             }
+        } else {
+            pass_ok = false;
         }
         return nombre_ok && pass_ok;
     }
@@ -413,12 +457,13 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras_profesor;
     private com.alee.laf.button.WebButton boton_entrar;
     private javax.swing.JButton boton_sonido;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;
+    private javax.swing.JPanel panel_profesor;
     private com.alee.laf.text.WebPasswordField password_profe;
     private com.alee.laf.button.WebButton webButton2;
     private com.alee.laf.button.WebButton webButton3;
