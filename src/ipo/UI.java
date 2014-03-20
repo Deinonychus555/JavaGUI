@@ -1,5 +1,6 @@
 package ipo;
 
+import JPanelsCustom.JPanelCustom;
 import com.alee.laf.optionpane.WebOptionPane;
 import java.awt.Color;
 import java.awt.Cursor;
