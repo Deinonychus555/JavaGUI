@@ -2,15 +2,21 @@ package ipo;
 
 import JPanelsCustom.JPanelCustom;
 import com.alee.laf.optionpane.WebOptionPane;
-import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javazoom.jlgui.basicplayer.BasicController;
+import javazoom.jlgui.basicplayer.BasicPlayer;
+import javazoom.jlgui.basicplayer.BasicPlayerEvent;
+import javazoom.jlgui.basicplayer.BasicPlayerException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -23,39 +29,41 @@ import javax.swing.JPanel;
  */
 public class UI extends javax.swing.JFrame {
     /*Variables Globales*/
+
     Cursor mickey;
     Font font_titulos, font_subtitulos;
     String fontName = "/img/GinSSB60.ttf";
     Font font;
     boolean musica_isActive;
-    
+
     /* Varibles Javi */
     Profesor profesor;
     ImageIcon fondo_inicio;
-    
-    /* Variables Juanan */
-    
-    /* Variables Oscar */
+    BasicPlayer player = new BasicPlayer();
+    BasicController control = (BasicController) player;
+    File array_musica;
+    boolean control_pausado;
 
+    /* Variables Juanan */
+    /* Variables Oscar */
     /**
-     * Creates new form UI
+     * Creates new form UI.
      */
     public UI() {
         /**
-         * Creación de profesores
+         * Creación de profesores.
          */
         profesor = new Profesor("profesor", "pass");
 
-      
         /**
-         * RATON MICKEY
+         * RATON MICKEY.
          */
         Toolkit tk = getToolkit();
         ImageIcon imagen_cursor = new ImageIcon(getClass().getResource("/img/mano_mickey.png"));
         mickey = tk.createCustomCursor(imagen_cursor.getImage(), new Point(0, 0), "mickey");
 
         /**
-         * INICIO FUENTE
+         * INICIO FUENTE.
          */
         try {
             //Se carga la fuente
@@ -71,18 +79,29 @@ public class UI extends javax.swing.JFrame {
         font_subtitulos = font.deriveFont(40f).deriveFont(Font.BOLD);
 
         /**
-         * INICIAMOS LOS COMPONENTES
+         * INICIAMOS LOS COMPONENTES.
          */
         initComponents();
 
         /**
-         * Ocultamos todos los paneles menos el INICIO
+         * Ocultamos todos los paneles menos el INICIO.
          */
         panel_inicio.setVisible(true);
         panel_profesor.setVisible(false);
 
+        /**
+         * INICIAMOS LA MÚSICA.
+         */
+        try {
+            control.open(new File(System.getProperty("user.dir"), "/src/musica/musica1.mp3"));
+            control.play();
+            control_pausado = false;
+            musica_isActive = true;
+        } catch (BasicPlayerException ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -93,7 +112,7 @@ public class UI extends javax.swing.JFrame {
     private void initComponents() {
 
         panel_profesor = new JPanelCustom("/img/gradiente_azul.jpg");
-        atras_profesor = new javax.swing.JButton();
+        boton_atras_profesor = new javax.swing.JButton();
         titulo_profesor = new com.alee.laf.label.WebLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_resultados = new com.alee.laf.table.WebTable();
@@ -133,15 +152,29 @@ public class UI extends javax.swing.JFrame {
         panel_profesor.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_profesor.setMinimumSize(new java.awt.Dimension(800, 600));
 
-        atras_profesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        atras_profesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras_profe.png"))); // NOI18N
-        atras_profesor.setToolTipText("Atrás");
-        atras_profesor.setBorderPainted(false);
-        atras_profesor.setContentAreaFilled(false);
-        atras_profesor.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        atras_profesor.addActionListener(new java.awt.event.ActionListener() {
+        boton_atras_profesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        boton_atras_profesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras_profe.png"))); // NOI18N
+        boton_atras_profesor.setToolTipText("Atrás");
+        boton_atras_profesor.setBorderPainted(false);
+        boton_atras_profesor.setContentAreaFilled(false);
+        boton_atras_profesor.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        boton_atras_profesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton_atras_profesorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                boton_atras_profesorMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton_atras_profesorMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton_atras_profesorMouseReleased(evt);
+            }
+        });
+        boton_atras_profesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atras_profesorActionPerformed(evt);
+                boton_atras_profesorActionPerformed(evt);
             }
         });
 
@@ -232,7 +265,7 @@ public class UI extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addComponent(atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(boton_atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(259, 259, 259)
                         .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -251,11 +284,11 @@ public class UI extends javax.swing.JFrame {
         panel_profesorLayout.setVerticalGroup(
             panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_profesorLayout.createSequentialGroup()
-                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_profesorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(atras_profesor)
-                        .addGap(87, 87, 87)
+                        .addComponent(boton_atras_profesor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                         .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -268,11 +301,11 @@ public class UI extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         panel_inicio.setBackground(new java.awt.Color(195, 226, 226));
@@ -503,19 +536,37 @@ public class UI extends javax.swing.JFrame {
     private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+             /*PAUSE DE LA MUSICA*/
+            try {
+                control.pause();
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else {
-
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            /* CONTINUAR MUSICA */
+            try {
+                if (control_pausado) {
+                    control.play();
+                } else {
+                    control.resume();
+                }
+                control_pausado = false;
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(musica_isActive){
+            musica_isActive = false;
+        }else{
+            musica_isActive = true;
         }
     }//GEN-LAST:event_boton_sonidoMouseReleased
 
     private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
         if (musica_isActive) {
-            musica_isActive = false;
-
             boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
         } else {
-            musica_isActive = true;
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
         }
     }//GEN-LAST:event_boton_sonidoMousePressed
@@ -529,6 +580,13 @@ public class UI extends javax.swing.JFrame {
             panel_profesor.setVisible(true);
             panel_inicio.setVisible(false);
             inicio = false;
+            /* STOP DE LA MUSICA */
+            try {
+                control.stop();
+                control_pausado = false;
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_boton_entrarActionPerformed
 
@@ -543,15 +601,40 @@ public class UI extends javax.swing.JFrame {
                 panel_profesor.setVisible(true);
                 panel_inicio.setVisible(false);
                 inicio = false;
+                musica_isActive = false;
+                boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+                /* STOP DE LA MUSICA */
+                try {
+                    control.stop();
+                    control_pausado = true;
+                } catch (BasicPlayerException ex) {
+                    Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }    }//GEN-LAST:event_password_profeKeyPressed
 
-    private void atras_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atras_profesorActionPerformed
+    private void boton_atras_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_atras_profesorActionPerformed
         panel_profesor.setVisible(false);
         panel_inicio.setVisible(true);
         nombre_profe.clear();
         password_profe.clear();
-    }//GEN-LAST:event_atras_profesorActionPerformed
+    }//GEN-LAST:event_boton_atras_profesorActionPerformed
+
+    private void boton_atras_profesorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_atras_profesorMouseEntered
+        boton_atras_profesor.setIcon(new ImageIcon(getClass().getResource("/img/atras_profe_hover.png")));
+    }//GEN-LAST:event_boton_atras_profesorMouseEntered
+
+    private void boton_atras_profesorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_atras_profesorMouseExited
+        boton_atras_profesor.setIcon(new ImageIcon(getClass().getResource("/img/atras_profe.png")));
+    }//GEN-LAST:event_boton_atras_profesorMouseExited
+
+    private void boton_atras_profesorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_atras_profesorMousePressed
+        boton_atras_profesor.setIcon(new ImageIcon(getClass().getResource("/img/atras_profe_pulsado.png")));
+    }//GEN-LAST:event_boton_atras_profesorMousePressed
+
+    private void boton_atras_profesorMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_atras_profesorMouseReleased
+        boton_atras_profesor.setIcon(new ImageIcon(getClass().getResource("/img/atras_profe.png")));
+    }//GEN-LAST:event_boton_atras_profesorMouseReleased
 
     public boolean iniciarSesion(String nombre, char[] pass) {
 
@@ -608,11 +691,11 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton atras_profesor;
     private com.alee.laf.button.WebButton boton_1A;
     private com.alee.laf.button.WebButton boton_1B;
     private com.alee.laf.button.WebButton boton_2A;
     private com.alee.laf.button.WebButton boton_2B;
+    private javax.swing.JButton boton_atras_profesor;
     private com.alee.laf.button.WebButton boton_entrar;
     private com.alee.laf.button.WebButton boton_guardar_obs;
     private com.alee.laf.button.WebButton boton_profe1;
