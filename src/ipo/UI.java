@@ -92,9 +92,19 @@ public class UI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel_profesor = new javax.swing.JPanel();
+        panel_profesor = new JPanelCustom("/img/gradiente_azul.jpg");
         atras_profesor = new javax.swing.JButton();
+        titulo_profesor = new com.alee.laf.label.WebLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_resultados = new com.alee.laf.table.WebTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textArea_observaciones = new com.alee.laf.text.WebTextArea();
+        label_observaciones = new com.alee.laf.label.WebLabel();
+        boton_guardar_obs = new com.alee.laf.button.WebButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        lista_alumnos = new com.alee.laf.list.WebList();
         webLabel1 = new com.alee.laf.label.WebLabel();
+        webLabel2 = new com.alee.laf.label.WebLabel();
         panel_inicio = new JPanel();
         label_bienvenido = new com.alee.laf.label.WebLabel();
         boton_profe1 = new com.alee.laf.button.WebButton();
@@ -125,6 +135,7 @@ public class UI extends javax.swing.JFrame {
 
         atras_profesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         atras_profesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras_profe.png"))); // NOI18N
+        atras_profesor.setToolTipText("Atrás");
         atras_profesor.setBorderPainted(false);
         atras_profesor.setContentAreaFilled(false);
         atras_profesor.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -134,33 +145,134 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        webLabel1.setText("PROFESOR");
-        webLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        webLabel1.setShadeColor(Color.WHITE);
-        webLabel1.setDrawShade(true);
+        titulo_profesor.setForeground(new java.awt.Color(255, 255, 255));
+        titulo_profesor.setText("PROFESOR");
+        titulo_profesor.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+
+        tabla_resultados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                { new Integer(1),  new Integer(1), null},
+                { new Integer(1),  new Integer(2), null},
+                { new Integer(1),  new Integer(3), null},
+                { new Integer(1),  new Integer(4), null},
+                { new Integer(2),  new Integer(1), null},
+                { new Integer(2),  new Integer(2), null},
+                { new Integer(2),  new Integer(3), null},
+                { new Integer(3),  new Integer(1), null},
+                { new Integer(3),  new Integer(2), null},
+                { new Integer(3),  new Integer(3), null},
+                { new Integer(3),  new Integer(4), null},
+                { new Integer(4),  new Integer(1), null},
+                { new Integer(4),  new Integer(2), null},
+                { new Integer(4),  new Integer(3), null},
+                { new Integer(5),  new Integer(1), null}
+            },
+            new String [] {
+                "Fase", "Nivel", "Fallos"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tabla_resultados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jScrollPane1.setViewportView(tabla_resultados);
+        tabla_resultados.getAccessibleContext().setAccessibleName("");
+
+        textArea_observaciones.setColumns(20);
+        textArea_observaciones.setRows(5);
+        textArea_observaciones.setToolTipText("");
+        jScrollPane2.setViewportView(textArea_observaciones);
+
+        label_observaciones.setForeground(new java.awt.Color(255, 255, 255));
+        label_observaciones.setText("Observaciones:");
+        label_observaciones.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        boton_guardar_obs.setText("Guardar");
+        boton_guardar_obs.setToolTipText("Guardar las observaciones");
+        boton_guardar_obs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        lista_alumnos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Armada Antonio", "María", "Campos Campos", "Beatriz", "Cañadilla Casco", "Javier", "Echeverrias Aranda", "Juan Antonio", "Miranda Bravo", "Oscar", "Ruiz Valenzuela", "Fernando" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        lista_alumnos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        lista_alumnos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jScrollPane3.setViewportView(lista_alumnos);
+
+        webLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        webLabel1.setText("Lista de alumnos:");
+        webLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        webLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        webLabel2.setText("Progreso:");
+        webLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout panel_profesorLayout = new javax.swing.GroupLayout(panel_profesor);
         panel_profesor.setLayout(panel_profesorLayout);
         panel_profesorLayout.setHorizontalGroup(
             panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_profesorLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(230, 230, 230))
             .addGroup(panel_profesorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(atras_profesor)
-                .addGap(249, 249, 249)
-                .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_profesorLayout.createSequentialGroup()
+                        .addComponent(atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(259, 259, 259)
+                        .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panel_profesorLayout.createSequentialGroup()
+                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32))))
         );
         panel_profesorLayout.setVerticalGroup(
             panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_profesorLayout.createSequentialGroup()
-                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(panel_profesorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(atras_profesor))
+                        .addComponent(atras_profesor)
+                        .addGap(87, 87, 87)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(532, 532, 532))
+                        .addGap(24, 24, 24)
+                        .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         panel_inicio.setBackground(new java.awt.Color(195, 226, 226));
@@ -307,27 +419,30 @@ public class UI extends javax.swing.JFrame {
                                         .addGap(75, 75, 75)
                                         .addComponent(boton_profe1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(panel_inicioLayout.createSequentialGroup()
-                                        .addGap(106, 106, 106)
+                                        .addGap(78, 78, 78)
                                         .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(6, 6, 6)))
-                        .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panel_inicioLayout.createSequentialGroup()
                                 .addComponent(label_bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(62, 62, 62)
                                 .addComponent(panel_login_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panel_inicioLayout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(boton_1B, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(boton_profe2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(49, 49, 49)
-                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(boton_2A, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(boton_profe3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(49, 49, 49)
-                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(boton_profe4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(panel_inicioLayout.createSequentialGroup()
+                                        .addGap(49, 49, 49)
+                                        .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(boton_profe4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(label_infantil, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -345,7 +460,7 @@ public class UI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(panel_login_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_inicioLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(23, 23, 23)
                         .addComponent(boton_sonido)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_infantil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -499,19 +614,29 @@ public class UI extends javax.swing.JFrame {
     private com.alee.laf.button.WebButton boton_2A;
     private com.alee.laf.button.WebButton boton_2B;
     private com.alee.laf.button.WebButton boton_entrar;
+    private com.alee.laf.button.WebButton boton_guardar_obs;
     private com.alee.laf.button.WebButton boton_profe1;
     private com.alee.laf.button.WebButton boton_profe2;
     private com.alee.laf.button.WebButton boton_profe3;
     private com.alee.laf.button.WebButton boton_profe4;
     private javax.swing.JButton boton_sonido;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private com.alee.laf.label.WebLabel label_bienvenido;
     private com.alee.laf.label.WebLabel label_infantil;
+    private com.alee.laf.label.WebLabel label_observaciones;
     private com.alee.laf.label.WebLabel label_primaria;
+    private com.alee.laf.list.WebList lista_alumnos;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;
     private javax.swing.JPanel panel_login_profesor;
     private javax.swing.JPanel panel_profesor;
     private com.alee.laf.text.WebPasswordField password_profe;
+    private com.alee.laf.table.WebTable tabla_resultados;
+    private com.alee.laf.text.WebTextArea textArea_observaciones;
+    private com.alee.laf.label.WebLabel titulo_profesor;
     private com.alee.laf.label.WebLabel webLabel1;
+    private com.alee.laf.label.WebLabel webLabel2;
     // End of variables declaration//GEN-END:variables
 }
