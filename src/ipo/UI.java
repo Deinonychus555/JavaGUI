@@ -15,7 +15,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javazoom.jlgui.basicplayer.BasicController;
 import javazoom.jlgui.basicplayer.BasicPlayer;
-import javazoom.jlgui.basicplayer.BasicPlayerEvent;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
 /*
