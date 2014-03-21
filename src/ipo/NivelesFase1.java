@@ -81,7 +81,6 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel1fase1.setForeground(new java.awt.Color(255, 255, 255));
         nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue.png"))); // NOI18N
         nivel1fase1.setText("Nivel 1");
-        nivel1fase1.setBorder(null);
         nivel1fase1.setBorderPainted(false);
         nivel1fase1.setContentAreaFilled(false);
         nivel1fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -185,7 +184,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nivel2fase1)
                     .addComponent(nivel4fase1))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,7 +290,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
 
     private void nivel4fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseExited
         // TODO add your handling code here:
-        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_red.png")));
+        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
     }//GEN-LAST:event_nivel4fase1MouseExited
 
     private void nivel4fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MousePressed
@@ -301,7 +300,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
 
     private void nivel4fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseReleased
         // TODO add your handling code here:
-        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_red.png")));
+        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
     }//GEN-LAST:event_nivel4fase1MouseReleased
 
     /**
