@@ -65,6 +65,7 @@ public class Fases extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         escuela = new javax.swing.JButton();
         barco = new javax.swing.JButton();
@@ -72,6 +73,9 @@ public class Fases extends javax.swing.JFrame {
         selva = new javax.swing.JButton();
         biblioteca = new javax.swing.JButton();
         titulo_fases = new com.alee.laf.label.WebLabel();
+        boton_sonido = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -218,6 +222,18 @@ public class Fases extends javax.swing.JFrame {
         titulo_fases.setFont(font_titulos
         );
 
+        boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
+        boton_sonido.setBorderPainted(false);
+        boton_sonido.setContentAreaFilled(false);
+        boton_sonido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton_sonidoMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton_sonidoMouseReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -229,7 +245,10 @@ public class Fases extends javax.swing.JFrame {
                         .addComponent(selva))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addComponent(escuela)))
+                        .addComponent(escuela))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(104, 104, 104)
@@ -254,7 +273,9 @@ public class Fases extends javax.swing.JFrame {
                         .addGap(85, 85, 85)
                         .addComponent(piramide))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
+                        .addGap(22, 22, 22)
+                        .addComponent(boton_sonido)
+                        .addGap(18, 18, 18)
                         .addComponent(escuela, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +284,6 @@ public class Fases extends javax.swing.JFrame {
                         .addComponent(selva)
                         .addContainerGap(21, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(biblioteca)
                         .addGap(33, 33, 33))))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -386,6 +406,44 @@ public class Fases extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_piramideActionPerformed
 
+    private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
+        if (musica_isActive) {
+            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }
+    }//GEN-LAST:event_boton_sonidoMousePressed
+
+    private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
+        if (musica_isActive) { //Si está activa -> la desactivamos.
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            /*PAUSE DE LA MUSICA*/
+            try {
+                control.pause();
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            /* CONTINUAR MUSICA */
+            try {
+                if (control_pausado) {
+                    control.play();
+                } else {
+                    control.resume();
+                }
+                control_pausado = false;
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(musica_isActive){
+            musica_isActive = false;
+        }else{
+            musica_isActive = true;
+        }
+    }//GEN-LAST:event_boton_sonidoMouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -432,7 +490,9 @@ public class Fases extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton barco;
     private javax.swing.JButton biblioteca;
+    private javax.swing.JButton boton_sonido;
     private javax.swing.JButton escuela;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton piramide;
     private javax.swing.JButton selva;
