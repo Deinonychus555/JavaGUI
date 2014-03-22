@@ -10,11 +10,14 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javazoom.jlgui.basicplayer.BasicController;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerEvent;
@@ -25,7 +28,7 @@ import javazoom.jlgui.basicplayer.BasicPlayerListener;
  *
  * @author Javier Cañadilla, Juan Antonio Echeverrías, Oscar Miranda
  */
-public class UI extends javax.swing.JFrame implements BasicPlayerListener {
+public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListSelectionListener {
     /*Variables Globales*/
 
     Cursor mickey;
@@ -41,9 +44,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
     BasicController control = (BasicController) player;
     File array_musica;
     boolean control_pausado;
-
+    String[] nombres_lista_alumnos = new String[]{"1 Armada Antonio, María", "2 Campos Campos, Beatriz",
+        "3 Cañadilla Casco, Javier", "4 Echeverrias Aranda, Juan Antonio",
+        "5 Miranda Bravo, Oscar", "6 Pérez Navarro, José", "7 Romero Álvarez, Gustavo", "8 Ruiz Valenzuela, Fernando"};
+    ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
     /* Variables Juanan */
     /* Variables Oscar */
+
     /**
      * Creates new form UI.
      */
@@ -52,6 +59,22 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
          * Creación de profesores.
          */
         profesor = new Profesor("profesor", "pass");
+
+        /**
+         * Creacion de Alumnos.
+         */
+        alumnos.add(new Alumno("Maria", "Antonio Armada", "918113226", "Calle de la Piruleta, nº3"));
+        alumnos.add(new Alumno("Beatriz", "Campos Campos", "918115626", "Calle de Alemania, nº8"));
+        alumnos.add(new Alumno("Javier", "Cañadilla Casco", "918113226", "Calle de la Piruleta, nº3"));
+        alumnos.add(new Alumno("Juan Antonio", "Echeverrias Aranda", "918119926", "Calle del Doctor Mateo, nº33"));
+        alumnos.add(new Alumno("Oscar", "Miranda Bravo", "918183722", "Avenida de los mercados, nº5"));
+        alumnos.add(new Alumno("José", "Pérez Navarro", "918185672", "Avenida de los barcos, nº15"));
+        alumnos.add(new Alumno("Gustavo", "Romero Álvarez", "918168677", "Paseo del Alparrache, nº7"));
+        alumnos.add(new Alumno("Fernando", "Ruiz Valenzuela", "918115478", "Paseo de la piruleta, nº37"));
+        /*Cambiamos la foto por defecto. */
+        alumnos.get(2).setImagen("/img/javier.png");
+        alumnos.get(3).setImagen("/img/juanan.png");
+        alumnos.get(4).setImagen("/img/oscar.PNG");
 
         /**
          * RATON MICKEY.
@@ -100,6 +123,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         } catch (BasicPlayerException ex) {
             Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        /**
+         * Lista alumnos -> IU PROFESOR
+         */
+        lista_nombres_alumnos.addListSelectionListener(this);
     }
 
     /**
@@ -114,14 +142,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         panel_profesor = new JPanelCustom("/img/fondo_profesor.png");
         boton_atras_profesor = new javax.swing.JButton();
         titulo_profesor = new com.alee.laf.label.WebLabel();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_resultados = new com.alee.laf.table.WebTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         textArea_observaciones = new com.alee.laf.text.WebTextArea();
         label_observaciones = new com.alee.laf.label.WebLabel();
         boton_guardar_obs = new com.alee.laf.button.WebButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        lista_alumnos = new com.alee.laf.list.WebList();
         webLabel1 = new com.alee.laf.label.WebLabel();
         webLabel2 = new com.alee.laf.label.WebLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -135,8 +162,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         apellido_alumno_profe = new com.alee.laf.text.WebTextField();
         telefono_alumno_profe = new com.alee.laf.text.WebTextField();
         direccion_alumno_profe = new com.alee.laf.text.WebTextField();
-        jButton1 = new javax.swing.JButton();
+        foto_alumno = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        lista_nombres_alumnos = new javax.swing.JList(nombres_lista_alumnos);
         panel_inicio = new JPanel();
         label_bienvenido = new com.alee.laf.label.WebLabel();
         boton_profe1 = new com.alee.laf.button.WebButton();
@@ -192,12 +221,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
             }
         });
 
+        titulo_profesor.setForeground(new java.awt.Color(0, 0, 102));
         titulo_profesor.setText("PROFESOR");
         titulo_profesor.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         titulo_profesor.setDrawShade(true);
         titulo_profesor.setShadeColor(Color.white);
 
-        tabla_resultados.setBackground(new java.awt.Color(234, 229, 229));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setMaximumSize(new java.awt.Dimension(800, 600));
+        jPanel3.setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel3.setPreferredSize(new java.awt.Dimension(800, 600));
+
         tabla_resultados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 { new Integer(1),  new Integer(1), null},
@@ -252,16 +286,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         boton_guardar_obs.setToolTipText("Guardar las observaciones");
         boton_guardar_obs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        lista_alumnos.setBackground(new java.awt.Color(234, 229, 229));
-        lista_alumnos.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Armada Antonio", "María", "Campos Campos", "Beatriz", "Cañadilla Casco", "Javier", "Echeverrias Aranda", "Juan Antonio", "Miranda Bravo", "Oscar", "Ruiz Valenzuela", "Fernando" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        lista_alumnos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-        lista_alumnos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jScrollPane3.setViewportView(lista_alumnos);
-
         webLabel1.setText("Lista de alumnos:");
         webLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -285,11 +309,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(90, 90, 90))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Datos del alumno", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         label_nombre_alumno.setText("Nombre:");
@@ -309,6 +334,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
 
         direccion_alumno_profe.setInputPrompt("Dirección del alumno");
 
+        foto_alumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -317,7 +344,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(foto_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_apellidos_alumno, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -341,7 +368,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(foto_alumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_nombre_alumno)
@@ -363,42 +390,81 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        jScrollPane4.setViewportView(lista_nombres_alumnos);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(label_observaciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(68, 68, 68))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(251, 251, 251))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane4)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10))
+        );
+
         javax.swing.GroupLayout panel_profesorLayout = new javax.swing.GroupLayout(panel_profesor);
         panel_profesor.setLayout(panel_profesorLayout);
         panel_profesorLayout.setHorizontalGroup(
             panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_profesorLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addComponent(boton_atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(259, 259, 259)
-                        .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_profesorLayout.createSequentialGroup()
-                                .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40))
-                            .addGroup(panel_profesorLayout.createSequentialGroup()
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane2)
-                                .addGroup(panel_profesorLayout.createSequentialGroup()
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addComponent(boton_atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(259, 259, 259)
+                .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(333, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_profesorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(246, 246, 246))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         panel_profesorLayout.setVerticalGroup(
             panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -411,32 +477,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
                         .addGap(24, 24, 24)
                         .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_profesorLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane3))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_profesorLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(16, 16, 16))))
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_inicio.setBackground(new java.awt.Color(195, 226, 226));
@@ -453,7 +495,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         label_bienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         label_bienvenido.setMargin(new java.awt.Insets(10, 0, 0, 0));
 
-        boton_profe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/foto carnet.png"))); // NOI18N
+        boton_profe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/javier.png"))); // NOI18N
         boton_profe1.setText("Javier Cañadilla");
         boton_profe1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         boton_profe1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -547,7 +589,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
 
         boton_2B.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2_B.png"))); // NOI18N
 
-        boton_profe3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        boton_profe3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/oscar.PNG"))); // NOI18N
         boton_profe3.setText("Óscar Miranda");
         boton_profe3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         boton_profe3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -559,7 +601,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
         boton_profe4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         boton_profe4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        boton_profe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        boton_profe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/juanan.png"))); // NOI18N
         boton_profe2.setText("Juan Antonio");
         boton_profe2.setToolTipText("");
         boton_profe2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
@@ -642,7 +684,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
                     .addComponent(boton_1B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(boton_2A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -727,7 +769,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
             System.err.println("Inicio de sesión: " + inicio);
             if (!inicio) {
                 WebOptionPane.showMessageDialog(this, "Nombre o password incorrecto", "Error", WebOptionPane.ERROR_MESSAGE);
-
             } else {
                 panel_profesor.setVisible(true);
                 panel_inicio.setVisible(false);
@@ -797,7 +838,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
             }
         }
     }
-    /*Métodos no necesarios */
+    /*Métodos no necesarios de la música */
 
     @Override
     public void setController(BasicController bc) {
@@ -810,17 +851,32 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
     @Override
     public void progress(int i, long l, byte[] bytes, Map map) {
     }
-    /*Fin metodos no necesarios */
+    /*Fin metodos no necesarios de la música*/
 
+    /*Métodos necesarios para la lista de alumnos de la IU PROFESOR */
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        int item = lista_nombres_alumnos.getSelectedIndex();
+        Alumno elegido = alumnos.get(item);
+
+        nombre_alumno_profe.setText(elegido.getNombre());
+        apellido_alumno_profe.setText(elegido.getApellidos());
+        telefono_alumno_profe.setText(elegido.getTelefono());
+        direccion_alumno_profe.setText(elegido.getDireccion());
+        foto_alumno.setIcon(elegido.getImagen());
+        textArea_observaciones.setText(elegido.getObservaciones());
+    }
+/*
+    Cargamos los fallos del alumno en la tabla del profesor
+    public void cargarFallos(Alumno elegido) {
+        for(int i = 0; i<15; i++){
+        }
+    }
+*/
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -864,13 +920,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
     private com.alee.laf.button.WebButton boton_profe4;
     private javax.swing.JButton boton_sonido;
     private com.alee.laf.text.WebTextField direccion_alumno_profe;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton foto_alumno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel label_apellidos_alumno;
     private com.alee.laf.label.WebLabel label_bienvenido;
@@ -880,7 +937,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener {
     private com.alee.laf.label.WebLabel label_observaciones;
     private com.alee.laf.label.WebLabel label_primaria;
     private javax.swing.JLabel label_telefono_alumno;
-    private com.alee.laf.list.WebList lista_alumnos;
+    private javax.swing.JList lista_nombres_alumnos;
     private com.alee.laf.text.WebTextField nombre_alumno_profe;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;
