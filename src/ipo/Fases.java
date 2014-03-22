@@ -6,6 +6,7 @@
 
 package ipo;
 
+import JPanelsCustom.JPanelCustom;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
@@ -13,6 +14,8 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.io.InputStream;
 import java.awt.Dimension;
+
+
 
 /**
  *
@@ -66,7 +69,7 @@ public class Fases extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 =  new JPanelCustom("/img/fondo_fases.jpg");
         escuela = new javax.swing.JButton();
         barco = new javax.swing.JButton();
         piramide = new javax.swing.JButton();
@@ -251,9 +254,6 @@ public class Fases extends javax.swing.JFrame {
                         .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addComponent(barco)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,7 +262,10 @@ public class Fases extends javax.swing.JFrame {
                                 .addComponent(biblioteca))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(128, 128, 128)
-                                .addComponent(piramide)))))
+                                .addComponent(piramide))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(74, 74, 74))
         );
         jPanel1Layout.setVerticalGroup(
@@ -407,17 +410,17 @@ public class Fases extends javax.swing.JFrame {
     }//GEN-LAST:event_piramideActionPerformed
 
     private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
-        if (musica_isActive) {
+        /*if (musica_isActive) {
             boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
         } else {
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
-        }
+        }*/
     }//GEN-LAST:event_boton_sonidoMousePressed
 
     private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
-        if (musica_isActive) { //Si está activa -> la desactivamos.
+       /* if (musica_isActive) { //Si está activa -> la desactivamos.
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
-            /*PAUSE DE LA MUSICA*/
+            
             try {
                 control.pause();
             } catch (BasicPlayerException ex) {
@@ -425,7 +428,7 @@ public class Fases extends javax.swing.JFrame {
             }
         } else {
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
-            /* CONTINUAR MUSICA */
+           
             try {
                 if (control_pausado) {
                     control.play();
@@ -441,7 +444,7 @@ public class Fases extends javax.swing.JFrame {
             musica_isActive = false;
         }else{
             musica_isActive = true;
-        }
+        }*/
     }//GEN-LAST:event_boton_sonidoMouseReleased
 
     /**
