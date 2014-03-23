@@ -16,7 +16,6 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.io.InputStream;
 import javax.swing.ImageIcon;
-import JPanelCustom;
 /**
  *
  * @author oscarmirandabravo
