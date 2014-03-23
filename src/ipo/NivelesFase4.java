@@ -16,6 +16,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.io.InputStream;
 import javax.swing.ImageIcon;
+import JPanelCustom;
 /**
  *
  * @author oscarmirandabravo
@@ -61,10 +62,10 @@ public class NivelesFase4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        nivel1fase1 = new javax.swing.JButton();
-        nivel2fase1 = new javax.swing.JButton();
-        nivel3fase1 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        nivel1fase4 = new javax.swing.JButton();
+        nivel2fase4 = new javax.swing.JButton();
+        nivel3fase4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -72,113 +73,113 @@ public class NivelesFase4 extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.setMaximumSize(new java.awt.Dimension(800, 600));
-        jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel4.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel4.setMaximumSize(new java.awt.Dimension(800, 600));
+        jPanel4.setMinimumSize(new java.awt.Dimension(800, 600));
 
-        nivel1fase1.setFont(font_boton_niveles);
-        nivel1fase1.setForeground(new java.awt.Color(255, 255, 255));
-        nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow.png"))); // NOI18N
-        nivel1fase1.setText("Nivel 1");
-        nivel1fase1.setBorderPainted(false);
-        nivel1fase1.setContentAreaFilled(false);
-        nivel1fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nivel1fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+        nivel1fase4.setFont(font_boton_niveles);
+        nivel1fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow.png"))); // NOI18N
+        nivel1fase4.setText("Nivel 1");
+        nivel1fase4.setBorderPainted(false);
+        nivel1fase4.setContentAreaFilled(false);
+        nivel1fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel1fase4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                nivel1fase1MousePressed(evt);
+                nivel1fase4MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                nivel1fase1MouseReleased(evt);
+                nivel1fase4MouseReleased(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel1fase1MouseExited(evt);
+                nivel1fase4MouseExited(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel1fase1MouseEntered(evt);
+                nivel1fase4MouseEntered(evt);
             }
         });
-        nivel1fase1.addActionListener(new java.awt.event.ActionListener() {
+        nivel1fase4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nivel1fase1ActionPerformed(evt);
+                nivel1fase4ActionPerformed(evt);
             }
         });
 
-        nivel2fase1.setFont(font_boton_niveles);
-        nivel2fase1.setForeground(new java.awt.Color(255, 255, 255));
-        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue.png"))); // NOI18N
-        nivel2fase1.setText("Nivel 2");
-        nivel2fase1.setBorderPainted(false);
-        nivel2fase1.setContentAreaFilled(false);
-        nivel2fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nivel2fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+        nivel2fase4.setFont(font_boton_niveles);
+        nivel2fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue.png"))); // NOI18N
+        nivel2fase4.setText("Nivel 2");
+        nivel2fase4.setBorderPainted(false);
+        nivel2fase4.setContentAreaFilled(false);
+        nivel2fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel2fase4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                nivel2fase1MousePressed(evt);
+                nivel2fase4MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                nivel2fase1MouseReleased(evt);
+                nivel2fase4MouseReleased(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel2fase1MouseExited(evt);
+                nivel2fase4MouseExited(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel2fase1MouseEntered(evt);
+                nivel2fase4MouseEntered(evt);
             }
         });
 
-        nivel3fase1.setFont(font_boton_niveles);
-        nivel3fase1.setForeground(new java.awt.Color(255, 255, 255));
-        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green.png"))); // NOI18N
-        nivel3fase1.setText("Nivel 3");
-        nivel3fase1.setBorderPainted(false);
-        nivel3fase1.setContentAreaFilled(false);
-        nivel3fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nivel3fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+        nivel3fase4.setFont(font_boton_niveles);
+        nivel3fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green.png"))); // NOI18N
+        nivel3fase4.setText("Nivel 3");
+        nivel3fase4.setBorderPainted(false);
+        nivel3fase4.setContentAreaFilled(false);
+        nivel3fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel3fase4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                nivel3fase1MousePressed(evt);
+                nivel3fase4MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                nivel3fase1MouseReleased(evt);
+                nivel3fase4MouseReleased(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel3fase1MouseExited(evt);
+                nivel3fase4MouseExited(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel3fase1MouseEntered(evt);
+                nivel3fase4MouseEntered(evt);
             }
         });
-        nivel3fase1.addActionListener(new java.awt.event.ActionListener() {
+        nivel3fase4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nivel3fase1ActionPerformed(evt);
+                nivel3fase4ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
-                .addComponent(nivel1fase1)
+                .addComponent(nivel1fase4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
-                .addComponent(nivel2fase1)
+                .addComponent(nivel2fase4)
                 .addGap(148, 148, 148))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(312, 312, 312)
-                .addComponent(nivel3fase1)
+                .addComponent(nivel3fase4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(95, 95, 95)
-                        .addComponent(nivel1fase1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(nivel1fase4))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
-                        .addComponent(nivel2fase1)))
+                        .addComponent(nivel2fase4)))
                 .addGap(66, 66, 66)
-                .addComponent(nivel3fase1)
+                .addComponent(nivel3fase4)
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
@@ -187,88 +188,88 @@ public class NivelesFase4 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(164, 164, 164))
+                .addGap(70, 70, 70)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(206, 206, 206))
+                .addGap(69, 69, 69)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(143, 143, 143))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nivel1fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseEntered
+    private void nivel1fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseEntered
         // TODO add your handling cocircle_blue_pulsadode here:
-        nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow_hover.png")));
-    }//GEN-LAST:event_nivel1fase1MouseEntered
+        nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow_hover.png")));
+    }//GEN-LAST:event_nivel1fase4MouseEntered
 
-    private void nivel1fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseExited
+    private void nivel1fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseExited
         // TODO add your handling code here:
-        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
-    }//GEN-LAST:event_nivel1fase1MouseExited
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel1fase4MouseExited
 
-    private void nivel1fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MousePressed
+    private void nivel1fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MousePressed
         // TODO add your handling code here:
-        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow_pulsado.png")));
-    }//GEN-LAST:event_nivel1fase1MousePressed
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow_pulsado.png")));
+    }//GEN-LAST:event_nivel1fase4MousePressed
 
-    private void nivel1fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseReleased
+    private void nivel1fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseReleased
         // TODO add your handling code here:
-        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
-    }//GEN-LAST:event_nivel1fase1MouseReleased
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel1fase4MouseReleased
 
-    private void nivel2fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseEntered
+    private void nivel2fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseEntered
         // TODO add your handling code here:
-        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_hover.png")));
-    }//GEN-LAST:event_nivel2fase1MouseEntered
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_hover.png")));
+    }//GEN-LAST:event_nivel2fase4MouseEntered
 
-    private void nivel2fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseExited
+    private void nivel2fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseExited
         // TODO add your handling code here:
-        nivel2fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
-    }//GEN-LAST:event_nivel2fase1MouseExited
+        nivel2fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel2fase4MouseExited
 
-    private void nivel2fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MousePressed
+    private void nivel2fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MousePressed
         // TODO add your handling code here:
-        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_pulsado.png")));
-    }//GEN-LAST:event_nivel2fase1MousePressed
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_pulsado.png")));
+    }//GEN-LAST:event_nivel2fase4MousePressed
 
-    private void nivel2fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseReleased
+    private void nivel2fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseReleased
         // TODO add your handling code here:
-        nivel2fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
-    }//GEN-LAST:event_nivel2fase1MouseReleased
+        nivel2fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel2fase4MouseReleased
 
-    private void nivel3fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseEntered
+    private void nivel3fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseEntered
         // TODO add your handling code here:
-        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_hover.png")));
-    }//GEN-LAST:event_nivel3fase1MouseEntered
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_hover.png")));
+    }//GEN-LAST:event_nivel3fase4MouseEntered
 
-    private void nivel3fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseExited
+    private void nivel3fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseExited
         // TODO add your handling code here:
-        nivel3fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
-    }//GEN-LAST:event_nivel3fase1MouseExited
+        nivel3fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel3fase4MouseExited
 
-    private void nivel3fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MousePressed
+    private void nivel3fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MousePressed
         // TODO add your handling code here:
-        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_pulsado.png")));
-    }//GEN-LAST:event_nivel3fase1MousePressed
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_pulsado.png")));
+    }//GEN-LAST:event_nivel3fase4MousePressed
 
-    private void nivel3fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseReleased
+    private void nivel3fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseReleased
         // TODO add your handling code here:
-        nivel3fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
-    }//GEN-LAST:event_nivel3fase1MouseReleased
+        nivel3fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel3fase4MouseReleased
 
-    private void nivel1fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase1ActionPerformed
+    private void nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nivel1fase1ActionPerformed
+    }//GEN-LAST:event_nivel1fase4ActionPerformed
 
-    private void nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase1ActionPerformed
+    private void nivel3fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nivel3fase1ActionPerformed
+    }//GEN-LAST:event_nivel3fase4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -307,9 +308,9 @@ public class NivelesFase4 extends javax.swing.JFrame {
 
      private javax.swing.JButton boton_sonido;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton nivel1fase1;
-    private javax.swing.JButton nivel2fase1;
-    private javax.swing.JButton nivel3fase1;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton nivel1fase4;
+    private javax.swing.JButton nivel2fase4;
+    private javax.swing.JButton nivel3fase4;
     // End of variables declaration//GEN-END:variables
 }
