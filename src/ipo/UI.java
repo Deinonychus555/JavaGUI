@@ -2,6 +2,7 @@ package ipo;
 
 import JPanelsCustom.JPanelCustom;
 import com.alee.laf.optionpane.WebOptionPane;
+import com.alee.managers.notification.NotificationManager;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -18,6 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.table.TableModel;
 import javazoom.jlgui.basicplayer.BasicController;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerEvent;
@@ -44,10 +46,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     BasicController control = (BasicController) player;
     File array_musica;
     boolean control_pausado;
-    String[] nombres_lista_alumnos = new String[]{"1 Armada Antonio, María", "2 Campos Campos, Beatriz",
+    String[] nombres_lista_alumnos = new String[8];
+   /* String[] nombres_lista_alumnos = new String[]{"1 Armada Antonio, María", "2 Campos Campos, Beatriz",
         "3 Cañadilla Casco, Javier", "4 Echeverrias Aranda, Juan Antonio",
         "5 Miranda Bravo, Oscar", "6 Pérez Navarro, José", "7 Romero Álvarez, Gustavo", "8 Ruiz Valenzuela, Fernando"};
+    */
     ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+    TableModel modelo_tabla_resultados;
+    boolean componentes_alumno_activados = false;
     /* Variables Juanan */
     /* Variables Oscar */
 
@@ -75,7 +81,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         alumnos.get(2).setImagen("/img/javier.png");
         alumnos.get(3).setImagen("/img/juanan.png");
         alumnos.get(4).setImagen("/img/oscar.PNG");
-
+        
+        generarListadoAlumnos();
+        
         /**
          * RATON MICKEY.
          */
@@ -148,7 +156,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jScrollPane2 = new javax.swing.JScrollPane();
         textArea_observaciones = new com.alee.laf.text.WebTextArea();
         label_observaciones = new com.alee.laf.label.WebLabel();
-        boton_guardar_obs = new com.alee.laf.button.WebButton();
+        boton_guardar = new com.alee.laf.button.WebButton();
         webLabel1 = new com.alee.laf.label.WebLabel();
         webLabel2 = new com.alee.laf.label.WebLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -232,7 +240,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jPanel3.setMinimumSize(new java.awt.Dimension(800, 600));
         jPanel3.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        tabla_resultados.setModel(new javax.swing.table.DefaultTableModel(
+        modelo_tabla_resultados = new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 { new Integer(1),  new Integer(1), null},
                 { new Integer(1),  new Integer(2), null},
@@ -268,7 +276,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
-        });
+        };
+        tabla_resultados.setModel(modelo_tabla_resultados);
+        tabla_resultados.setEditable(false);
+        tabla_resultados.setEnabled(false);
         tabla_resultados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(tabla_resultados);
         tabla_resultados.getAccessibleContext().setAccessibleName("");
@@ -277,14 +288,21 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         textArea_observaciones.setColumns(20);
         textArea_observaciones.setRows(5);
         textArea_observaciones.setToolTipText("");
+        textArea_observaciones.setEnabled(false);
         jScrollPane2.setViewportView(textArea_observaciones);
 
         label_observaciones.setText("Observaciones:");
         label_observaciones.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        boton_guardar_obs.setText("Guardar");
-        boton_guardar_obs.setToolTipText("Guardar las observaciones");
-        boton_guardar_obs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        boton_guardar.setText("Guardar");
+        boton_guardar.setToolTipText("Guardar las observaciones");
+        boton_guardar.setEnabled(false);
+        boton_guardar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        boton_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_guardarActionPerformed(evt);
+            }
+        });
 
         webLabel1.setText("Lista de alumnos:");
         webLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -304,7 +322,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,15 +344,20 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         label_direccion_alumno.setText("Dirección:");
         label_direccion_alumno.setToolTipText("");
 
+        nombre_alumno_profe.setEnabled(false);
         nombre_alumno_profe.setInputPrompt("Nombre del alumno");
 
+        apellido_alumno_profe.setEnabled(false);
         apellido_alumno_profe.setInputPrompt("Apellidos del alumno");
 
+        telefono_alumno_profe.setEnabled(false);
         telefono_alumno_profe.setInputPrompt("Número del alumno");
 
+        direccion_alumno_profe.setEnabled(false);
         direccion_alumno_profe.setInputPrompt("Dirección del alumno");
 
         foto_alumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet_prueba.png"))); // NOI18N
+        foto_alumno.setEnabled(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -409,16 +432,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(webLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jScrollPane1)
                             .addGap(18, 18, 18)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(label_observaciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(68, 68, 68))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(boton_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(251, 251, 251))
         );
         jPanel3Layout.setVerticalGroup(
@@ -447,7 +470,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addGap(5, 5, 5)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton_guardar_obs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(boton_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10))
         );
 
@@ -753,10 +776,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             panel_profesor.setVisible(true);
             panel_inicio.setVisible(false);
             inicio = false;
+            musica_isActive = false;
             /* STOP DE LA MUSICA */
             try {
+                control_pausado = true;
                 control.stop();
-                control_pausado = false;
             } catch (BasicPlayerException ex) {
                 Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -808,6 +832,45 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton_atras_profesor.setIcon(new ImageIcon(getClass().getResource("/img/atras_profe.png")));
     }//GEN-LAST:event_boton_atras_profesorMouseReleased
 
+    private void boton_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_guardarActionPerformed
+        if (lista_nombres_alumnos.getSelectedIndex() != -1) {
+            Alumno elegido = alumnos.get(lista_nombres_alumnos.getSelectedIndex());
+            int seleccion = WebOptionPane.showConfirmDialog(this, "¿Está seguro de modificar la información del alumno?", "Confirmar", WebOptionPane.YES_NO_OPTION,
+                    WebOptionPane.QUESTION_MESSAGE);
+            if (seleccion == 0) { //SI
+                elegido.setNombre(nombre_alumno_profe.getText());
+                elegido.setApellidos(apellido_alumno_profe.getText());
+                elegido.setTelefono(telefono_alumno_profe.getText());
+                elegido.setDireccion(direccion_alumno_profe.getText());
+                elegido.setObservaciones(textArea_observaciones.getText());
+                generarListadoAlumnos();
+                NotificationManager.showNotification("Datos modificados correctamente.").setDisplayTime(2000);
+                lista_nombres_alumnos.updateUI(); //Actualizamos la lista con los datos modificados.
+            } else {
+                cargarDatosAlumno(elegido);
+                NotificationManager.showNotification("Datos del alumno restaurados.").setDisplayTime(2000);
+            }
+        }
+    }//GEN-LAST:event_boton_guardarActionPerformed
+    /**
+     * Métodos de Javi.
+     */
+    
+    public void generarListadoAlumnos(){
+        int i = 0;
+        for(Alumno elegido : alumnos){
+            nombres_lista_alumnos[i] = elegido.getApellidos()+", "+elegido.getNombre();
+            i++;
+        }
+    }
+
+    /**
+     * Iniciar sesión con el Nombre y Password que se nos pasa del formulario.
+     *
+     * @param nombre Nombre de usuario
+     * @param pass Password para ese usuario
+     * @return True/false si se inicia sesión o no.
+     */
     public boolean iniciarSesion(String nombre, char[] pass) {
 
         boolean nombre_ok = nombre.equals(profesor.getNombre());
@@ -826,7 +889,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }
 
     /**
-     * Controlar la música
+     * Controlar la música.
      */
     @Override
     public void stateUpdated(BasicPlayerEvent bpe) {
@@ -858,7 +921,27 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     public void valueChanged(ListSelectionEvent e) {
         int item = lista_nombres_alumnos.getSelectedIndex();
         Alumno elegido = alumnos.get(item);
+        if (!componentes_alumno_activados) {
+            activarComponentesDatosAlumno();
+        }
+        cargarDatosAlumno(elegido);
+        cargarFallos(elegido);
+    }
+    /*Activamos los componentes de la UI profesor */
 
+    public void activarComponentesDatosAlumno() {
+        nombre_alumno_profe.setEnabled(true);
+        apellido_alumno_profe.setEnabled(true);
+        telefono_alumno_profe.setEnabled(true);
+        direccion_alumno_profe.setEnabled(true);
+        foto_alumno.setEnabled(true);
+        textArea_observaciones.setEnabled(true);
+        tabla_resultados.setEnabled(true);
+        boton_guardar.setEnabled(true);
+    }
+
+    /* Cargamos los datos del alumno elegido */
+    public void cargarDatosAlumno(Alumno elegido) {
         nombre_alumno_profe.setText(elegido.getNombre());
         apellido_alumno_profe.setText(elegido.getApellidos());
         telefono_alumno_profe.setText(elegido.getTelefono());
@@ -866,13 +949,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         foto_alumno.setIcon(elegido.getImagen());
         textArea_observaciones.setText(elegido.getObservaciones());
     }
-/*
-    Cargamos los fallos del alumno en la tabla del profesor
+    /* Cargamos los fallos del alumno elegido en la tabla del profesor */
+
     public void cargarFallos(Alumno elegido) {
-        for(int i = 0; i<15; i++){
+        for (int i = 0; i < 15; i++) {
+            modelo_tabla_resultados.setValueAt(elegido.getFallos(i), i, 2);
         }
     }
-*/
+
+    /**
+     * Fin métodos de Javi.
+     */
     /**
      * @param args the command line arguments
      */
@@ -913,7 +1000,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.button.WebButton boton_2B;
     private javax.swing.JButton boton_atras_profesor;
     private com.alee.laf.button.WebButton boton_entrar;
-    private com.alee.laf.button.WebButton boton_guardar_obs;
+    private com.alee.laf.button.WebButton boton_guardar;
     private com.alee.laf.button.WebButton boton_profe1;
     private com.alee.laf.button.WebButton boton_profe2;
     private com.alee.laf.button.WebButton boton_profe3;
