@@ -106,7 +106,7 @@
                           <Component id="nivel3fase1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                  <EmptySpace pref="99" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -121,7 +121,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/circle_blue.png"/>
+              <Image iconType="3" name="/img/circle_green.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nivel 1"/>
             <Property name="borderPainted" type="boolean" value="false"/>
@@ -144,12 +144,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/circle_green.png"/>
+              <Image iconType="3" name="/img/circle_orange.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nivel 2"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -170,7 +167,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/circle_red.png"/>
+              <Image iconType="3" name="/img/circle_yellow.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nivel 3"/>
             <Property name="borderPainted" type="boolean" value="false"/>
@@ -193,7 +190,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/circle_yellow.png"/>
+              <Image iconType="3" name="/img/circle_blue.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nivel 4"/>
             <Property name="borderPainted" type="boolean" value="false"/>
