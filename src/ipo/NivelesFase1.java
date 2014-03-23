@@ -61,6 +61,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        versionInfo1 = new com.alee.managers.version.VersionInfo();
         jPanel1 = new javax.swing.JPanel();
         nivel1fase1 = new javax.swing.JButton();
         nivel2fase1 = new javax.swing.JButton();
@@ -345,5 +346,6 @@ public class NivelesFase1 extends javax.swing.JFrame {
     private javax.swing.JButton nivel2fase1;
     private javax.swing.JButton nivel3fase1;
     private javax.swing.JButton nivel4fase1;
+    private com.alee.managers.version.VersionInfo versionInfo1;
     // End of variables declaration//GEN-END:variables
 }
