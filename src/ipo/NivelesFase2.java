@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
  */
 public class NivelesFase2 extends javax.swing.JFrame {
     Cursor mickey;
-    Font font_boton_niveles;
+    Font font_boton_niveles, font_titulo_niveles;
     String fontName = "/img/GinSSB60.ttf";
     Font font;
 
@@ -48,6 +48,7 @@ public class NivelesFase2 extends javax.swing.JFrame {
         }
         /*FIN FUENTE*/
         font_boton_niveles = font.deriveFont(30f).deriveFont(1);
+        font_titulo_niveles = font.deriveFont(50f).deriveFont(1);
         initComponents();
     }
 
@@ -65,6 +66,7 @@ public class NivelesFase2 extends javax.swing.JFrame {
         nivel1fase2 = new javax.swing.JButton();
         nivel2fase2 = new javax.swing.JButton();
         nivel3fase2 = new javax.swing.JButton();
+        webLabel1 = new com.alee.laf.label.WebLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -152,6 +154,10 @@ public class NivelesFase2 extends javax.swing.JFrame {
             }
         });
 
+        webLabel1.setForeground(new java.awt.Color(0, 51, 255));
+        webLabel1.setText("Escoge un nivel");
+        webLabel1.setFont(font_titulo_niveles);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -163,8 +169,13 @@ public class NivelesFase2 extends javax.swing.JFrame {
                 .addComponent(nivel2fase2)
                 .addGap(148, 148, 148))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(312, 312, 312)
-                .addComponent(nivel3fase2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(nivel3fase2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -172,7 +183,9 @@ public class NivelesFase2 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addGap(34, 34, 34)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
                         .addComponent(nivel1fase2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
@@ -311,5 +324,6 @@ public class NivelesFase2 extends javax.swing.JFrame {
     private javax.swing.JButton nivel1fase2;
     private javax.swing.JButton nivel2fase2;
     private javax.swing.JButton nivel3fase2;
+    private com.alee.laf.label.WebLabel webLabel1;
     // End of variables declaration//GEN-END:variables
 }

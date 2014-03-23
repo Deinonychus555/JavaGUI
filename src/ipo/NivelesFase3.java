@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
  */
 public class NivelesFase3 extends javax.swing.JFrame {
     Cursor mickey;
-    Font font_boton_niveles;
+    Font font_boton_niveles, font_titulo_niveles;
     String fontName = "/img/GinSSB60.ttf";
     Font font;
 
@@ -48,6 +48,7 @@ public class NivelesFase3 extends javax.swing.JFrame {
         }
         /*FIN FUENTE*/
         font_boton_niveles = font.deriveFont(30f).deriveFont(1);
+        font_titulo_niveles = font.deriveFont(50f).deriveFont(1);
         initComponents();
     }
 
@@ -66,14 +67,17 @@ public class NivelesFase3 extends javax.swing.JFrame {
         nivel2fase3 = new javax.swing.JButton();
         nivel3fase3 = new javax.swing.JButton();
         nivel4fase3 = new javax.swing.JButton();
+        webLabel1 = new com.alee.laf.label.WebLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(font_titulo_niveles);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel3.setFont(font_titulo_niveles);
         jPanel3.setMaximumSize(new java.awt.Dimension(800, 600));
         jPanel3.setMinimumSize(new java.awt.Dimension(800, 600));
 
@@ -120,6 +124,11 @@ public class NivelesFase3 extends javax.swing.JFrame {
                 nivel2fase3MouseEntered(evt);
             }
         });
+        nivel2fase3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel2fase3ActionPerformed(evt);
+            }
+        });
 
         nivel3fase3.setFont(font_boton_niveles);
         nivel3fase3.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,6 +149,11 @@ public class NivelesFase3 extends javax.swing.JFrame {
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 nivel3fase3MouseEntered(evt);
+            }
+        });
+        nivel3fase3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel3fase3ActionPerformed(evt);
             }
         });
 
@@ -164,6 +178,15 @@ public class NivelesFase3 extends javax.swing.JFrame {
                 nivel4fase3MouseEntered(evt);
             }
         });
+        nivel4fase3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel4fase3ActionPerformed(evt);
+            }
+        });
+
+        webLabel1.setForeground(new java.awt.Color(0, 51, 255));
+        webLabel1.setText("Escoge un nivel");
+        webLabel1.setFont(font_titulo_niveles);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -173,33 +196,35 @@ public class NivelesFase3 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(174, 174, 174)
-                        .addComponent(nivel1fase3)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(nivel3fase3)
-                        .addGap(34, 34, 34)))
-                .addGap(65, 65, 65)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nivel2fase3)
-                    .addComponent(nivel4fase3))
-                .addContainerGap(199, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nivel1fase3)
+                            .addComponent(nivel3fase3))
+                        .addGap(109, 109, 109)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nivel2fase3)
+                            .addComponent(nivel4fase3)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(247, 247, 247)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                        .addGap(150, 150, 150)
                         .addComponent(nivel2fase3)
-                        .addGap(102, 102, 102)
+                        .addGap(70, 70, 70)
                         .addComponent(nivel4fase3))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGap(20, 20, 20)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
                         .addComponent(nivel1fase3)
-                        .addGap(70, 70, 70)
+                        .addGap(48, 48, 48)
                         .addComponent(nivel3fase3)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -302,6 +327,18 @@ public class NivelesFase3 extends javax.swing.JFrame {
         nivel4fase3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_pulsado.png")));
     }//GEN-LAST:event_nivel4fase3MousePressed
 
+    private void nivel3fase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel3fase3ActionPerformed
+
+    private void nivel2fase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel2fase3ActionPerformed
+
+    private void nivel4fase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel4fase3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel4fase3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,5 +381,6 @@ public class NivelesFase3 extends javax.swing.JFrame {
     private javax.swing.JButton nivel2fase3;
     private javax.swing.JButton nivel3fase3;
     private javax.swing.JButton nivel4fase3;
+    private com.alee.laf.label.WebLabel webLabel1;
     // End of variables declaration//GEN-END:variables
 }

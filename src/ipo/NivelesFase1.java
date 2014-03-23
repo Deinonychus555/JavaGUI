@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
  */
 public class NivelesFase1 extends javax.swing.JFrame {
     Cursor mickey;
-    Font font_boton_niveles;
+    Font font_boton_niveles, font_titulo_niveles;
     String fontName = "/img/GinSSB60.ttf";
     Font font;
 
@@ -48,6 +48,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
         }
         /*FIN FUENTE*/
         font_boton_niveles = font.deriveFont(30f).deriveFont(1);
+        font_titulo_niveles = font.deriveFont(50f).deriveFont(1);
         initComponents();
     }
 
@@ -67,6 +68,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel2fase1 = new javax.swing.JButton();
         nivel3fase1 = new javax.swing.JButton();
         nivel4fase1 = new javax.swing.JButton();
+        webLabel1 = new com.alee.laf.label.WebLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -144,6 +146,11 @@ public class NivelesFase1 extends javax.swing.JFrame {
                 nivel3fase1MouseEntered(evt);
             }
         });
+        nivel3fase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel3fase1ActionPerformed(evt);
+            }
+        });
 
         nivel4fase1.setFont(font_boton_niveles);
         nivel4fase1.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,6 +173,15 @@ public class NivelesFase1 extends javax.swing.JFrame {
                 nivel4fase1MouseEntered(evt);
             }
         });
+        nivel4fase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel4fase1ActionPerformed(evt);
+            }
+        });
+
+        webLabel1.setForeground(new java.awt.Color(0, 51, 255));
+        webLabel1.setText("Escoge un nivel");
+        webLabel1.setFont(font_titulo_niveles);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,33 +191,34 @@ public class NivelesFase1 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(174, 174, 174)
-                        .addComponent(nivel1fase1)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(nivel3fase1)
-                        .addGap(34, 34, 34)))
-                .addGap(65, 65, 65)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nivel2fase1)
-                    .addComponent(nivel4fase1))
-                .addContainerGap(199, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nivel1fase1)
+                            .addComponent(nivel3fase1))
+                        .addGap(140, 140, 140)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nivel2fase1)
+                            .addComponent(nivel4fase1)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(248, 248, 248)
+                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(nivel2fase1)
-                        .addGap(102, 102, 102)
-                        .addComponent(nivel4fase1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(nivel1fase1)
-                        .addGap(70, 70, 70)
-                        .addComponent(nivel3fase1)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(nivel1fase1)
+                .addGap(51, 51, 51)
+                .addComponent(nivel3fase1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(nivel2fase1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addComponent(nivel4fase1)
+                .addGap(57, 57, 57))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -211,14 +228,14 @@ public class NivelesFase1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(226, 226, 226))
+                .addGap(326, 326, 326))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(298, 298, 298))
+                .addGap(271, 271, 271))
         );
 
         pack();
@@ -304,6 +321,14 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
     }//GEN-LAST:event_nivel4fase1MouseReleased
 
+    private void nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel3fase1ActionPerformed
+
+    private void nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel4fase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel4fase1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -347,5 +372,6 @@ public class NivelesFase1 extends javax.swing.JFrame {
     private javax.swing.JButton nivel3fase1;
     private javax.swing.JButton nivel4fase1;
     private com.alee.managers.version.VersionInfo versionInfo1;
+    private com.alee.laf.label.WebLabel webLabel1;
     // End of variables declaration//GEN-END:variables
 }
