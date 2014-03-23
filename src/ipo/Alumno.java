@@ -78,8 +78,8 @@ public class Alumno {
         this.imagen = new ImageIcon(getClass().getResource(imagen));
     }
 
-    public int[] getFallos() {
-        return fallos;
+    public int getFallos(int fila) {
+        return fallos[fila];
     }
 
     public void setFallos(int posicion, int fallos) {
