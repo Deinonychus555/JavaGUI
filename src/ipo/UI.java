@@ -191,6 +191,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton_profe3 = new com.alee.laf.button.WebButton();
         boton_profe4 = new com.alee.laf.button.WebButton();
         boton_profe2 = new com.alee.laf.button.WebButton();
+        panel_login = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
@@ -710,6 +711,21 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addContainerGap(127, Short.MAX_VALUE))
         );
 
+        panel_login.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_login.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_login.setPreferredSize(new java.awt.Dimension(800, 600));
+
+        javax.swing.GroupLayout panel_loginLayout = new javax.swing.GroupLayout(panel_login);
+        panel_login.setLayout(panel_loginLayout);
+        panel_loginLayout.setHorizontalGroup(
+            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        panel_loginLayout.setVerticalGroup(
+            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -717,12 +733,22 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -1028,6 +1054,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.text.WebTextField nombre_alumno_profe;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;
+    private javax.swing.JPanel panel_login;
     private javax.swing.JPanel panel_login_profesor;
     private javax.swing.JPanel panel_profesor;
     private com.alee.laf.text.WebPasswordField password_profe;
