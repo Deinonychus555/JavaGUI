@@ -930,7 +930,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo10MouseReleased
 
     private void globo11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MouseEntered
-        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10_hover.png")));
+        globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11_hover.png")));
     }//GEN-LAST:event_globo11MouseEntered
 
     private void globo11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MouseExited
