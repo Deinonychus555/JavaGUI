@@ -239,6 +239,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setMaximumSize(new java.awt.Dimension(800, 600));
         jPanel3.setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel3.setOpaque(false);
         jPanel3.setPreferredSize(new java.awt.Dimension(800, 600));
 
         modelo_tabla_resultados = new javax.swing.table.DefaultTableModel(
@@ -334,7 +335,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Datos del alumno", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Datos del alumno", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        jPanel2.setOpaque(false);
 
         label_nombre_alumno.setText("Nombre:");
 
@@ -885,7 +887,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     public void generarListadoAlumnos(){
         int i = 0;
         for(Alumno elegido : alumnos){
-            nombres_lista_alumnos[i] = elegido.getApellidos()+", "+elegido.getNombre();
+            nombres_lista_alumnos[i] = i+1+" "+elegido.getApellidos()+", "+elegido.getNombre();
             i++;
         }
     }
