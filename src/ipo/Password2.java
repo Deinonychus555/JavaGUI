@@ -770,403 +770,403 @@ public class Password2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void globo1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo1MouseEntered
-        // TODO add your handling code here:
+        globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1_hover.png")));
     }//GEN-LAST:event_globo1MouseEntered
 
     private void globo1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo1MouseExited
-        // TODO add your handling code here:
+        globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1.png")));
     }//GEN-LAST:event_globo1MouseExited
 
     private void globo1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo1MousePressed
-        // TODO add your handling code here:
+       globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1_press.png")));
     }//GEN-LAST:event_globo1MousePressed
 
     private void globo1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo1MouseReleased
-        // TODO add your handling code here:
+         globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1.png")));
     }//GEN-LAST:event_globo1MouseReleased
 
     private void globo2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo2MouseEntered
-        // TODO add your handling code here:
+        globo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo2_hover.png")));
     }//GEN-LAST:event_globo2MouseEntered
 
     private void globo2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo2MouseExited
-        // TODO add your handling code here:
+         globo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo2.png")));
     }//GEN-LAST:event_globo2MouseExited
 
     private void globo2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo2MousePressed
-        // TODO add your handling code here:
+        globo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo2_press.png")));
     }//GEN-LAST:event_globo2MousePressed
 
     private void globo2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo2MouseReleased
-        // TODO add your handling code here:
+        globo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo2.png")));
     }//GEN-LAST:event_globo2MouseReleased
 
     private void globo3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo3MouseEntered
-        // TODO add your handling code here:
+        globo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo3_hover.png")));
     }//GEN-LAST:event_globo3MouseEntered
 
     private void globo3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo3MouseExited
-        // TODO add your handling code here:
+        globo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo3.png")));
     }//GEN-LAST:event_globo3MouseExited
 
     private void globo3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo3MousePressed
-        // TODO add your handling code here:
+       globo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo3_press.png")));
     }//GEN-LAST:event_globo3MousePressed
 
     private void globo3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo3MouseReleased
-        // TODO add your handling code here:
+        globo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo3.png")));
     }//GEN-LAST:event_globo3MouseReleased
 
     private void globo4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo4MouseEntered
-        // TODO add your handling code here:
+        globo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo4_hover.png")));
     }//GEN-LAST:event_globo4MouseEntered
 
     private void globo4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo4MouseExited
-        // TODO add your handling code here:
+        globo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo4.png")));
     }//GEN-LAST:event_globo4MouseExited
 
     private void globo4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo4MousePressed
-        // TODO add your handling code here:
+        globo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo4_press.png")));
     }//GEN-LAST:event_globo4MousePressed
 
     private void globo4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo4MouseReleased
-        // TODO add your handling code here:
+        globo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo4.png")));
     }//GEN-LAST:event_globo4MouseReleased
 
     private void globo5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo5MouseEntered
-        // TODO add your handling code here:
+        globo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo5_hover.png")));
     }//GEN-LAST:event_globo5MouseEntered
 
     private void globo5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo5MouseExited
-        // TODO add your handling code here:
+        globo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo5.png")));
     }//GEN-LAST:event_globo5MouseExited
 
     private void globo5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo5MousePressed
-        // TODO add your handling code here:
+        globo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo5_press.png")));
     }//GEN-LAST:event_globo5MousePressed
 
     private void globo5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo5MouseReleased
-        // TODO add your handling code here:
+        globo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo5.png")));
     }//GEN-LAST:event_globo5MouseReleased
 
     private void globo6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo6MouseEntered
-        // TODO add your handling code here:
+        globo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo6_hover.png")));
     }//GEN-LAST:event_globo6MouseEntered
 
     private void globo6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo6MouseExited
-        // TODO add your handling code here:
+        globo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo6.png")));
     }//GEN-LAST:event_globo6MouseExited
 
     private void globo6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo6MousePressed
-        // TODO add your handling code here:
+        globo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo6_press.png")));
     }//GEN-LAST:event_globo6MousePressed
 
     private void globo6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo6MouseReleased
-        // TODO add your handling code here:
+         globo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo6.png")));
     }//GEN-LAST:event_globo6MouseReleased
 
     private void globo7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo7MouseEntered
-        // TODO add your handling code here:
+        globo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo7_hover.png")));
     }//GEN-LAST:event_globo7MouseEntered
 
     private void globo7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo7MouseExited
-        // TODO add your handling code here:
+         globo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo7.png")));
     }//GEN-LAST:event_globo7MouseExited
 
     private void globo7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo7MousePressed
-        // TODO add your handling code here:
+        globo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo7_press.png")));
     }//GEN-LAST:event_globo7MousePressed
 
     private void globo7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo7MouseReleased
-        // TODO add your handling code here:
+        globo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo7.png")));
     }//GEN-LAST:event_globo7MouseReleased
 
     private void globo8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo8MouseEntered
-        // TODO add your handling code here:
+        globo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo8_hover.png")));
     }//GEN-LAST:event_globo8MouseEntered
 
     private void globo8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo8MouseExited
-        // TODO add your handling code here:
+        globo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo8.png")));
     }//GEN-LAST:event_globo8MouseExited
 
     private void globo8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo8MousePressed
-        // TODO add your handling code here:
+        globo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo8_press.png")));
     }//GEN-LAST:event_globo8MousePressed
 
     private void globo8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo8MouseReleased
-        // TODO add your handling code here:
+        globo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo8.png")));
     }//GEN-LAST:event_globo8MouseReleased
 
     private void globo9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo9MouseEntered
-        // TODO add your handling code here:
+       globo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo9_hover.png")));
     }//GEN-LAST:event_globo9MouseEntered
 
     private void globo9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo9MouseExited
-        // TODO add your handling code here:
+        globo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo9.png")));// TODO add your handling code here:
     }//GEN-LAST:event_globo9MouseExited
 
     private void globo9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo9MousePressed
-        // TODO add your handling code here:
+        globo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo9_press.png")));
     }//GEN-LAST:event_globo9MousePressed
 
     private void globo9MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo9MouseReleased
-        // TODO add your handling code here:
+        globo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo9.png")));
     }//GEN-LAST:event_globo9MouseReleased
 
     private void globo10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MouseEntered
-        // TODO add your handling code here:
+        globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1_hover.png")));
     }//GEN-LAST:event_globo10MouseEntered
 
     private void globo10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MouseExited
-        // TODO add your handling code here:
+        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10.png")));
     }//GEN-LAST:event_globo10MouseExited
 
     private void globo10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MousePressed
-        // TODO add your handling code here:
+        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10_press.png")));
     }//GEN-LAST:event_globo10MousePressed
 
     private void globo10MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MouseReleased
-        // TODO add your handling code here:
+        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10.png")));
     }//GEN-LAST:event_globo10MouseReleased
 
     private void globo11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MouseEntered
-        // TODO add your handling code here:
+        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10_hover.png")));
     }//GEN-LAST:event_globo11MouseEntered
 
     private void globo11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MouseExited
-        // TODO add your handling code here:
+        globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11.png")));
     }//GEN-LAST:event_globo11MouseExited
 
     private void globo11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MousePressed
-        // TODO add your handling code here:
+       globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11_press.png")));
     }//GEN-LAST:event_globo11MousePressed
 
     private void globo11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo11MouseReleased
-        // TODO add your handling code here:
+       globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11.png")));
     }//GEN-LAST:event_globo11MouseReleased
 
     private void globo12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MouseEntered
-        // TODO add your handling code here:
+        globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11_hover.png")));
     }//GEN-LAST:event_globo12MouseEntered
 
     private void globo12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MouseExited
-        // TODO add your handling code here:
+         globo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo12.png")));
     }//GEN-LAST:event_globo12MouseExited
 
     private void globo12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MousePressed
-        // TODO add your handling code here:
+        globo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo12_press.png")));
     }//GEN-LAST:event_globo12MousePressed
 
     private void globo12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MouseReleased
-        // TODO add your handling code here:
+        globo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo12.png")));
     }//GEN-LAST:event_globo12MouseReleased
 
     private void globo13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo13MouseEntered
-        // TODO add your handling code here:
+       globo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo13_hover.png")));
     }//GEN-LAST:event_globo13MouseEntered
 
     private void globo13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo13MouseExited
-        // TODO add your handling code here:
+         globo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo13.png")));
     }//GEN-LAST:event_globo13MouseExited
 
     private void globo13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo13MousePressed
-        // TODO add your handling code here:
+        globo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo13_press.png")));
     }//GEN-LAST:event_globo13MousePressed
 
     private void globo13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo13MouseReleased
-        // TODO add your handling code here:
+         globo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo13.png")));
     }//GEN-LAST:event_globo13MouseReleased
 
     private void globo14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo14MouseEntered
-        // TODO add your handling code here:
+        globo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo14_hover.png")));
     }//GEN-LAST:event_globo14MouseEntered
 
     private void globo14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo14MouseExited
-        // TODO add your handling code here:
+         globo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo14.png")));
     }//GEN-LAST:event_globo14MouseExited
 
     private void globo14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo14MousePressed
-        // TODO add your handling code here:
+        globo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo14_press.png")));
     }//GEN-LAST:event_globo14MousePressed
 
     private void globo14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo14MouseReleased
-        // TODO add your handling code here:
+         globo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo14.png")));
     }//GEN-LAST:event_globo14MouseReleased
 
     private void globo15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo15MouseEntered
-        // TODO add your handling code here:
+        globo15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo15_hover.png")));
     }//GEN-LAST:event_globo15MouseEntered
 
     private void globo15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo15MouseExited
-        // TODO add your handling code here:
+         globo15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo15.png")));
     }//GEN-LAST:event_globo15MouseExited
 
     private void globo15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo15MousePressed
-        // TODO add your handling code here:
+        globo15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo15_press.png")));
     }//GEN-LAST:event_globo15MousePressed
 
     private void globo15MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo15MouseReleased
-        // TODO add your handling code here:
+         globo15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo15.png")));
     }//GEN-LAST:event_globo15MouseReleased
 
     private void globo16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo16MouseEntered
-        // TODO add your handling code here:
+        globo16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo16_hover.png")));
     }//GEN-LAST:event_globo16MouseEntered
 
     private void globo16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo16MouseExited
-        // TODO add your handling code here:
+         globo16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo16.png")));
     }//GEN-LAST:event_globo16MouseExited
 
     private void globo16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo16MousePressed
-        // TODO add your handling code here:
+        globo16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo16_press.png")));
     }//GEN-LAST:event_globo16MousePressed
 
     private void globo16MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo16MouseReleased
-        // TODO add your handling code here:
+         globo16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo16.png")));
     }//GEN-LAST:event_globo16MouseReleased
 
     private void globo17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo17MouseEntered
-        // TODO add your handling code here:
+        globo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo17_hover.png")));
     }//GEN-LAST:event_globo17MouseEntered
 
     private void globo17MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo17MouseExited
-        // TODO add your handling code here:
+         globo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo17.png")));
     }//GEN-LAST:event_globo17MouseExited
 
     private void globo17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo17MousePressed
-        // TODO add your handling code here:
+        globo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo17_press.png")));
     }//GEN-LAST:event_globo17MousePressed
 
     private void globo17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo17MouseReleased
-        // TODO add your handling code here:
+         globo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo17.png")));
     }//GEN-LAST:event_globo17MouseReleased
 
     private void globo18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo18MouseEntered
-        // TODO add your handling code here:
+       globo18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo18_hover.png")));
     }//GEN-LAST:event_globo18MouseEntered
 
     private void globo18MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo18MouseExited
-        // TODO add your handling code here:
+         globo18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo18.png")));
     }//GEN-LAST:event_globo18MouseExited
 
     private void globo18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo18MousePressed
-        // TODO add your handling code here:
+        globo18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo18_press.png")));
     }//GEN-LAST:event_globo18MousePressed
 
     private void globo18MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo18MouseReleased
-        // TODO add your handling code here:
+         globo18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo18.png")));
     }//GEN-LAST:event_globo18MouseReleased
 
     private void globo19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo19MouseEntered
-        // TODO add your handling code here:
+        globo19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo19_hover.png")));
     }//GEN-LAST:event_globo19MouseEntered
 
     private void globo19MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo19MouseExited
-        // TODO add your handling code here:
+         globo19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo19.png")));
     }//GEN-LAST:event_globo19MouseExited
 
     private void globo19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo19MousePressed
-        // TODO add your handling code here:
+        globo19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo19_press.png")));
     }//GEN-LAST:event_globo19MousePressed
 
     private void globo19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo19MouseReleased
-        // TODO add your handling code here:
+         globo19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo19.png")));
     }//GEN-LAST:event_globo19MouseReleased
 
     private void globo20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo20MouseEntered
-        // TODO add your handling code here:
+        globo20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo20_hover.png")));
     }//GEN-LAST:event_globo20MouseEntered
 
     private void globo20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo20MouseExited
-        // TODO add your handling code here:
+         globo20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo20.png")));
     }//GEN-LAST:event_globo20MouseExited
 
     private void globo20MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo20MousePressed
-        // TODO add your handling code here:
+        globo20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo20_press.png")));
     }//GEN-LAST:event_globo20MousePressed
 
     private void globo20MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo20MouseReleased
-        // TODO add your handling code here:
+         globo20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo20.png")));
     }//GEN-LAST:event_globo20MouseReleased
 
     private void globo21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MouseEntered
-        // TODO add your handling code here:
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_hover.png")));
     }//GEN-LAST:event_globo21MouseEntered
 
     private void globo21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MouseExited
-        // TODO add your handling code here:
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_hover.png")));
     }//GEN-LAST:event_globo21MouseExited
 
     private void globo21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MousePressed
-        // TODO add your handling code here:
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_press.png")));
     }//GEN-LAST:event_globo21MousePressed
 
     private void globo21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MouseReleased
-        // TODO add your handling code here:
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_hover.png")));
     }//GEN-LAST:event_globo21MouseReleased
 
     private void globo22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseEntered
-        // TODO add your handling code here:
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_hover.png")));
     }//GEN-LAST:event_globo22MouseEntered
 
     private void globo22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseExited
-        // TODO add your handling code here:
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_hover.png")));
     }//GEN-LAST:event_globo22MouseExited
 
     private void globo22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MousePressed
-        // TODO add your handling code here:
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_press.png")));
     }//GEN-LAST:event_globo22MousePressed
 
     private void globo22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseReleased
-        // TODO add your handling code here:
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_hover.png")));
     }//GEN-LAST:event_globo22MouseReleased
 
     private void globo23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseEntered
-        // TODO add your handling code here:
+        globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_hover.png")));
     }//GEN-LAST:event_globo23MouseEntered
 
     private void globo23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseExited
-        // TODO add your handling code here:
+        globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_hover.png")));
     }//GEN-LAST:event_globo23MouseExited
 
     private void globo23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MousePressed
-        // TODO add your handling code here:
+       globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_press.png")));
     }//GEN-LAST:event_globo23MousePressed
 
     private void globo23MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseReleased
-        // TODO add your handling code here:
+       globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_hover.png")));
     }//GEN-LAST:event_globo23MouseReleased
 
     private void globo24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseEntered
-        // TODO add your handling code here:
+       globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_hover.png")));
     }//GEN-LAST:event_globo24MouseEntered
 
     private void globo24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseExited
-        // TODO add your handling code here:
+        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_hover.png")));
     }//GEN-LAST:event_globo24MouseExited
 
     private void globo24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MousePressed
-        // TODO add your handling code here:
+        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_press.png")));
     }//GEN-LAST:event_globo24MousePressed
 
     private void globo24MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseReleased
-        // TODO add your handling code here:
+        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_hover.png")));
     }//GEN-LAST:event_globo24MouseReleased
 
     private void globo25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseEntered
-        // TODO add your handling code here:
+        globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_hover.png")));
     }//GEN-LAST:event_globo25MouseEntered
 
     private void globo25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseExited
-        // TODO add your handling code here:
+        globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_hover.png")));
     }//GEN-LAST:event_globo25MouseExited
 
     private void globo25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MousePressed
-        // TODO add your handling code here:
+        globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_press.png")));
     }//GEN-LAST:event_globo25MousePressed
 
     private void globo25MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseReleased
-        // TODO add your handling code here:
+       globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_hover.png")));
     }//GEN-LAST:event_globo25MouseReleased
 
     private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
