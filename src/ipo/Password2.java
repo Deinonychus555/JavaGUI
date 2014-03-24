@@ -914,7 +914,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo9MouseReleased
 
     private void globo10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MouseEntered
-        globo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo1_hover.png")));
+        globo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo10_hover.png")));
     }//GEN-LAST:event_globo10MouseEntered
 
     private void globo10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo10MouseExited
@@ -946,7 +946,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo11MouseReleased
 
     private void globo12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MouseEntered
-        globo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo11_hover.png")));
+        globo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo12_hover.png")));
     }//GEN-LAST:event_globo12MouseEntered
 
     private void globo12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo12MouseExited
@@ -1094,7 +1094,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo21MouseEntered
 
     private void globo21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MouseExited
-        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_hover.png")));
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21.png")));
     }//GEN-LAST:event_globo21MouseExited
 
     private void globo21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MousePressed
@@ -1102,7 +1102,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo21MousePressed
 
     private void globo21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo21MouseReleased
-        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21_hover.png")));
+        globo21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo21.png")));
     }//GEN-LAST:event_globo21MouseReleased
 
     private void globo22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseEntered
@@ -1110,7 +1110,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo22MouseEntered
 
     private void globo22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseExited
-        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_hover.png")));
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22.png")));
     }//GEN-LAST:event_globo22MouseExited
 
     private void globo22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MousePressed
@@ -1118,7 +1118,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo22MousePressed
 
     private void globo22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo22MouseReleased
-        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22_hover.png")));
+        globo22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo22.png")));
     }//GEN-LAST:event_globo22MouseReleased
 
     private void globo23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseEntered
@@ -1126,7 +1126,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo23MouseEntered
 
     private void globo23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseExited
-        globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_hover.png")));
+        globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23.png")));
     }//GEN-LAST:event_globo23MouseExited
 
     private void globo23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MousePressed
@@ -1134,7 +1134,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo23MousePressed
 
     private void globo23MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo23MouseReleased
-       globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23_hover.png")));
+       globo23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo23.png")));
     }//GEN-LAST:event_globo23MouseReleased
 
     private void globo24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseEntered
@@ -1142,7 +1142,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo24MouseEntered
 
     private void globo24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseExited
-        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_hover.png")));
+        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24.png")));
     }//GEN-LAST:event_globo24MouseExited
 
     private void globo24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MousePressed
@@ -1150,7 +1150,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo24MousePressed
 
     private void globo24MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo24MouseReleased
-        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24_hover.png")));
+        globo24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo24.png")));
     }//GEN-LAST:event_globo24MouseReleased
 
     private void globo25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseEntered
@@ -1158,7 +1158,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo25MouseEntered
 
     private void globo25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseExited
-        globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_hover.png")));
+        globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25.png")));
     }//GEN-LAST:event_globo25MouseExited
 
     private void globo25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MousePressed
@@ -1166,7 +1166,7 @@ public class Password2 extends javax.swing.JFrame {
     }//GEN-LAST:event_globo25MousePressed
 
     private void globo25MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_globo25MouseReleased
-       globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25_hover.png")));
+       globo25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo25.png")));
     }//GEN-LAST:event_globo25MouseReleased
 
     private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
