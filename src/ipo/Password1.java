@@ -113,7 +113,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_b.png"))); // NOI18N
         letra2.setBorder(null);
         letra2.setBorderPainted(false);
         letra2.setContentAreaFilled(false);
@@ -137,7 +137,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_c.png"))); // NOI18N
         letra3.setBorder(null);
         letra3.setBorderPainted(false);
         letra3.setContentAreaFilled(false);
@@ -155,8 +155,13 @@ public class Password1 extends javax.swing.JFrame {
                 letra3MouseReleased(evt);
             }
         });
+        letra3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                letra3ActionPerformed(evt);
+            }
+        });
 
-        letra4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_d.png"))); // NOI18N
         letra4.setBorder(null);
         letra4.setBorderPainted(false);
         letra4.setContentAreaFilled(false);
@@ -175,7 +180,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_e.png"))); // NOI18N
         letra5.setBorder(null);
         letra5.setBorderPainted(false);
         letra5.setContentAreaFilled(false);
@@ -194,7 +199,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_f.png"))); // NOI18N
         letra6.setBorder(null);
         letra6.setBorderPainted(false);
         letra6.setContentAreaFilled(false);
@@ -213,7 +218,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_g.png"))); // NOI18N
         letra7.setBorder(null);
         letra7.setBorderPainted(false);
         letra7.setContentAreaFilled(false);
@@ -232,7 +237,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_h.png"))); // NOI18N
         letra8.setBorder(null);
         letra8.setBorderPainted(false);
         letra8.setContentAreaFilled(false);
@@ -251,7 +256,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_i.png"))); // NOI18N
         letra9.setBorder(null);
         letra9.setBorderPainted(false);
         letra9.setContentAreaFilled(false);
@@ -270,7 +275,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_j.png"))); // NOI18N
         letra10.setBorder(null);
         letra10.setBorderPainted(false);
         letra10.setContentAreaFilled(false);
@@ -289,7 +294,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_k.png"))); // NOI18N
         letra11.setBorder(null);
         letra11.setBorderPainted(false);
         letra11.setContentAreaFilled(false);
@@ -308,7 +313,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_l.png"))); // NOI18N
         letra12.setBorder(null);
         letra12.setBorderPainted(false);
         letra12.setContentAreaFilled(false);
@@ -327,7 +332,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_m.png"))); // NOI18N
         letra13.setBorder(null);
         letra13.setBorderPainted(false);
         letra13.setContentAreaFilled(false);
@@ -346,7 +351,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_n.png"))); // NOI18N
         letra14.setBorder(null);
         letra14.setBorderPainted(false);
         letra14.setContentAreaFilled(false);
@@ -365,7 +370,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_nn.png"))); // NOI18N
         letra15.setBorder(null);
         letra15.setBorderPainted(false);
         letra15.setContentAreaFilled(false);
@@ -384,7 +389,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_o.png"))); // NOI18N
         letra16.setBorder(null);
         letra16.setBorderPainted(false);
         letra16.setContentAreaFilled(false);
@@ -403,7 +408,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_p.png"))); // NOI18N
         letra17.setBorder(null);
         letra17.setBorderPainted(false);
         letra17.setContentAreaFilled(false);
@@ -422,7 +427,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_q.png"))); // NOI18N
         letra18.setBorder(null);
         letra18.setBorderPainted(false);
         letra18.setContentAreaFilled(false);
@@ -441,7 +446,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_r.png"))); // NOI18N
         letra19.setBorder(null);
         letra19.setBorderPainted(false);
         letra19.setContentAreaFilled(false);
@@ -460,7 +465,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_s.png"))); // NOI18N
         letra20.setBorder(null);
         letra20.setBorderPainted(false);
         letra20.setContentAreaFilled(false);
@@ -479,7 +484,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_t.png"))); // NOI18N
         letra21.setBorder(null);
         letra21.setBorderPainted(false);
         letra21.setContentAreaFilled(false);
@@ -498,7 +503,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_u.png"))); // NOI18N
         letra22.setBorder(null);
         letra22.setBorderPainted(false);
         letra22.setContentAreaFilled(false);
@@ -517,7 +522,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_v.png"))); // NOI18N
         letra23.setBorder(null);
         letra23.setBorderPainted(false);
         letra23.setContentAreaFilled(false);
@@ -536,7 +541,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_w.png"))); // NOI18N
         letra24.setBorder(null);
         letra24.setBorderPainted(false);
         letra24.setContentAreaFilled(false);
@@ -555,7 +560,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_x.png"))); // NOI18N
         letra25.setBorder(null);
         letra25.setBorderPainted(false);
         letra25.setContentAreaFilled(false);
@@ -574,7 +579,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_y.png"))); // NOI18N
         letra26.setBorder(null);
         letra26.setBorderPainted(false);
         letra26.setContentAreaFilled(false);
@@ -593,7 +598,7 @@ public class Password1 extends javax.swing.JFrame {
             }
         });
 
-        letra27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_a.png"))); // NOI18N
+        letra27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/letras_z.png"))); // NOI18N
         letra27.setBorder(null);
         letra27.setBorderPainted(false);
         letra27.setContentAreaFilled(false);
@@ -1340,6 +1345,10 @@ public class Password1 extends javax.swing.JFrame {
     private void letra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letra2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_letra2ActionPerformed
+
+    private void letra3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letra3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_letra3ActionPerformed
 
     /**
      * @param args the command line arguments
