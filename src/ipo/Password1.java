@@ -59,7 +59,7 @@ public class Password1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new JPanelCustom("/img/fondo_password1.jpg");
         letra1 = new javax.swing.JButton();
         letra2 = new javax.swing.JButton();
         letra3 = new javax.swing.JButton();
