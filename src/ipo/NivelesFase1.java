@@ -60,7 +60,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
     private void initComponents() {
 
         versionInfo1 = new com.alee.managers.version.VersionInfo();
-        Fase1 = new JPanelCustom("/img/clase.png");
+        Fase1 = new JPanelCustom("/img/fondoClase.png");
         nivel1fase1 = new javax.swing.JButton();
         nivel2fase1 = new javax.swing.JButton();
         nivel3fase1 = new javax.swing.JButton();

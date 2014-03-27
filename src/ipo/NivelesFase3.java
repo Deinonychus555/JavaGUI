@@ -59,7 +59,7 @@ public class NivelesFase3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Fase3 = new JPanelCustom("/img/piramide.png");
+        Fase3 = new JPanelCustom("/img/fondoPiramide.png");
         nivel1fase3 = new javax.swing.JButton();
         nivel2fase3 = new javax.swing.JButton();
         nivel3fase3 = new javax.swing.JButton();

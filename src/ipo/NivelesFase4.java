@@ -59,7 +59,7 @@ public class NivelesFase4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Fase4 = new JPanelCustom("/img/selva.png");
+        Fase4 = new JPanelCustom("/img/fondoSelva.png");
         nivel1fase4 = new javax.swing.JButton();
         nivel2fase4 = new javax.swing.JButton();
         nivel3fase4 = new javax.swing.JButton();

@@ -327,7 +327,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
         });
 
-        webLabel1.setText("Lista de alumnos:");
+        webLabel1.setText("Seleccione un alumno de la lista:");
         webLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         webLabel2.setText("Progreso:");
