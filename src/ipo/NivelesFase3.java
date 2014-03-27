@@ -6,10 +6,7 @@
 
 package ipo;
 
-import com.alee.extended.painter.TitledBorderPainter;
-import com.alee.laf.button.WebButton;
-import com.alee.laf.text.WebPasswordField;
-import com.alee.laf.text.WebTextField;
+import JPanelsCustom.JPanelCustom;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Point;
@@ -62,7 +59,7 @@ public class NivelesFase3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Fase3 = new JPanelCustom("img/piramide.png");
+        Fase3 = new JPanelCustom("/img/piramide.png");
         nivel1fase3 = new javax.swing.JButton();
         nivel2fase3 = new javax.swing.JButton();
         nivel3fase3 = new javax.swing.JButton();

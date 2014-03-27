@@ -6,10 +6,7 @@
 
 package ipo;
 
-import com.alee.extended.painter.TitledBorderPainter;
-import com.alee.laf.button.WebButton;
-import com.alee.laf.text.WebPasswordField;
-import com.alee.laf.text.WebTextField;
+import JPanelsCustom.JPanelCustom;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Point;
@@ -63,7 +60,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
     private void initComponents() {
 
         versionInfo1 = new com.alee.managers.version.VersionInfo();
-        Fase1 = new JPanelCustom("img/clase.png");
+        Fase1 = new JPanelCustom("/img/clase.png");
         nivel1fase1 = new javax.swing.JButton();
         nivel2fase1 = new javax.swing.JButton();
         nivel3fase1 = new javax.swing.JButton();
