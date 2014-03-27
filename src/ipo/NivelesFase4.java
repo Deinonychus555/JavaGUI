@@ -62,11 +62,11 @@ public class NivelesFase4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new javax.swing.JPanel();
+        Fase4 = new JPanelCustom("img/selva.png");
         nivel1fase4 = new javax.swing.JButton();
         nivel2fase4 = new javax.swing.JButton();
         nivel3fase4 = new javax.swing.JButton();
-        webLabel1 = new com.alee.laf.label.WebLabel();
+        TituloFase4 = new com.alee.laf.label.WebLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -74,9 +74,9 @@ public class NivelesFase4 extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        jPanel4.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel4.setMaximumSize(new java.awt.Dimension(800, 600));
-        jPanel4.setMinimumSize(new java.awt.Dimension(800, 600));
+        Fase4.setBackground(new java.awt.Color(204, 255, 204));
+        Fase4.setMaximumSize(new java.awt.Dimension(800, 600));
+        Fase4.setMinimumSize(new java.awt.Dimension(800, 600));
 
         nivel1fase4.setFont(font_boton_niveles);
         nivel1fase4.setForeground(new java.awt.Color(255, 255, 255));
@@ -154,40 +154,40 @@ public class NivelesFase4 extends javax.swing.JFrame {
             }
         });
 
-        webLabel1.setForeground(new java.awt.Color(0, 51, 255));
-        webLabel1.setText("Escoge un nivel");
-        webLabel1.setFont(font_titulo_niveles);
+        TituloFase4.setForeground(new java.awt.Color(0, 51, 255));
+        TituloFase4.setText("Escoge un nivel");
+        TituloFase4.setFont(font_titulo_niveles);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout Fase4Layout = new javax.swing.GroupLayout(Fase4);
+        Fase4.setLayout(Fase4Layout);
+        Fase4Layout.setHorizontalGroup(
+            Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Fase4Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
                 .addComponent(nivel1fase4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addComponent(nivel2fase4)
                 .addGap(148, 148, 148))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(Fase4Layout.createSequentialGroup()
+                .addGroup(Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(312, 312, 312)
                         .addComponent(nivel3fase4))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(234, 234, 234)
-                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+        Fase4Layout.setVerticalGroup(
+            Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Fase4Layout.createSequentialGroup()
+                .addGroup(Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
                         .addComponent(nivel1fase4))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(nivel2fase4)))
                 .addGap(66, 66, 66)
@@ -201,14 +201,14 @@ public class NivelesFase4 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Fase4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Fase4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -320,10 +320,10 @@ public class NivelesFase4 extends javax.swing.JFrame {
 
      private javax.swing.JButton boton_sonido;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel Fase4;
+    private com.alee.laf.label.WebLabel TituloFase4;
     private javax.swing.JButton nivel1fase4;
     private javax.swing.JButton nivel2fase4;
     private javax.swing.JButton nivel3fase4;
-    private com.alee.laf.label.WebLabel webLabel1;
     // End of variables declaration//GEN-END:variables
 }
