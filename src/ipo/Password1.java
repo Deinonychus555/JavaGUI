@@ -15,6 +15,7 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.io.InputStream;
 import java.awt.Dimension;
+import javax.imageio.ImageIO;
 
 
 public class Password1 extends javax.swing.JFrame {
@@ -105,6 +106,9 @@ public class Password1 extends javax.swing.JFrame {
         letra1.setBorderPainted(false);
         letra1.setContentAreaFilled(false);
         letra1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                letra1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 letra1MouseEntered(evt);
             }
@@ -286,6 +290,9 @@ public class Password1 extends javax.swing.JFrame {
         letra10.setBorderPainted(false);
         letra10.setContentAreaFilled(false);
         letra10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                letra10MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 letra10MouseEntered(evt);
             }
@@ -362,6 +369,9 @@ public class Password1 extends javax.swing.JFrame {
         letra14.setBorderPainted(false);
         letra14.setContentAreaFilled(false);
         letra14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                letra14MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 letra14MouseEntered(evt);
             }
@@ -514,6 +524,9 @@ public class Password1 extends javax.swing.JFrame {
         letra22.setBorderPainted(false);
         letra22.setContentAreaFilled(false);
         letra22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                letra22MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 letra22MouseEntered(evt);
             }
@@ -1221,6 +1234,24 @@ public class Password1 extends javax.swing.JFrame {
     private void letra3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letra3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_letra3ActionPerformed
+
+    private void letra10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra10MouseClicked
+      
+       jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/JJ.png")));  
+        
+    }//GEN-LAST:event_letra10MouseClicked
+
+    private void letra22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra22MouseClicked
+         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/UU.png")));  
+    }//GEN-LAST:event_letra22MouseClicked
+
+    private void letra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra1MouseClicked
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AA.png")));  
+    }//GEN-LAST:event_letra1MouseClicked
+
+    private void letra14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra14MouseClicked
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/NNN.png")));  
+    }//GEN-LAST:event_letra14MouseClicked
 
     /**
      * @param args the command line arguments
