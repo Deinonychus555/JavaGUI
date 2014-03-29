@@ -589,17 +589,12 @@
                                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                          <Component id="boton_profe1" min="-2" pref="124" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                                          <Component id="boton_sonido" min="-2" pref="55" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="boton_profe1" min="-2" pref="124" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                  <Component id="boton_sonido" min="-2" pref="55" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -951,8 +946,9 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           <Component id="atras_login" min="-2" pref="68" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="home_login" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
@@ -989,7 +985,6 @@
                                   <Component id="boton_sonido1" min="-2" pref="55" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                                   <Component id="titulo_login" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1009,44 +1004,39 @@
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="alumno2" max="32767" attributes="0"/>
-                                      <Component id="alumno3" max="32767" attributes="0"/>
-                                      <Component id="alumno1" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="alumno6" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="alumno7" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="alumno5" min="-2" pref="149" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="alumno4" pref="0" max="32767" attributes="0"/>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="alumno8" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="alumno2" max="32767" attributes="0"/>
+                              <Component id="alumno3" max="32767" attributes="0"/>
+                              <Component id="alumno1" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="atras_login" min="-2" pref="58" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="alumno6" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="alumno7" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="alumno5" min="-2" pref="149" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="home_login" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="alumno4" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton4" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="alumno8" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="atras_login" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="home_login" min="-2" pref="65" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               </Group>

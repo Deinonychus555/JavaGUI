@@ -672,14 +672,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                                 .addComponent(boton_1A, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(1, 1, 1))
                             .addGroup(panel_inicioLayout.createSequentialGroup()
-                                .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panel_inicioLayout.createSequentialGroup()
-                                        .addGap(75, 75, 75)
-                                        .addComponent(boton_profe1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(panel_inicioLayout.createSequentialGroup()
-                                        .addGap(78, 78, 78)
-                                        .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, 0)))
+                                .addGap(75, 75, 75)
+                                .addComponent(boton_profe1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_inicioLayout.createSequentialGroup()
+                                .addGap(78, 78, 78)
+                                .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(panel_inicioLayout.createSequentialGroup()
                                 .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -858,8 +855,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addGroup(panel_loginLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(atras_login, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(home_login, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(home_login, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(panel_loginLayout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -888,8 +886,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                             .addGroup(panel_loginLayout.createSequentialGroup()
                                 .addComponent(boton_sonido1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(62, 62, 62)
-                                .addComponent(titulo_login)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(titulo_login)))))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         panel_loginLayout.setVerticalGroup(
@@ -902,33 +899,30 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addGap(30, 30, 30)
                 .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_loginLayout.createSequentialGroup()
+                        .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(alumno2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(alumno3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(alumno1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)
+                        .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(alumno6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(alumno7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(alumno5, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel_loginLayout.createSequentialGroup()
                         .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel_loginLayout.createSequentialGroup()
-                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(alumno2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(alumno3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(alumno1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(51, 51, 51)
-                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(alumno6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(alumno7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(alumno5, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(panel_loginLayout.createSequentialGroup()
-                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panel_loginLayout.createSequentialGroup()
-                                        .addComponent(jButton3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(panel_loginLayout.createSequentialGroup()
-                                        .addComponent(alumno4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addGap(51, 51, 51)))
-                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(alumno8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(40, 40, 40)
-                        .addComponent(atras_login, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_loginLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(home_login, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(alumno4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addGap(51, 51, 51)))
+                        .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(alumno8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(33, 33, 33)
+                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(atras_login, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(home_login, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
         );
 
@@ -1083,7 +1077,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             boton_sonido1.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
             musica_isActive = true;
             /* CONTINUAR MUSICA */
-           activarMusica();
+            activarMusica();
         }
     }//GEN-LAST:event_boton_sonido1MouseReleased
 
@@ -1204,45 +1198,46 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             modelo_tabla_resultados.setValueAt(elegido.getFallos(i), i, 2);
         }
     }
-    
+
     /**
      * Activar música.
      */
-    public void activarMusica(){
-         try {
-                if (control_pausado) {
-                    control.play();
-                } else {
-                    control.resume();
-                }
-                control_pausado = false;
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+    public void activarMusica() {
+        try {
+            if (control_pausado) {
+                control.play();
+            } else {
+                control.resume();
             }
+            control_pausado = false;
+        } catch (BasicPlayerException ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
+
     /**
      * Pausar Musica.
      */
-    public void pausarMusica(){
+    public void pausarMusica() {
         try {
-                control.pause();
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            control.pause();
+        } catch (BasicPlayerException ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
+
     /**
      * Stop Musica.
      */
-    public void stopMusica(){
-         try {
-                    control.stop();
-                    control_pausado = true;
-                } catch (BasicPlayerException ex) {
-                    Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-                }
+    public void stopMusica() {
+        try {
+            control.stop();
+            control_pausado = true;
+        } catch (BasicPlayerException ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
     /**
      * Fin métodos de Javi.
      */
