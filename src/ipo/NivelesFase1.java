@@ -241,7 +241,7 @@ public class NivelesFase1 extends javax.swing.JFrame {
                         .addComponent(nivel1fase1)
                         .addGap(51, 51, 51)
                         .addComponent(nivel3fase1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                         .addComponent(backFase1)))
                 .addGap(40, 40, 40))
         );

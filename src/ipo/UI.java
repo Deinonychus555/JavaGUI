@@ -53,6 +53,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     boolean componentes_alumno_activados = false;
     /* Variables Juanan */
     /* Variables Oscar */
+    Font font_boton_niveles,font_titulo_niveles;
 
     /**
      * Creates new form UI.
@@ -114,6 +115,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         font_subtitulos = font.deriveFont(40f).deriveFont(Font.BOLD);
 
         /**
+         * Fuentes utilizadas por Oscar.
+         */
+        font_boton_niveles = font.deriveFont(30f).deriveFont(1);
+        font_titulo_niveles = font.deriveFont(50f).deriveFont(1);
+
+        /**
          * INICIAMOS LOS COMPONENTES.
          */
         initComponents();
@@ -124,6 +131,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_inicio.setVisible(true);
         panel_profesor.setVisible(false);
         panel_login.setVisible(false);
+        fase1.setVisible(false);
 
         /**
          * INICIAMOS LA MÚSICA.
@@ -213,6 +221,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         alumno7 = new javax.swing.JButton();
         alumno8 = new javax.swing.JButton();
         titulo_login = new javax.swing.JLabel();
+        fase1 = new JPanelCustom("/img/fondoClase.png");
+        nivel1fase1 = new javax.swing.JButton();
+        nivel2fase1 = new javax.swing.JButton();
+        nivel3fase1 = new javax.swing.JButton();
+        nivel4fase1 = new javax.swing.JButton();
+        TituloFase1 = new com.alee.laf.label.WebLabel();
+        backFase1 = new javax.swing.JButton();
+        homeFase1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
@@ -507,7 +523,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(boton_atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(259, 259, 259)
                 .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(353, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_profesorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -703,7 +719,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addGroup(panel_inicioLayout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(label_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         panel_inicioLayout.setVerticalGroup(
             panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -733,7 +749,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(boton_1B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(boton_2A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(boton_2B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         panel_login.setBackground(new java.awt.Color(195, 226, 226));
@@ -926,29 +942,208 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addGap(51, 51, 51))
         );
 
+        fase1.setBackground(new java.awt.Color(204, 255, 204));
+        fase1.setMaximumSize(new java.awt.Dimension(800, 600));
+        fase1.setMinimumSize(new java.awt.Dimension(800, 600));
+
+        nivel1fase1.setFont(font_boton_niveles);
+        nivel1fase1.setForeground(new java.awt.Color(255, 255, 255));
+        nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue.png"))); // NOI18N
+        nivel1fase1.setText("Nivel 1");
+        nivel1fase1.setBorderPainted(false);
+        nivel1fase1.setContentAreaFilled(false);
+        nivel1fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel1fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel1fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel1fase1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel1fase1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel1fase1MouseReleased(evt);
+            }
+        });
+
+        nivel2fase1.setFont(font_boton_niveles);
+        nivel2fase1.setForeground(new java.awt.Color(255, 255, 255));
+        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green.png"))); // NOI18N
+        nivel2fase1.setText("Nivel 2");
+        nivel2fase1.setBorder(null);
+        nivel2fase1.setBorderPainted(false);
+        nivel2fase1.setContentAreaFilled(false);
+        nivel2fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel2fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel2fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel2fase1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel2fase1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel2fase1MouseReleased(evt);
+            }
+        });
+
+        nivel3fase1.setFont(font_boton_niveles);
+        nivel3fase1.setForeground(new java.awt.Color(255, 255, 255));
+        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_red.png"))); // NOI18N
+        nivel3fase1.setText("Nivel 3");
+        nivel3fase1.setBorderPainted(false);
+        nivel3fase1.setContentAreaFilled(false);
+        nivel3fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel3fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel3fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel3fase1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel3fase1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel3fase1MouseReleased(evt);
+            }
+        });
+        nivel3fase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel3fase1ActionPerformed(evt);
+            }
+        });
+
+        nivel4fase1.setFont(font_boton_niveles);
+        nivel4fase1.setForeground(new java.awt.Color(255, 255, 255));
+        nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow.png"))); // NOI18N
+        nivel4fase1.setText("Nivel 4");
+        nivel4fase1.setBorderPainted(false);
+        nivel4fase1.setContentAreaFilled(false);
+        nivel4fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel4fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel4fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel4fase1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel4fase1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel4fase1MouseReleased(evt);
+            }
+        });
+        nivel4fase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel4fase1ActionPerformed(evt);
+            }
+        });
+
+        TituloFase1.setForeground(new java.awt.Color(0, 51, 255));
+        TituloFase1.setText("Escoge un nivel");
+        TituloFase1.setFont(font_titulo_niveles);
+
+        backFase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backFase1.setBorderPainted(false);
+        backFase1.setContentAreaFilled(false);
+        backFase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backFase1MouseClicked(evt);
+            }
+        });
+
+        homeFase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeFase1.setBorderPainted(false);
+        homeFase1.setContentAreaFilled(false);
+        homeFase1.setEnabled(false);
+
+        javax.swing.GroupLayout fase1Layout = new javax.swing.GroupLayout(fase1);
+        fase1.setLayout(fase1Layout);
+        fase1Layout.setHorizontalGroup(
+            fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fase1Layout.createSequentialGroup()
+                .addGroup(fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fase1Layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
+                        .addGroup(fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nivel1fase1)
+                            .addComponent(nivel3fase1))
+                        .addGap(140, 140, 140)
+                        .addGroup(fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nivel2fase1)
+                            .addComponent(nivel4fase1)))
+                    .addGroup(fase1Layout.createSequentialGroup()
+                        .addGap(248, 248, 248)
+                        .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(fase1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backFase1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase1)))
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+        fase1Layout.setVerticalGroup(
+            fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fase1Layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(nivel2fase1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nivel4fase1)
+                .addGap(57, 57, 57))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fase1Layout.createSequentialGroup()
+                .addGroup(fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(fase1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeFase1))
+                    .addGroup(fase1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(nivel1fase1)
+                        .addGap(51, 51, 51)
+                        .addComponent(nivel3fase1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addComponent(backFase1)))
+                .addGap(40, 40, 40))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_profesor, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addComponent(fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         pack();
@@ -1093,6 +1288,98 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void atras_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atras_loginMouseExited
         atras_login.setIcon(new ImageIcon(getClass().getResource("/img/back.png")));
     }//GEN-LAST:event_atras_loginMouseExited
+
+    private void nivel1fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseEntered
+        // TODO add your handling cocircle_blue_pulsadode here:
+        nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_hover.png")));
+    }//GEN-LAST:event_nivel1fase1MouseEntered
+
+    private void nivel1fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseExited
+        // TODO add your handling code here:
+        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel1fase1MouseExited
+
+    private void nivel1fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MousePressed
+        // TODO add your handling code here:
+        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue_pulsado.png")));
+    }//GEN-LAST:event_nivel1fase1MousePressed
+
+    private void nivel1fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase1MouseReleased
+        // TODO add your handling code here:
+        nivel1fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel1fase1MouseReleased
+
+    private void nivel2fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseEntered
+        // TODO add your handling code here:
+        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_hover.png")));
+    }//GEN-LAST:event_nivel2fase1MouseEntered
+
+    private void nivel2fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseExited
+        // TODO add your handling code here:
+        nivel2fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel2fase1MouseExited
+
+    private void nivel2fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MousePressed
+        // TODO add your handling code here:
+        nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_pulsado.png")));
+    }//GEN-LAST:event_nivel2fase1MousePressed
+
+    private void nivel2fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase1MouseReleased
+        // TODO add your handling code here:
+        nivel2fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel2fase1MouseReleased
+
+    private void nivel3fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseEntered
+        // TODO add your handling code here:
+        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_red_hover.png")));
+    }//GEN-LAST:event_nivel3fase1MouseEntered
+
+    private void nivel3fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseExited
+        // TODO add your handling code here:
+        nivel3fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_red.png")));
+    }//GEN-LAST:event_nivel3fase1MouseExited
+
+    private void nivel3fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MousePressed
+        // TODO add your handling code here:
+        nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_red_pulsado.png")));
+    }//GEN-LAST:event_nivel3fase1MousePressed
+
+    private void nivel3fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase1MouseReleased
+        // TODO add your handling code here:
+        nivel3fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_red.png")));
+    }//GEN-LAST:event_nivel3fase1MouseReleased
+
+    private void nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel3fase1ActionPerformed
+
+    private void nivel4fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseEntered
+        // TODO add your handling code here:
+        nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow_hover.png")));
+    }//GEN-LAST:event_nivel4fase1MouseEntered
+
+    private void nivel4fase1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseExited
+        // TODO add your handling code here:
+        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel4fase1MouseExited
+
+    private void nivel4fase1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MousePressed
+        // TODO add your handling code here:
+        nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow_pulsado.png")));
+    }//GEN-LAST:event_nivel4fase1MousePressed
+
+    private void nivel4fase1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseReleased
+        // TODO add your handling code here:
+        nivel4fase1.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel4fase1MouseReleased
+
+    private void nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel4fase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel4fase1ActionPerformed
+
+    private void backFase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backFase1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backFase1MouseClicked
 
     /**
      * Métodos de Javi.
@@ -1267,6 +1554,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.alee.laf.label.WebLabel TituloFase1;
     private javax.swing.JButton alumno1;
     private javax.swing.JButton alumno2;
     private javax.swing.JButton alumno3;
@@ -1277,6 +1565,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton alumno8;
     private com.alee.laf.text.WebTextField apellido_alumno_profe;
     private javax.swing.JButton atras_login;
+    private javax.swing.JButton backFase1;
     private com.alee.laf.button.WebButton boton_1A;
     private com.alee.laf.button.WebButton boton_1B;
     private com.alee.laf.button.WebButton boton_2A;
@@ -1291,7 +1580,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton boton_sonido;
     private javax.swing.JButton boton_sonido1;
     private com.alee.laf.text.WebTextField direccion_alumno_profe;
+    private javax.swing.JPanel fase1;
     private javax.swing.JButton foto_alumno;
+    private javax.swing.JButton homeFase1;
     private javax.swing.JButton home_login;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1312,6 +1603,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.label.WebLabel label_primaria;
     private javax.swing.JLabel label_telefono_alumno;
     private javax.swing.JList lista_nombres_alumnos;
+    private javax.swing.JButton nivel1fase1;
+    private javax.swing.JButton nivel2fase1;
+    private javax.swing.JButton nivel3fase1;
+    private javax.swing.JButton nivel4fase1;
     private com.alee.laf.text.WebTextField nombre_alumno_profe;
     private com.alee.laf.text.WebTextField nombre_profe;
     private javax.swing.JPanel panel_inicio;

@@ -28,7 +28,7 @@ public class Fases extends javax.swing.JFrame {
      */
     Cursor mickey;
     Font font_titulos, font_subtitulos;
-    String fontName = "/img/GinSSB60.ttf";
+    String fontName = "/img/palmemim.ttf";
     Font font;
     ImageIcon fondo;
     
@@ -52,7 +52,7 @@ public class Fases extends javax.swing.JFrame {
             font = new Font("Arial", Font.PLAIN, 14);
         }
         /*FIN FUENTE*/
-        font_titulos = font.deriveFont(20f).deriveFont(1);
+        font_titulos = font.deriveFont(25f).deriveFont(1);
         font_subtitulos = font.deriveFont(40f).deriveFont(1);
         
         
@@ -69,7 +69,7 @@ public class Fases extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jPanel1 =  new JPanelCustom("/img/fondo_fases.jpg");
+        panel_fases =  new JPanelCustom("/img/fondoFases.png");
         escuela = new javax.swing.JButton();
         barco = new javax.swing.JButton();
         piramide = new javax.swing.JButton();
@@ -77,19 +77,25 @@ public class Fases extends javax.swing.JFrame {
         biblioteca = new javax.swing.JButton();
         titulo_fases = new com.alee.laf.label.WebLabel();
         boton_sonido = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setFont(font_titulos);
-        jPanel1.setMaximumSize(new java.awt.Dimension(800, 600));
-        jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_fases.setFont(font_titulos);
+        panel_fases.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_fases.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_fases.setPreferredSize(new java.awt.Dimension(800, 600));
 
         escuela.setFont(font_titulos);
         escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png"))); // NOI18N
-        escuela.setText("La escuela\n de las letras");
         escuela.setBorder(null);
         escuela.setBorderPainted(false);
         escuela.setContentAreaFilled(false);
@@ -117,7 +123,6 @@ public class Fases extends javax.swing.JFrame {
 
         barco.setFont(font_titulos);
         barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png"))); // NOI18N
-        barco.setText("Viajando con las sílabas");
         barco.setBorder(null);
         barco.setBorderPainted(false);
         barco.setContentAreaFilled(false);
@@ -145,7 +150,6 @@ public class Fases extends javax.swing.JFrame {
 
         piramide.setFont(font_titulos);
         piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png"))); // NOI18N
-        piramide.setText("Descubriendo las palabras");
         piramide.setBorder(null);
         piramide.setBorderPainted(false);
         piramide.setContentAreaFilled(false);
@@ -176,7 +180,6 @@ public class Fases extends javax.swing.JFrame {
 
         selva.setFont(font_titulos);
         selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Selva.png"))); // NOI18N
-        selva.setText("Explorando las frases");
         selva.setBorder(null);
         selva.setBorderPainted(false);
         selva.setContentAreaFilled(false);
@@ -199,7 +202,6 @@ public class Fases extends javax.swing.JFrame {
 
         biblioteca.setFont(font_titulos);
         biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png"))); // NOI18N
-        biblioteca.setText("La biblioteca de textos");
         biblioteca.setBorder(null);
         biblioteca.setBorderPainted(false);
         biblioteca.setContentAreaFilled(false);
@@ -222,8 +224,7 @@ public class Fases extends javax.swing.JFrame {
 
         titulo_fases.setForeground(new java.awt.Color(0, 0, 255));
         titulo_fases.setText("¿Dónde quieres jugar hoy?");
-        titulo_fases.setFont(font_titulos
-        );
+        titulo_fases.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
 
         boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
         boton_sonido.setBorderPainted(false);
@@ -237,190 +238,151 @@ public class Fases extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(selva))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(escuela))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(barco)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(167, 167, 167)
-                                .addComponent(biblioteca))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(128, 128, 128)
-                                .addComponent(piramide))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(74, 74, 74))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(piramide))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(boton_sonido)
-                        .addGap(18, 18, 18)
-                        .addComponent(escuela, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(7, 7, 7)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(selva)
-                        .addContainerGap(21, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(biblioteca)
-                        .addGap(33, 33, 33))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85)
-                .addComponent(barco)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("PalMeMim", 1, 30)); // NOI18N
+        jLabel1.setText("<html><center>La escuela de <br> las letras</center></html>");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        escuela.getAccessibleContext().setAccessibleName("");
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("PalMeMim", 1, 30)); // NOI18N
+        jLabel2.setText("<html><center>Viajando con<br> las sílabas</center></html>");
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("PalMeMim", 1, 30)); // NOI18N
+        jLabel3.setText("<html><center>Descubriendo las<br> palabras</center></html>");
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("PalMeMim", 1, 30)); // NOI18N
+        jLabel4.setText("La biblioteca de textos");
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("PalMeMim", 1, 30)); // NOI18N
+        jLabel5.setText("Explorando las frases");
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+
+        javax.swing.GroupLayout panel_fasesLayout = new javax.swing.GroupLayout(panel_fases);
+        panel_fases.setLayout(panel_fasesLayout);
+        panel_fasesLayout.setHorizontalGroup(
+            panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_fasesLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(escuela))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                                .addComponent(barco)
+                                .addGap(335, 335, 335))
+                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                .addGap(101, 101, 101)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(panel_fasesLayout.createSequentialGroup()
+                .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(selva))
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_fasesLayout.createSequentialGroup()
+                        .addComponent(biblioteca)
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_fasesLayout.createSequentialGroup()
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(piramide)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28))))
+        );
+        panel_fasesLayout.setVerticalGroup(
+            panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_fasesLayout.createSequentialGroup()
+                .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                .addComponent(boton_sonido)
+                                .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                                        .addGap(67, 67, 67)
+                                        .addComponent(barco)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panel_fasesLayout.createSequentialGroup()
+                                        .addGap(41, 41, 41)
+                                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                                .addComponent(escuela, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                                .addComponent(piramide)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(biblioteca)
+                            .addComponent(selva))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_fasesLayout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(jLabel4))
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(8, 8, 8))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_fases, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_fases, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void escuelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escuelaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_escuelaActionPerformed
-
-    private void escuelaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseEntered
-         escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_hover.png")));
-    }//GEN-LAST:event_escuelaMouseEntered
-
-    private void escuelaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseExited
-        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png")));
-    }//GEN-LAST:event_escuelaMouseExited
-
-    private void barcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barcoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_barcoActionPerformed
-
-    private void barcoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseEntered
-        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_hover.png")));
-    }//GEN-LAST:event_barcoMouseEntered
-
-    private void barcoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseExited
-        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png")));
-    }//GEN-LAST:event_barcoMouseExited
-
-    private void barcoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMousePressed
-        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_press.png")));
-    }//GEN-LAST:event_barcoMousePressed
-
-    private void escuelaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMousePressed
-        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_press.png")));
-    }//GEN-LAST:event_escuelaMousePressed
-
-    private void barcoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseReleased
-        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png")));
-    }//GEN-LAST:event_barcoMouseReleased
-
-    private void escuelaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseReleased
-        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png")));
-    }//GEN-LAST:event_escuelaMouseReleased
-
-    private void piramideMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_piramideMouseClicked
-
-    private void piramideMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseEntered
-        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_hover.png")));
-    }//GEN-LAST:event_piramideMouseEntered
-
-    private void piramideMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseExited
-        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
-    }//GEN-LAST:event_piramideMouseExited
-
-    private void piramideMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMousePressed
-        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_press.png")));
-    }//GEN-LAST:event_piramideMousePressed
-
-    private void piramideMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseReleased
-        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
-    }//GEN-LAST:event_piramideMouseReleased
-
-    private void selvaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseEntered
-        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_hover.png")));
-    }//GEN-LAST:event_selvaMouseEntered
-
-    private void selvaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseExited
-        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
-    }//GEN-LAST:event_selvaMouseExited
-
-    private void selvaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMousePressed
-        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_press.png")));
-    }//GEN-LAST:event_selvaMousePressed
-
-    private void selvaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseReleased
-        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
-    }//GEN-LAST:event_selvaMouseReleased
-
-    private void bibliotecaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseEntered
-        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_hover.png")));
-    }//GEN-LAST:event_bibliotecaMouseEntered
-
-    private void bibliotecaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseExited
-        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
-    }//GEN-LAST:event_bibliotecaMouseExited
-
-    private void bibliotecaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMousePressed
-        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_press.png")));
-    }//GEN-LAST:event_bibliotecaMousePressed
-
-    private void bibliotecaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseReleased
-        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
-    }//GEN-LAST:event_bibliotecaMouseReleased
-
-    private void piramideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piramideActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_piramideActionPerformed
-
-    private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
-        /*if (musica_isActive) {
-            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
-        } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
-        }*/
-    }//GEN-LAST:event_boton_sonidoMousePressed
-
     private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
-       /* if (musica_isActive) { //Si está activa -> la desactivamos.
+        /* if (musica_isActive) { //Si está activa -> la desactivamos.
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
-            
+
             try {
                 control.pause();
             } catch (BasicPlayerException ex) {
@@ -428,7 +390,7 @@ public class Fases extends javax.swing.JFrame {
             }
         } else {
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
-           
+
             try {
                 if (control_pausado) {
                     control.play();
@@ -446,6 +408,110 @@ public class Fases extends javax.swing.JFrame {
             musica_isActive = true;
         }*/
     }//GEN-LAST:event_boton_sonidoMouseReleased
+
+    private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
+        /*if (musica_isActive) {
+            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }*/
+    }//GEN-LAST:event_boton_sonidoMousePressed
+
+    private void bibliotecaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseReleased
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
+    }//GEN-LAST:event_bibliotecaMouseReleased
+
+    private void bibliotecaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMousePressed
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_press.png")));
+    }//GEN-LAST:event_bibliotecaMousePressed
+
+    private void bibliotecaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseExited
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
+    }//GEN-LAST:event_bibliotecaMouseExited
+
+    private void bibliotecaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseEntered
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_hover.png")));
+    }//GEN-LAST:event_bibliotecaMouseEntered
+
+    private void selvaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseReleased
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
+    }//GEN-LAST:event_selvaMouseReleased
+
+    private void selvaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMousePressed
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_press.png")));
+    }//GEN-LAST:event_selvaMousePressed
+
+    private void selvaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseExited
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
+    }//GEN-LAST:event_selvaMouseExited
+
+    private void selvaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseEntered
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_hover.png")));
+    }//GEN-LAST:event_selvaMouseEntered
+
+    private void piramideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piramideActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piramideActionPerformed
+
+    private void piramideMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseReleased
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
+    }//GEN-LAST:event_piramideMouseReleased
+
+    private void piramideMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMousePressed
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_press.png")));
+    }//GEN-LAST:event_piramideMousePressed
+
+    private void piramideMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseExited
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
+    }//GEN-LAST:event_piramideMouseExited
+
+    private void piramideMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseEntered
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_hover.png")));
+    }//GEN-LAST:event_piramideMouseEntered
+
+    private void piramideMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piramideMouseClicked
+
+    private void barcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barcoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_barcoActionPerformed
+
+    private void barcoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseReleased
+        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png")));
+    }//GEN-LAST:event_barcoMouseReleased
+
+    private void barcoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMousePressed
+        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_press.png")));
+    }//GEN-LAST:event_barcoMousePressed
+
+    private void barcoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseExited
+        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png")));
+    }//GEN-LAST:event_barcoMouseExited
+
+    private void barcoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseEntered
+        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_hover.png")));
+    }//GEN-LAST:event_barcoMouseEntered
+
+    private void escuelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escuelaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_escuelaActionPerformed
+
+    private void escuelaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseReleased
+        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png")));
+    }//GEN-LAST:event_escuelaMouseReleased
+
+    private void escuelaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMousePressed
+        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_press.png")));
+    }//GEN-LAST:event_escuelaMousePressed
+
+    private void escuelaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseExited
+        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png")));
+    }//GEN-LAST:event_escuelaMouseExited
+
+    private void escuelaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseEntered
+        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_hover.png")));
+    }//GEN-LAST:event_escuelaMouseEntered
 
     /**
      * @param args the command line arguments
@@ -495,8 +561,15 @@ public class Fases extends javax.swing.JFrame {
     private javax.swing.JButton biblioteca;
     private javax.swing.JButton boton_sonido;
     private javax.swing.JButton escuela;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel panel_fases;
     private javax.swing.JButton piramide;
     private javax.swing.JButton selva;
     private com.alee.laf.label.WebLabel titulo_fases;
