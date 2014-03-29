@@ -31,8 +31,8 @@ import javazoom.jlgui.basicplayer.BasicPlayerListener;
  * @author Javier Cañadilla, Juan Antonio Echeverrías, Oscar Miranda
  */
 public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListSelectionListener {
-    /*Variables Globales*/
 
+    /*Variables Globales*/
     Cursor mickey;
     Font font_titulos, font_subtitulos, font_titulo_login;
     String fontName = "/img/GinSSB60.ttf";
@@ -48,10 +48,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     File array_musica;
     boolean control_pausado;
     String[] nombres_lista_alumnos = new String[8];
-    /* String[] nombres_lista_alumnos = new String[]{"1 Armada Antonio, María", "2 Campos Campos, Beatriz",
-     "3 Cañadilla Casco, Javier", "4 Echeverrias Aranda, Juan Antonio",
-     "5 Miranda Bravo, Oscar", "6 Pérez Navarro, José", "7 Romero Álvarez, Gustavo", "8 Ruiz Valenzuela, Fernando"};
-     */
     ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
     TableModel modelo_tabla_resultados;
     boolean componentes_alumno_activados = false;
@@ -63,12 +59,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
      */
     public UI() {
         /**
-         * Creación de profesores.
+         * Creación de profesor/es.
          */
         profesor = new Profesor("profesor", "pass");
 
         /**
-         * Creacion de Alumnos.
+         * Creación de Alumnos.
          */
         alumnos.add(new Alumno("Maria", "Antonio Armada", "918113226", "Calle de la Piruleta, nº3"));
         alumnos.add(new Alumno("Beatriz", "Campos Campos", "918115626", "Calle de Alemania, nº8"));
@@ -78,7 +74,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         alumnos.add(new Alumno("José", "Pérez Navarro", "918185672", "Avenida de los barcos, nº15"));
         alumnos.add(new Alumno("Gustavo", "Romero Álvarez", "918168677", "Paseo del Alparrache, nº7"));
         alumnos.add(new Alumno("Fernando", "Ruiz Valenzuela", "918115478", "Paseo de la piruleta, nº37"));
-        /*Cambiamos la foto por defecto. */
+        /**
+         * Cambiamos la foto por defecto.
+         */
         alumnos.get(2).setImagen("/img/javier.png");
         alumnos.get(3).setImagen("/img/juanan.png");
         alumnos.get(4).setImagen("/img/oscar.PNG");
@@ -93,7 +91,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mickey = tk.createCustomCursor(imagen_cursor.getImage(), new Point(0, 0), "mickey");
 
         /**
-         * INICIO FUENTE.
+         * INICIALIZACIÓN FUENTE.
          */
         try {
             //Se carga la fuente
@@ -108,7 +106,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             font_tildes = new Font("Arial", Font.PLAIN, 14);
 
         }
-        /* Fuentes utilizadas */
+        /**
+         * Fuentes utilizadas por Javi.
+         */
         font_titulos = font.deriveFont(70f).deriveFont(Font.BOLD);
         font_titulo_login = font_tildes.deriveFont(60f).deriveFont(Font.BOLD);
         font_subtitulos = font.deriveFont(40f).deriveFont(Font.BOLD);
@@ -140,9 +140,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         }
 
         /**
-         * Lista alumnos -> IU PROFESOR
+         * Lista alumnos -> IU PROFESOR.
          */
-        lista_nombres_alumnos.addListSelectionListener(this);
+        lista_nombres_alumnos.addListSelectionListener(this); //Agregamos el listener.
     }
 
     /**
@@ -964,30 +964,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            musica_isActive = false;
             /*PAUSE DE LA MUSICA*/
-            try {
-                control.pause();
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            pausarMusica();
         } else {
             boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
-            /* CONTINUAR MUSICA */
-            try {
-                if (control_pausado) {
-                    control.play();
-                } else {
-                    control.resume();
-                }
-                control_pausado = false;
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        if (musica_isActive) {
-            musica_isActive = false;
-        } else {
             musica_isActive = true;
+            /* CONTINUAR MUSICA */
+            activarMusica();
         }
     }//GEN-LAST:event_boton_sonidoMouseReleased
 
@@ -1010,16 +994,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             inicio = false;
             musica_isActive = false;
             /* STOP DE LA MUSICA */
-            try {
-                control_pausado = true;
-                control.stop();
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            stopMusica();
         }
     }//GEN-LAST:event_boton_entrarActionPerformed
 
     private void password_profeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_password_profeKeyPressed
+        //Cuando presionamos ENTER en el Password
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             boolean inicio = iniciarSesion(nombre_profe.getText(), password_profe.getPassword());
             System.err.println("Inicio de sesión: " + inicio);
@@ -1032,12 +1012,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 musica_isActive = false;
                 boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
                 /* STOP DE LA MUSICA */
-                try {
-                    control.stop();
-                    control_pausado = true;
-                } catch (BasicPlayerException ex) {
-                    Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                stopMusica();
             }
         }    }//GEN-LAST:event_password_profeKeyPressed
 
@@ -1101,30 +1076,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void boton_sonido1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido1MouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
             boton_sonido1.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            musica_isActive = false;
             /*PAUSE DE LA MUSICA*/
-            try {
-                control.pause();
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            pausarMusica();
         } else {
             boton_sonido1.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
-            /* CONTINUAR MUSICA */
-            try {
-                if (control_pausado) {
-                    control.play();
-                } else {
-                    control.resume();
-                }
-                control_pausado = false;
-            } catch (BasicPlayerException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        if (musica_isActive) {
-            musica_isActive = false;
-        } else {
             musica_isActive = true;
+            /* CONTINUAR MUSICA */
+           activarMusica();
         }
     }//GEN-LAST:event_boton_sonido1MouseReleased
 
@@ -1143,6 +1102,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     /**
      * Métodos de Javi.
+     */
+    /**
+     * Generar la lista de alumnos con: Nº Lista + apellidos + , + Nombre.
      */
     public void generarListadoAlumnos() {
         int i = 0;
@@ -1178,6 +1140,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     /**
      * Controlar la música.
+     *
+     * @param bpe BasicPlayerEvent
      */
     @Override
     public void stateUpdated(BasicPlayerEvent bpe) {
@@ -1189,20 +1153,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
         }
     }
-    /*Métodos no necesarios de la música */
-
-    @Override
-    public void setController(BasicController bc) {
-    }
-
-    @Override
-    public void opened(Object o, Map map) {
-    }
-
-    @Override
-    public void progress(int i, long l, byte[] bytes, Map map) {
-    }
-    /*Fin metodos no necesarios de la música*/
 
     /*Métodos necesarios para la lista de alumnos de la IU PROFESOR */
     @Override
@@ -1215,8 +1165,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         cargarDatosAlumno(elegido);
         cargarFallos(elegido);
     }
-    /*Activamos los componentes de la UI profesor */
 
+    /**
+     * Activar los componentes del alumno.
+     */
     public void activarComponentesDatosAlumno() {
         nombre_alumno_profe.setEnabled(true);
         apellido_alumno_profe.setEnabled(true);
@@ -1228,7 +1180,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton_guardar.setEnabled(true);
     }
 
-    /* Cargamos los datos del alumno elegido */
+    /**
+     * Cargar datos del alumno en la interfaz profesor.
+     *
+     * @param elegido alumno elegido.
+     */
     public void cargarDatosAlumno(Alumno elegido) {
         nombre_alumno_profe.setText(elegido.getNombre());
         apellido_alumno_profe.setText(elegido.getApellidos());
@@ -1237,14 +1193,56 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         foto_alumno.setIcon(elegido.getImagen());
         textArea_observaciones.setText(elegido.getObservaciones());
     }
-    /* Cargamos los fallos del alumno elegido en la tabla del profesor */
 
+    /**
+     * Cargar Fallos del alumno.
+     *
+     * @param elegido alumno elegido.
+     */
     public void cargarFallos(Alumno elegido) {
         for (int i = 0; i < 15; i++) {
             modelo_tabla_resultados.setValueAt(elegido.getFallos(i), i, 2);
         }
     }
-
+    
+    /**
+     * Activar música.
+     */
+    public void activarMusica(){
+         try {
+                if (control_pausado) {
+                    control.play();
+                } else {
+                    control.resume();
+                }
+                control_pausado = false;
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
+    
+    /**
+     * Pausar Musica.
+     */
+    public void pausarMusica(){
+        try {
+                control.pause();
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
+    
+    /**
+     * Stop Musica.
+     */
+    public void stopMusica(){
+         try {
+                    control.stop();
+                    control_pausado = true;
+                } catch (BasicPlayerException ex) {
+                    Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
     /**
      * Fin métodos de Javi.
      */
@@ -1259,23 +1257,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                UI ui = new UI();
-                ui.setVisible(true);
-
+                new UI().setVisible(true);
             }
         });
     }
@@ -1341,4 +1332,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.label.WebLabel webLabel1;
     private com.alee.laf.label.WebLabel webLabel2;
     // End of variables declaration//GEN-END:variables
+/*Métodos no necesarios de la música */
+
+    @Override
+    public void setController(BasicController bc) {
+    }
+
+    @Override
+    public void opened(Object o, Map map) {
+    }
+
+    @Override
+    public void progress(int i, long l, byte[] bytes, Map map) {
+    }
+    /*Fin metodos no necesarios de la música*/
+
 }
