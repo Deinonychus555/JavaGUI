@@ -65,6 +65,8 @@ public class NivelesFase3 extends javax.swing.JFrame {
         nivel3fase3 = new javax.swing.JButton();
         nivel4fase3 = new javax.swing.JButton();
         TituloFase3 = new com.alee.laf.label.WebLabel();
+        backFase3 = new javax.swing.JButton();
+        homeFase3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(font_titulo_niveles);
@@ -185,24 +187,43 @@ public class NivelesFase3 extends javax.swing.JFrame {
         TituloFase3.setText("Escoge un nivel");
         TituloFase3.setFont(font_titulo_niveles);
 
+        backFase3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backFase3.setBorderPainted(false);
+        backFase3.setContentAreaFilled(false);
+
+        homeFase3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeFase3.setBorderPainted(false);
+        homeFase3.setContentAreaFilled(false);
+        homeFase3.setEnabled(false);
+        homeFase3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeFase3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Fase3Layout = new javax.swing.GroupLayout(Fase3);
         Fase3.setLayout(Fase3Layout);
         Fase3Layout.setHorizontalGroup(
             Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Fase3Layout.createSequentialGroup()
-                .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(Fase3Layout.createSequentialGroup()
                         .addGap(174, 174, 174)
                         .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(nivel1fase3)
                             .addComponent(nivel3fase3))
                         .addGap(109, 109, 109)
-                        .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nivel2fase3)
-                            .addComponent(nivel4fase3)))
+                        .addComponent(nivel2fase3))
                     .addGroup(Fase3Layout.createSequentialGroup()
                         .addGap(247, 247, 247)
-                        .addComponent(TituloFase3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TituloFase3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backFase3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nivel4fase3)))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
         Fase3Layout.setVerticalGroup(
@@ -210,18 +231,22 @@ public class NivelesFase3 extends javax.swing.JFrame {
             .addGroup(Fase3Layout.createSequentialGroup()
                 .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Fase3Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(nivel2fase3)
-                        .addGap(70, 70, 70)
-                        .addComponent(nivel4fase3))
-                    .addGroup(Fase3Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(TituloFase3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
                         .addComponent(nivel1fase3)
                         .addGap(48, 48, 48)
-                        .addComponent(nivel3fase3)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addComponent(nivel3fase3)
+                        .addGap(31, 31, 31)
+                        .addGroup(Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(backFase3)
+                            .addComponent(homeFase3)))
+                    .addGroup(Fase3Layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(nivel2fase3)
+                        .addGap(70, 70, 70)
+                        .addComponent(nivel4fase3)))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -336,6 +361,10 @@ public class NivelesFase3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nivel4fase3ActionPerformed
 
+    private void homeFase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeFase3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeFase3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -375,6 +404,8 @@ public class NivelesFase3 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fase3;
     private com.alee.laf.label.WebLabel TituloFase3;
+    private javax.swing.JButton backFase3;
+    private javax.swing.JButton homeFase3;
     private javax.swing.JButton nivel1fase3;
     private javax.swing.JButton nivel2fase3;
     private javax.swing.JButton nivel3fase3;
