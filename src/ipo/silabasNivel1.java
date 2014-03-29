@@ -102,6 +102,11 @@ public class silabasNivel1 extends javax.swing.JFrame {
 
         soluciónsilabas1.setFont(font_boton_niveles);
         soluciónsilabas1.setText("Pe-lota");
+        soluciónsilabas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                soluciónsilabas1ActionPerformed(evt);
+            }
+        });
 
         boton1silabas1.setFont(font_boton_niveles);
         boton1silabas1.setText("Ca-mión");
@@ -111,6 +116,11 @@ public class silabasNivel1 extends javax.swing.JFrame {
 
         boton3silabas1.setFont(font_boton_niveles);
         boton3silabas1.setText("Me-lón");
+        boton3silabas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3silabas1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Fase1Layout = new javax.swing.GroupLayout(Fase1);
         Fase1.setLayout(Fase1Layout);
@@ -119,7 +129,7 @@ public class silabasNivel1 extends javax.swing.JFrame {
             .addGroup(Fase1Layout.createSequentialGroup()
                 .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(248, 248, 248)
+                        .addGap(193, 193, 193)
                         .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Fase1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -127,39 +137,38 @@ public class silabasNivel1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(homeSilabas1))
                     .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(302, 302, 302)
-                        .addComponent(silabasImg1))
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
+                        .addGap(101, 101, 101)
                         .addComponent(soluciónsilabas1)
-                        .addGap(47, 47, 47)
+                        .addGap(79, 79, 79)
                         .addComponent(boton1silabas1)
-                        .addGap(51, 51, 51)
+                        .addGap(79, 79, 79)
                         .addComponent(boton2silabas1)
-                        .addGap(39, 39, 39)
+                        .addGap(79, 79, 79)
                         .addComponent(boton3silabas1)))
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
+                .addGap(0, 327, Short.MAX_VALUE)
+                .addComponent(silabasImg1)
+                .addGap(372, 372, 372))
         );
         Fase1Layout.setVerticalGroup(
             Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
-                .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(silabasImg1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
                         .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(soluciónsilabas1)
                             .addComponent(boton1silabas1)
                             .addComponent(boton2silabas1)
                             .addComponent(boton3silabas1))
-                        .addGap(137, 137, 137)
+                        .addGap(135, 135, 135)
                         .addComponent(homeSilabas1))
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(silabasImg1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 252, Short.MAX_VALUE)
-                        .addComponent(backSilabas1)))
+                    .addComponent(backSilabas1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(40, 40, 40))
         );
 
@@ -170,14 +179,14 @@ public class silabasNivel1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(326, 326, 326))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(347, 347, 347))
+                .addContainerGap())
         );
 
         pack();
@@ -186,6 +195,14 @@ public class silabasNivel1 extends javax.swing.JFrame {
     private void backSilabas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backSilabas1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_backSilabas1MouseClicked
+
+    private void soluciónsilabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_soluciónsilabas1ActionPerformed
+
+    private void boton3silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton3silabas1ActionPerformed
 
     /**
      * @param args the command line arguments
