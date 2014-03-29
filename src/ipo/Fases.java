@@ -6,6 +6,7 @@
 
 package ipo;
 
+import JPanelsCustom.JPanelCustom;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
@@ -13,6 +14,8 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.io.InputStream;
 import java.awt.Dimension;
+
+
 
 /**
  *
@@ -65,9 +68,17 @@ public class Fases extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jPanel1 =  new JPanelCustom("/img/fondo_fases.jpg");
         escuela = new javax.swing.JButton();
         barco = new javax.swing.JButton();
+        piramide = new javax.swing.JButton();
+        selva = new javax.swing.JButton();
+        biblioteca = new javax.swing.JButton();
+        titulo_fases = new com.alee.laf.label.WebLabel();
+        boton_sonido = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +115,7 @@ public class Fases extends javax.swing.JFrame {
             }
         });
 
+        barco.setFont(font_titulos);
         barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco.png"))); // NOI18N
         barco.setText("Viajando con las sílabas");
         barco.setBorder(null);
@@ -131,28 +143,158 @@ public class Fases extends javax.swing.JFrame {
             }
         });
 
+        piramide.setFont(font_titulos);
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png"))); // NOI18N
+        piramide.setText("Descubriendo las palabras");
+        piramide.setBorder(null);
+        piramide.setBorderPainted(false);
+        piramide.setContentAreaFilled(false);
+        piramide.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        piramide.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        piramide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                piramideMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                piramideMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                piramideMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                piramideMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                piramideMouseReleased(evt);
+            }
+        });
+        piramide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                piramideActionPerformed(evt);
+            }
+        });
+
+        selva.setFont(font_titulos);
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Selva.png"))); // NOI18N
+        selva.setText("Explorando las frases");
+        selva.setBorder(null);
+        selva.setBorderPainted(false);
+        selva.setContentAreaFilled(false);
+        selva.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        selva.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        selva.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                selvaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                selvaMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                selvaMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                selvaMouseReleased(evt);
+            }
+        });
+
+        biblioteca.setFont(font_titulos);
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png"))); // NOI18N
+        biblioteca.setText("La biblioteca de textos");
+        biblioteca.setBorder(null);
+        biblioteca.setBorderPainted(false);
+        biblioteca.setContentAreaFilled(false);
+        biblioteca.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        biblioteca.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        biblioteca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bibliotecaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bibliotecaMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bibliotecaMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                bibliotecaMouseReleased(evt);
+            }
+        });
+
+        titulo_fases.setForeground(new java.awt.Color(0, 0, 255));
+        titulo_fases.setText("¿Dónde quieres jugar hoy?");
+        titulo_fases.setFont(font_titulos
+        );
+
+        boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
+        boton_sonido.setBorderPainted(false);
+        boton_sonido.setContentAreaFilled(false);
+        boton_sonido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton_sonidoMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton_sonidoMouseReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(escuela)
-                .addGap(97, 97, 97)
-                .addComponent(barco)
-                .addContainerGap(389, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(selva))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(escuela))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(boton_sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(barco)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(167, 167, 167)
+                                .addComponent(biblioteca))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(piramide))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(74, 74, 74))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(barco))
+                        .addGap(85, 85, 85)
+                        .addComponent(piramide))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(22, 22, 22)
+                        .addComponent(boton_sonido)
+                        .addGap(18, 18, 18)
                         .addComponent(escuela, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addGap(7, 7, 7)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(selva)
+                        .addContainerGap(21, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(biblioteca)
+                        .addGap(33, 33, 33))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(titulo_fases, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
+                .addComponent(barco)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         escuela.getAccessibleContext().setAccessibleName("");
@@ -196,11 +338,11 @@ public class Fases extends javax.swing.JFrame {
     }//GEN-LAST:event_barcoMouseExited
 
     private void barcoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMousePressed
-        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_click.png")));
+        barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_press.png")));
     }//GEN-LAST:event_barcoMousePressed
 
     private void escuelaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMousePressed
-        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_click.png")));
+        escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_press.png")));
     }//GEN-LAST:event_escuelaMousePressed
 
     private void barcoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseReleased
@@ -210,6 +352,100 @@ public class Fases extends javax.swing.JFrame {
     private void escuelaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseReleased
         escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school.png")));
     }//GEN-LAST:event_escuelaMouseReleased
+
+    private void piramideMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piramideMouseClicked
+
+    private void piramideMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseEntered
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_hover.png")));
+    }//GEN-LAST:event_piramideMouseEntered
+
+    private void piramideMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseExited
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
+    }//GEN-LAST:event_piramideMouseExited
+
+    private void piramideMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMousePressed
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_press.png")));
+    }//GEN-LAST:event_piramideMousePressed
+
+    private void piramideMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseReleased
+        piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide.png")));
+    }//GEN-LAST:event_piramideMouseReleased
+
+    private void selvaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseEntered
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_hover.png")));
+    }//GEN-LAST:event_selvaMouseEntered
+
+    private void selvaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseExited
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
+    }//GEN-LAST:event_selvaMouseExited
+
+    private void selvaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMousePressed
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_press.png")));
+    }//GEN-LAST:event_selvaMousePressed
+
+    private void selvaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseReleased
+        selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva.png")));
+    }//GEN-LAST:event_selvaMouseReleased
+
+    private void bibliotecaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseEntered
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_hover.png")));
+    }//GEN-LAST:event_bibliotecaMouseEntered
+
+    private void bibliotecaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseExited
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
+    }//GEN-LAST:event_bibliotecaMouseExited
+
+    private void bibliotecaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMousePressed
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_press.png")));
+    }//GEN-LAST:event_bibliotecaMousePressed
+
+    private void bibliotecaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseReleased
+        biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca.png")));
+    }//GEN-LAST:event_bibliotecaMouseReleased
+
+    private void piramideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piramideActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piramideActionPerformed
+
+    private void boton_sonidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMousePressed
+        /*if (musica_isActive) {
+            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }*/
+    }//GEN-LAST:event_boton_sonidoMousePressed
+
+    private void boton_sonidoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonidoMouseReleased
+       /* if (musica_isActive) { //Si está activa -> la desactivamos.
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            
+            try {
+                control.pause();
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+           
+            try {
+                if (control_pausado) {
+                    control.play();
+                } else {
+                    control.resume();
+                }
+                control_pausado = false;
+            } catch (BasicPlayerException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(musica_isActive){
+            musica_isActive = false;
+        }else{
+            musica_isActive = true;
+        }*/
+    }//GEN-LAST:event_boton_sonidoMouseReleased
 
     /**
      * @param args the command line arguments
@@ -256,7 +492,13 @@ public class Fases extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton barco;
+    private javax.swing.JButton biblioteca;
+    private javax.swing.JButton boton_sonido;
     private javax.swing.JButton escuela;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton piramide;
+    private javax.swing.JButton selva;
+    private com.alee.laf.label.WebLabel titulo_fases;
     // End of variables declaration//GEN-END:variables
 }
