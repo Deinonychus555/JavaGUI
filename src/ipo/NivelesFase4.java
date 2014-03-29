@@ -64,6 +64,8 @@ public class NivelesFase4 extends javax.swing.JFrame {
         nivel2fase4 = new javax.swing.JButton();
         nivel3fase4 = new javax.swing.JButton();
         TituloFase4 = new com.alee.laf.label.WebLabel();
+        backFase4 = new javax.swing.JButton();
+        homeFase4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -155,6 +157,20 @@ public class NivelesFase4 extends javax.swing.JFrame {
         TituloFase4.setText("Escoge un nivel");
         TituloFase4.setFont(font_titulo_niveles);
 
+        backFase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backFase4.setBorderPainted(false);
+        backFase4.setContentAreaFilled(false);
+
+        homeFase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeFase4.setBorderPainted(false);
+        homeFase4.setContentAreaFilled(false);
+        homeFase4.setEnabled(false);
+        homeFase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeFase4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Fase4Layout = new javax.swing.GroupLayout(Fase4);
         Fase4.setLayout(Fase4Layout);
         Fase4Layout.setHorizontalGroup(
@@ -168,7 +184,11 @@ public class NivelesFase4 extends javax.swing.JFrame {
             .addGroup(Fase4Layout.createSequentialGroup()
                 .addGroup(Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Fase4Layout.createSequentialGroup()
-                        .addGap(312, 312, 312)
+                        .addContainerGap()
+                        .addComponent(backFase4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase4)
+                        .addGap(140, 140, 140)
                         .addComponent(nivel3fase4))
                     .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(234, 234, 234)
@@ -187,9 +207,17 @@ public class NivelesFase4 extends javax.swing.JFrame {
                     .addGroup(Fase4Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(nivel2fase4)))
-                .addGap(66, 66, 66)
-                .addComponent(nivel3fase4)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGroup(Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Fase4Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(nivel3fase4)
+                        .addContainerGap(99, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(Fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(backFase4)
+                            .addComponent(homeFase4))
+                        .addGap(48, 48, 48))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -280,6 +308,10 @@ public class NivelesFase4 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nivel3fase4ActionPerformed
 
+    private void homeFase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeFase4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeFase4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -319,6 +351,8 @@ public class NivelesFase4 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fase4;
     private com.alee.laf.label.WebLabel TituloFase4;
+    private javax.swing.JButton backFase4;
+    private javax.swing.JButton homeFase4;
     private javax.swing.JButton nivel1fase4;
     private javax.swing.JButton nivel2fase4;
     private javax.swing.JButton nivel3fase4;

@@ -66,6 +66,8 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel3fase1 = new javax.swing.JButton();
         nivel4fase1 = new javax.swing.JButton();
         TituloFase1 = new com.alee.laf.label.WebLabel();
+        backFase1 = new javax.swing.JButton();
+        homeFase1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -180,6 +182,20 @@ public class NivelesFase1 extends javax.swing.JFrame {
         TituloFase1.setText("Escoge un nivel");
         TituloFase1.setFont(font_titulo_niveles);
 
+        backFase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backFase1.setBorderPainted(false);
+        backFase1.setContentAreaFilled(false);
+        backFase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backFase1MouseClicked(evt);
+            }
+        });
+
+        homeFase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeFase1.setBorderPainted(false);
+        homeFase1.setContentAreaFilled(false);
+        homeFase1.setEnabled(false);
+
         javax.swing.GroupLayout Fase1Layout = new javax.swing.GroupLayout(Fase1);
         Fase1.setLayout(Fase1Layout);
         Fase1Layout.setHorizontalGroup(
@@ -197,25 +213,37 @@ public class NivelesFase1 extends javax.swing.JFrame {
                             .addComponent(nivel4fase1)))
                     .addGroup(Fase1Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
-                        .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Fase1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backFase1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase1)))
                 .addContainerGap(198, Short.MAX_VALUE))
         );
         Fase1Layout.setVerticalGroup(
             Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Fase1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(nivel1fase1)
-                .addGap(51, 51, 51)
-                .addComponent(nivel3fase1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(Fase1Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(nivel2fase1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(nivel4fase1)
                 .addGap(57, 57, 57))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
+                .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Fase1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeFase1))
+                    .addGroup(Fase1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(TituloFase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(nivel1fase1)
+                        .addGap(51, 51, 51)
+                        .addComponent(nivel3fase1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backFase1)))
+                .addGap(40, 40, 40))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -326,6 +354,10 @@ public class NivelesFase1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nivel4fase1ActionPerformed
 
+    private void backFase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backFase1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backFase1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -365,6 +397,8 @@ public class NivelesFase1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fase1;
     private com.alee.laf.label.WebLabel TituloFase1;
+    private javax.swing.JButton backFase1;
+    private javax.swing.JButton homeFase1;
     private javax.swing.JButton nivel1fase1;
     private javax.swing.JButton nivel2fase1;
     private javax.swing.JButton nivel3fase1;
