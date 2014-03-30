@@ -94,6 +94,8 @@ public class Password1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -647,6 +649,14 @@ public class Password1 extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/N.png"))); // NOI18N
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -713,8 +723,8 @@ public class Password1 extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(letra8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(letra9)
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addComponent(letra9)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -725,14 +735,21 @@ public class Password1 extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addGap(0, 58, Short.MAX_VALUE))))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(foto)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(foto))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(foto)
@@ -744,39 +761,44 @@ public class Password1 extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel1))
                         .addGap(103, 103, 103)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(letra9, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra8, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra6, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(letra18, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra17, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra16, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra15, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra14, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra13, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra12, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra11, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(letra10, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(letra19)
-                    .addComponent(letra20)
-                    .addComponent(letra21)
-                    .addComponent(letra22)
-                    .addComponent(letra23)
-                    .addComponent(letra24)
-                    .addComponent(letra25)
-                    .addComponent(letra26)
-                    .addComponent(letra27))
-                .addGap(82, 82, 82))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(letra9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra8, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra6, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra7, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(letra18, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra17, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra16, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra15, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra14, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra13, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra12, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra11, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(letra10, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(letra19)
+                            .addComponent(letra20)
+                            .addComponent(letra21)
+                            .addComponent(letra22)
+                            .addComponent(letra23)
+                            .addComponent(letra24)
+                            .addComponent(letra25)
+                            .addComponent(letra26)
+                            .addComponent(letra27))
+                        .addGap(47, 47, 47)
+                        .addComponent(jButton2))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1290,6 +1312,8 @@ public class Password1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel foto;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
