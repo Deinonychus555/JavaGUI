@@ -323,7 +323,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         panel_fases.setCursor(mickey);
@@ -508,6 +507,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setEnabled(false);
 
         javax.swing.GroupLayout panel_fasesLayout = new javax.swing.GroupLayout(panel_fases);
         panel_fases.setLayout(panel_fasesLayout);
@@ -594,7 +594,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(jLabel5)
                         .addGap(38, 38, 38))
                     .addGroup(panel_fasesLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addComponent(selva)
                         .addGap(0, 0, 0)
                         .addGroup(panel_fasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -919,6 +918,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         backFase1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backFase1MouseClicked(evt);
+            }
+        });
+        backFase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backFase1ActionPerformed(evt);
             }
         });
 
@@ -2727,75 +2731,73 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_pass_primariaLayout.setHorizontalGroup(
             panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
                 .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                        .addComponent(letra19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra23)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(letra26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(letra27))
-                    .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                        .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(140, 140, 140)
+                        .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                                .addComponent(letra1)
+                                .addComponent(letra19)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra2))
+                                .addComponent(letra20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra25)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(letra26)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(letra27))
                             .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                                .addComponent(letra10)
+                                .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(panel_pass_primariaLayout.createSequentialGroup()
+                                        .addComponent(letra1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra2))
+                                    .addGroup(panel_pass_primariaLayout.createSequentialGroup()
+                                        .addComponent(letra10)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(letra11)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(letra12)
+                                    .addComponent(letra3))
                                 .addGap(10, 10, 10)
-                                .addComponent(letra11)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(letra12)
-                            .addComponent(letra3))
-                        .addGap(10, 10, 10)
-                        .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                                .addComponent(letra13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(letra17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra18))
-                            .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                                .addComponent(letra4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(letra8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(letra9)))
-                        .addContainerGap(125, Short.MAX_VALUE))))
-            .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panel_pass_primariaLayout.createSequentialGroup()
+                                        .addComponent(letra13)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra14)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra15)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra16)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(letra17)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra18))
+                                    .addGroup(panel_pass_primariaLayout.createSequentialGroup()
+                                        .addComponent(letra4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(letra8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(letra9))))))
                     .addGroup(panel_pass_primariaLayout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel_pass_primariaLayout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addGap(122, 122, 122)
+                                .addGap(200, 200, 200)
                                 .addComponent(letraJprimaria)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(letraUprimaria)
@@ -2812,7 +2814,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         panel_pass_primariaLayout.setVerticalGroup(
             panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3178,7 +3180,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_escuelaMouseReleased
 
     private void escuelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escuelaActionPerformed
-        // TODO add your handling code here:
+        panel_fases.setVisible(false);
+        panel_fase1.setVisible(true);
     }//GEN-LAST:event_escuelaActionPerformed
 
     private void barcoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseEntered
@@ -4188,6 +4191,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_inicio.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void backFase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backFase1ActionPerformed
+        panel_fase1.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_backFase1ActionPerformed
+
     /**
      * Métodos de Javi.
      */
@@ -4344,9 +4352,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     
     public void desactivarNombre(){
         letraJ = false;
+        letraJprimaria.setIcon(new ImageIcon(getClass().getResource("/img/J.png")));
         letraA = false;
+        letraAprimaria.setIcon(new ImageIcon(getClass().getResource("/img/A.png")));
         letraU = false;
+        letraUprimaria.setIcon(new ImageIcon(getClass().getResource("/img/U.png")));
         letraN = false;
+        letraNprimaria.setIcon(new ImageIcon(getClass().getResource("/img/N.png")));
     }
 
     /**
