@@ -314,9 +314,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         letraUprimaria = new javax.swing.JLabel();
         letraAprimaria = new javax.swing.JLabel();
         letraNprimaria = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        back_login_primaria = new javax.swing.JButton();
+        home_login_primaria = new javax.swing.JButton();
+        sonido_LoginPrimaria = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
@@ -1479,6 +1479,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_pass_infantil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_pass_infantil.setBorderPainted(false);
         back_pass_infantil.setContentAreaFilled(false);
+        back_pass_infantil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_pass_infantilActionPerformed(evt);
+            }
+        });
 
         home_pass_infantil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_pass_infantil.setBorderPainted(false);
@@ -2713,18 +2718,31 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         letraNprimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/N.png"))); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
+        back_login_primaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        back_login_primaria.setBorderPainted(false);
+        back_login_primaria.setContentAreaFilled(false);
+        back_login_primaria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_login_primariaActionPerformed(evt);
+            }
+        });
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
-        jButton6.setBorderPainted(false);
-        jButton6.setContentAreaFilled(false);
-        jButton6.setEnabled(false);
+        home_login_primaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        home_login_primaria.setBorderPainted(false);
+        home_login_primaria.setContentAreaFilled(false);
+        home_login_primaria.setEnabled(false);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
+        sonido_LoginPrimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
+        sonido_LoginPrimaria.setBorderPainted(false);
+        sonido_LoginPrimaria.setContentAreaFilled(false);
+        sonido_LoginPrimaria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sonido_LoginPrimariaMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                sonido_LoginPrimariaMouseReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_pass_primariaLayout = new javax.swing.GroupLayout(panel_pass_primaria);
         panel_pass_primaria.setLayout(panel_pass_primariaLayout);
@@ -2808,19 +2826,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                             .addComponent(foto)))
                     .addGroup(panel_pass_primariaLayout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(sonido_LoginPrimaria, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_pass_primariaLayout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(back_login_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(home_login_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         panel_pass_primariaLayout.setVerticalGroup(
             panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_pass_primariaLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jButton7)
+                .addComponent(sonido_LoginPrimaria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(foto, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2866,8 +2884,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(letra27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(panel_pass_primariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(back_login_primaria, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(home_login_primaria, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(47, 47, 47))
         );
 
@@ -2901,7 +2919,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(panel_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2911,17 +2929,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(panel_fase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(panel_pass_infantil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(panel_pass_infantil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(panel_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(panel_fases, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(panel_fases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(panel_pass_primaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3262,19 +3274,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void boton_sonido2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido2MousePressed
         if (musica_isActive) {
-            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+            boton_sonido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+            boton_sonido2.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
         }
     }//GEN-LAST:event_boton_sonido2MousePressed
 
     private void boton_sonido2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido2MouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            boton_sonido2.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
             musica_isActive = false;
             pausarMusica();
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            boton_sonido2.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
             musica_isActive = true;
             activarMusica();
         }
@@ -3682,19 +3694,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void boton_sonido3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido3MousePressed
         if (musica_isActive) {
-            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+            boton_sonido3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+            boton_sonido3.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
         }
     }//GEN-LAST:event_boton_sonido3MousePressed
 
     private void boton_sonido3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido3MouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            boton_sonido3.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
             musica_isActive = false;
             pausarMusica();
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            boton_sonido3.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
             musica_isActive = true;
             activarMusica();
         }
@@ -3708,7 +3720,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void letra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra1MouseClicked
         letraAprimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AA.png")));
         letraA = true;
-        if(comprobarNombrePrimaria()){
+        if (comprobarNombrePrimaria()) {
             panel_pass_primaria.setVisible(false);
             panel_fases.setVisible(true);
             desactivarNombre();
@@ -3862,7 +3874,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void letra10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra10MouseClicked
         letraJprimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/JJ.png")));
         letraJ = true;
-        if(comprobarNombrePrimaria()){
+        if (comprobarNombrePrimaria()) {
             panel_pass_primaria.setVisible(false);
             panel_fases.setVisible(true);
             desactivarNombre();
@@ -3936,7 +3948,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void letra14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra14MouseClicked
         letraNprimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/NNN.png")));
         letraN = true;
-        if(comprobarNombrePrimaria()){
+        if (comprobarNombrePrimaria()) {
             panel_pass_primaria.setVisible(false);
             panel_fases.setVisible(true);
             desactivarNombre();
@@ -4074,7 +4086,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void letra22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_letra22MouseClicked
         letraUprimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/UU.png")));
         letraU = true;
-        if(comprobarNombrePrimaria()){
+        if (comprobarNombrePrimaria()) {
             panel_pass_primaria.setVisible(false);
             panel_fases.setVisible(true);
             desactivarNombre();
@@ -4183,7 +4195,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_alumno4ActionPerformed
 
     private void letra10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letra10ActionPerformed
-        
+
     }//GEN-LAST:event_letra10ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -4195,6 +4207,36 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_fase1.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_backFase1ActionPerformed
+
+    private void back_pass_infantilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_pass_infantilActionPerformed
+        panel_pass_infantil.setVisible(false);
+        panel_login.setVisible(true);
+    }//GEN-LAST:event_back_pass_infantilActionPerformed
+
+    private void back_login_primariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_login_primariaActionPerformed
+        panel_pass_primaria.setVisible(false);
+        panel_login.setVisible(true);
+    }//GEN-LAST:event_back_login_primariaActionPerformed
+
+    private void sonido_LoginPrimariaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sonido_LoginPrimariaMousePressed
+        if (musica_isActive) {
+            sonido_LoginPrimaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            sonido_LoginPrimaria.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }
+    }//GEN-LAST:event_sonido_LoginPrimariaMousePressed
+
+    private void sonido_LoginPrimariaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sonido_LoginPrimariaMouseReleased
+        if (musica_isActive) { //Si está activa -> la desactivamos.
+            sonido_LoginPrimaria.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            musica_isActive = false;
+            pausarMusica();
+        } else {
+            sonido_LoginPrimaria.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            musica_isActive = true;
+            activarMusica();
+        }
+    }//GEN-LAST:event_sonido_LoginPrimariaMouseReleased
 
     /**
      * Métodos de Javi.
@@ -4349,8 +4391,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     public boolean comprobarNombrePrimaria() {
         return (letraJ && letraU && letraA && letraN);
     }
-    
-    public void desactivarNombre(){
+
+    public void desactivarNombre() {
         letraJ = false;
         letraJprimaria.setIcon(new ImageIcon(getClass().getResource("/img/J.png")));
         letraA = false;
@@ -4364,7 +4406,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     /**
      * Fin métodos Juanan
      */
-
     /**
      * @param args the command line arguments
      */
@@ -4403,6 +4444,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.text.WebTextField apellido_alumno_profe;
     private javax.swing.JButton atras_login;
     private javax.swing.JButton backFase1;
+    private javax.swing.JButton back_login_primaria;
     private javax.swing.JButton back_pass_infantil;
     private javax.swing.JButton barco;
     private javax.swing.JButton biblioteca;
@@ -4452,14 +4494,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton globo9;
     private javax.swing.JButton homeFase1;
     private javax.swing.JButton home_login;
+    private javax.swing.JButton home_login_primaria;
     private javax.swing.JButton home_pass_infantil;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -4530,6 +4570,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.text.WebPasswordField password_profe;
     private javax.swing.JButton piramide;
     private javax.swing.JButton selva;
+    private javax.swing.JButton sonido_LoginPrimaria;
     private com.alee.laf.table.WebTable tabla_resultados;
     private com.alee.laf.text.WebTextField telefono_alumno_profe;
     private com.alee.laf.text.WebTextArea textArea_observaciones;
@@ -4552,5 +4593,5 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     @Override
     public void progress(int i, long l, byte[] bytes, Map map) {
     }
-/*Fin metodos no necesarios de la música*/
+    /*Fin metodos no necesarios de la música*/
 }
