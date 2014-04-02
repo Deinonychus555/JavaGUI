@@ -62,7 +62,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanelCustom(&quot;/img/fondoClase.png&quot;)"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanelCustom(&quot;/img/fondoBarco.png&quot;)"/>
       </AuxValues>
 
       <Layout>

@@ -60,7 +60,7 @@ public class silabasNivel2 extends javax.swing.JFrame {
     private void initComponents() {
 
         versionInfo1 = new com.alee.managers.version.VersionInfo();
-        Fase1 = new JPanelCustom("/img/fondoClase.png");
+        Fase1 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas2 = new com.alee.laf.label.WebLabel();
         backSilabas2 = new javax.swing.JButton();
         homeSilabas2 = new javax.swing.JButton();
@@ -102,6 +102,11 @@ public class silabasNivel2 extends javax.swing.JFrame {
 
         soluciónsilabas2.setFont(font_boton_niveles);
         soluciónsilabas2.setText("Ca-ramelo");
+        soluciónsilabas2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                soluciónsilabas2ActionPerformed(evt);
+            }
+        });
 
         boton1silabas2.setFont(font_boton_niveles);
         boton1silabas2.setText("Pe-lota");
@@ -205,6 +210,11 @@ public class silabasNivel2 extends javax.swing.JFrame {
     private void boton1silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton1silabas2ActionPerformed
+
+    private void soluciónsilabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas2ActionPerformed
+        // TODO add your handling code here:
+        acertado.setVisible(true);
+    }//GEN-LAST:event_soluciónsilabas2ActionPerformed
 
     /**
      * @param args the command line arguments

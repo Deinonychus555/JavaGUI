@@ -62,7 +62,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanelCustom(&quot;/img/fondoClase.png&quot;)"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanelCustom(&quot;/img/fondoBarco.png&quot;)"/>
       </AuxValues>
 
       <Layout>
@@ -180,6 +180,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ca-ramelo"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soluci&#xf3;nsilabas2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="boton1silabas2">
           <Properties>

@@ -60,7 +60,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
     private void initComponents() {
 
         versionInfo1 = new com.alee.managers.version.VersionInfo();
-        Fase1 = new JPanelCustom("/img/fondoClase.png");
+        Fase1 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas3 = new com.alee.laf.label.WebLabel();
         backSilabas3 = new javax.swing.JButton();
         homeSilabas3 = new javax.swing.JButton();
@@ -152,7 +152,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
                 .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(silabasImg3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
                         .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -171,16 +171,13 @@ public class silabasNivel3 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(65, 65, 65)
                 .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -192,6 +189,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
 
     private void solucionsilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas3ActionPerformed
         // TODO add your handling code here:
+        acertado.setVisible(true);
     }//GEN-LAST:event_solucionsilabas3ActionPerformed
 
     /**
