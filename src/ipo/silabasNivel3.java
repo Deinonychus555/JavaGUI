@@ -60,7 +60,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
     private void initComponents() {
 
         versionInfo1 = new com.alee.managers.version.VersionInfo();
-        Fase1 = new JPanelCustom("/img/fondoBarco.png");
+        panel_nivel3fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas3 = new com.alee.laf.label.WebLabel();
         backSilabas3 = new javax.swing.JButton();
         homeSilabas3 = new javax.swing.JButton();
@@ -74,9 +74,9 @@ public class silabasNivel3 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        Fase1.setBackground(new java.awt.Color(204, 255, 204));
-        Fase1.setMaximumSize(new java.awt.Dimension(800, 600));
-        Fase1.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_nivel3fase2.setBackground(new java.awt.Color(204, 255, 204));
+        panel_nivel3fase2.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_nivel3fase2.setMinimumSize(new java.awt.Dimension(800, 600));
 
         TituloSilabas3.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas3.setText("Selecciona la sílaba correcta");
@@ -117,51 +117,53 @@ public class silabasNivel3 extends javax.swing.JFrame {
         boton3silabas3.setFont(font_boton_niveles);
         boton3silabas3.setText("Bra-zo");
 
-        javax.swing.GroupLayout Fase1Layout = new javax.swing.GroupLayout(Fase1);
-        Fase1.setLayout(Fase1Layout);
-        Fase1Layout.setHorizontalGroup(
-            Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Fase1Layout.createSequentialGroup()
-                .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Fase1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_nivel3fase2Layout = new javax.swing.GroupLayout(panel_nivel3fase2);
+        panel_nivel3fase2.setLayout(panel_nivel3fase2Layout);
+        panel_nivel3fase2Layout.setHorizontalGroup(
+            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
+                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backSilabas3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(homeSilabas3))
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
+                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
+                .addGap(0, 162, Short.MAX_VALUE)
+                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
                         .addComponent(boton1silabas3)
                         .addGap(79, 79, 79)
                         .addComponent(boton2silabas3)
                         .addGap(78, 78, 78)
                         .addComponent(solucionsilabas3)
                         .addGap(78, 78, 78)
-                        .addComponent(boton3silabas3))
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(337, 337, 337)
-                        .addComponent(silabasImg3))
-                    .addGroup(Fase1Layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                        .addComponent(boton3silabas3)
+                        .addGap(149, 149, 149))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
+                        .addComponent(silabasImg3)
+                        .addGap(316, 316, 316))))
         );
-        Fase1Layout.setVerticalGroup(
-            Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
+        panel_nivel3fase2Layout.setVerticalGroup(
+            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(82, 82, 82)
                 .addComponent(silabasImg3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
-                .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase1Layout.createSequentialGroup()
-                        .addGroup(Fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(boton1silabas3)
-                            .addComponent(boton2silabas3)
-                            .addComponent(solucionsilabas3)
-                            .addComponent(boton3silabas3))
-                        .addGap(137, 137, 137)
-                        .addComponent(homeSilabas3))
+                .addGap(85, 85, 85)
+                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boton1silabas3)
+                    .addComponent(boton2silabas3)
+                    .addComponent(solucionsilabas3)
+                    .addComponent(boton3silabas3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(homeSilabas3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(backSilabas3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(40, 40, 40))
         );
@@ -170,14 +172,11 @@ public class silabasNivel3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panel_nivel3fase2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_nivel3fase2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -189,7 +188,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
 
     private void solucionsilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas3ActionPerformed
         // TODO add your handling code here:
-        acertado.setVisible(true);
+       // acertado.setVisible(true);
     }//GEN-LAST:event_solucionsilabas3ActionPerformed
 
     /**
@@ -229,13 +228,13 @@ public class silabasNivel3 extends javax.swing.JFrame {
 
      private javax.swing.JButton boton_sonido;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Fase1;
     private com.alee.laf.label.WebLabel TituloSilabas3;
     private javax.swing.JButton backSilabas3;
     private javax.swing.JButton boton1silabas3;
     private javax.swing.JButton boton2silabas3;
     private javax.swing.JButton boton3silabas3;
     private javax.swing.JButton homeSilabas3;
+    private javax.swing.JPanel panel_nivel3fase2;
     private javax.swing.JButton silabasImg3;
     private javax.swing.JButton solucionsilabas3;
     private com.alee.managers.version.VersionInfo versionInfo1;

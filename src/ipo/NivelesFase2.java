@@ -59,7 +59,7 @@ public class NivelesFase2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Fase2 = new JPanelCustom("/img/fondoBarco.png");
+        panel_fase2 = new JPanelCustom("/img/fondoBarco.png");
         nivel1fase2 = new javax.swing.JButton();
         nivel2fase2 = new javax.swing.JButton();
         nivel3fase2 = new javax.swing.JButton();
@@ -73,9 +73,9 @@ public class NivelesFase2 extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
-        Fase2.setBackground(new java.awt.Color(204, 255, 204));
-        Fase2.setMaximumSize(new java.awt.Dimension(800, 600));
-        Fase2.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_fase2.setBackground(new java.awt.Color(204, 255, 204));
+        panel_fase2.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_fase2.setMinimumSize(new java.awt.Dimension(800, 600));
 
         nivel1fase2.setFont(font_boton_niveles);
         nivel1fase2.setForeground(new java.awt.Color(255, 255, 255));
@@ -176,50 +176,50 @@ public class NivelesFase2 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout Fase2Layout = new javax.swing.GroupLayout(Fase2);
-        Fase2.setLayout(Fase2Layout);
-        Fase2Layout.setHorizontalGroup(
-            Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Fase2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_fase2Layout = new javax.swing.GroupLayout(panel_fase2);
+        panel_fase2.setLayout(panel_fase2Layout);
+        panel_fase2Layout.setHorizontalGroup(
+            panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_fase2Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
                 .addComponent(nivel1fase2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
                 .addComponent(nivel2fase2)
                 .addGap(148, 148, 148))
-            .addGroup(Fase2Layout.createSequentialGroup()
-                .addGroup(Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Fase2Layout.createSequentialGroup()
+            .addGroup(panel_fase2Layout.createSequentialGroup()
+                .addGroup(panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backFase2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(homeFase2)
                         .addGap(140, 140, 140)
                         .addComponent(nivel3fase2))
-                    .addGroup(Fase2Layout.createSequentialGroup()
+                    .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addGap(258, 258, 258)
                         .addComponent(TituloFase2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Fase2Layout.setVerticalGroup(
-            Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Fase2Layout.createSequentialGroup()
-                .addGroup(Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Fase2Layout.createSequentialGroup()
+        panel_fase2Layout.setVerticalGroup(
+            panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_fase2Layout.createSequentialGroup()
+                .addGroup(panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(TituloFase2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
                         .addComponent(nivel1fase2))
-                    .addGroup(Fase2Layout.createSequentialGroup()
+                    .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(nivel2fase2)))
-                .addGroup(Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Fase2Layout.createSequentialGroup()
+                .addGroup(panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(nivel3fase2)
-                        .addContainerGap(99, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Fase2Layout.createSequentialGroup()
+                        .addContainerGap(116, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_fase2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(Fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(backFase2)
                             .addComponent(homeFase2))
                         .addGap(40, 40, 40))))
@@ -229,17 +229,11 @@ public class NivelesFase2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Fase2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(164, 164, 164))
+            .addComponent(panel_fase2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Fase2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(336, 336, 336))
+            .addComponent(panel_fase2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -358,12 +352,12 @@ public class NivelesFase2 extends javax.swing.JFrame {
 
      private javax.swing.JButton boton_sonido;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Fase2;
     private com.alee.laf.label.WebLabel TituloFase2;
     private javax.swing.JButton backFase2;
     private javax.swing.JButton homeFase2;
     private javax.swing.JButton nivel1fase2;
     private javax.swing.JButton nivel2fase2;
     private javax.swing.JButton nivel3fase2;
+    private javax.swing.JPanel panel_fase2;
     // End of variables declaration//GEN-END:variables
 }

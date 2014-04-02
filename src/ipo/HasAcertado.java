@@ -6,6 +6,8 @@
 
 package ipo;
 
+import JPanelsCustom.JPanelCustom;
+
 /**
  *
  * @author oscarmirandabravo
