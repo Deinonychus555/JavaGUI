@@ -21,7 +21,7 @@ import javax.imageio.ImageIO;
  *
  * @author Juanan
  */
-public class Nivel1Fase1 extends javax.swing.JFrame {
+public class LetrasNivel1 extends javax.swing.JFrame {
 
      Cursor mickey;
     Font font_titulos, font_subtitulos;
@@ -29,7 +29,7 @@ public class Nivel1Fase1 extends javax.swing.JFrame {
     Font font;
     ImageIcon fondo;
     
-    public Nivel1Fase1() {
+    public LetrasNivel1() {
         
         Toolkit tk = getToolkit();
         ImageIcon imagen_cursor = new ImageIcon(getClass().getResource("/img/mano_mickey.png"));
@@ -65,15 +65,22 @@ public class Nivel1Fase1 extends javax.swing.JFrame {
     private void initComponents() {
 
         letrasNivel1_Panel = new JPanelCustom ("/img/fondo_fases_letras.jpg");
+        fl11_titulo = new javax.swing.JLabel();
         fl11_imagen1 = new javax.swing.JButton();
         fl11_imagen2 = new javax.swing.JButton();
         fl11_imagen3 = new javax.swing.JButton();
         fl11_letra = new javax.swing.JLabel();
+        backLetras1 = new javax.swing.JButton();
+        homeLetras1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         letrasNivel1_Panel.setMaximumSize(new java.awt.Dimension(800, 600));
         letrasNivel1_Panel.setMinimumSize(new java.awt.Dimension(800, 600));
+
+        fl11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
+        fl11_titulo.setForeground(new java.awt.Color(255, 255, 0));
+        fl11_titulo.setText("NIVEL 1");
 
         fl11_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_arbol.png"))); // NOI18N
         fl11_imagen1.setBorder(null);
@@ -146,42 +153,74 @@ public class Nivel1Fase1 extends javax.swing.JFrame {
             }
         });
 
-        fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/a_minuscula.png"))); // NOI18N
+        fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_a_minuscula.png"))); // NOI18N
+
+        backLetras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backLetras1.setBorderPainted(false);
+        backLetras1.setContentAreaFilled(false);
+        backLetras1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backLetras1MouseClicked(evt);
+            }
+        });
+
+        homeLetras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeLetras1.setBorderPainted(false);
+        homeLetras1.setContentAreaFilled(false);
+        homeLetras1.setEnabled(false);
 
         javax.swing.GroupLayout letrasNivel1_PanelLayout = new javax.swing.GroupLayout(letrasNivel1_Panel);
         letrasNivel1_Panel.setLayout(letrasNivel1_PanelLayout);
         letrasNivel1_PanelLayout.setHorizontalGroup(
             letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel1_PanelLayout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(fl11_imagen1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
-                .addComponent(fl11_imagen2)
-                .addGap(200, 200, 200)
-                .addComponent(fl11_imagen3)
-                .addGap(85, 85, 85))
             .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
-                .addGap(549, 549, 549)
-                .addComponent(fl11_letra)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        letrasNivel1_PanelLayout.setVerticalGroup(
-            letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(100, 100, 100)
+                .addComponent(fl11_imagen1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(fl11_imagen3)
+                .addGap(84, 84, 84))
             .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
                 .addGroup(letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(fl11_imagen2))
+                        .addGap(390, 390, 390)
+                        .addComponent(fl11_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(fl11_imagen1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
-                .addComponent(fl11_letra)
-                .addGap(89, 89, 89))
-            .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(fl11_imagen3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(453, 453, 453)
+                        .addGroup(letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fl11_imagen2)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel1_PanelLayout.createSequentialGroup()
+                                .addComponent(fl11_letra)
+                                .addGap(30, 30, 30))))
+                    .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
+                        .addComponent(backLetras1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeLetras1)))
+                .addContainerGap(429, Short.MAX_VALUE))
+        );
+        letrasNivel1_PanelLayout.setVerticalGroup(
+            letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel1_PanelLayout.createSequentialGroup()
+                .addGroup(letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(fl11_imagen1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(letrasNivel1_PanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(fl11_titulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                        .addGroup(letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel1_PanelLayout.createSequentialGroup()
+                                .addComponent(fl11_imagen3)
+                                .addGap(197, 197, 197))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel1_PanelLayout.createSequentialGroup()
+                                .addComponent(fl11_imagen2)
+                                .addGap(114, 114, 114)
+                                .addComponent(fl11_letra)
+                                .addGap(31, 31, 31)))))
+                .addGroup(letrasNivel1_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(backLetras1)
+                    .addComponent(homeLetras1)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,6 +301,10 @@ public class Nivel1Fase1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fl11_imagen1ActionPerformed
 
+    private void backLetras1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLetras1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backLetras1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -279,29 +322,32 @@ public class Nivel1Fase1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Nivel1Fase1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LetrasNivel1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Nivel1Fase1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LetrasNivel1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Nivel1Fase1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LetrasNivel1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Nivel1Fase1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LetrasNivel1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Nivel1Fase1().setVisible(true);
+                new LetrasNivel1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backLetras1;
     private javax.swing.JButton fl11_imagen1;
     private javax.swing.JButton fl11_imagen2;
     private javax.swing.JButton fl11_imagen3;
     private javax.swing.JLabel fl11_letra;
+    private javax.swing.JLabel fl11_titulo;
+    private javax.swing.JButton homeLetras1;
     private javax.swing.JPanel letrasNivel1_Panel;
     // End of variables declaration//GEN-END:variables
 }

@@ -90,6 +90,11 @@ public class silabasNivel3 extends javax.swing.JFrame {
                 backSilabas3MouseClicked(evt);
             }
         });
+        backSilabas3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backSilabas3ActionPerformed(evt);
+            }
+        });
 
         homeSilabas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         homeSilabas3.setBorderPainted(false);
@@ -190,6 +195,10 @@ public class silabasNivel3 extends javax.swing.JFrame {
         // TODO add your handling code here:
        // acertado.setVisible(true);
     }//GEN-LAST:event_solucionsilabas3ActionPerformed
+
+    private void backSilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backSilabas3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backSilabas3ActionPerformed
 
     /**
      * @param args the command line arguments
