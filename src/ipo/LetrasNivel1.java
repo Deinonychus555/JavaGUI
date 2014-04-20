@@ -77,6 +77,7 @@ public class LetrasNivel1 extends javax.swing.JFrame {
 
         letrasNivel1_Panel.setMaximumSize(new java.awt.Dimension(800, 600));
         letrasNivel1_Panel.setMinimumSize(new java.awt.Dimension(800, 600));
+        letrasNivel1_Panel.setPreferredSize(new java.awt.Dimension(800, 600));
 
         fl11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         fl11_titulo.setForeground(new java.awt.Color(255, 255, 0));
@@ -227,11 +228,11 @@ public class LetrasNivel1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(letrasNivel1_Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(letrasNivel1_Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1119, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(letrasNivel1_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(letrasNivel1_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
         );
 
         pack();
