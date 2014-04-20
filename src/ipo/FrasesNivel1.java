@@ -23,12 +23,11 @@ import javax.imageio.ImageIO;
  */
 public class FrasesNivel1 extends javax.swing.JFrame {
 
-    boolean ff11_imagen1, ff11_imagen2;
+    
             
     public FrasesNivel1() {
         initComponents();
-        ff11_imagen1=false;
-        ff11_imagen2=false;
+        
         
     }
 
@@ -189,6 +188,7 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra7.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png"))); // NOI18N
+        ff11_palabra7.setEnabled(false);
         ff11_palabra7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra7MouseClicked(evt);
@@ -249,6 +249,7 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra11.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png"))); // NOI18N
+        ff11_palabra11.setEnabled(false);
         ff11_palabra11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra11MouseClicked(evt);
@@ -379,7 +380,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ff11_palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseEntered
-        ff11_palabra1.setForeground(Color.yellow);
+        if (ff11_palabra1.isEnabled()){
+            ff11_palabra1.setForeground(Color.yellow);
+        }    
     }//GEN-LAST:event_ff11_palabra1MouseEntered
 
     private void ff11_palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseExited
@@ -400,12 +403,16 @@ public class FrasesNivel1 extends javax.swing.JFrame {
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
         ff11_palabra2.setEnabled(false);
-        ff11_imagen2=true;
-        if (ff11_imagen1){;}
+        ff11_palabra11.setEnabled(true);
+        if (!ff11_palabra5.isEnabled()){
+            ;
+        }
     }//GEN-LAST:event_ff11_palabra2MouseClicked
 
     private void ff11_palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseEntered
-        ff11_palabra2.setForeground(Color.yellow);
+        if (ff11_palabra2.isEnabled()){
+            ff11_palabra2.setForeground(Color.yellow);
+        }
     }//GEN-LAST:event_ff11_palabra2MouseEntered
 
     private void ff11_palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseExited
@@ -425,7 +432,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ff11_palabra3MouseClicked
 
     private void ff11_palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseEntered
-        ff11_palabra3.setForeground(Color.yellow);
+        if (ff11_palabra3.isEnabled()){
+            ff11_palabra3.setForeground(Color.yellow);
+        }
     }//GEN-LAST:event_ff11_palabra3MouseEntered
 
     private void ff11_palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseExited
@@ -445,7 +454,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ff11_palabra4MouseClicked
 
     private void ff11_palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseEntered
-        ff11_palabra4.setForeground(Color.yellow);
+        if (ff11_palabra4.isEnabled()){
+            ff11_palabra4.setForeground(Color.yellow);
+        }
     }//GEN-LAST:event_ff11_palabra4MouseEntered
 
     private void ff11_palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseExited
@@ -462,12 +473,16 @@ public class FrasesNivel1 extends javax.swing.JFrame {
 
     private void ff11_palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseClicked
         ff11_palabra5.setEnabled(false);
-        ff11_imagen1=true;
-        if (ff11_imagen2){;}
+        ff11_palabra7.setEnabled(true);
+        if (!ff11_palabra2.isEnabled()){
+            ;
+        }
     }//GEN-LAST:event_ff11_palabra5MouseClicked
 
     private void ff11_palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseEntered
-      ff11_palabra5.setForeground(Color.yellow);
+      if (ff11_palabra5.isEnabled()){
+            ff11_palabra5.setForeground(Color.yellow);
+        }
     }//GEN-LAST:event_ff11_palabra5MouseEntered
 
     private void ff11_palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseExited
@@ -487,11 +502,15 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ff11_palabra7MouseClicked
 
     private void ff11_palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra7MouseEntered
-        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando_hover.png")));
+        if (!ff11_palabra5.isEnabled()){
+            ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando_hover.png")));
+        }
     }//GEN-LAST:event_ff11_palabra7MouseEntered
 
     private void ff11_palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra7MouseExited
-        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
+        if (!ff11_palabra5.isEnabled()){
+            ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
+        }
     }//GEN-LAST:event_ff11_palabra7MouseExited
 
     private void ff11_palabra6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra6MouseClicked
@@ -535,11 +554,15 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ff11_palabra11MouseClicked
 
     private void ff11_palabra11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra11MouseEntered
-        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna_hover.png")));
+        if (!ff11_palabra2.isEnabled()){
+            ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna_hover.png")));
+        }    
     }//GEN-LAST:event_ff11_palabra11MouseEntered
 
     private void ff11_palabra11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra11MouseExited
-        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
+        if (!ff11_palabra2.isEnabled()){
+            ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
+        }
     }//GEN-LAST:event_ff11_palabra11MouseExited
 
     private void ff11_palabra10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra10MouseClicked
