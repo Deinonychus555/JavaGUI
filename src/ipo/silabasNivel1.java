@@ -190,7 +190,7 @@ public class silabasNivel1 extends javax.swing.JFrame {
 
     private void soluciónsilabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas1ActionPerformed
         // TODO add your handling code here:
-      //  acertado.setVisible(true);
+            //acertado.setVisible(true);
     }//GEN-LAST:event_soluciónsilabas1ActionPerformed
 
     private void boton3silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas1ActionPerformed
