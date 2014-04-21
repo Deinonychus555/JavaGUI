@@ -180,7 +180,6 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         homeLetras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         homeLetras1.setBorderPainted(false);
         homeLetras1.setContentAreaFilled(false);
-        homeLetras1.setEnabled(false);
 
         ff11_palabra6.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra6.setText("El");

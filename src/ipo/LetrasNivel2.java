@@ -172,7 +172,6 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         homeLetras4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         homeLetras4.setBorderPainted(false);
         homeLetras4.setContentAreaFilled(false);
-        homeLetras4.setEnabled(false);
 
         ff11_subtitulo.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
         ff11_subtitulo.setForeground(new java.awt.Color(204, 0, 102));
