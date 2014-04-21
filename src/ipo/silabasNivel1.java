@@ -69,6 +69,7 @@ public class silabasNivel1 extends javax.swing.JFrame {
         boton1silabas1 = new javax.swing.JButton();
         boton2silabas1 = new javax.swing.JButton();
         boton3silabas1 = new javax.swing.JButton();
+        ff11_titulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
@@ -77,10 +78,12 @@ public class silabasNivel1 extends javax.swing.JFrame {
         panel_nivel1fase2.setBackground(new java.awt.Color(204, 255, 204));
         panel_nivel1fase2.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase2.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_nivel1fase2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloSilabas1.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas1.setText("Selecciona la sílaba correcta");
-        TituloSilabas1.setFont(font_titulo_niveles);
+        TituloSilabas1.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
+        panel_nivel1fase2.add(TituloSilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
         backSilabas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         backSilabas1.setBorderPainted(false);
@@ -90,85 +93,49 @@ public class silabasNivel1 extends javax.swing.JFrame {
                 backSilabas1MouseClicked(evt);
             }
         });
+        panel_nivel1fase2.add(backSilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 512, -1, -1));
 
         homeSilabas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         homeSilabas1.setBorderPainted(false);
         homeSilabas1.setContentAreaFilled(false);
         homeSilabas1.setEnabled(false);
+        panel_nivel1fase2.add(homeSilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 512, -1, -1));
 
         silabasImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/soccer_ball.png"))); // NOI18N
         silabasImg1.setBorderPainted(false);
         silabasImg1.setContentAreaFilled(false);
+        panel_nivel1fase2.add(silabasImg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, -1, -1));
 
-        soluciónsilabas1.setFont(font_boton_niveles);
+        soluciónsilabas1.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         soluciónsilabas1.setText("Pe-lota");
         soluciónsilabas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 soluciónsilabas1ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(soluciónsilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
 
-        boton1silabas1.setFont(font_boton_niveles);
+        boton1silabas1.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton1silabas1.setText("Ca-mión");
+        panel_nivel1fase2.add(boton1silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
-        boton2silabas1.setFont(font_boton_niveles);
+        boton2silabas1.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton2silabas1.setText("A-renero");
+        panel_nivel1fase2.add(boton2silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, -1, -1));
 
-        boton3silabas1.setFont(font_boton_niveles);
+        boton3silabas1.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton3silabas1.setText("Me-lón");
         boton3silabas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton3silabas1ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(boton3silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel1fase2Layout = new javax.swing.GroupLayout(panel_nivel1fase2);
-        panel_nivel1fase2.setLayout(panel_nivel1fase2Layout);
-        panel_nivel1fase2Layout.setHorizontalGroup(
-            panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backSilabas1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(homeSilabas1))
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(soluciónsilabas1)
-                        .addGap(79, 79, 79)
-                        .addComponent(boton1silabas1)
-                        .addGap(79, 79, 79)
-                        .addComponent(boton2silabas1)
-                        .addGap(79, 79, 79)
-                        .addComponent(boton3silabas1))
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addGap(317, 317, 317)
-                        .addComponent(silabasImg1)))
-                .addContainerGap(146, Short.MAX_VALUE))
-        );
-        panel_nivel1fase2Layout.setVerticalGroup(
-            panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(silabasImg1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(soluciónsilabas1)
-                    .addComponent(boton1silabas1)
-                    .addComponent(boton2silabas1)
-                    .addComponent(boton3silabas1))
-                .addGap(129, 129, 129)
-                .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeSilabas1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(backSilabas1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(40, 40, 40))
-        );
+        ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
+        ff11_titulo.setForeground(new java.awt.Color(0, 204, 51));
+        ff11_titulo.setText("NIVEL 1");
+        panel_nivel1fase2.add(ff11_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -239,6 +206,7 @@ public class silabasNivel1 extends javax.swing.JFrame {
     private javax.swing.JButton boton1silabas1;
     private javax.swing.JButton boton2silabas1;
     private javax.swing.JButton boton3silabas1;
+    private javax.swing.JLabel ff11_titulo;
     private javax.swing.JButton homeSilabas1;
     private javax.swing.JPanel panel_nivel1fase2;
     private javax.swing.JButton silabasImg1;
