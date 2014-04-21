@@ -40,7 +40,7 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        frasesNivel1Panel1 = new JPanelCustom("/img/fondoSelva.jpg");
+        frasesNivel1Panel1 = new JPanelCustom("/img/fondoSelva.png");
         ff11_titulo = new javax.swing.JLabel();
         ff11_subtitulo = new javax.swing.JLabel();
         ff11_palabra1 = new javax.swing.JButton();

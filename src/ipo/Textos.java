@@ -28,7 +28,6 @@ public class Textos extends javax.swing.JFrame {
     public Textos() {
         initComponents();
         
-        
     }
 
     /**
@@ -40,7 +39,7 @@ public class Textos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        frasesNivel1Panel1 = new JPanelCustom("/img/fondoBiblioteca.jpg");
+        frasesNivel1Panel1 = new JPanelCustom("/img/fondoSelva.png");
         backLetras1 = new javax.swing.JButton();
         homeLetras1 = new javax.swing.JButton();
         palabra1 = new javax.swing.JButton();
@@ -518,7 +517,7 @@ public class Textos extends javax.swing.JFrame {
         frasesNivel1Panel1.add(palabra28, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, -1, -1));
 
         ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
-        ff11_titulo.setForeground(new java.awt.Color(0, 204, 51));
+        ff11_titulo.setForeground(new java.awt.Color(255, 0, 0));
         ff11_titulo.setText("Completa el texto");
         frasesNivel1Panel1.add(ff11_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 623, -1));
 
@@ -567,6 +566,7 @@ public class Textos extends javax.swing.JFrame {
 
     private void palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseClicked
         palabra1.setEnabled(false);
+        palabra1.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra1MouseClicked
 
     private void palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseEntered
@@ -576,15 +576,20 @@ public class Textos extends javax.swing.JFrame {
     }//GEN-LAST:event_palabra1MouseEntered
 
     private void palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseExited
-        palabra1.setForeground(Color.black);
+        if(palabra1.isEnabled()){
+            palabra1.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra1MouseExited
 
     private void palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseClicked
         palabra2.setEnabled(false);
+        palabra2.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra2MouseClicked
 
     private void palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseExited
-        palabra2.setForeground(Color.black);
+        if(palabra2.isEnabled()){
+            palabra2.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra2MouseExited
 
     private void palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseEntered
@@ -599,10 +604,13 @@ public class Textos extends javax.swing.JFrame {
         if ((!palabra9.isEnabled())&&(!palabra6.isEnabled())&&(!palabra4.isEnabled())){
             ;
         }
+        palabra3.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra3MouseClicked
 
     private void palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseExited
-        palabra3.setForeground(Color.black);
+        if(palabra3.isEnabled()){
+            palabra3.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra3MouseExited
 
     private void palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseEntered
@@ -617,10 +625,13 @@ public class Textos extends javax.swing.JFrame {
         if ((!palabra9.isEnabled())&&(!palabra6.isEnabled())&&(!palabra3.isEnabled())){
             ;
         }
+        palabra4.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra4MouseClicked
 
     private void palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseExited
-        palabra4.setForeground(Color.black);
+        if(palabra4.isEnabled()){
+            palabra4.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra4MouseExited
 
     private void palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseEntered
@@ -631,10 +642,13 @@ public class Textos extends javax.swing.JFrame {
 
     private void palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseClicked
         palabra5.setEnabled(false);
+        palabra5.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra5MouseClicked
 
     private void palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseExited
-        palabra5.setForeground(Color.black);
+        if(palabra5.isEnabled()){
+            palabra5.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra5MouseExited
 
     private void palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseEntered
@@ -649,10 +663,13 @@ public class Textos extends javax.swing.JFrame {
         if ((!palabra9.isEnabled())&&(!palabra3.isEnabled())&&(!palabra4.isEnabled())){
             ;
         }
+        palabra6.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra6MouseClicked
 
     private void palabra6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseExited
-        palabra6.setForeground(Color.black);
+        if(palabra6.isEnabled()){
+            palabra6.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra6MouseExited
 
     private void palabra6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseEntered
@@ -663,10 +680,13 @@ public class Textos extends javax.swing.JFrame {
 
     private void palabra7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseClicked
         palabra7.setEnabled(false);
+        palabra7.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra7MouseClicked
 
     private void palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseExited
-        palabra7.setForeground(Color.black);
+        if(palabra7.isEnabled()){
+            palabra7.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra7MouseExited
 
     private void palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseEntered
@@ -677,10 +697,13 @@ public class Textos extends javax.swing.JFrame {
 
     private void palabra8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseClicked
         palabra8.setEnabled(false);
+        palabra8.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra8MouseClicked
 
     private void palabra8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseExited
-        palabra8.setForeground(Color.black);
+        if(palabra8.isEnabled()){
+            palabra8.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra8MouseExited
 
     private void palabra8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseEntered
@@ -695,10 +718,13 @@ public class Textos extends javax.swing.JFrame {
         if ((!palabra3.isEnabled())&&(!palabra6.isEnabled())&&(!palabra4.isEnabled())){
             ;
         }
+        palabra9.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra9MouseClicked
 
     private void palabra9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseExited
-        palabra9.setForeground(Color.black);
+        if(palabra9.isEnabled()){
+            palabra9.setForeground(Color.black);
+        }
     }//GEN-LAST:event_palabra9MouseExited
 
     private void palabra9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseEntered
