@@ -87,17 +87,17 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel1fase1.setContentAreaFilled(false);
         nivel1fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel1fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel1fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel1fase1MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel1fase1MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel1fase1MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel1fase1MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel1fase1MouseEntered(evt);
             }
         });
 
@@ -110,17 +110,17 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel2fase1.setContentAreaFilled(false);
         nivel2fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel2fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel2fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel2fase1MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel2fase1MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel2fase1MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel2fase1MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel2fase1MouseEntered(evt);
             }
         });
 
@@ -132,17 +132,17 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel3fase1.setContentAreaFilled(false);
         nivel3fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel3fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel3fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel3fase1MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel3fase1MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel3fase1MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel3fase1MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel3fase1MouseEntered(evt);
             }
         });
         nivel3fase1.addActionListener(new java.awt.event.ActionListener() {
@@ -159,17 +159,17 @@ public class NivelesFase1 extends javax.swing.JFrame {
         nivel4fase1.setContentAreaFilled(false);
         nivel4fase1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel4fase1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel4fase1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel4fase1MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel4fase1MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel4fase1MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel4fase1MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel4fase1MouseEntered(evt);
             }
         });
         nivel4fase1.addActionListener(new java.awt.event.ActionListener() {
