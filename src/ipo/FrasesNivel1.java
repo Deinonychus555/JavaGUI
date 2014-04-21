@@ -40,8 +40,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        frasesNivel1Panel1 = new JPanelCustom("/img/fondo_fases_frases.jpg");
+        frasesNivel1Panel1 = new JPanelCustom("/img/fondoSelva.jpg");
         ff11_titulo = new javax.swing.JLabel();
+        ff11_subtitulo = new javax.swing.JLabel();
         ff11_palabra1 = new javax.swing.JLabel();
         ff11_palabra2 = new javax.swing.JLabel();
         ff11_palabra3 = new javax.swing.JLabel();
@@ -64,10 +65,20 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         ff11_titulo.setForeground(new java.awt.Color(0, 204, 51));
         ff11_titulo.setText("NIVEL 1");
+        ff11_titulo.setNextFocusableComponent(ff11_subtitulo);
+
+        ff11_subtitulo.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
+        ff11_subtitulo.setForeground(new java.awt.Color(0, 0, 255));
+        ff11_subtitulo.setText("Selecciona las palabras correctas");
+        ff11_subtitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ff11_subtitulo.setNextFocusableComponent(ff11_palabra1);
 
         ff11_palabra1.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra1.setText("gato");
+        ff11_palabra1.setFocusCycleRoot(true);
+        ff11_palabra1.setFocusTraversalPolicyProvider(true);
+        ff11_palabra1.setNextFocusableComponent(ff11_palabra2);
         ff11_palabra1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseClicked(evt);
@@ -89,6 +100,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra2.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra2.setText("luna");
+        ff11_palabra2.setFocusCycleRoot(true);
+        ff11_palabra2.setFocusTraversalPolicyProvider(true);
+        ff11_palabra2.setNextFocusableComponent(ff11_palabra3);
         ff11_palabra2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra2MouseClicked(evt);
@@ -110,6 +124,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra3.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra3.setText("pera");
+        ff11_palabra3.setFocusCycleRoot(true);
+        ff11_palabra3.setFocusTraversalPolicyProvider(true);
+        ff11_palabra3.setNextFocusableComponent(ff11_palabra4);
         ff11_palabra3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra3MouseClicked(evt);
@@ -131,6 +148,9 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra4.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra4.setText("sol");
+        ff11_palabra4.setFocusCycleRoot(true);
+        ff11_palabra4.setFocusTraversalPolicyProvider(true);
+        ff11_palabra4.setNextFocusableComponent(ff11_palabra5);
         ff11_palabra4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra4MouseClicked(evt);
@@ -152,6 +172,8 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         ff11_palabra5.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ff11_palabra5.setText("perro");
+        ff11_palabra5.setFocusCycleRoot(true);
+        ff11_palabra5.setFocusTraversalPolicyProvider(true);
         ff11_palabra5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra5MouseClicked(evt);
@@ -280,89 +302,87 @@ public class FrasesNivel1 extends javax.swing.JFrame {
         frasesNivel1Panel1.setLayout(frasesNivel1Panel1Layout);
         frasesNivel1Panel1Layout.setHorizontalGroup(
             frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(ff11_palabra1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(ff11_palabra2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ff11_palabra3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(ff11_palabra4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ff11_palabra5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frasesNivel1Panel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ff11_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(237, 237, 237))
             .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(ff11_palabra6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ff11_palabra7, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(ff11_palabra8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(ff11_palabra9, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(ff11_palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ff11_palabra11, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
                 .addComponent(backLetras1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(homeLetras1)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ff11_subtitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
+                            .addComponent(ff11_palabra1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(34, 34, 34)
+                            .addComponent(ff11_palabra2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(ff11_palabra3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ff11_palabra4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
+                            .addComponent(ff11_palabra6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(ff11_palabra7, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(26, 26, 26)
+                            .addComponent(ff11_palabra8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addComponent(ff11_palabra9, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(34, 34, 34)
+                            .addComponent(ff11_palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 30, Short.MAX_VALUE)
+                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ff11_palabra11, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ff11_palabra5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         frasesNivel1Panel1Layout.setVerticalGroup(
             frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(ff11_titulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ff11_subtitulo)
                 .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
                         .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(ff11_palabra2))
-                            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addComponent(ff11_palabra4))
-                            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
+                                .addGap(25, 25, 25)
                                 .addComponent(ff11_palabra1))
                             .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ff11_palabra5)
-                                    .addComponent(ff11_palabra3))))
+                                .addGap(33, 33, 33)
+                                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(ff11_palabra3)
+                                    .addComponent(ff11_palabra5))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ff11_palabra11)
+                        .addGap(51, 51, 51))
+                    .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ff11_palabra2)
+                            .addComponent(ff11_palabra4))
+                        .addGap(62, 62, 62)
                         .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frasesNivel1Panel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(ff11_palabra8)
                                     .addComponent(ff11_palabra9)
                                     .addComponent(ff11_palabra10))
-                                .addContainerGap())
+                                .addGap(66, 66, 66))
                             .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
                                 .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(frasesNivel1Panel1Layout.createSequentialGroup()
-                                        .addGap(112, 112, 112)
-                                        .addComponent(ff11_palabra6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frasesNivel1Panel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ff11_palabra7)
-                                        .addGap(62, 62, 62)))
-                                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(backLetras1)
-                                    .addComponent(homeLetras1)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frasesNivel1Panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ff11_palabra11)
-                        .addGap(135, 135, 135))))
+                                    .addComponent(ff11_palabra6)
+                                    .addComponent(ff11_palabra7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))))
+                .addGroup(frasesNivel1Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(backLetras1)
+                    .addComponent(homeLetras1)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -629,6 +649,7 @@ public class FrasesNivel1 extends javax.swing.JFrame {
     private javax.swing.JLabel ff11_palabra7;
     private javax.swing.JLabel ff11_palabra8;
     private javax.swing.JLabel ff11_palabra9;
+    private javax.swing.JLabel ff11_subtitulo;
     private javax.swing.JLabel ff11_titulo;
     private javax.swing.JPanel frasesNivel1Panel1;
     private javax.swing.JButton homeLetras1;

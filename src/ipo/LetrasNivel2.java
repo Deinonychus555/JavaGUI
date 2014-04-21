@@ -64,7 +64,7 @@ public class LetrasNivel2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        letrasNivel2_Panel = new JPanelCustom ("/img/fondo_fases_letras.jpg");
+        letrasNivel2_Panel = new JPanelCustom ("/img/fondoClase.png");
         fl21_titulo = new javax.swing.JLabel();
         fl21_imagen1 = new javax.swing.JButton();
         fl21_imagen2 = new javax.swing.JButton();
@@ -72,11 +72,13 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         fl21_letra = new javax.swing.JLabel();
         backLetras2 = new javax.swing.JButton();
         homeLetras4 = new javax.swing.JButton();
+        ff11_subtitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         letrasNivel2_Panel.setMaximumSize(new java.awt.Dimension(800, 600));
         letrasNivel2_Panel.setMinimumSize(new java.awt.Dimension(800, 600));
+        letrasNivel2_Panel.setPreferredSize(new java.awt.Dimension(800, 600));
 
         fl21_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         fl21_titulo.setForeground(new java.awt.Color(255, 255, 0));
@@ -86,6 +88,7 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         fl21_imagen1.setBorder(null);
         fl21_imagen1.setBorderPainted(false);
         fl21_imagen1.setContentAreaFilled(false);
+        fl21_imagen1.setNextFocusableComponent(fl21_imagen2);
         fl21_imagen1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fl21_imagen1MouseClicked(evt);
@@ -113,6 +116,7 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         fl21_imagen2.setBorder(null);
         fl21_imagen2.setBorderPainted(false);
         fl21_imagen2.setContentAreaFilled(false);
+        fl21_imagen2.setNextFocusableComponent(fl21_imagen3);
         fl21_imagen2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fl21_imagen2MouseClicked(evt);
@@ -135,6 +139,7 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         fl21_imagen3.setBorder(null);
         fl21_imagen3.setBorderPainted(false);
         fl21_imagen3.setContentAreaFilled(false);
+        fl21_imagen3.setNextFocusableComponent(backLetras2);
         fl21_imagen3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fl21_imagen3MouseClicked(evt);
@@ -169,51 +174,64 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         homeLetras4.setContentAreaFilled(false);
         homeLetras4.setEnabled(false);
 
+        ff11_subtitulo.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
+        ff11_subtitulo.setForeground(new java.awt.Color(204, 0, 102));
+        ff11_subtitulo.setText("Selecciona el dibujo correcto");
+        ff11_subtitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
         javax.swing.GroupLayout letrasNivel2_PanelLayout = new javax.swing.GroupLayout(letrasNivel2_Panel);
         letrasNivel2_Panel.setLayout(letrasNivel2_PanelLayout);
         letrasNivel2_PanelLayout.setHorizontalGroup(
             letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(fl21_imagen1)
-                .addGap(369, 369, 369)
-                .addComponent(fl21_imagen2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
-                .addComponent(fl21_imagen3)
-                .addGap(31, 31, 31))
             .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
-                .addComponent(backLetras2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(homeLetras4)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
-                        .addComponent(fl21_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(405, 405, 405))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
-                        .addComponent(fl21_letra)
-                        .addGap(575, 575, 575))))
+                    .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                        .addComponent(backLetras2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeLetras4))
+                    .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(fl21_imagen1)
+                        .addGap(150, 150, 150)
+                        .addComponent(fl21_imagen2)
+                        .addGap(162, 162, 162)
+                        .addComponent(fl21_imagen3))
+                    .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(ff11_subtitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 530, Short.MAX_VALUE))
+            .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                        .addGap(304, 304, 304)
+                        .addComponent(fl21_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addComponent(fl21_letra)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         letrasNivel2_PanelLayout.setVerticalGroup(
             letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
+                .addComponent(fl21_titulo)
                 .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(fl21_imagen3))
+                        .addGap(120, 120, 120)
+                        .addComponent(fl21_imagen3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(letrasNivel2_PanelLayout.createSequentialGroup()
-                                .addComponent(fl21_titulo)
-                                .addGap(113, 113, 113)
-                                .addComponent(fl21_imagen2))
-                            .addComponent(fl21_imagen1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-                .addComponent(fl21_letra)
-                .addGap(33, 33, 33)
+                        .addGap(18, 18, 18)
+                        .addComponent(ff11_subtitulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
+                                .addComponent(fl21_imagen1)
+                                .addGap(137, 137, 137))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, letrasNivel2_PanelLayout.createSequentialGroup()
+                                .addComponent(fl21_imagen2)
+                                .addGap(81, 81, 81)
+                                .addComponent(fl21_letra)
+                                .addGap(39, 39, 39)))))
                 .addGroup(letrasNivel2_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(backLetras2)
                     .addComponent(homeLetras4)))
@@ -223,11 +241,11 @@ public class LetrasNivel2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(letrasNivel2_Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1292, Short.MAX_VALUE)
+            .addComponent(letrasNivel2_Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(letrasNivel2_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
+            .addComponent(letrasNivel2_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -338,6 +356,7 @@ public class LetrasNivel2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backLetras2;
+    private javax.swing.JLabel ff11_subtitulo;
     private javax.swing.JButton fl21_imagen1;
     private javax.swing.JButton fl21_imagen2;
     private javax.swing.JButton fl21_imagen3;
