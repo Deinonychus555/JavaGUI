@@ -79,6 +79,7 @@ public class NivelesFase3 extends javax.swing.JFrame {
         Fase3.setFont(font_titulo_niveles);
         Fase3.setMaximumSize(new java.awt.Dimension(800, 600));
         Fase3.setMinimumSize(new java.awt.Dimension(800, 600));
+        Fase3.setPreferredSize(new java.awt.Dimension(800, 600));
 
         nivel1fase3.setFont(font_boton_niveles);
         nivel1fase3.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,7 +225,7 @@ public class NivelesFase3 extends javax.swing.JFrame {
                         .addComponent(homeFase3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(nivel4fase3)))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         Fase3Layout.setVerticalGroup(
             Fase3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,24 +247,18 @@ public class NivelesFase3 extends javax.swing.JFrame {
                         .addComponent(nivel2fase3)
                         .addGap(70, 70, 70)
                         .addComponent(nivel4fase3)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Fase3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(226, 226, 226))
+            .addComponent(Fase3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Fase3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(298, 298, 298))
+            .addComponent(Fase3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

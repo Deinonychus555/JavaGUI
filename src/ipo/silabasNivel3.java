@@ -69,6 +69,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
         boton2silabas3 = new javax.swing.JButton();
         solucionsilabas3 = new javax.swing.JButton();
         boton3silabas3 = new javax.swing.JButton();
+        ff11_titulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
@@ -77,10 +78,12 @@ public class silabasNivel3 extends javax.swing.JFrame {
         panel_nivel3fase2.setBackground(new java.awt.Color(204, 255, 204));
         panel_nivel3fase2.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel3fase2.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_nivel3fase2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloSilabas3.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas3.setText("Selecciona la sílaba correcta");
-        TituloSilabas3.setFont(font_titulo_niveles);
+        TituloSilabas3.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
+        panel_nivel3fase2.add(TituloSilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, -1, -1));
 
         backSilabas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         backSilabas3.setBorderPainted(false);
@@ -95,83 +98,44 @@ public class silabasNivel3 extends javax.swing.JFrame {
                 backSilabas3ActionPerformed(evt);
             }
         });
+        panel_nivel3fase2.add(backSilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 512, -1, -1));
 
         homeSilabas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         homeSilabas3.setBorderPainted(false);
         homeSilabas3.setContentAreaFilled(false);
         homeSilabas3.setEnabled(false);
+        panel_nivel3fase2.add(homeSilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 512, -1, -1));
 
         silabasImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clover.png"))); // NOI18N
         silabasImg3.setBorderPainted(false);
         silabasImg3.setContentAreaFilled(false);
+        panel_nivel3fase2.add(silabasImg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, -1));
 
-        boton1silabas3.setFont(font_boton_niveles);
+        boton1silabas3.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton1silabas3.setText("Tri-ciclo");
+        panel_nivel3fase2.add(boton1silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, -1));
 
-        boton2silabas3.setFont(font_boton_niveles);
+        boton2silabas3.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton2silabas3.setText("Tren");
+        panel_nivel3fase2.add(boton2silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, -1, -1));
 
-        solucionsilabas3.setFont(font_boton_niveles);
+        solucionsilabas3.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         solucionsilabas3.setText("Tre-bol");
         solucionsilabas3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 solucionsilabas3ActionPerformed(evt);
             }
         });
+        panel_nivel3fase2.add(solucionsilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, -1, -1));
 
-        boton3silabas3.setFont(font_boton_niveles);
+        boton3silabas3.setFont(new java.awt.Font("PalMeMim", 0, 36)); // NOI18N
         boton3silabas3.setText("Bra-zo");
+        panel_nivel3fase2.add(boton3silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel3fase2Layout = new javax.swing.GroupLayout(panel_nivel3fase2);
-        panel_nivel3fase2.setLayout(panel_nivel3fase2Layout);
-        panel_nivel3fase2Layout.setHorizontalGroup(
-            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backSilabas3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(homeSilabas3))
-                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                .addGap(0, 162, Short.MAX_VALUE)
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                        .addComponent(boton1silabas3)
-                        .addGap(79, 79, 79)
-                        .addComponent(boton2silabas3)
-                        .addGap(78, 78, 78)
-                        .addComponent(solucionsilabas3)
-                        .addGap(78, 78, 78)
-                        .addComponent(boton3silabas3)
-                        .addGap(149, 149, 149))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                        .addComponent(silabasImg3)
-                        .addGap(316, 316, 316))))
-        );
-        panel_nivel3fase2Layout.setVerticalGroup(
-            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
-                .addComponent(silabasImg3)
-                .addGap(85, 85, 85)
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton1silabas3)
-                    .addComponent(boton2silabas3)
-                    .addComponent(solucionsilabas3)
-                    .addComponent(boton3silabas3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeSilabas3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(backSilabas3, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(40, 40, 40))
-        );
+        ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
+        ff11_titulo.setForeground(new java.awt.Color(255, 0, 0));
+        ff11_titulo.setText("NIVEL 2");
+        panel_nivel3fase2.add(ff11_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -242,6 +206,7 @@ public class silabasNivel3 extends javax.swing.JFrame {
     private javax.swing.JButton boton1silabas3;
     private javax.swing.JButton boton2silabas3;
     private javax.swing.JButton boton3silabas3;
+    private javax.swing.JLabel ff11_titulo;
     private javax.swing.JButton homeSilabas3;
     private javax.swing.JPanel panel_nivel3fase2;
     private javax.swing.JButton silabasImg3;
