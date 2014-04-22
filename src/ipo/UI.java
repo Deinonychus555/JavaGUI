@@ -6504,7 +6504,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void bibliotecaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseEntered
         biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_hover.png")));
-        reproduceSonido("a_labiliotecadelostextos.mp3");
+        reproduceSonido("a_labibliotecadelostextos.mp3");
     }//GEN-LAST:event_bibliotecaMouseEntered
 
     private void bibliotecaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseExited
