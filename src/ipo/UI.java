@@ -9611,7 +9611,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl41_imagen3ActionPerformed
 
     private void fl41_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen2ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl41_imagen2ActionPerformed
 
     private void mascota_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase4ActionPerformed
