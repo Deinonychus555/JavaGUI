@@ -9142,71 +9142,71 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl21_letraMouseEntered
 
     private void boton1silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas1MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_ca.mp3");
     }//GEN-LAST:event_boton1silabas1MouseEntered
 
     private void boton2silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas1MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_to.mp3");
     }//GEN-LAST:event_boton2silabas1MouseEntered
 
     private void boton3silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas1MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_me.mp3");
     }//GEN-LAST:event_boton3silabas1MouseEntered
 
     private void solucionsilabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_solucionsilabas1MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_pe.mp3");
     }//GEN-LAST:event_solucionsilabas1MouseEntered
 
     private void silabasImg1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg1MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_pelota.mp3");
     }//GEN-LAST:event_silabasImg1MouseEntered
 
     private void silabasImg2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg2MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_caramelo.mp3");
     }//GEN-LAST:event_silabasImg2MouseEntered
 
     private void boton1silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas2MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_pe.mp3");
     }//GEN-LAST:event_boton1silabas2MouseEntered
 
     private void boton2silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas2MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_es.mp3");
     }//GEN-LAST:event_boton2silabas2MouseEntered
 
     private void soluciónsilabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_soluciónsilabas2MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_ca.mp3");
     }//GEN-LAST:event_soluciónsilabas2MouseEntered
 
     private void boton3silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas2MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_san.mp3");
     }//GEN-LAST:event_boton3silabas2MouseEntered
 
     private void silabasImg3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg3MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_trebol.mp3");
     }//GEN-LAST:event_silabasImg3MouseEntered
 
     private void boton2silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas3MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_tro.mp3");
     }//GEN-LAST:event_boton2silabas3MouseEntered
 
     private void solucionsilabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_solucionsilabas3MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_tre.mp3");
     }//GEN-LAST:event_solucionsilabas3MouseEntered
 
     private void boton3silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas3MouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_bra.mp3");
     }//GEN-LAST:event_boton3silabas3MouseEntered
 
     private void fl11_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_letraMouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_a.mp3");
     }//GEN-LAST:event_fl11_letraMouseEntered
 
     private void fl31_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_letraMouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_m.mp3");
     }//GEN-LAST:event_fl31_letraMouseEntered
 
     private void fl41_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_letraMouseEntered
-        // TODO add your handling code here:
+        reproduceSonido("a_r.mp3");
     }//GEN-LAST:event_fl41_letraMouseEntered
 
     /**
