@@ -588,7 +588,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -4114,6 +4116,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         nivel2fase3.setText("Nivel 2");
         nivel2fase3.setBorderPainted(false);
         nivel2fase3.setContentAreaFilled(false);
+        nivel2fase3.setEnabled(false);
         nivel2fase3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel2fase3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -4141,6 +4144,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         nivel3fase3.setText("Nivel 3");
         nivel3fase3.setBorderPainted(false);
         nivel3fase3.setContentAreaFilled(false);
+        nivel3fase3.setEnabled(false);
         nivel3fase3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel3fase3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -4168,6 +4172,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         nivel4fase3.setText("Nivel 4");
         nivel4fase3.setBorderPainted(false);
         nivel4fase3.setContentAreaFilled(false);
+        nivel4fase3.setEnabled(false);
         nivel4fase3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel4fase3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -4505,6 +4510,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 fl11_imagen1MouseReleased(evt);
+            }
+        });
+        fl11_imagen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl11_imagen1ActionPerformed(evt);
             }
         });
 
@@ -6164,19 +6174,20 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         nivel2fase4.setText("Nivel 2");
         nivel2fase4.setBorderPainted(false);
         nivel2fase4.setContentAreaFilled(false);
+        nivel2fase4.setEnabled(false);
         nivel2fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel2fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel2fase4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel2fase4MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel2fase4MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel2fase4MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel2fase4MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel2fase4MouseEntered(evt);
             }
         });
 
@@ -6186,19 +6197,20 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         nivel3fase4.setText("Nivel 3");
         nivel3fase4.setBorderPainted(false);
         nivel3fase4.setContentAreaFilled(false);
+        nivel3fase4.setEnabled(false);
         nivel3fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nivel3fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel3fase4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel3fase4MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 nivel3fase4MousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel3fase4MouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                nivel3fase4MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                nivel3fase4MouseEntered(evt);
             }
         });
         nivel3fase4.addActionListener(new java.awt.event.ActionListener() {
@@ -6224,11 +6236,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         homeFase4.setBorderPainted(false);
         homeFase4.setContentAreaFilled(false);
         homeFase4.setEnabled(false);
-        homeFase4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeFase4ActionPerformed(evt);
-            }
-        });
 
         boton_sonido_fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
         boton_sonido_fase4.setBorderPainted(false);
@@ -6495,6 +6502,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase1ActionPerformed
         panel_nivel3fase1.setVisible(true);
         panel_fase1.setVisible(false);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel3fase1ActionPerformed
 
     private void nivel4fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseEntered
@@ -6520,6 +6529,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel4fase1ActionPerformed
         panel_nivel4fase1.setVisible(true);
         panel_fase1.setVisible(false);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel4fase1ActionPerformed
 
     private void backFase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backFase1MouseClicked
@@ -7660,7 +7671,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase2ActionPerformed
         panel_fase2.setVisible(false);
         panel_nivel1fase2.setVisible(true);
-        pausarMusica();
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel1fase2ActionPerformed
 
     private void nivel2fase2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase2MousePressed
@@ -7698,13 +7710,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase2ActionPerformed
         panel_nivel3fase2.setVisible(true);
         panel_fase2.setVisible(false);
-        pausarMusica();
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel3fase2ActionPerformed
 
     private void nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase2ActionPerformed
         panel_nivel2fase2.setVisible(true);
         panel_fase2.setVisible(false);
-        pausarMusica();
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel2fase2ActionPerformed
 
     private void boton2silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas1ActionPerformed
@@ -7959,6 +7973,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 reproduceSonido("nonono.mp3");
                 break;
         }
+        if (nivelCompletado()) {
+            reproduceSonido("bien.mp3");
+            panelPalabrasNivel1.setVisible(false);
+            panel_fases.setVisible(true);
+            try{
+                Thread.sleep(3000);
+            }catch(Exception ex){
+                
+            }
+        }
     }//GEN-LAST:event_letraPulsadaEvent
 
     private void nivel1fase3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase3MousePressed
@@ -8060,6 +8084,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel1fase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase3ActionPerformed
         panelPalabrasNivel1.setVisible(true);
         panel_fase3.setVisible(false);
+        musica_isActive = false;
         stopMusica();
     }//GEN-LAST:event_nivel1fase3ActionPerformed
 
@@ -8132,6 +8157,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel1fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase1ActionPerformed
         panel_nivel1fase1.setVisible(true);
         panel_fase1.setVisible(false);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel1fase1ActionPerformed
 
     private void boton_sonido_fase3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase3MousePressed
@@ -8201,7 +8228,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_boton_sonido_fase1MouseReleased
 
     private void fl11_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel1fase1.setVisible(false);
+        panel_nivel2fase1.setVisible(true);
     }//GEN-LAST:event_fl11_imagen1MouseClicked
 
     private void fl11_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseEntered
@@ -8314,7 +8343,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl21_imagen2MouseReleased
 
     private void fl21_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel2fase1.setVisible(false);
+        panel_nivel3fase1.setVisible(true);
     }//GEN-LAST:event_fl21_imagen3MouseClicked
 
     private void fl21_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseEntered
@@ -8385,7 +8416,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl31_imagen2MouseReleased
 
     private void fl31_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel3fase1.setVisible(false);
+        panel_nivel4fase1.setVisible(true);
     }//GEN-LAST:event_fl31_imagen3MouseClicked
 
     private void fl31_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseEntered
@@ -8410,7 +8443,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_back_nivel3fase1MouseClicked
 
     private void fl41_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel4fase1.setVisible(false);
+        panel_fases.setVisible(true);
     }//GEN-LAST:event_fl41_imagen1MouseClicked
 
     private void fl41_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseEntered
@@ -8479,6 +8514,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void home_nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel4fase1ActionPerformed
         panel_nivel4fase1.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel4fase1ActionPerformed
 
     private void ff11_palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseClicked
@@ -8511,7 +8548,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra11.setEnabled(true);
         ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
         if (!ff11_palabra5.isEnabled()) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase4.setVisible(false);
+            panel_fases.setVisible(true);
         }
     }//GEN-LAST:event_ff11_palabra2MouseClicked
 
@@ -8679,36 +8718,50 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void back_nivel1fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase1ActionPerformed
         panel_nivel1fase1.setVisible(false);
         panel_fase1.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel1fase1ActionPerformed
 
     private void home_nivel1fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase1ActionPerformed
         panel_nivel1fase1.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel1fase1ActionPerformed
 
     private void back_nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel2fase1ActionPerformed
         panel_nivel2fase1.setVisible(false);
         panel_fase1.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel2fase1ActionPerformed
 
     private void home_nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel2fase1ActionPerformed
         panel_nivel2fase1.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel2fase1ActionPerformed
 
     private void back_nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel3fase1ActionPerformed
         panel_nivel3fase1.setVisible(false);
         panel_fase1.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel3fase1ActionPerformed
 
     private void home_nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel3fase1ActionPerformed
         panel_nivel3fase1.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel3fase1ActionPerformed
 
     private void back_nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel4fase1ActionPerformed
         panel_nivel4fase1.setVisible(false);
         panel_fase1.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel4fase1ActionPerformed
 
     private void nivel1fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MousePressed
@@ -8734,6 +8787,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase4ActionPerformed
         panel_nivel1fase4.setVisible(true);
         panel_fase4.setVisible(false);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel1fase4ActionPerformed
 
     private void nivel2fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MousePressed
@@ -8780,10 +8835,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_nivel3fase4ActionPerformed
 
-    private void homeFase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeFase4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeFase4ActionPerformed
-
     private void boton_sonido_fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase4MousePressed
         if (musica_isActive) {
             boton_sonido_fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
@@ -8814,11 +8865,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void home_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase4ActionPerformed
         panel_nivel1fase4.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel1fase4ActionPerformed
 
     private void back_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase4ActionPerformed
         panel_nivel1fase4.setVisible(false);
         panel_fase4.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel1fase4ActionPerformed
 
     private void selvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selvaActionPerformed
@@ -8829,6 +8884,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void bibliotecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bibliotecaActionPerformed
         panel_fases.setVisible(false);
         panel_nivel1fase5.setVisible(true);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_bibliotecaActionPerformed
 
     private void palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseEntered
@@ -9276,11 +9333,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void home_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase5ActionPerformed
         panel_nivel1fase5.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel1fase5ActionPerformed
 
     private void back_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase5ActionPerformed
         panel_nivel1fase5.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel1fase5ActionPerformed
 
     private void ff11_palabra6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra6ActionPerformed
@@ -9297,13 +9358,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra7.setEnabled(true);
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
         if (!ff11_palabra2.isEnabled()) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel3fase1.setVisible(false);
+            panel_nivel4fase1.setVisible(true);
         }
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
     private void nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase1ActionPerformed
         panel_nivel2fase1.setVisible(true);
         panel_fase1.setVisible(false);
+        musica_isActive = false;
+        stopMusica();
     }//GEN-LAST:event_nivel2fase1ActionPerformed
 
     private void home_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase2ActionPerformed
@@ -9314,26 +9379,36 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void back_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase2ActionPerformed
         panel_nivel1fase2.setVisible(false);
         panel_fase2.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel1fase2ActionPerformed
 
     private void back_nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel2fase2ActionPerformed
         panel_nivel2fase2.setVisible(false);
         panel_fase2.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel2fase2ActionPerformed
 
     private void home_nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel2fase2ActionPerformed
         panel_nivel2fase2.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel2fase2ActionPerformed
 
     private void back_nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel3fase2ActionPerformed
         panel_nivel3fase2.setVisible(false);
         panel_fase2.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_back_nivel3fase2ActionPerformed
 
     private void home_nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel3fase2ActionPerformed
         panel_nivel3fase2.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel3fase2ActionPerformed
 
     private void fl21_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_letraMouseEntered
@@ -9417,7 +9492,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_boton1silabas3MouseEntered
 
     private void palabra4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra4ActionPerformed
-      
+
     }//GEN-LAST:event_palabra4ActionPerformed
 
     private void palabra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra2ActionPerformed
@@ -9425,7 +9500,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_palabra2ActionPerformed
 
     private void palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra5ActionPerformed
-       reproduceSonido("nonono.mp3");
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra5ActionPerformed
 
     private void palabra8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra8ActionPerformed
@@ -9445,7 +9520,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra4ActionPerformed
 
     private void boton2silabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas3ActionPerformed
-       reproduceSonido("nonono.mp3");
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton2silabas3ActionPerformed
 
     private void boton3silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas2ActionPerformed
@@ -9465,19 +9540,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_boton1silabas1ActionPerformed
 
     private void mascota_nivel1fase10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase10ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_buscalaspalabrasdelosdibujos.mp3");
     }//GEN-LAST:event_mascota_nivel1fase10ActionPerformed
 
     private void mascota_nivel1fase11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase11ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionalasilaba.mp3");
     }//GEN-LAST:event_mascota_nivel1fase11ActionPerformed
 
     private void mascota_nivel1fase12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mascota_nivel1fase12ActionPerformed
-
+        reproduceSonido("a_seleccionalasilaba.mp3");    }//GEN-LAST:event_mascota_nivel1fase12ActionPerformed
     private void mascota_nivel1fase13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase13ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionalasilaba.mp3");
     }//GEN-LAST:event_mascota_nivel1fase13ActionPerformed
 
     private void globo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_globo5ActionPerformed
@@ -9489,7 +9562,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl11_imagen2ActionPerformed
 
     private void fl11_imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen3ActionPerformed
-       reproduceSonido("nonono.mp3");
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl11_imagen3ActionPerformed
 
     private void fl21_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl21_imagen2ActionPerformed
@@ -9501,7 +9574,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl31_imagen2ActionPerformed
 
     private void fl41_imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen3ActionPerformed
-       reproduceSonido("nonono.mp3");
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl41_imagen3ActionPerformed
 
     private void fl41_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen2ActionPerformed
@@ -9509,28 +9582,32 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl41_imagen2ActionPerformed
 
     private void mascota_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase4ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionalaspalabrascorrectas.mp3");
     }//GEN-LAST:event_mascota_nivel1fase4ActionPerformed
 
     private void mascota_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase5ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_completaeltexto.mp3");
     }//GEN-LAST:event_mascota_nivel1fase5ActionPerformed
 
     private void mascota_nivel1fase6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase6ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionaeldibujocorrecto.mp3");
     }//GEN-LAST:event_mascota_nivel1fase6ActionPerformed
 
     private void mascota_nivel1fase7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase7ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionaeldibujocorrecto.mp3");
     }//GEN-LAST:event_mascota_nivel1fase7ActionPerformed
 
     private void mascota_nivel1fase8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase8ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionaeldibujocorrecto.mp3");
     }//GEN-LAST:event_mascota_nivel1fase8ActionPerformed
 
     private void mascota_nivel1fase9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase9ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_seleccionaeldibujocorrecto.mp3");
     }//GEN-LAST:event_mascota_nivel1fase9ActionPerformed
+
+    private void fl11_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl11_imagen1ActionPerformed
 
     /**
      * Métodos de Javi.
@@ -9762,12 +9839,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         return completada;
     }
 
-    public void activarContador(int milisegundos) {
-        try {
-            Thread.sleep(milisegundos);
-        } catch (Exception e) {
-            // Mensaje en caso de que falle
-        }
+    public boolean nivelCompletado() {
+        return (gato[4] && goma[4] && sol[3] && lapiz[5]);
     }
 
     public void reproduceSonido(String nombreSonido) {
