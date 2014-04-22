@@ -150,36 +150,54 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_pass_primaria.setVisible(false);
         panel_fases.setVisible(false);
         /**
-         * FASE 1. *
+         * FASE 1.
          */
         panel_fase1.setVisible(false);
         panel_nivel1fase1.setVisible(false);
         panel_nivel2fase1.setVisible(false);
         panel_nivel3fase1.setVisible(false);
         panel_nivel4fase1.setVisible(false);
+
+        panel_fase1.setCursor(mickey);
+        panel_nivel1fase1.setCursor(mickey);
+        panel_nivel2fase1.setCursor(mickey);
+        panel_nivel3fase1.setCursor(mickey);
+        panel_nivel4fase1.setCursor(mickey);
+
         /**
-         * FASE 2. *
+         * FASE 2.
          */
         panel_fase2.setVisible(false);
         panel_nivel1fase2.setVisible(false);
         panel_nivel2fase2.setVisible(false);
         panel_nivel3fase2.setVisible(false);
+
+        panel_fase2.setCursor(mickey);
+        panel_nivel1fase2.setCursor(mickey);
+        panel_nivel2fase2.setCursor(mickey);
+        panel_nivel3fase2.setCursor(mickey);
         /**
-         * FASE 3. *
+         * FASE 3.
          */
         panel_fase3.setVisible(false);
+        panel_fase3.setCursor(mickey);
         /**
-         * FASE 4. *
+         * FASE 4.
          */
         panel_fase4.setVisible(false);
         panel_nivel1fase4.setVisible(false);
+        panel_fase4.setCursor(mickey);
+        panel_nivel1fase4.setCursor(mickey);
         /**
-         * FASE 5. *
+         * FASE 5.
          */
         panel_nivel1fase5.setVisible(false);
         panelPalabrasNivel1.setVisible(false);
         panel_acertado.setVisible(false);
 
+        panel_nivel1fase5.setCursor(mickey);
+        panelPalabrasNivel1.setCursor(mickey);
+        panel_acertado.setCursor(mickey);
         /**
          * INICIAMOS LA MÚSICA.
          */
@@ -1286,6 +1304,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 globo5MouseReleased(evt);
             }
         });
+        globo5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                globo5ActionPerformed(evt);
+            }
+        });
 
         globo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globo6.png"))); // NOI18N
         globo6.setBorder(null);
@@ -1861,6 +1884,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_profesor.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_profesor.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_profesor.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_profesor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         boton_atras_profesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         boton_atras_profesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras_profe.png"))); // NOI18N
@@ -1887,12 +1911,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton_atras_profesorActionPerformed(evt);
             }
         });
+        panel_profesor.add(boton_atras_profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 42, -1));
 
         titulo_profesor.setForeground(new java.awt.Color(0, 0, 102));
         titulo_profesor.setText("PROFESOR");
         titulo_profesor.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         titulo_profesor.setDrawShade(true);
         titulo_profesor.setShadeColor(Color.white);
+        panel_profesor.add(titulo_profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 24, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setMaximumSize(new java.awt.Dimension(800, 600));
@@ -1987,7 +2013,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(90, 90, 90))
         );
@@ -2103,7 +2129,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(boton_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(261, 261, 261))
+                .addGap(263, 263, 263))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2113,10 +2139,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(webLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                             .addComponent(jScrollPane4)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2129,41 +2153,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(boton_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGap(105, 105, 105))
         );
 
-        javax.swing.GroupLayout panel_profesorLayout = new javax.swing.GroupLayout(panel_profesor);
-        panel_profesor.setLayout(panel_profesorLayout);
-        panel_profesorLayout.setHorizontalGroup(
-            panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_profesorLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(boton_atras_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(259, 259, 259)
-                .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_profesorLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
-        panel_profesorLayout.setVerticalGroup(
-            panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_profesorLayout.createSequentialGroup()
-                .addGroup(panel_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(boton_atras_profesor))
-                    .addGroup(panel_profesorLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(titulo_profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+        panel_profesor.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 758, 517));
 
         getContentPane().add(panel_profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -7697,6 +7693,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "A":
@@ -7735,6 +7732,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
+
                 }
                 break;
             case "M":
@@ -7751,6 +7750,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "O":
@@ -7789,6 +7789,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "L":
@@ -7816,6 +7817,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "I":
@@ -7832,6 +7834,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "P":
@@ -7848,6 +7851,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "Z":
@@ -7864,6 +7868,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "T":
@@ -7880,6 +7885,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             case "S":
@@ -7896,10 +7902,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     }
                 } else {
                     desactivarLetras();
+                    reproduceSonido("nonono.mp3");
                 }
                 break;
             default:
                 desactivarLetras();
+                reproduceSonido("nonono.mp3");
                 break;
         }
     }//GEN-LAST:event_letraPulsadaEvent
@@ -8448,7 +8456,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra1ActionPerformed
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
-        
+
         ff11_palabra2.setEnabled(false);
         ff11_palabra2.setForeground(Color.GRAY);
         ff11_palabra11.setEnabled(true);
@@ -9395,6 +9403,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_mascota_nivel1fase13ActionPerformed
 
+    private void globo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_globo5ActionPerformed
+        panel_pass_infantil.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_globo5ActionPerformed
     private void fl11_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen2ActionPerformed
         reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl11_imagen2ActionPerformed
