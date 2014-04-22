@@ -148,12 +148,24 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_pass_infantil.setVisible(false);
         panel_pass_primaria.setVisible(false);
         panel_fases.setVisible(false);
+        /** FASE 1. **/
         panel_fase1.setVisible(false);
+        panel_nivel1fase1.setVisible(false);
+        panel_nivel2fase1.setVisible(false);
+        panel_nivel3fase1.setVisible(false);
+        panel_nivel4fase1.setVisible(false);
+        /** FASE 2. **/
         panel_fase2.setVisible(false);
-        panel_fase3.setVisible(false);
         panel_nivel1fase2.setVisible(false);
         panel_nivel2fase2.setVisible(false);
         panel_nivel3fase2.setVisible(false);
+        /** FASE 3. **/
+        panel_fase3.setVisible(false);
+        /** FASE 4. **/
+        panel_fase4.setVisible(false);
+        panel_nivel1fase4.setVisible(false);
+        /** FASE 5. **/
+        panel_nivel1fase5.setVisible(false);
         panelPalabrasNivel1.setVisible(false);
         panel_acertado.setVisible(false);
 
@@ -480,7 +492,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_nivel4fase1 = new javax.swing.JButton();
         home_nivel4fase1 = new javax.swing.JButton();
         ff11_subtitulo3 = new javax.swing.JLabel();
-        panel_nivel1fase5 = new JPanelCustom("/img/fondoSelva.png");
+        panel_nivel1fase5 = new JPanelCustom("/img/fondoBiblioteca.jpg");
         back_nivel1fase5 = new javax.swing.JButton();
         home_nivel1fase5 = new javax.swing.JButton();
         palabra1 = new javax.swing.JButton();
@@ -505,7 +517,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra23 = new javax.swing.JButton();
         palabra24 = new javax.swing.JButton();
         palabra25 = new javax.swing.JButton();
-        palabra27 = new javax.swing.JButton();
         palabra28 = new javax.swing.JButton();
         ff11_titulo = new javax.swing.JLabel();
         palabra3 = new javax.swing.JButton();
@@ -518,14 +529,22 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra3 = new javax.swing.JButton();
         ff11_palabra4 = new javax.swing.JButton();
         ff11_palabra5 = new javax.swing.JButton();
-        backLetras6 = new javax.swing.JButton();
-        homeLetras6 = new javax.swing.JButton();
+        back_nivel1fase4 = new javax.swing.JButton();
+        home_nivel1fase4 = new javax.swing.JButton();
         ff11_palabra6 = new javax.swing.JButton();
         ff11_palabra7 = new javax.swing.JButton();
         ff11_palabra8 = new javax.swing.JButton();
         ff11_palabra9 = new javax.swing.JButton();
         ff11_palabra10 = new javax.swing.JButton();
         ff11_palabra11 = new javax.swing.JButton();
+        panel_fase4 = new JPanelCustom("/img/fondoSelva.png");
+        nivel1fase4 = new javax.swing.JButton();
+        nivel2fase4 = new javax.swing.JButton();
+        nivel3fase4 = new javax.swing.JButton();
+        TituloFase4 = new com.alee.laf.label.WebLabel();
+        backFase4 = new javax.swing.JButton();
+        homeFase4 = new javax.swing.JButton();
+        boton_sonido_fase4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
@@ -651,6 +670,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 selvaMouseReleased(evt);
             }
         });
+        selva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selvaActionPerformed(evt);
+            }
+        });
         panel_fases.add(selva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, -1, -1));
 
         biblioteca.setFont(font_titulos);
@@ -672,6 +696,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 bibliotecaMouseReleased(evt);
+            }
+        });
+        biblioteca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bibliotecaActionPerformed(evt);
             }
         });
         panel_fases.add(biblioteca, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, -1, -1));
@@ -3469,18 +3498,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             .addGroup(panel_fase2Layout.createSequentialGroup()
                 .addGroup(panel_fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_fase2Layout.createSequentialGroup()
-                        .addGap(322, 322, 322)
-                        .addComponent(nivel3fase2))
+                        .addGap(78, 78, 78)
+                        .addComponent(boton_sonido_fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
+                        .addComponent(TituloFase2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_fase2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backFase2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(homeFase2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_fase2Layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(boton_sonido_fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(120, 120, 120)
-                        .addComponent(TituloFase2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(homeFase2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(198, 198, 198)
+                        .addComponent(nivel3fase2)))
                 .addContainerGap(210, Short.MAX_VALUE))
         );
         panel_fase2Layout.setVerticalGroup(
@@ -5056,6 +5084,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase5.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase5.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_nivel1fase5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         back_nivel1fase5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase5.setBorderPainted(false);
@@ -5065,6 +5094,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel1fase5ActionPerformed(evt);
             }
         });
+        panel_nivel1fase5.add(back_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 485, 55, -1));
 
         home_nivel1fase5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel1fase5.setBorderPainted(false);
@@ -5074,6 +5104,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel1fase5ActionPerformed(evt);
             }
         });
+        panel_nivel1fase5.add(home_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 485, 54, -1));
 
         palabra1.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra1.setText("Anillo");
@@ -5083,13 +5114,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra1MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra1MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra1MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra1MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
 
         palabra4.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra4.setText("Carta");
@@ -5099,13 +5131,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra4MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra4MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra4MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra4MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, -1, -1));
 
         palabra5.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra5.setText("Papel");
@@ -5115,13 +5148,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra5MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra5MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra5MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra5MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
         palabra6.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra6.setText("Casado");
@@ -5131,13 +5165,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra6MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra6MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra6MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra6MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, -1));
 
         palabra7.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra7.setText("Rata");
@@ -5147,13 +5182,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra7MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra7MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra7MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra7MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
 
         palabra8.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra8.setText("Casa");
@@ -5163,13 +5199,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra8MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra8MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra8MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra8MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
 
         palabra9.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra9.setText("Tejado");
@@ -5179,13 +5216,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra9MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra9MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra9MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra9MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, -1));
 
         palabra10.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png"))); // NOI18N
@@ -5195,13 +5233,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra10MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra10MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra10MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra10MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 128, 128));
 
         palabra11.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra11.setText("El");
@@ -5211,13 +5250,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra11MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra11MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra11MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra11MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         palabra12.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra12.setText("sentado");
@@ -5227,13 +5267,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra12MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra12MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra12MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra12MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, -1, -1));
 
         palabra13.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra13.setText("estaba");
@@ -5243,13 +5284,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra13MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra13MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra13MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra13MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
 
         palabra14.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra14.setText("en");
@@ -5259,13 +5301,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra14MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra14MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra14MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra14MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
 
         palabra15.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra15.setText("su");
@@ -5275,13 +5318,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra15MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra15MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra15MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra15MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
 
         palabra16.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png"))); // NOI18N
@@ -5295,13 +5339,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra16MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra16MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra16MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra16MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 127, 126));
 
         palabra18.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra18.setText("Ha");
@@ -5311,13 +5356,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra18MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra18MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra18MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra18MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra18, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 270, 99, -1));
 
         palabra19.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra19.setText("recibido");
@@ -5327,13 +5373,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra19MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra19MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra19MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra19MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
 
         palabra20.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra20.setText("una");
@@ -5343,13 +5390,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra20MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra20MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra20MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra20MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
 
         palabra21.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png"))); // NOI18N
@@ -5359,13 +5407,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra21MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra21MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra21MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra21MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra21, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 128, 128));
 
         palabra22.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra22.setText("por");
@@ -5375,13 +5424,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra22MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra22MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra22MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra22MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 98, -1));
 
         palabra23.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra23.setText("si");
@@ -5391,13 +5441,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra23MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra23MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra23MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra23MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 390, -1, -1));
 
         palabra24.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra24.setText("quiere");
@@ -5407,13 +5458,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra24MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra24MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra24MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra24MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, -1, -1));
 
         palabra25.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra25.setText("ser");
@@ -5423,34 +5475,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra25MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra25MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra25MouseEntered(evt);
             }
-        });
-
-        palabra27.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
-        palabra27.setText(".");
-        palabra27.setBorderPainted(false);
-        palabra27.setContentAreaFilled(false);
-        palabra27.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                palabra27MouseClicked(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra27MouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                palabra27MouseEntered(evt);
+                palabra25MouseExited(evt);
             }
         });
-        palabra27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                palabra27ActionPerformed(evt);
-            }
-        });
+        panel_nivel1fase5.add(palabra25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
 
         palabra28.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png"))); // NOI18N
@@ -5461,17 +5493,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra28MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra28MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra28MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra28MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra28, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
 
         ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         ff11_titulo.setForeground(new java.awt.Color(255, 0, 0));
         ff11_titulo.setText("Completa el texto");
+        panel_nivel1fase5.add(ff11_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 623, -1));
 
         palabra3.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra3.setText("Gato");
@@ -5481,13 +5515,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra3MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra3MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra3MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
 
         palabra2.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra2.setText("Perro");
@@ -5497,194 +5532,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra2MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra2MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra2MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra2MouseExited(evt);
+            }
         });
+        panel_nivel1fase5.add(palabra2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel1fase5Layout = new javax.swing.GroupLayout(panel_nivel1fase5);
-        panel_nivel1fase5.setLayout(panel_nivel1fase5Layout);
-        panel_nivel1fase5Layout.setHorizontalGroup(
-            panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(palabra8))
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(palabra13))
-                            .addComponent(palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra14))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(palabra23))
-                            .addComponent(palabra22, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(palabra12))
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(palabra21, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
-                .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(palabra1)
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(palabra18, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(palabra28))
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(palabra16, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(ff11_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(580, 580, 580)
-                .addComponent(palabra5))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(240, 240, 240)
-                .addComponent(palabra4))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(palabra3))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(palabra20))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(palabra2))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(560, 560, 560)
-                .addComponent(palabra25))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(450, 450, 450)
-                .addComponent(palabra24))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(palabra6))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(palabra9))
-            .addComponent(palabra11)
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(390, 390, 390)
-                .addComponent(palabra7))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(palabra15))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(878, 878, 878)
-                .addComponent(palabra27, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(palabra19))
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(back_nivel1fase5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(home_nivel1fase5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        panel_nivel1fase5Layout.setVerticalGroup(
-            panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                        .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(palabra8)
-                                .addGap(9, 9, 9)
-                                .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(palabra13))
-                                    .addComponent(palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(palabra14)
-                                        .addGap(59, 59, 59)
-                                        .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(palabra23)
-                                            .addComponent(palabra22)))
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(palabra12))
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addGap(100, 100, 100)
-                                        .addComponent(palabra21, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addGroup(panel_nivel1fase5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addComponent(palabra1)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(palabra18)
-                                        .addGap(19, 19, 19)
-                                        .addComponent(palabra28))
-                                    .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                        .addGap(60, 60, 60)
-                                        .addComponent(palabra16, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(ff11_titulo)
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(350, 350, 350)
-                                .addComponent(palabra19))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra5))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra4))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra3))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(350, 350, 350)
-                                .addComponent(palabra20))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra2))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(350, 350, 350)
-                                .addComponent(palabra25))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(350, 350, 350)
-                                .addComponent(palabra24))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(palabra6))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(palabra9))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(240, 240, 240)
-                                .addComponent(palabra11))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(palabra7))
-                            .addGroup(panel_nivel1fase5Layout.createSequentialGroup()
-                                .addGap(230, 230, 230)
-                                .addComponent(palabra15)))
-                        .addGap(64, 64, 64)
-                        .addComponent(back_nivel1fase5))
-                    .addComponent(home_nivel1fase5))
-                .addGap(305, 305, 305)
-                .addComponent(palabra27))
-        );
-
-        getContentPane().add(panel_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 900));
+        getContentPane().add(panel_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         panel_nivel1fase4.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase4.setMinimumSize(new java.awt.Dimension(800, 600));
@@ -5702,6 +5559,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra1.setText("gato");
         ff11_palabra1.setBorder(null);
         ff11_palabra1.setBorderPainted(false);
+        ff11_palabra1.setContentAreaFilled(false);
         ff11_palabra1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseClicked(evt);
@@ -5723,6 +5581,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra2.setText("luna");
         ff11_palabra2.setBorder(null);
         ff11_palabra2.setBorderPainted(false);
+        ff11_palabra2.setContentAreaFilled(false);
         ff11_palabra2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra2MouseClicked(evt);
@@ -5744,6 +5603,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra3.setText("pera");
         ff11_palabra3.setBorder(null);
         ff11_palabra3.setBorderPainted(false);
+        ff11_palabra3.setContentAreaFilled(false);
         ff11_palabra3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra3MouseClicked(evt);
@@ -5760,6 +5620,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra4.setText("sol");
         ff11_palabra4.setBorder(null);
         ff11_palabra4.setBorderPainted(false);
+        ff11_palabra4.setContentAreaFilled(false);
         ff11_palabra4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra4MouseClicked(evt);
@@ -5776,6 +5637,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra5.setText("perro");
         ff11_palabra5.setBorder(null);
         ff11_palabra5.setBorderPainted(false);
+        ff11_palabra5.setContentAreaFilled(false);
         ff11_palabra5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra5MouseClicked(evt);
@@ -5788,23 +5650,34 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
         });
 
-        backLetras6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
-        backLetras6.setBorderPainted(false);
-        backLetras6.setContentAreaFilled(false);
-        backLetras6.addMouseListener(new java.awt.event.MouseAdapter() {
+        back_nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        back_nivel1fase4.setBorderPainted(false);
+        back_nivel1fase4.setContentAreaFilled(false);
+        back_nivel1fase4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backLetras6MouseClicked(evt);
+                back_nivel1fase4MouseClicked(evt);
+            }
+        });
+        back_nivel1fase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_nivel1fase4ActionPerformed(evt);
             }
         });
 
-        homeLetras6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
-        homeLetras6.setBorderPainted(false);
-        homeLetras6.setContentAreaFilled(false);
+        home_nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        home_nivel1fase4.setBorderPainted(false);
+        home_nivel1fase4.setContentAreaFilled(false);
+        home_nivel1fase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home_nivel1fase4ActionPerformed(evt);
+            }
+        });
 
         ff11_palabra6.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra6.setText("El");
         ff11_palabra6.setBorder(null);
         ff11_palabra6.setBorderPainted(false);
+        ff11_palabra6.setContentAreaFilled(false);
         ff11_palabra6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra6MouseClicked(evt);
@@ -5821,6 +5694,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png"))); // NOI18N
         ff11_palabra7.setBorder(null);
         ff11_palabra7.setBorderPainted(false);
+        ff11_palabra7.setContentAreaFilled(false);
         ff11_palabra7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra7MouseClicked(evt);
@@ -5837,6 +5711,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra8.setText("ladra");
         ff11_palabra8.setBorder(null);
         ff11_palabra8.setBorderPainted(false);
+        ff11_palabra8.setContentAreaFilled(false);
         ff11_palabra8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra8MouseClicked(evt);
@@ -5853,6 +5728,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra9.setText("a");
         ff11_palabra9.setBorder(null);
         ff11_palabra9.setBorderPainted(false);
+        ff11_palabra9.setContentAreaFilled(false);
         ff11_palabra9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra9MouseClicked(evt);
@@ -5869,6 +5745,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra10.setText("la");
         ff11_palabra10.setBorder(null);
         ff11_palabra10.setBorderPainted(false);
+        ff11_palabra10.setContentAreaFilled(false);
         ff11_palabra10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra10MouseClicked(evt);
@@ -5885,6 +5762,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png"))); // NOI18N
         ff11_palabra11.setBorder(null);
         ff11_palabra11.setBorderPainted(false);
+        ff11_palabra11.setContentAreaFilled(false);
         ff11_palabra11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra11MouseClicked(evt);
@@ -5933,9 +5811,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(ff11_palabra11, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(backLetras6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(back_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(homeLetras6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(home_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panel_nivel1fase4Layout.setVerticalGroup(
             panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5974,12 +5852,181 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(ff11_palabra11)))
                 .addGap(6, 6, 6)
                 .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backLetras6)
-                    .addComponent(homeLetras6))
+                    .addComponent(back_nivel1fase4)
+                    .addComponent(home_nivel1fase4))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_nivel1fase4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        panel_fase4.setBackground(new java.awt.Color(204, 255, 204));
+        panel_fase4.setMaximumSize(new java.awt.Dimension(800, 600));
+        panel_fase4.setMinimumSize(new java.awt.Dimension(800, 600));
+
+        nivel1fase4.setFont(font_boton_niveles);
+        nivel1fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow.png"))); // NOI18N
+        nivel1fase4.setText("Nivel 1");
+        nivel1fase4.setBorderPainted(false);
+        nivel1fase4.setContentAreaFilled(false);
+        nivel1fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel1fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel1fase4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel1fase4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel1fase4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel1fase4MouseReleased(evt);
+            }
+        });
+        nivel1fase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel1fase4ActionPerformed(evt);
+            }
+        });
+
+        nivel2fase4.setFont(font_boton_niveles);
+        nivel2fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue.png"))); // NOI18N
+        nivel2fase4.setText("Nivel 2");
+        nivel2fase4.setBorderPainted(false);
+        nivel2fase4.setContentAreaFilled(false);
+        nivel2fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel2fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel2fase4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel2fase4MouseReleased(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel2fase4MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel2fase4MouseEntered(evt);
+            }
+        });
+
+        nivel3fase4.setFont(font_boton_niveles);
+        nivel3fase4.setForeground(new java.awt.Color(255, 255, 255));
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green.png"))); // NOI18N
+        nivel3fase4.setText("Nivel 3");
+        nivel3fase4.setBorderPainted(false);
+        nivel3fase4.setContentAreaFilled(false);
+        nivel3fase4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nivel3fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nivel3fase4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nivel3fase4MouseReleased(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nivel3fase4MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nivel3fase4MouseEntered(evt);
+            }
+        });
+        nivel3fase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel3fase4ActionPerformed(evt);
+            }
+        });
+
+        TituloFase4.setForeground(new java.awt.Color(0, 51, 255));
+        TituloFase4.setText("Escoge un nivel");
+        TituloFase4.setFont(new java.awt.Font("GinoSchoolScript", 1, 56)); // NOI18N
+
+        backFase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        backFase4.setBorderPainted(false);
+        backFase4.setContentAreaFilled(false);
+        backFase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backFase4ActionPerformed(evt);
+            }
+        });
+
+        homeFase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        homeFase4.setBorderPainted(false);
+        homeFase4.setContentAreaFilled(false);
+        homeFase4.setEnabled(false);
+        homeFase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeFase4ActionPerformed(evt);
+            }
+        });
+
+        boton_sonido_fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido.png"))); // NOI18N
+        boton_sonido_fase4.setBorderPainted(false);
+        boton_sonido_fase4.setContentAreaFilled(false);
+        boton_sonido_fase4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton_sonido_fase4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton_sonido_fase4MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_fase4Layout = new javax.swing.GroupLayout(panel_fase4);
+        panel_fase4.setLayout(panel_fase4Layout);
+        panel_fase4Layout.setHorizontalGroup(
+            panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_fase4Layout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(nivel1fase4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addComponent(nivel2fase4)
+                .addGap(148, 148, 148))
+            .addGroup(panel_fase4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(backFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(homeFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(nivel3fase4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panel_fase4Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(boton_sonido_fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_fase4Layout.setVerticalGroup(
+            panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_fase4Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boton_sonido_fase4))
+                .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(nivel1fase4))
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(nivel2fase4)))
+                .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(nivel3fase4)
+                        .addContainerGap(104, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_fase4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(backFase4)
+                            .addComponent(homeFase4))
+                        .addGap(42, 42, 42))))
+        );
+
+        getContentPane().add(panel_fase4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -8112,399 +8159,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_fases.setVisible(false);
     }//GEN-LAST:event_home_nivel4fase1ActionPerformed
 
-    private void palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseClicked
-        palabra1.setEnabled(false);
-        palabra1.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra1MouseClicked
-
-    private void palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseExited
-        if (palabra1.isEnabled()) {
-            palabra1.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra1MouseExited
-
-    private void palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseEntered
-        if (palabra1.isEnabled()) {
-            palabra1.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra1MouseEntered
-
-    private void palabra4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseClicked
-        palabra4.setEnabled(false);
-        palabra21.setEnabled(true);
-        if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra3.isEnabled())) {
-            ;
-        }
-        palabra4.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra4MouseClicked
-
-    private void palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseExited
-        if (palabra4.isEnabled()) {
-            palabra4.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra4MouseExited
-
-    private void palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseEntered
-        if (palabra4.isEnabled()) {
-            palabra4.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra4MouseEntered
-
-    private void palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseClicked
-        palabra5.setEnabled(false);
-        palabra5.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra5MouseClicked
-
-    private void palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseExited
-        if (palabra5.isEnabled()) {
-            palabra5.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra5MouseExited
-
-    private void palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseEntered
-        if (palabra5.isEnabled()) {
-            palabra5.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra5MouseEntered
-
-    private void palabra6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseClicked
-        palabra6.setEnabled(false);
-        palabra28.setEnabled(true);
-        if ((!palabra9.isEnabled()) && (!palabra3.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
-        }
-        palabra6.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra6MouseClicked
-
-    private void palabra6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseExited
-        if (palabra6.isEnabled()) {
-            palabra6.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra6MouseExited
-
-    private void palabra6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseEntered
-        if (palabra6.isEnabled()) {
-            palabra6.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra6MouseEntered
-
-    private void palabra7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseClicked
-        palabra7.setEnabled(false);
-        palabra7.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra7MouseClicked
-
-    private void palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseExited
-        if (palabra7.isEnabled()) {
-            palabra7.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra7MouseExited
-
-    private void palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseEntered
-        if (palabra7.isEnabled()) {
-            palabra7.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra7MouseEntered
-
-    private void palabra8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseClicked
-        palabra8.setEnabled(false);
-        palabra8.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra8MouseClicked
-
-    private void palabra8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseExited
-        if (palabra8.isEnabled()) {
-            palabra8.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra8MouseExited
-
-    private void palabra8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseEntered
-        if (palabra8.isEnabled()) {
-            palabra8.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra8MouseEntered
-
-    private void palabra9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseClicked
-        palabra9.setEnabled(false);
-        palabra16.setEnabled(true);
-        if ((!palabra3.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
-        }
-        palabra9.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra9MouseClicked
-
-    private void palabra9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseExited
-        if (palabra9.isEnabled()) {
-            palabra9.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra9MouseExited
-
-    private void palabra9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseEntered
-        if (palabra9.isEnabled()) {
-            palabra9.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra9MouseEntered
-
-    private void palabra10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra10MouseClicked
-
-    private void palabra10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseExited
-        if (!palabra3.isEnabled()) {
-            palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
-        }
-    }//GEN-LAST:event_palabra10MouseExited
-
-    private void palabra10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseEntered
-        if (!palabra3.isEnabled()) {
-            palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato_hover.png")));
-        }
-    }//GEN-LAST:event_palabra10MouseEntered
-
-    private void palabra11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra11MouseClicked
-
-    private void palabra11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseExited
-        palabra11.setForeground(Color.black);
-    }//GEN-LAST:event_palabra11MouseExited
-
-    private void palabra11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseEntered
-        palabra11.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra11MouseEntered
-
-    private void palabra12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra12MouseClicked
-
-    private void palabra12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseExited
-        palabra12.setForeground(Color.black);
-    }//GEN-LAST:event_palabra12MouseExited
-
-    private void palabra12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseEntered
-        palabra12.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra12MouseEntered
-
-    private void palabra13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra13MouseClicked
-
-    private void palabra13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseExited
-        palabra13.setForeground(Color.black);
-    }//GEN-LAST:event_palabra13MouseExited
-
-    private void palabra13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseEntered
-        palabra13.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra13MouseEntered
-
-    private void palabra14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra14MouseClicked
-
-    private void palabra14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseExited
-        palabra14.setForeground(Color.black);
-    }//GEN-LAST:event_palabra14MouseExited
-
-    private void palabra14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseEntered
-        palabra14.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra14MouseEntered
-
-    private void palabra15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra15MouseClicked
-
-    private void palabra15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseExited
-        palabra15.setForeground(Color.black);
-    }//GEN-LAST:event_palabra15MouseExited
-
-    private void palabra15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseEntered
-        palabra15.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra15MouseEntered
-
-    private void palabra16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra16MouseClicked
-
-    private void palabra16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseExited
-        if (!palabra9.isEnabled()) {
-            palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png")));
-        }
-    }//GEN-LAST:event_palabra16MouseExited
-
-    private void palabra16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseEntered
-        if (!palabra9.isEnabled()) {
-            palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado_hover.png")));
-        }
-    }//GEN-LAST:event_palabra16MouseEntered
-
-    private void palabra18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra18MouseClicked
-
-    private void palabra18MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseExited
-        palabra18.setForeground(Color.black);
-    }//GEN-LAST:event_palabra18MouseExited
-
-    private void palabra18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseEntered
-        palabra18.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra18MouseEntered
-
-    private void palabra19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra19MouseClicked
-
-    private void palabra19MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseExited
-        palabra19.setForeground(Color.black);
-    }//GEN-LAST:event_palabra19MouseExited
-
-    private void palabra19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseEntered
-        palabra19.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra19MouseEntered
-
-    private void palabra20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra20MouseClicked
-
-    private void palabra20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseExited
-        palabra20.setForeground(Color.black);
-    }//GEN-LAST:event_palabra20MouseExited
-
-    private void palabra20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseEntered
-        palabra20.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra20MouseEntered
-
-    private void palabra21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra21MouseClicked
-
-    private void palabra21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseExited
-        if (!palabra4.isEnabled()) {
-            palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png")));
-        }
-    }//GEN-LAST:event_palabra21MouseExited
-
-    private void palabra21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseEntered
-        if (!palabra4.isEnabled()) {
-            palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta_hover.png")));
-        }
-    }//GEN-LAST:event_palabra21MouseEntered
-
-    private void palabra22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra22MouseClicked
-
-    private void palabra22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseExited
-        palabra22.setForeground(Color.black);
-    }//GEN-LAST:event_palabra22MouseExited
-
-    private void palabra22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseEntered
-        palabra22.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra22MouseEntered
-
-    private void palabra23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra23MouseClicked
-
-    private void palabra23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseExited
-        palabra23.setForeground(Color.black);
-    }//GEN-LAST:event_palabra23MouseExited
-
-    private void palabra23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseEntered
-        palabra23.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra23MouseEntered
-
-    private void palabra24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra24MouseClicked
-
-    private void palabra24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseExited
-        palabra24.setForeground(Color.black);
-    }//GEN-LAST:event_palabra24MouseExited
-
-    private void palabra24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseEntered
-        palabra24.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra24MouseEntered
-
-    private void palabra25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra25MouseClicked
-
-    private void palabra25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseExited
-        palabra25.setForeground(Color.black);
-    }//GEN-LAST:event_palabra25MouseExited
-
-    private void palabra25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseEntered
-        palabra25.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra25MouseEntered
-
-    private void palabra27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra27MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra27MouseClicked
-
-    private void palabra27MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra27MouseExited
-        palabra27.setForeground(Color.black);
-    }//GEN-LAST:event_palabra27MouseExited
-
-    private void palabra27MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra27MouseEntered
-        palabra27.setForeground(Color.yellow);
-    }//GEN-LAST:event_palabra27MouseEntered
-
-    private void palabra27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra27ActionPerformed
-
-    private void palabra28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_palabra28MouseClicked
-
-    private void palabra28MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseExited
-        if (!palabra6.isEnabled()) {
-            palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png")));
-        }
-    }//GEN-LAST:event_palabra28MouseExited
-
-    private void palabra28MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseEntered
-        if (!palabra6.isEnabled()) {
-            palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_hover.png")));
-        }
-    }//GEN-LAST:event_palabra28MouseEntered
-
-    private void palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseClicked
-        palabra3.setEnabled(false);
-        palabra10.setEnabled(true);
-        if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
-        }
-        palabra3.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra3MouseClicked
-
-    private void palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseExited
-        if (palabra3.isEnabled()) {
-            palabra3.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra3MouseExited
-
-    private void palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseEntered
-        if (palabra3.isEnabled()) {
-            palabra3.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra3MouseEntered
-
-    private void palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseClicked
-        palabra2.setEnabled(false);
-        palabra2.setForeground(Color.GRAY);
-    }//GEN-LAST:event_palabra2MouseClicked
-
-    private void palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseExited
-        if (palabra2.isEnabled()) {
-            palabra2.setForeground(Color.black);
-        }
-    }//GEN-LAST:event_palabra2MouseExited
-
-    private void palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseEntered
-        if (palabra2.isEnabled()) {
-            palabra2.setForeground(Color.yellow);
-        }
-    }//GEN-LAST:event_palabra2MouseEntered
-
     private void ff11_palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseClicked
         ff11_palabra1.setEnabled(false);
     }//GEN-LAST:event_ff11_palabra1MouseClicked
@@ -8591,9 +8245,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra5.setForeground(Color.black);
     }//GEN-LAST:event_ff11_palabra5MouseExited
 
-    private void backLetras6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLetras6MouseClicked
+    private void back_nivel1fase4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel1fase4MouseClicked
 
-    }//GEN-LAST:event_backLetras6MouseClicked
+    }//GEN-LAST:event_back_nivel1fase4MouseClicked
 
     private void ff11_palabra6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra6MouseClicked
         // TODO add your handling code here:
@@ -8710,15 +8364,512 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_fase1.setVisible(true);
     }//GEN-LAST:event_back_nivel4fase1ActionPerformed
 
-    private void back_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase5ActionPerformed
-        panel_nivel1fase5.setVisible(false);
+    private void nivel1fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MousePressed
+        // TODO add your handling code here:
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow_pulsado.png")));
+    }//GEN-LAST:event_nivel1fase4MousePressed
+
+    private void nivel1fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseReleased
+        // TODO add your handling code here:
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel1fase4MouseReleased
+
+    private void nivel1fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseExited
+        // TODO add your handling code here:
+        nivel1fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_yellow.png")));
+    }//GEN-LAST:event_nivel1fase4MouseExited
+
+    private void nivel1fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase4MouseEntered
+        // TODO add your handling cocircle_blue_pulsadode here:
+        nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_yellow_hover.png")));
+    }//GEN-LAST:event_nivel1fase4MouseEntered
+
+    private void nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase4ActionPerformed
+        panel_nivel1fase4.setVisible(true);
+        panel_fase4.setVisible(false);
+    }//GEN-LAST:event_nivel1fase4ActionPerformed
+
+    private void nivel2fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MousePressed
+        // TODO add your handling code here:
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_pulsado.png")));
+    }//GEN-LAST:event_nivel2fase4MousePressed
+
+    private void nivel2fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseReleased
+        // TODO add your handling code here:
+        nivel2fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel2fase4MouseReleased
+
+    private void nivel2fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseExited
+        // TODO add your handling code here:
+        nivel2fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_blue.png")));
+    }//GEN-LAST:event_nivel2fase4MouseExited
+
+    private void nivel2fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase4MouseEntered
+        // TODO add your handling code here:
+        nivel2fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_blue_hover.png")));
+    }//GEN-LAST:event_nivel2fase4MouseEntered
+
+    private void nivel3fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MousePressed
+        // TODO add your handling code here:
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_pulsado.png")));
+    }//GEN-LAST:event_nivel3fase4MousePressed
+
+    private void nivel3fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseReleased
+        // TODO add your handling code here:
+        nivel3fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel3fase4MouseReleased
+
+    private void nivel3fase4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseExited
+        // TODO add your handling code here:
+        nivel3fase4.setIcon(new ImageIcon(getClass().getResource("/img/circle_green.png")));
+    }//GEN-LAST:event_nivel3fase4MouseExited
+
+    private void nivel3fase4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel3fase4MouseEntered
+        // TODO add your handling code here:
+        nivel3fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/circle_green_hover.png")));
+    }//GEN-LAST:event_nivel3fase4MouseEntered
+
+    private void nivel3fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nivel3fase4ActionPerformed
+
+    private void homeFase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeFase4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeFase4ActionPerformed
+
+    private void boton_sonido_fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase4MousePressed
+        if (musica_isActive) {
+            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }
+    }//GEN-LAST:event_boton_sonido_fase4MousePressed
+
+    private void boton_sonido_fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase4MouseReleased
+        if (musica_isActive) { //Si está activa -> la desactivamos.
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            musica_isActive = false;
+            /*PAUSE DE LA MUSICA*/
+            pausarMusica();
+        } else {
+            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            musica_isActive = true;
+            /* CONTINUAR MUSICA */
+            activarMusica();
+        }
+    }//GEN-LAST:event_boton_sonido_fase4MouseReleased
+
+    private void backFase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backFase4ActionPerformed
+        panel_fase4.setVisible(false);
         panel_fases.setVisible(true);
-    }//GEN-LAST:event_back_nivel1fase5ActionPerformed
+    }//GEN-LAST:event_backFase4ActionPerformed
+
+    private void home_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase4ActionPerformed
+        panel_nivel1fase4.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_home_nivel1fase4ActionPerformed
+
+    private void back_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase4ActionPerformed
+        panel_nivel1fase4.setVisible(false);
+        panel_fase4.setVisible(true);
+    }//GEN-LAST:event_back_nivel1fase4ActionPerformed
+
+    private void selvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selvaActionPerformed
+        panel_fases.setVisible(false);
+        panel_fase4.setVisible(true);
+    }//GEN-LAST:event_selvaActionPerformed
+
+    private void bibliotecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bibliotecaActionPerformed
+        panel_fases.setVisible(false);
+        panel_nivel1fase5.setVisible(true);
+    }//GEN-LAST:event_bibliotecaActionPerformed
+
+    private void palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseEntered
+        if (palabra2.isEnabled()) {
+            palabra2.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra2MouseEntered
+
+    private void palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseExited
+        if (palabra2.isEnabled()) {
+            palabra2.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra2MouseExited
+
+    private void palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseClicked
+        palabra2.setEnabled(false);
+        palabra2.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra2MouseClicked
+
+    private void palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseEntered
+        if (palabra3.isEnabled()) {
+            palabra3.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra3MouseEntered
+
+    private void palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseExited
+        if (palabra3.isEnabled()) {
+            palabra3.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra3MouseExited
+
+    private void palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseClicked
+        palabra3.setEnabled(false);
+        palabra10.setEnabled(true);
+        if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
+            ;
+        }
+        palabra3.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra3MouseClicked
+
+    private void palabra28MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseEntered
+        if (!palabra6.isEnabled()) {
+            palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_hover.png")));
+        }
+    }//GEN-LAST:event_palabra28MouseEntered
+
+    private void palabra28MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseExited
+        if (!palabra6.isEnabled()) {
+            palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png")));
+        }
+    }//GEN-LAST:event_palabra28MouseExited
+
+    private void palabra28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra28MouseClicked
+
+    private void palabra25MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseEntered
+        palabra25.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra25MouseEntered
+
+    private void palabra25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseExited
+        palabra25.setForeground(Color.black);
+    }//GEN-LAST:event_palabra25MouseExited
+
+    private void palabra25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra25MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra25MouseClicked
+
+    private void palabra24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseEntered
+        palabra24.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra24MouseEntered
+
+    private void palabra24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseExited
+        palabra24.setForeground(Color.black);
+    }//GEN-LAST:event_palabra24MouseExited
+
+    private void palabra24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra24MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra24MouseClicked
+
+    private void palabra23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseEntered
+        palabra23.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra23MouseEntered
+
+    private void palabra23MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseExited
+        palabra23.setForeground(Color.black);
+    }//GEN-LAST:event_palabra23MouseExited
+
+    private void palabra23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra23MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra23MouseClicked
+
+    private void palabra22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseEntered
+        palabra22.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra22MouseEntered
+
+    private void palabra22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseExited
+        palabra22.setForeground(Color.black);
+    }//GEN-LAST:event_palabra22MouseExited
+
+    private void palabra22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra22MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra22MouseClicked
+
+    private void palabra21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseEntered
+        if (!palabra4.isEnabled()) {
+            palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta_hover.png")));
+        }
+    }//GEN-LAST:event_palabra21MouseEntered
+
+    private void palabra21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseExited
+        if (!palabra4.isEnabled()) {
+            palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png")));
+        }
+    }//GEN-LAST:event_palabra21MouseExited
+
+    private void palabra21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra21MouseClicked
+
+    private void palabra20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseEntered
+        palabra20.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra20MouseEntered
+
+    private void palabra20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseExited
+        palabra20.setForeground(Color.black);
+    }//GEN-LAST:event_palabra20MouseExited
+
+    private void palabra20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra20MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra20MouseClicked
+
+    private void palabra19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseEntered
+        palabra19.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra19MouseEntered
+
+    private void palabra19MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseExited
+        palabra19.setForeground(Color.black);
+    }//GEN-LAST:event_palabra19MouseExited
+
+    private void palabra19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra19MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra19MouseClicked
+
+    private void palabra18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseEntered
+        palabra18.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra18MouseEntered
+
+    private void palabra18MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseExited
+        palabra18.setForeground(Color.black);
+    }//GEN-LAST:event_palabra18MouseExited
+
+    private void palabra18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra18MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra18MouseClicked
+
+    private void palabra16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseEntered
+        if (!palabra9.isEnabled()) {
+            palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado_hover.png")));
+        }
+    }//GEN-LAST:event_palabra16MouseEntered
+
+    private void palabra16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseExited
+        if (!palabra9.isEnabled()) {
+            palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png")));
+        }
+    }//GEN-LAST:event_palabra16MouseExited
+
+    private void palabra16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra16MouseClicked
+
+    private void palabra15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseEntered
+        palabra15.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra15MouseEntered
+
+    private void palabra15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseExited
+        palabra15.setForeground(Color.black);
+    }//GEN-LAST:event_palabra15MouseExited
+
+    private void palabra15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra15MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra15MouseClicked
+
+    private void palabra14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseEntered
+        palabra14.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra14MouseEntered
+
+    private void palabra14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseExited
+        palabra14.setForeground(Color.black);
+    }//GEN-LAST:event_palabra14MouseExited
+
+    private void palabra14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra14MouseClicked
+
+    private void palabra13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseEntered
+        palabra13.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra13MouseEntered
+
+    private void palabra13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseExited
+        palabra13.setForeground(Color.black);
+    }//GEN-LAST:event_palabra13MouseExited
+
+    private void palabra13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra13MouseClicked
+
+    private void palabra12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseEntered
+        palabra12.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra12MouseEntered
+
+    private void palabra12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseExited
+        palabra12.setForeground(Color.black);
+    }//GEN-LAST:event_palabra12MouseExited
+
+    private void palabra12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra12MouseClicked
+
+    private void palabra11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseEntered
+        palabra11.setForeground(Color.yellow);
+    }//GEN-LAST:event_palabra11MouseEntered
+
+    private void palabra11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseExited
+        palabra11.setForeground(Color.black);
+    }//GEN-LAST:event_palabra11MouseExited
+
+    private void palabra11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra11MouseClicked
+
+    private void palabra10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseEntered
+        if (!palabra3.isEnabled()) {
+            palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato_hover.png")));
+        }
+    }//GEN-LAST:event_palabra10MouseEntered
+
+    private void palabra10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseExited
+        if (!palabra3.isEnabled()) {
+            palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
+        }
+    }//GEN-LAST:event_palabra10MouseExited
+
+    private void palabra10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra10MouseClicked
+
+    private void palabra9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseEntered
+        if (palabra9.isEnabled()) {
+            palabra9.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra9MouseEntered
+
+    private void palabra9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseExited
+        if (palabra9.isEnabled()) {
+            palabra9.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra9MouseExited
+
+    private void palabra9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseClicked
+        palabra9.setEnabled(false);
+        palabra16.setEnabled(true);
+        if ((!palabra3.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
+            ;
+        }
+        palabra9.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra9MouseClicked
+
+    private void palabra8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseEntered
+        if (palabra8.isEnabled()) {
+            palabra8.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra8MouseEntered
+
+    private void palabra8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseExited
+        if (palabra8.isEnabled()) {
+            palabra8.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra8MouseExited
+
+    private void palabra8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseClicked
+        palabra8.setEnabled(false);
+        palabra8.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra8MouseClicked
+
+    private void palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseEntered
+        if (palabra7.isEnabled()) {
+            palabra7.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra7MouseEntered
+
+    private void palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseExited
+        if (palabra7.isEnabled()) {
+            palabra7.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra7MouseExited
+
+    private void palabra7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseClicked
+        palabra7.setEnabled(false);
+        palabra7.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra7MouseClicked
+
+    private void palabra6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseEntered
+        if (palabra6.isEnabled()) {
+            palabra6.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra6MouseEntered
+
+    private void palabra6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseExited
+        if (palabra6.isEnabled()) {
+            palabra6.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra6MouseExited
+
+    private void palabra6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseClicked
+        palabra6.setEnabled(false);
+        palabra28.setEnabled(true);
+        if ((!palabra9.isEnabled()) && (!palabra3.isEnabled()) && (!palabra4.isEnabled())) {
+            ;
+        }
+        palabra6.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra6MouseClicked
+
+    private void palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseEntered
+        if (palabra5.isEnabled()) {
+            palabra5.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra5MouseEntered
+
+    private void palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseExited
+        if (palabra5.isEnabled()) {
+            palabra5.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra5MouseExited
+
+    private void palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseClicked
+        palabra5.setEnabled(false);
+        palabra5.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra5MouseClicked
+
+    private void palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseEntered
+        if (palabra4.isEnabled()) {
+            palabra4.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra4MouseEntered
+
+    private void palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseExited
+        if (palabra4.isEnabled()) {
+            palabra4.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra4MouseExited
+
+    private void palabra4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseClicked
+        palabra4.setEnabled(false);
+        palabra21.setEnabled(true);
+        if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra3.isEnabled())) {
+            ;
+        }
+        palabra4.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra4MouseClicked
+
+    private void palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseEntered
+        if (palabra1.isEnabled()) {
+            palabra1.setForeground(Color.yellow);
+        }
+    }//GEN-LAST:event_palabra1MouseEntered
+
+    private void palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseExited
+        if (palabra1.isEnabled()) {
+            palabra1.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_palabra1MouseExited
+
+    private void palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseClicked
+        palabra1.setEnabled(false);
+        palabra1.setForeground(Color.GRAY);
+    }//GEN-LAST:event_palabra1MouseClicked
 
     private void home_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase5ActionPerformed
         panel_nivel1fase5.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_home_nivel1fase5ActionPerformed
+
+    private void back_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase5ActionPerformed
+        panel_nivel1fase5.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_back_nivel1fase5ActionPerformed
 
     /**
      * Métodos de Javi.
@@ -9011,6 +9162,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private com.alee.laf.label.WebLabel TituloFase1;
     private com.alee.laf.label.WebLabel TituloFase2;
     private com.alee.laf.label.WebLabel TituloFase3;
+    private com.alee.laf.label.WebLabel TituloFase4;
     private com.alee.laf.label.WebLabel TituloSilabas1;
     private com.alee.laf.label.WebLabel TituloSilabas2;
     private com.alee.laf.label.WebLabel TituloSilabas3;
@@ -9037,12 +9189,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton backFase2;
     private javax.swing.JButton backFase3;
     private javax.swing.JButton backFase3Nivel1;
-    private javax.swing.JButton backLetras6;
+    private javax.swing.JButton backFase4;
     private javax.swing.JButton backSilabas1;
     private javax.swing.JButton backSilabas2;
     private javax.swing.JButton backSilabas3;
     private javax.swing.JButton back_login_primaria;
     private javax.swing.JButton back_nivel1fase1;
+    private javax.swing.JButton back_nivel1fase4;
     private javax.swing.JButton back_nivel1fase5;
     private javax.swing.JButton back_nivel2fase1;
     private javax.swing.JButton back_nivel3fase1;
@@ -9078,6 +9231,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton boton_sonido_fase1;
     private javax.swing.JButton boton_sonido_fase2;
     private javax.swing.JButton boton_sonido_fase3;
+    private javax.swing.JButton boton_sonido_fase4;
     private com.alee.laf.text.WebTextField direccion_alumno_profe;
     private javax.swing.JButton escuela;
     private javax.swing.JButton ff11_palabra1;
@@ -9149,7 +9303,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton homeFase2;
     private javax.swing.JButton homeFase3;
     private javax.swing.JButton homeFase3Nivel1;
-    private javax.swing.JButton homeLetras6;
+    private javax.swing.JButton homeFase4;
     private javax.swing.JButton homeSilabas1;
     private javax.swing.JButton homeSilabas2;
     private javax.swing.JButton homeSilabas3;
@@ -9157,6 +9311,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton home_login1;
     private javax.swing.JButton home_login_primaria;
     private javax.swing.JButton home_nivel1fase1;
+    private javax.swing.JButton home_nivel1fase4;
     private javax.swing.JButton home_nivel1fase5;
     private javax.swing.JButton home_nivel2fase1;
     private javax.swing.JButton home_nivel3fase1;
@@ -9269,12 +9424,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton nivel1fase1;
     private javax.swing.JButton nivel1fase2;
     private javax.swing.JButton nivel1fase3;
+    private javax.swing.JButton nivel1fase4;
     private javax.swing.JButton nivel2fase1;
     private javax.swing.JButton nivel2fase2;
     private javax.swing.JButton nivel2fase3;
+    private javax.swing.JButton nivel2fase4;
     private javax.swing.JButton nivel3fase1;
     private javax.swing.JButton nivel3fase2;
     private javax.swing.JButton nivel3fase3;
+    private javax.swing.JButton nivel3fase4;
     private javax.swing.JButton nivel4fase1;
     private javax.swing.JButton nivel4fase3;
     private com.alee.laf.text.WebTextField nombre_alumno_profe;
@@ -9296,7 +9454,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton palabra23;
     private javax.swing.JButton palabra24;
     private javax.swing.JButton palabra25;
-    private javax.swing.JButton palabra27;
     private javax.swing.JButton palabra28;
     private javax.swing.JButton palabra3;
     private javax.swing.JButton palabra4;
@@ -9310,6 +9467,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JPanel panel_fase1;
     private javax.swing.JPanel panel_fase2;
     private javax.swing.JPanel panel_fase3;
+    private javax.swing.JPanel panel_fase4;
     private javax.swing.JPanel panel_fases;
     private javax.swing.JPanel panel_inicio;
     private javax.swing.JPanel panel_login;
