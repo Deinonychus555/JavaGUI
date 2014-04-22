@@ -49,7 +49,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     ImageIcon fondo_inicio;
     BasicPlayer player = new BasicPlayer();
     BasicController control = (BasicController) player;
-    BasicPlayer sonidos = new BasicPlayer();  
+    BasicPlayer sonidos = new BasicPlayer();
     File array_musica;
     boolean control_pausado;
     String[] nombres_lista_alumnos = new String[8];
@@ -8275,6 +8275,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseEntered
         if (ff11_palabra2.isEnabled()) {
             ff11_palabra2.setForeground(Color.yellow);
+            reproduceSonido("a_luna.mp3");
         }
     }//GEN-LAST:event_ff11_palabra2MouseEntered
 
@@ -8294,6 +8295,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseEntered
         if (ff11_palabra3.isEnabled()) {
             ff11_palabra3.setForeground(Color.yellow);
+            reproduceSonido("a_pera.mp3");
         }
     }//GEN-LAST:event_ff11_palabra3MouseEntered
 
@@ -8309,6 +8311,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseEntered
         if (ff11_palabra4.isEnabled()) {
             ff11_palabra4.setForeground(Color.yellow);
+            reproduceSonido("a_sol.mp3");
         }
     }//GEN-LAST:event_ff11_palabra4MouseEntered
 
@@ -8597,8 +8600,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseEntered
         if (palabra3.isEnabled()) {
             palabra3.setForeground(Color.yellow);
+            reproduceSonido("a_gato.mp3");
         }
-        reproduceSonido("a_gato.mp3");
     }//GEN-LAST:event_palabra3MouseEntered
 
     private void palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseExited
@@ -8844,8 +8847,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseEntered
         if (palabra9.isEnabled()) {
             palabra9.setForeground(Color.yellow);
+            reproduceSonido("a_tejado.mp3");
         }
-        reproduceSonido("a_tejado.mp3");
     }//GEN-LAST:event_palabra9MouseEntered
 
     private void palabra9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseExited
@@ -8867,8 +8870,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseEntered
         if (palabra8.isEnabled()) {
             palabra8.setForeground(Color.yellow);
+            reproduceSonido("a_casa.mp3");
         }
-        reproduceSonido("a_casa.mp3");
     }//GEN-LAST:event_palabra8MouseEntered
 
     private void palabra8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra8MouseExited
@@ -8946,8 +8949,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseEntered
         if (palabra4.isEnabled()) {
             palabra4.setForeground(Color.yellow);
+            reproduceSonido("a_carta.mp3");
         }
-        reproduceSonido("a_carta.mp3");
     }//GEN-LAST:event_palabra4MouseEntered
 
     private void palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseExited
@@ -9283,12 +9286,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             // Mensaje en caso de que falle
         }
     }
-    
-    public void reproduceSonido(String nombreSonido){
-        try{
-            sonidos.open(new File(System.getProperty("user.dir")+"/src/mp3/"+nombreSonido));
+
+    public void reproduceSonido(String nombreSonido) {
+        try {
+            sonidos.open(new File(System.getProperty("user.dir") + "/src/mp3/" + nombreSonido));
             sonidos.play();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
