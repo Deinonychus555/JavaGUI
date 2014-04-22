@@ -3967,7 +3967,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         imagenLapiz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lapiz.png"))); // NOI18N
 
-        imagenSol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sol.gif"))); // NOI18N
+        imagenSol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sol.png"))); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 153, 0));
@@ -7999,11 +7999,25 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_backFase2ActionPerformed
 
     private void boton_sonido4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido4MousePressed
-        // TODO add your handling code here:
+        if (musica_isActive) {
+            boton_sonido4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+        } else {
+            boton_sonido4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+        }
     }//GEN-LAST:event_boton_sonido4MousePressed
 
     private void boton_sonido4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido4MouseReleased
-        // TODO add your handling code here:
+        if (musica_isActive) { //Si está activa -> la desactivamos.
+            boton_sonido4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            musica_isActive = false;
+            /*PAUSE DE LA MUSICA*/
+            pausarMusica();
+        } else {
+            boton_sonido4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            musica_isActive = true;
+            /* CONTINUAR MUSICA */
+            activarMusica();
+        }
     }//GEN-LAST:event_boton_sonido4MouseReleased
 
     private void atras_login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atras_login1ActionPerformed
@@ -8392,11 +8406,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             ff11_palabra1.setForeground(Color.yellow);
             reproduceSonido("a_gato.mp3");
         }
-        
+
     }//GEN-LAST:event_ff11_palabra1MouseEntered
 
     private void ff11_palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseExited
-        if (ff11_palabra1.isEnabled()){
+        if (ff11_palabra1.isEnabled()) {
             ff11_palabra1.setForeground(Color.black);
         }
     }//GEN-LAST:event_ff11_palabra1MouseExited
@@ -8423,7 +8437,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra2MouseEntered
 
     private void ff11_palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseExited
-        if (ff11_palabra2.isEnabled()){
+        if (ff11_palabra2.isEnabled()) {
             ff11_palabra2.setForeground(Color.black);
         }
     }//GEN-LAST:event_ff11_palabra2MouseExited
@@ -8445,7 +8459,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra3MouseEntered
 
     private void ff11_palabra3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseExited
-        if (ff11_palabra3.isEnabled()){
+        if (ff11_palabra3.isEnabled()) {
             ff11_palabra3.setForeground(Color.black);
         }
     }//GEN-LAST:event_ff11_palabra3MouseExited
@@ -8463,13 +8477,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra4MouseEntered
 
     private void ff11_palabra4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseExited
-        if (ff11_palabra4.isEnabled()){
+        if (ff11_palabra4.isEnabled()) {
             ff11_palabra4.setForeground(Color.black);
         }
     }//GEN-LAST:event_ff11_palabra4MouseExited
 
     private void ff11_palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseClicked
-       
+
     }//GEN-LAST:event_ff11_palabra5MouseClicked
 
     private void ff11_palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseEntered
@@ -8480,7 +8494,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra5MouseEntered
 
     private void ff11_palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseExited
-        if (ff11_palabra5.isEnabled()){
+        if (ff11_palabra5.isEnabled()) {
             ff11_palabra5.setForeground(Color.black);
         }
     }//GEN-LAST:event_ff11_palabra5MouseExited
@@ -8511,7 +8525,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando_hover.png")));
             reproduceSonido("a_perro.mp3");
         }
-       
+
     }//GEN-LAST:event_ff11_palabra7MouseEntered
 
     private void ff11_palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra7MouseExited
@@ -8686,20 +8700,20 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void boton_sonido_fase4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase4MousePressed
         if (musica_isActive) {
-            boton_sonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
+            boton_sonido_fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton_sonido_pulsado.png")));
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
+            boton_sonido_fase4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado_pulsado.png")));
         }
     }//GEN-LAST:event_boton_sonido_fase4MousePressed
 
     private void boton_sonido_fase4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase4MouseReleased
         if (musica_isActive) { //Si está activa -> la desactivamos.
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
+            boton_sonido_fase4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido_desactivado.png")));
             musica_isActive = false;
             /*PAUSE DE LA MUSICA*/
             pausarMusica();
         } else {
-            boton_sonido.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
+            boton_sonido_fase4.setIcon(new ImageIcon(getClass().getResource("/img/boton_sonido.png")));
             musica_isActive = true;
             /* CONTINUAR MUSICA */
             activarMusica();
@@ -8736,7 +8750,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra2.setForeground(Color.yellow);
             reproduceSonido("a_perro.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra2MouseEntered
 
     private void palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseExited
@@ -8778,7 +8792,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_hover.png")));
             reproduceSonido("a_casado.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra28MouseEntered
 
     private void palabra28MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra28MouseExited
@@ -8848,7 +8862,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta_hover.png")));
             reproduceSonido("a_carta.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra21MouseEntered
 
     private void palabra21MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra21MouseExited
@@ -8905,7 +8919,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado_hover.png")));
             reproduceSonido("a_tejado.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra16MouseEntered
 
     private void palabra16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra16MouseExited
@@ -8988,7 +9002,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato_hover.png")));
             reproduceSonido("a_gato.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra10MouseEntered
 
     private void palabra10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra10MouseExited
@@ -9047,7 +9061,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra7.setForeground(Color.yellow);
             reproduceSonido("a_rata.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra7MouseEntered
 
     private void palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseExited
@@ -9089,7 +9103,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra5.setForeground(Color.yellow);
             reproduceSonido("a_papel.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra5MouseEntered
 
     private void palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseExited
@@ -9131,7 +9145,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             palabra1.setForeground(Color.yellow);
             reproduceSonido("a_anillo.mp3");
         }
-        
+
     }//GEN-LAST:event_palabra1MouseEntered
 
     private void palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseExited
@@ -9164,7 +9178,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra7ActionPerformed
 
     private void ff11_palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra5ActionPerformed
-         ff11_palabra5.setEnabled(false);
+        ff11_palabra5.setEnabled(false);
         ff11_palabra5.setForeground(Color.GRAY);
         ff11_palabra7.setEnabled(true);
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
