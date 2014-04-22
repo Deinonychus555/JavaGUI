@@ -560,9 +560,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -4538,6 +4536,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_a_minuscula.png"))); // NOI18N
+        fl11_letra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fl11_letraMouseEntered(evt);
+            }
+        });
 
         back_nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase1.setBorderPainted(false);
@@ -7955,6 +7958,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl11_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseEntered
         fl11_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_arbol_hover.png")));
+        reproduceSonido("a_arbol.mp3");
     }//GEN-LAST:event_fl11_imagen1MouseEntered
 
     private void fl11_imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseExited
@@ -7979,6 +7983,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl11_imagen2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen2MouseEntered
         fl11_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_coche_hover.PNG")));
+        reproduceSonido("a_coche.mp3");
     }//GEN-LAST:event_fl11_imagen2MouseEntered
 
     private void fl11_imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen2MouseExited
@@ -7999,6 +8004,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl11_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen3MouseEntered
         fl11_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_perro_hover.png")));
+        reproduceSonido("a_perro.mp3");
     }//GEN-LAST:event_fl11_imagen3MouseEntered
 
     private void fl11_imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen3MouseExited
@@ -8989,6 +8995,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel3fase2.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_home_nivel3fase2ActionPerformed
+
+    private void fl11_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_letraMouseEntered
+        reproduceSonido("a_a.mp3");
+    }//GEN-LAST:event_fl11_letraMouseEntered
 
     /**
      * Métodos de Javi.
