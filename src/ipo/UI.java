@@ -5525,11 +5525,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra3MouseExited(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra3MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra3MouseExited(evt);
+        });
+        palabra3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra3ActionPerformed(evt);
             }
         });
         panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
@@ -8527,6 +8532,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseClicked
         palabra3.setEnabled(false);
         palabra10.setEnabled(true);
+        palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
             ;
         }
@@ -8756,6 +8762,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra9MouseClicked
         palabra9.setEnabled(false);
         palabra16.setEnabled(true);
+        palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png")));
         if ((!palabra3.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
             ;
         }
@@ -8811,6 +8818,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseClicked
         palabra6.setEnabled(false);
         palabra28.setEnabled(true);
+        palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_hover.png")));
         if ((!palabra9.isEnabled()) && (!palabra3.isEnabled()) && (!palabra4.isEnabled())) {
             ;
         }
@@ -8849,6 +8857,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra4MouseClicked
         palabra4.setEnabled(false);
         palabra21.setEnabled(true);
+        palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra3.isEnabled())) {
             ;
         }
@@ -8889,6 +8898,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_palabra16ActionPerformed
+
+    private void palabra3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra3ActionPerformed
 
     /**
      * Métodos de Javi.
