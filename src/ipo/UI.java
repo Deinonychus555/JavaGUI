@@ -4708,6 +4708,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl21_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_e_minuscula.png"))); // NOI18N
+        fl21_letra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fl21_letraMouseEntered(evt);
+            }
+        });
 
         back_nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel2fase1.setBorderPainted(false);
@@ -8023,6 +8028,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl21_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen1MouseEntered
         fl21_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_planta_hover.png")));
+        reproduceSonido("a_planta.mp3");
     }//GEN-LAST:event_fl21_imagen1MouseEntered
 
     private void fl21_imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen1MouseExited
@@ -8047,6 +8053,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl21_imagen2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen2MouseEntered
         fl21_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_tortuga_hover.png")));
+        reproduceSonido("a_tortuga.mp3");
     }//GEN-LAST:event_fl21_imagen2MouseEntered
 
     private void fl21_imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen2MouseExited
@@ -8067,6 +8074,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl21_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseEntered
         fl21_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_espejo_hover.png")));
+        reproduceSonido("a_espejo.mp3");
     }//GEN-LAST:event_fl21_imagen3MouseEntered
 
     private void fl21_imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseExited
@@ -8989,6 +8997,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel3fase2.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_home_nivel3fase2ActionPerformed
+
+    private void fl21_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_letraMouseEntered
+        reproduceSonido("a_e.mp3");
+    }//GEN-LAST:event_fl21_letraMouseEntered
 
     /**
      * Métodos de Javi.
