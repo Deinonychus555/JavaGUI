@@ -3371,6 +3371,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton1silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas3.setText("Tri");
+        boton1silabas3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton1silabas3MouseEntered(evt);
+            }
+        });
 
         boton2silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas3.setText("Tro");
@@ -5652,11 +5657,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                palabra3MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 palabra3MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                palabra3MouseEntered(evt);
             }
         });
         panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
@@ -9234,6 +9239,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_palabra7ActionPerformed
+
+    private void boton1silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas3MouseEntered
+        reproduceSonido("a_tri.mp3");
+    }//GEN-LAST:event_boton1silabas3MouseEntered
 
     /**
      * Métodos de Javi.
