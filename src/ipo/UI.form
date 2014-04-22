@@ -5478,9 +5478,6 @@
               <Image iconType="3" name="/img/fl_a_minuscula.png"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="fl11_letraMouseEntered"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="back_nivel1fase1">
           <Properties>

@@ -4536,11 +4536,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_a_minuscula.png"))); // NOI18N
-        fl11_letra.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                fl11_letraMouseEntered(evt);
-            }
-        });
 
         back_nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase1.setBorderPainted(false);
