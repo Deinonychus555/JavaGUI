@@ -4507,6 +4507,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen1MouseReleased(evt);
             }
         });
+        fl11_imagen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl11_imagen1ActionPerformed(evt);
+            }
+        });
 
         fl11_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_coche.PNG"))); // NOI18N
         fl11_imagen2.setBorder(null);
@@ -5776,11 +5781,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ff11_palabra1MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ff11_palabra1MouseEntered(evt);
             }
         });
         ff11_palabra1.addActionListener(new java.awt.event.ActionListener() {
@@ -8182,7 +8187,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_boton_sonido_fase1MouseReleased
 
     private void fl11_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel1fase1.setVisible(false);
+        panel_nivel2fase1.setVisible(true);
     }//GEN-LAST:event_fl11_imagen1MouseClicked
 
     private void fl11_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseEntered
@@ -8295,7 +8302,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl21_imagen2MouseReleased
 
     private void fl21_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel2fase1.setVisible(false);
+        panel_nivel3fase1.setVisible(true);
     }//GEN-LAST:event_fl21_imagen3MouseClicked
 
     private void fl21_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseEntered
@@ -8366,7 +8375,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl31_imagen2MouseReleased
 
     private void fl31_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel3fase1.setVisible(false);
+        panel_nivel4fase1.setVisible(true);
     }//GEN-LAST:event_fl31_imagen3MouseClicked
 
     private void fl31_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseEntered
@@ -8391,7 +8402,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_back_nivel3fase1MouseClicked
 
     private void fl41_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseClicked
-        // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
+        panel_nivel4fase1.setVisible(false);
+        panel_fases.setVisible(true);
     }//GEN-LAST:event_fl41_imagen1MouseClicked
 
     private void fl41_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseEntered
@@ -8492,7 +8505,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra11.setEnabled(true);
         ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
         if (!ff11_palabra5.isEnabled()) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase4.setVisible(false);
+            panel_fases.setVisible(true);
         }
     }//GEN-LAST:event_ff11_palabra2MouseClicked
 
@@ -9250,7 +9265,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra7.setEnabled(true);
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
         if (!ff11_palabra2.isEnabled()) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel3fase1.setVisible(false);
+            panel_nivel4fase1.setVisible(true);
         }
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
@@ -9484,6 +9501,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void mascota_nivel1fase9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mascota_nivel1fase9ActionPerformed
+
+    private void fl11_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl11_imagen1ActionPerformed
 
     /**
      * Métodos de Javi.
