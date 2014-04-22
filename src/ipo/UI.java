@@ -7597,8 +7597,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void solucionsilabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas1ActionPerformed
         // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
         panel_nivel1fase2.setVisible(false);
-        panel_acertado.setVisible(true);
+        panel_nivel2fase2.setVisible(true);
     }//GEN-LAST:event_solucionsilabas1ActionPerformed
 
     private void boton3silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas1ActionPerformed
@@ -7612,8 +7613,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void soluciónsilabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas2ActionPerformed
         // TODO add your handling code here:
+        reproduceSonido("bien.mp3");
         panel_nivel2fase2.setVisible(false);
-        panel_acertado.setVisible(true);
+        panel_nivel3fase2.setVisible(true);
     }//GEN-LAST:event_soluciónsilabas2ActionPerformed
 
     private void back_nivel3fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel3fase2MouseClicked
@@ -7622,7 +7624,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void solucionsilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas3ActionPerformed
         // TODO add your handling code here:
-        panel_acertado.setVisible(true);
+        reproduceSonido("bien.mp3");
+        panel_nivel3fase2.setVisible(false);
+        panel_fases.setVisible(true);
     }//GEN-LAST:event_solucionsilabas3ActionPerformed
 
     private void nivel1fase2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel1fase2MousePressed
@@ -8864,7 +8868,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra10.setEnabled(true);
         palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase5.setVisible(false);
+            panel_fases.setVisible(true);
         }
         palabra3.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra3MouseClicked
@@ -9115,7 +9121,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra16.setEnabled(true);
         palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png")));
         if ((!palabra3.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase5.setVisible(false);
+            panel_fases.setVisible(true);
         }
         palabra9.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra9MouseClicked
@@ -9175,7 +9183,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra28.setEnabled(true);
         palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png")));
         if ((!palabra9.isEnabled()) && (!palabra3.isEnabled()) && (!palabra4.isEnabled())) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase5.setVisible(false);
+            panel_fases.setVisible(true);
         }
         palabra6.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra6MouseClicked
@@ -9217,7 +9227,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra21.setEnabled(true);
         palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra3.isEnabled())) {
-            ;
+            reproduceSonido("bien.mp3");
+            panel_nivel1fase5.setVisible(false);
+            panel_fases.setVisible(true);
         }
         palabra4.setForeground(Color.GRAY);
     }//GEN-LAST:event_palabra4MouseClicked
