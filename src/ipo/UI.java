@@ -8250,7 +8250,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseEntered
         if (ff11_palabra1.isEnabled()) {
             ff11_palabra1.setForeground(Color.yellow);
+            reproduceSonido("a_gato.mp3");
         }
+        
     }//GEN-LAST:event_ff11_palabra1MouseEntered
 
     private void ff11_palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseExited
@@ -8326,6 +8328,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseEntered
         if (ff11_palabra5.isEnabled()) {
             ff11_palabra5.setForeground(Color.yellow);
+            reproduceSonido("a_gato.mp3");
         }
     }//GEN-LAST:event_ff11_palabra5MouseEntered
 
@@ -8575,8 +8578,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseEntered
         if (palabra2.isEnabled()) {
             palabra2.setForeground(Color.yellow);
+            reproduceSonido("a_perro.mp3");
         }
-        reproduceSonido("a_perro.mp3");
+        
     }//GEN-LAST:event_palabra2MouseEntered
 
     private void palabra2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra2MouseExited
@@ -8881,8 +8885,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseEntered
         if (palabra7.isEnabled()) {
             palabra7.setForeground(Color.yellow);
+            reproduceSonido("a_rata.mp3");
         }
-        reproduceSonido("a_rata.mp3");
+        
     }//GEN-LAST:event_palabra7MouseEntered
 
     private void palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra7MouseExited
@@ -8899,8 +8904,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseEntered
         if (palabra6.isEnabled()) {
             palabra6.setForeground(Color.yellow);
+            reproduceSonido("a_casado.mp3");
         }
-        reproduceSonido("a_casado.mp3");
     }//GEN-LAST:event_palabra6MouseEntered
 
     private void palabra6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra6MouseExited
@@ -8922,8 +8927,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseEntered
         if (palabra5.isEnabled()) {
             palabra5.setForeground(Color.yellow);
+            reproduceSonido("a_papel.mp3");
         }
-        reproduceSonido("a_papel.mp3");
+        
     }//GEN-LAST:event_palabra5MouseEntered
 
     private void palabra5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra5MouseExited
@@ -8963,8 +8969,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseEntered
         if (palabra1.isEnabled()) {
             palabra1.setForeground(Color.yellow);
+            reproduceSonido("a_anillo.mp3");
         }
-        reproduceSonido("a_anillo.mp3");
+        
     }//GEN-LAST:event_palabra1MouseEntered
 
     private void palabra1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra1MouseExited
