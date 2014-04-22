@@ -368,6 +368,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton2silabas1 = new javax.swing.JButton();
         boton3silabas1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        mascota_nivel1fase13 = new javax.swing.JButton();
         panel_nivel2fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas2 = new com.alee.laf.label.WebLabel();
         back_nivel2fase2 = new javax.swing.JButton();
@@ -378,6 +379,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton2silabas2 = new javax.swing.JButton();
         boton3silabas2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        mascota_nivel1fase12 = new javax.swing.JButton();
         panel_nivel3fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas3 = new com.alee.laf.label.WebLabel();
         back_nivel3fase2 = new javax.swing.JButton();
@@ -388,6 +390,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         solucionsilabas3 = new javax.swing.JButton();
         boton3silabas3 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        mascota_nivel1fase11 = new javax.swing.JButton();
         panel_acertado = new JPanelCustom("/img/acertado.jpg");
         panel_fase2 = new JPanelCustom("/img/fondoBarco.png");
         nivel1fase2 = new javax.swing.JButton();
@@ -443,6 +446,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jLabel8 = new javax.swing.JLabel();
         backFase3Nivel1 = new javax.swing.JButton();
         homeFase3Nivel1 = new javax.swing.JButton();
+        mascota_nivel1fase10 = new javax.swing.JButton();
         panel_fase3 = new JPanelCustom("/img/fondoPiramide.png");
         nivel1fase3 = new javax.swing.JButton();
         nivel2fase3 = new javax.swing.JButton();
@@ -476,6 +480,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_nivel1fase1 = new javax.swing.JButton();
         home_nivel1fase1 = new javax.swing.JButton();
         ff11_subtitulo = new javax.swing.JLabel();
+        mascota_nivel1fase9 = new javax.swing.JButton();
         panel_nivel2fase1 = new JPanelCustom ("/img/fondoClase.png");
         fl21_titulo = new javax.swing.JLabel();
         fl21_imagen1 = new javax.swing.JButton();
@@ -485,6 +490,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_nivel2fase1 = new javax.swing.JButton();
         home_nivel2fase1 = new javax.swing.JButton();
         ff11_subtitulo1 = new javax.swing.JLabel();
+        mascota_nivel1fase8 = new javax.swing.JButton();
         panel_nivel3fase1 = new JPanelCustom ("/img/fondoClase.png");
         fl31_titulo = new javax.swing.JLabel();
         fl31_imagen1 = new javax.swing.JButton();
@@ -494,6 +500,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_nivel3fase1 = new javax.swing.JButton();
         home_nivel3fase1 = new javax.swing.JButton();
         ff11_subtitulo2 = new javax.swing.JLabel();
+        mascota_nivel1fase7 = new javax.swing.JButton();
         panel_nivel4fase1 = new JPanelCustom ("/img/fondoClase.png");
         fl41_titulo = new javax.swing.JLabel();
         fl41_imagen1 = new javax.swing.JButton();
@@ -503,6 +510,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         back_nivel4fase1 = new javax.swing.JButton();
         home_nivel4fase1 = new javax.swing.JButton();
         ff11_subtitulo3 = new javax.swing.JLabel();
+        mascota_nivel1fase6 = new javax.swing.JButton();
         panel_nivel1fase5 = new JPanelCustom("/img/fondoBiblioteca.jpg");
         back_nivel1fase5 = new javax.swing.JButton();
         home_nivel1fase5 = new javax.swing.JButton();
@@ -532,6 +540,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_titulo = new javax.swing.JLabel();
         palabra3 = new javax.swing.JButton();
         palabra2 = new javax.swing.JButton();
+        mascota_nivel1fase5 = new javax.swing.JButton();
         panel_nivel1fase4 = new JPanelCustom("/img/fondoSelva.png");
         ff11_titulo1 = new javax.swing.JLabel();
         ff11_subtitulo4 = new javax.swing.JLabel();
@@ -548,6 +557,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra9 = new javax.swing.JButton();
         ff11_palabra10 = new javax.swing.JButton();
         ff11_palabra11 = new javax.swing.JButton();
+        mascota_nivel1fase4 = new javax.swing.JButton();
         panel_fase4 = new JPanelCustom("/img/fondoSelva.png");
         nivel1fase4 = new javax.swing.JButton();
         nivel2fase4 = new javax.swing.JButton();
@@ -560,7 +570,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -3038,10 +3050,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase2.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase2.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase2.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_nivel1fase2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloSilabas1.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas1.setText("Selecciona la sílaba correcta");
         TituloSilabas1.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
+        panel_nivel1fase2.add(TituloSilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 133, -1, -1));
 
         back_nivel1fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase2.setBorderPainted(false);
@@ -3056,6 +3070,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel1fase2ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(back_nivel1fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 499, 54, -1));
 
         home_nivel1fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel1fase2.setBorderPainted(false);
@@ -3065,6 +3080,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel1fase2ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(home_nivel1fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 499, 50, -1));
 
         silabasImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/soccer_ball.png"))); // NOI18N
         silabasImg1.setBorderPainted(false);
@@ -3074,6 +3090,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 silabasImg1MouseEntered(evt);
             }
         });
+        panel_nivel1fase2.add(silabasImg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 203, 130, 110));
 
         solucionsilabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         solucionsilabas1.setText("Pe");
@@ -3087,6 +3104,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 solucionsilabas1ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(solucionsilabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 363, -1, -1));
 
         boton1silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas1.setText("Ca");
@@ -3095,6 +3113,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton1silabas1MouseEntered(evt);
             }
         });
+        boton1silabas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1silabas1ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase2.add(boton1silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 363, -1, -1));
 
         boton2silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas1.setText("To");
@@ -3108,6 +3132,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton2silabas1ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(boton2silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 363, -1, -1));
 
         boton3silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas1.setText("Me");
@@ -3121,63 +3146,22 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton3silabas1ActionPerformed(evt);
             }
         });
+        panel_nivel1fase2.add(boton3silabas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 363, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 153, 0));
         jLabel9.setText("NIVEL 1");
+        panel_nivel1fase2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel1fase2Layout = new javax.swing.GroupLayout(panel_nivel1fase2);
-        panel_nivel1fase2.setLayout(panel_nivel1fase2Layout);
-        panel_nivel1fase2Layout.setHorizontalGroup(
-            panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(jLabel9))
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(silabasImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(solucionsilabas1)
-                .addGap(103, 103, 103)
-                .addComponent(boton1silabas1)
-                .addGap(123, 123, 123)
-                .addComponent(boton2silabas1)
-                .addGap(111, 111, 111)
-                .addComponent(boton3silabas1))
-            .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(back_nivel1fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(home_nivel1fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        panel_nivel1fase2Layout.setVerticalGroup(
-            panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel1fase2Layout.createSequentialGroup()
-                .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(home_nivel1fase2))
-                    .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel9)
-                        .addGap(15, 15, 15)
-                        .addComponent(TituloSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(silabasImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(solucionsilabas1)
-                            .addComponent(boton1silabas1)
-                            .addComponent(boton2silabas1)
-                            .addComponent(boton3silabas1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                        .addComponent(back_nivel1fase2)))
-                .addGap(42, 42, 42))
-        );
+        mascota_nivel1fase13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase13.setBorderPainted(false);
+        mascota_nivel1fase13.setContentAreaFilled(false);
+        mascota_nivel1fase13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase13ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase2.add(mascota_nivel1fase13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 110, -1));
 
         getContentPane().add(panel_nivel1fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -3185,10 +3169,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel2fase2.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel2fase2.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel2fase2.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_nivel2fase2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloSilabas2.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas2.setText("Selecciona la sílaba correcta");
         TituloSilabas2.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
+        panel_nivel2fase2.add(TituloSilabas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 123, -1, -1));
 
         back_nivel2fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel2fase2.setBorderPainted(false);
@@ -3203,6 +3189,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel2fase2ActionPerformed(evt);
             }
         });
+        panel_nivel2fase2.add(back_nivel2fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 499, 54, -1));
 
         home_nivel2fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel2fase2.setBorderPainted(false);
@@ -3212,6 +3199,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel2fase2ActionPerformed(evt);
             }
         });
+        panel_nivel2fase2.add(home_nivel2fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 499, 53, -1));
 
         silabasImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/candy.png"))); // NOI18N
         silabasImg2.setBorderPainted(false);
@@ -3221,6 +3209,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 silabasImg2MouseEntered(evt);
             }
         });
+        panel_nivel2fase2.add(silabasImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 183, -1, -1));
 
         soluciónsilabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         soluciónsilabas2.setText("Ca");
@@ -3234,6 +3223,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 soluciónsilabas2ActionPerformed(evt);
             }
         });
+        panel_nivel2fase2.add(soluciónsilabas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 363, -1, -1));
 
         boton1silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas2.setText("Pe");
@@ -3247,6 +3237,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton1silabas2ActionPerformed(evt);
             }
         });
+        panel_nivel2fase2.add(boton1silabas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 363, -1, -1));
 
         boton2silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas2.setText("Es");
@@ -3260,6 +3251,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton2silabas2ActionPerformed(evt);
             }
         });
+        panel_nivel2fase2.add(boton2silabas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 363, -1, -1));
 
         boton3silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas2.setText("San");
@@ -3268,63 +3260,27 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton3silabas2MouseEntered(evt);
             }
         });
+        boton3silabas2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3silabas2ActionPerformed(evt);
+            }
+        });
+        panel_nivel2fase2.add(boton3silabas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 363, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 0));
         jLabel10.setText("NIVEL 2");
+        panel_nivel2fase2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel2fase2Layout = new javax.swing.GroupLayout(panel_nivel2fase2);
-        panel_nivel2fase2.setLayout(panel_nivel2fase2Layout);
-        panel_nivel2fase2Layout.setHorizontalGroup(
-            panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                .addGroup(panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jLabel10))
-                    .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                        .addGap(320, 320, 320)
-                        .addComponent(silabasImg2))
-                    .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(boton1silabas2)
-                        .addGap(93, 93, 93)
-                        .addComponent(boton2silabas2)
-                        .addGap(103, 103, 103)
-                        .addComponent(soluciónsilabas2)
-                        .addGap(83, 83, 83)
-                        .addComponent(boton3silabas2))
-                    .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(back_nivel2fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(home_nivel2fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(97, 97, 97))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel2fase2Layout.createSequentialGroup()
-                .addComponent(TituloSilabas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
-        );
-        panel_nivel2fase2Layout.setVerticalGroup(
-            panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel10)
-                .addGap(5, 5, 5)
-                .addComponent(TituloSilabas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(silabasImg2)
-                .addGap(43, 43, 43)
-                .addGroup(panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boton1silabas2)
-                    .addComponent(boton2silabas2)
-                    .addComponent(soluciónsilabas2)
-                    .addComponent(boton3silabas2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addGroup(panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(home_nivel2fase2)
-                    .addComponent(back_nivel2fase2))
-                .addGap(42, 42, 42))
-        );
+        mascota_nivel1fase12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase12.setBorderPainted(false);
+        mascota_nivel1fase12.setContentAreaFilled(false);
+        mascota_nivel1fase12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase12ActionPerformed(evt);
+            }
+        });
+        panel_nivel2fase2.add(mascota_nivel1fase12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 110, -1));
 
         getContentPane().add(panel_nivel2fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -3332,10 +3288,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel3fase2.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel3fase2.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel3fase2.setPreferredSize(new java.awt.Dimension(800, 600));
+        panel_nivel3fase2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloSilabas3.setForeground(new java.awt.Color(0, 51, 255));
         TituloSilabas3.setText("Selecciona la sílaba correcta");
         TituloSilabas3.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
+        panel_nivel3fase2.add(TituloSilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 129, -1, -1));
 
         back_nivel3fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel3fase2.setBorderPainted(false);
@@ -3350,6 +3308,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel3fase2ActionPerformed(evt);
             }
         });
+        panel_nivel3fase2.add(back_nivel3fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 499, 54, -1));
 
         home_nivel3fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel3fase2.setBorderPainted(false);
@@ -3359,6 +3318,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel3fase2ActionPerformed(evt);
             }
         });
+        panel_nivel3fase2.add(home_nivel3fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 499, 54, -1));
 
         silabasImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clover.png"))); // NOI18N
         silabasImg3.setBorderPainted(false);
@@ -3368,6 +3328,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 silabasImg3MouseEntered(evt);
             }
         });
+        panel_nivel3fase2.add(silabasImg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 209, -1, -1));
 
         boton1silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas3.setText("Tri");
@@ -3376,6 +3337,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton1silabas3MouseEntered(evt);
             }
         });
+        boton1silabas3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2silabas3ActionPerformed(evt);
+            }
+        });
+        panel_nivel3fase2.add(boton1silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, -1, -1));
 
         boton2silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas3.setText("Tro");
@@ -3384,6 +3351,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton2silabas3MouseEntered(evt);
             }
         });
+        boton2silabas3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2silabas3ActionPerformed(evt);
+            }
+        });
+        panel_nivel3fase2.add(boton2silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
 
         solucionsilabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         solucionsilabas3.setText("Tre");
@@ -3397,6 +3370,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 solucionsilabas3ActionPerformed(evt);
             }
         });
+        panel_nivel3fase2.add(solucionsilabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
 
         boton3silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas3.setText("Bra");
@@ -3406,65 +3380,27 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 boton3silabas3MouseEntered(evt);
             }
         });
+        boton3silabas3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2silabas3ActionPerformed(evt);
+            }
+        });
+        panel_nivel3fase2.add(boton3silabas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 153, 0));
         jLabel11.setText("NIVEL 3");
+        panel_nivel3fase2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, -1, -1));
 
-        javax.swing.GroupLayout panel_nivel3fase2Layout = new javax.swing.GroupLayout(panel_nivel3fase2);
-        panel_nivel3fase2.setLayout(panel_nivel3fase2Layout);
-        panel_nivel3fase2Layout.setHorizontalGroup(
-            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                .addGap(0, 174, Short.MAX_VALUE)
-                .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(149, 149, 149))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(boton1silabas3)
-                .addGap(88, 88, 88)
-                .addComponent(boton2silabas3)
-                .addGap(93, 93, 93)
-                .addComponent(solucionsilabas3)
-                .addGap(79, 79, 79)
-                .addComponent(boton3silabas3)
-                .addGap(97, 97, 97))
-            .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(back_nivel3fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(home_nivel3fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                        .addGap(318, 318, 318)
-                        .addComponent(silabasImg3))
-                    .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jLabel11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panel_nivel3fase2Layout.setVerticalGroup(
-            panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TituloSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(silabasImg3)
-                .addGap(37, 37, 37)
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton1silabas3)
-                    .addComponent(boton2silabas3)
-                    .addComponent(solucionsilabas3)
-                    .addComponent(boton3silabas3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(home_nivel3fase2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(back_nivel3fase2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(42, 42, 42))
-        );
+        mascota_nivel1fase11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase11.setBorderPainted(false);
+        mascota_nivel1fase11.setContentAreaFilled(false);
+        mascota_nivel1fase11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase11ActionPerformed(evt);
+            }
+        });
+        panel_nivel3fase2.add(mascota_nivel1fase11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 110, -1));
 
         getContentPane().add(panel_nivel3fase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -4059,6 +3995,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
         });
 
+        mascota_nivel1fase10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase10.setBorderPainted(false);
+        mascota_nivel1fase10.setContentAreaFilled(false);
+        mascota_nivel1fase10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase10ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPalabrasNivel1Layout = new javax.swing.GroupLayout(panelPalabrasNivel1);
         panelPalabrasNivel1.setLayout(panelPalabrasNivel1Layout);
         panelPalabrasNivel1Layout.setHorizontalGroup(
@@ -4069,31 +4014,37 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addGap(270, 270, 270)
                         .addComponent(jLabel7))
                     .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                        .addGap(55, 55, 55)
-                                        .addComponent(imagenGato))
-                                    .addComponent(imagenGoma)))
-                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(backFase3Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(homeFase3Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(54, 54, 54)
-                        .addComponent(sopaLetras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(imagenLapiz))
-                            .addComponent(imagenSol)))
-                    .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
                         .addGap(131, 131, 131)
                         .addComponent(jLabel8)))
-                .addGap(363, 363, 363))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(imagenGato))
+                            .addComponent(imagenGoma)))
+                    .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(backFase3Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(homeFase3Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sopaLetras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                            .addComponent(mascota_nivel1fase10)
+                            .addGap(120, 120, 120))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPalabrasNivel1Layout.createSequentialGroup()
+                            .addComponent(imagenLapiz)
+                            .addGap(58, 58, 58)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPalabrasNivel1Layout.createSequentialGroup()
+                        .addComponent(imagenSol)
+                        .addGap(34, 34, 34))))
         );
         panelPalabrasNivel1Layout.setVerticalGroup(
             panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4104,26 +4055,28 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(jLabel8)
                 .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(21, 21, 21)
+                        .addComponent(imagenGato)
+                        .addGap(37, 37, 37)
+                        .addComponent(imagenGoma)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPalabrasNivel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(imagenGato)
-                                .addGap(37, 37, 37)
-                                .addComponent(imagenGoma))
-                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
+                                .addGap(7, 7, 7)
                                 .addComponent(imagenLapiz)
-                                .addGap(40, 40, 40)
-                                .addComponent(imagenSol)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(homeFase3Nivel1)
-                            .addComponent(backFase3Nivel1))
-                        .addGap(42, 42, 42))
-                    .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(sopaLetras, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(imagenSol)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(mascota_nivel1fase10))
+                            .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
+                                .addComponent(sopaLetras, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(homeFase3Nivel1)
+                                    .addComponent(backFase3Nivel1))))
+                        .addGap(42, 42, 42))))
         );
 
         getContentPane().add(panelPalabrasNivel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -4560,11 +4513,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen1MouseReleased(evt);
             }
         });
-        fl11_imagen1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fl11_imagen1ActionPerformed(evt);
-            }
-        });
 
         fl11_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_coche.PNG"))); // NOI18N
         fl11_imagen2.setBorder(null);
@@ -4645,24 +4593,25 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_subtitulo.setText("Selecciona el dibujo correcto");
         ff11_subtitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        mascota_nivel1fase9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase9.setBorderPainted(false);
+        mascota_nivel1fase9.setContentAreaFilled(false);
+
         javax.swing.GroupLayout panel_nivel1fase1Layout = new javax.swing.GroupLayout(panel_nivel1fase1);
         panel_nivel1fase1.setLayout(panel_nivel1fase1Layout);
         panel_nivel1fase1Layout.setHorizontalGroup(
             panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(fl11_imagen1)
-                .addGap(89, 89, 89)
-                .addComponent(fl11_imagen2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addComponent(fl11_imagen3)
-                .addGap(32, 32, 32))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel1fase1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ff11_subtitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(200, 200, 200))
-            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel1fase1Layout.createSequentialGroup()
                 .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(fl11_imagen1)
+                        .addGap(89, 89, 89)
+                        .addComponent(fl11_imagen2))
                     .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(back_nivel1fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4673,7 +4622,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(fl11_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mascota_nivel1fase9)
+                    .addComponent(fl11_imagen3))
+                .addGap(32, 32, 32))
         );
         panel_nivel1fase1Layout.setVerticalGroup(
             panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4698,9 +4651,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel1fase1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(home_nivel1fase1)
-                            .addComponent(back_nivel1fase1))
+                        .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(mascota_nivel1fase9)
+                            .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(home_nivel1fase1)
+                                .addComponent(back_nivel1fase1)))
                         .addGap(42, 42, 42))))
         );
 
@@ -4820,10 +4775,26 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_subtitulo1.setText("Selecciona el dibujo correcto");
         ff11_subtitulo1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        mascota_nivel1fase8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase8.setBorderPainted(false);
+        mascota_nivel1fase8.setContentAreaFilled(false);
+
         javax.swing.GroupLayout panel_nivel2fase1Layout = new javax.swing.GroupLayout(panel_nivel2fase1);
         panel_nivel2fase1.setLayout(panel_nivel2fase1Layout);
         panel_nivel2fase1Layout.setHorizontalGroup(
             panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(fl21_titulo)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(fl21_imagen1)
+                .addGap(150, 150, 150)
+                .addComponent(fl21_imagen2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(fl21_imagen3)
+                .addGap(56, 56, 56))
             .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
                 .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
@@ -4835,28 +4806,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(fl21_letra))
                     .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
                         .addGap(223, 223, 223)
-                        .addComponent(ff11_subtitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
-                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ff11_subtitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(fl21_imagen1)
-                        .addGap(150, 150, 150)
-                        .addComponent(fl21_imagen2)
-                        .addGap(162, 162, 162)
-                        .addComponent(fl21_imagen3))
-                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(fl21_titulo)))
-                .addGap(0, 38, Short.MAX_VALUE))
+                        .addGap(578, 578, 578)
+                        .addComponent(mascota_nivel1fase8)))
+                .addGap(34, 89, Short.MAX_VALUE))
         );
         panel_nivel2fase1Layout.setVerticalGroup(
             panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(fl21_imagen3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(fl21_titulo)
@@ -4870,11 +4827,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(fl21_letra)
                         .addGap(98, 98, 98))
                     .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
-                        .addComponent(fl21_imagen1)
-                        .addGap(76, 76, 76)
-                        .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(back_nivel2fase1)
-                            .addComponent(home_nivel2fase1))
+                        .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                                .addComponent(fl21_imagen3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(mascota_nivel1fase8))
+                            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                                .addComponent(fl21_imagen1)
+                                .addGap(76, 76, 76)
+                                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(back_nivel2fase1)
+                                    .addComponent(home_nivel2fase1))))
                         .addGap(42, 42, 42))))
         );
 
@@ -4994,16 +4957,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_subtitulo2.setText("Selecciona el dibujo correcto");
         ff11_subtitulo2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        mascota_nivel1fase7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase7.setBorderPainted(false);
+        mascota_nivel1fase7.setContentAreaFilled(false);
+
         javax.swing.GroupLayout panel_nivel3fase1Layout = new javax.swing.GroupLayout(panel_nivel3fase1);
         panel_nivel3fase1.setLayout(panel_nivel3fase1Layout);
         panel_nivel3fase1Layout.setHorizontalGroup(
             panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(back_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(home_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
                 .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
@@ -5021,29 +4982,44 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(fl31_imagen2)
                 .addGap(31, 31, 31))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(fl31_letra)
-                .addGap(267, 267, 267))
+            .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(back_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(home_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(fl31_letra)
+                        .addGap(69, 69, 69)))
+                .addComponent(mascota_nivel1fase7)
+                .addGap(65, 65, 65))
         );
         panel_nivel3fase1Layout.setVerticalGroup(
             panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel3fase1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(fl31_titulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ff11_subtitulo2)
-                .addGap(33, 33, 33)
-                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fl31_imagen2)
-                    .addComponent(fl31_imagen1)
-                    .addComponent(fl31_imagen3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(fl31_letra)
-                .addGap(28, 28, 28)
                 .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(back_nivel3fase1)
-                    .addComponent(home_nivel3fase1))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(mascota_nivel1fase7))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(fl31_titulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ff11_subtitulo2)
+                        .addGap(33, 33, 33)
+                        .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fl31_imagen2)
+                            .addComponent(fl31_imagen1)
+                            .addComponent(fl31_imagen3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(fl31_letra)
+                        .addGap(28, 28, 28)
+                        .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(back_nivel3fase1)
+                            .addComponent(home_nivel3fase1))))
                 .addGap(42, 42, 42))
         );
 
@@ -5157,6 +5133,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_subtitulo3.setText("Selecciona el dibujo correcto");
         ff11_subtitulo3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        mascota_nivel1fase6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase6.setBorderPainted(false);
+        mascota_nivel1fase6.setContentAreaFilled(false);
+
         javax.swing.GroupLayout panel_nivel4fase1Layout = new javax.swing.GroupLayout(panel_nivel4fase1);
         panel_nivel4fase1.setLayout(panel_nivel4fase1Layout);
         panel_nivel4fase1Layout.setHorizontalGroup(
@@ -5166,15 +5146,23 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(fl41_imagen3)
                 .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                        .addComponent(fl41_imagen1)
-                        .addGap(104, 104, 104)
-                        .addComponent(fl41_imagen2)
-                        .addGap(55, 55, 55))
-                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(ff11_subtitulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(177, Short.MAX_VALUE))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                                .addGap(151, 151, 151)
+                                .addComponent(fl41_letra)
+                                .addGap(123, 123, 123))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel4fase1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fl41_imagen1)
+                                .addGap(107, 107, 107)))
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fl41_imagen2)
+                            .addComponent(mascota_nivel1fase6))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
                 .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
@@ -5186,32 +5174,35 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addGap(270, 270, 270)
                         .addComponent(fl41_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(fl41_letra)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_nivel4fase1Layout.setVerticalGroup(
             panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(fl41_titulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ff11_subtitulo3)
-                .addGap(24, 24, 24)
-                .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fl41_imagen2)
-                    .addComponent(fl41_imagen1))
-                .addGap(51, 51, 51)
-                .addComponent(fl41_letra)
-                .addContainerGap(136, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel4fase1Layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(fl41_imagen3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(back_nivel4fase1)
-                    .addComponent(home_nivel4fase1))
+                .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(fl41_titulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ff11_subtitulo3)
+                        .addGap(24, 24, 24)
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fl41_imagen1)
+                            .addComponent(fl41_imagen2))
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(fl41_letra)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel4fase1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                                .addComponent(mascota_nivel1fase6))))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(fl41_imagen3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(back_nivel4fase1)
+                            .addComponent(home_nivel4fase1))))
                 .addGap(42, 42, 42))
         );
 
@@ -5258,7 +5249,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra1MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
+        palabra1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra1ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase5.add(palabra1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
 
         palabra4.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra4.setText("Carta");
@@ -5275,7 +5271,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra4MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, -1, -1));
+        palabra4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra4ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase5.add(palabra4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
         palabra5.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra5.setText("Papel");
@@ -5292,7 +5293,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra5MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
+        palabra5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra5ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase5.add(palabra5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, -1, -1));
 
         palabra6.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra6.setText("Casado");
@@ -5309,7 +5315,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra6MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, -1));
+        panel_nivel1fase5.add(palabra6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
 
         palabra7.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra7.setText("Rata");
@@ -5319,11 +5325,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra7MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra7MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra7MouseExited(evt);
             }
         });
         palabra7.addActionListener(new java.awt.event.ActionListener() {
@@ -5331,7 +5337,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra7ActionPerformed(evt);
             }
         });
-        panel_nivel1fase5.add(palabra7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
+        panel_nivel1fase5.add(palabra7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
 
         palabra8.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra8.setText("Casa");
@@ -5348,7 +5354,12 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra8MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+        palabra8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra8ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase5.add(palabra8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
 
         palabra9.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra9.setText("Tejado");
@@ -5365,7 +5376,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra9MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, -1));
+        panel_nivel1fase5.add(palabra9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         palabra10.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato_gris.png"))); // NOI18N
@@ -5375,14 +5386,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra10MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra10MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra10MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra10MouseExited(evt);
+            }
         });
-        panel_nivel1fase5.add(palabra10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 128, 128));
+        panel_nivel1fase5.add(palabra10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 128, 128));
 
         palabra11.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra11.setText("El");
@@ -5399,7 +5410,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra11MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        panel_nivel1fase5.add(palabra11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         palabra12.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra12.setText("sentado");
@@ -5416,7 +5427,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra12MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, -1, -1));
+        panel_nivel1fase5.add(palabra12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
 
         palabra13.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra13.setText("estaba");
@@ -5433,7 +5444,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra13MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        panel_nivel1fase5.add(palabra13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
 
         palabra14.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra14.setText("en");
@@ -5450,7 +5461,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra14MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
+        panel_nivel1fase5.add(palabra14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
 
         palabra15.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra15.setText("su");
@@ -5467,7 +5478,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra15MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
+        panel_nivel1fase5.add(palabra15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, -1));
 
         palabra16.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado_gris.png"))); // NOI18N
@@ -5488,7 +5499,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra16MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 127, 126));
+        panel_nivel1fase5.add(palabra16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 127, 126));
 
         palabra18.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra18.setText("Ha");
@@ -5505,7 +5516,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra18MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra18, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 270, 99, -1));
+        panel_nivel1fase5.add(palabra18, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, 99, -1));
 
         palabra19.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra19.setText("recibido");
@@ -5522,7 +5533,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra19MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
+        panel_nivel1fase5.add(palabra19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
         palabra20.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra20.setText("una");
@@ -5539,7 +5550,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra20MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        panel_nivel1fase5.add(palabra20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
 
         palabra21.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta_gris.png"))); // NOI18N
@@ -5556,7 +5567,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra21MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra21, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 128, 128));
+        panel_nivel1fase5.add(palabra21, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 128, 128));
 
         palabra22.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra22.setText("por");
@@ -5573,7 +5584,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra22MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 98, -1));
+        panel_nivel1fase5.add(palabra22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 98, -1));
 
         palabra23.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra23.setText("si");
@@ -5590,7 +5601,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra23MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 390, -1, -1));
+        panel_nivel1fase5.add(palabra23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, -1, -1));
 
         palabra24.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra24.setText("quiere");
@@ -5607,7 +5618,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra24MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, -1, -1));
+        panel_nivel1fase5.add(palabra24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, -1, -1));
 
         palabra25.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra25.setText("ser");
@@ -5624,7 +5635,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra25MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
+        panel_nivel1fase5.add(palabra25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, -1, -1));
 
         palabra28.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_gris.png"))); // NOI18N
@@ -5642,7 +5653,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra28MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra28, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
+        panel_nivel1fase5.add(palabra28, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, -1, -1));
 
         ff11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         ff11_titulo.setForeground(new java.awt.Color(255, 0, 0));
@@ -5657,14 +5668,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra3MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra3MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra3MouseExited(evt);
+            }
         });
-        panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
+        panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
         palabra2.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
         palabra2.setText("Perro");
@@ -5681,7 +5692,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 palabra2MouseExited(evt);
             }
         });
-        panel_nivel1fase5.add(palabra2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, -1));
+        palabra2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra2ActionPerformed(evt);
+            }
+        });
+        panel_nivel1fase5.add(palabra2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+
+        mascota_nivel1fase5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase5.setBorderPainted(false);
+        mascota_nivel1fase5.setContentAreaFilled(false);
+        panel_nivel1fase5.add(mascota_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 110, -1));
 
         getContentPane().add(panel_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -5706,11 +5727,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ff11_palabra1MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ff11_palabra1MouseExited(evt);
             }
         });
         ff11_palabra1.addActionListener(new java.awt.event.ActionListener() {
@@ -5728,11 +5749,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra2MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ff11_palabra2MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ff11_palabra2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ff11_palabra2MouseExited(evt);
             }
         });
         ff11_palabra2.addActionListener(new java.awt.event.ActionListener() {
@@ -5757,6 +5778,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 ff11_palabra3MouseExited(evt);
             }
         });
+        ff11_palabra3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ff11_palabra3ActionPerformed(evt);
+            }
+        });
 
         ff11_palabra4.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
         ff11_palabra4.setText("sol");
@@ -5772,6 +5798,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ff11_palabra4MouseExited(evt);
+            }
+        });
+        ff11_palabra4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ff11_palabra4ActionPerformed(evt);
             }
         });
 
@@ -5932,45 +5963,60 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
         });
 
+        mascota_nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
+        mascota_nivel1fase4.setBorderPainted(false);
+        mascota_nivel1fase4.setContentAreaFilled(false);
+
         javax.swing.GroupLayout panel_nivel1fase4Layout = new javax.swing.GroupLayout(panel_nivel1fase4);
         panel_nivel1fase4.setLayout(panel_nivel1fase4Layout);
         panel_nivel1fase4Layout.setHorizontalGroup(
             panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(ff11_titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(ff11_subtitulo4, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(ff11_palabra1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(ff11_palabra2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(ff11_palabra3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(ff11_palabra4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(ff11_palabra5))
-            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(ff11_palabra6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(ff11_palabra7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(ff11_palabra8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(ff11_palabra9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(ff11_palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(ff11_palabra11, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(back_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(home_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(270, 270, 270)
+                        .addComponent(ff11_titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(ff11_palabra1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(344, 344, 344)
+                                .addComponent(ff11_palabra4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(464, 464, 464)
+                                .addComponent(ff11_palabra5))
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(ff11_palabra2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ff11_subtitulo4, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(204, 204, 204)
+                                .addComponent(ff11_palabra3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(back_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ff11_palabra6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(home_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addComponent(ff11_palabra7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(ff11_palabra8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(ff11_palabra9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mascota_nivel1fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(ff11_palabra10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(ff11_palabra11, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         panel_nivel1fase4Layout.setVerticalGroup(
             panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5978,22 +6024,33 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addGap(24, 24, 24)
                 .addComponent(ff11_titulo1)
                 .addGap(6, 6, 6)
-                .addComponent(ff11_subtitulo4)
-                .addGap(34, 34, 34)
                 .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ff11_palabra1)
-                    .addComponent(ff11_palabra3)
-                    .addComponent(ff11_palabra5)
                     .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ff11_palabra2)
-                            .addComponent(ff11_palabra4))))
-                .addGap(38, 38, 38)
+                        .addComponent(ff11_palabra1))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(ff11_palabra4))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(ff11_palabra5))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(ff11_palabra2))
+                    .addComponent(ff11_subtitulo4)
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(ff11_palabra3)))
+                .addGap(1, 1, 1)
                 .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(ff11_palabra6))
+                        .addGap(200, 200, 200)
+                        .addComponent(back_nivel1fase4))
+                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(ff11_palabra6)
+                        .addGap(91, 91, 91)
+                        .addComponent(home_nivel1fase4))
                     .addComponent(ff11_palabra7)
                     .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
@@ -6002,15 +6059,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addGap(40, 40, 40)
                         .addComponent(ff11_palabra9))
                     .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(ff11_palabra10))
-                    .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(ff11_palabra11)))
-                .addGap(6, 6, 6)
-                .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(back_nivel1fase4)
-                    .addComponent(home_nivel1fase4))
+                        .addGap(30, 30, 30)
+                        .addGroup(panel_nivel1fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(mascota_nivel1fase4))
+                            .addGroup(panel_nivel1fase4Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(ff11_palabra10))
+                            .addComponent(ff11_palabra11))))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
@@ -7500,14 +7557,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_acertado.setVisible(true);
     }//GEN-LAST:event_soluciónsilabas2ActionPerformed
 
-    private void boton1silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton1silabas2ActionPerformed
-
-    private void boton2silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton2silabas2ActionPerformed
-
     private void back_nivel3fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel3fase2MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_back_nivel3fase2MouseClicked
@@ -8073,10 +8122,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_fl11_imagen1MouseReleased
 
-    private void fl11_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fl11_imagen1ActionPerformed
-
     private void fl11_imagen2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen2MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_fl11_imagen2MouseClicked
@@ -8364,7 +8409,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra2.setEnabled(false);
         ff11_palabra2.setForeground(Color.GRAY);
         ff11_palabra11.setEnabled(true);
-        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_luna.png")));
+        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
         if (!ff11_palabra5.isEnabled()) {
             ;
         }
@@ -8424,14 +8469,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra4MouseExited
 
     private void ff11_palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseClicked
-        ff11_palabra5.setEnabled(false);
-        ff11_palabra5.setForeground(Color.GRAY);
-        ff11_palabra7.setEnabled(true);
-        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_perro_ladrando.png")));
-        if (!ff11_palabra2.isEnabled()) {
-            ;
-        }
-        
+       
     }//GEN-LAST:event_ff11_palabra5MouseClicked
 
     private void ff11_palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseEntered
@@ -9126,7 +9164,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra7ActionPerformed
 
     private void ff11_palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra5ActionPerformed
-        // TODO add your handling code here:
+         ff11_palabra5.setEnabled(false);
+        ff11_palabra5.setForeground(Color.GRAY);
+        ff11_palabra7.setEnabled(true);
+        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
+        if (!ff11_palabra2.isEnabled()) {
+            ;
+        }
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
     private void nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase1ActionPerformed
@@ -9243,6 +9287,70 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void boton1silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas3MouseEntered
         reproduceSonido("a_tri.mp3");
     }//GEN-LAST:event_boton1silabas3MouseEntered
+
+    private void palabra4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra4ActionPerformed
+
+    private void palabra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra2ActionPerformed
+
+    private void palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra5ActionPerformed
+
+    private void palabra8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra8ActionPerformed
+
+    private void palabra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra1ActionPerformed
+
+    private void ff11_palabra3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ff11_palabra3ActionPerformed
+
+    private void ff11_palabra4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ff11_palabra4ActionPerformed
+
+    private void boton2silabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton2silabas3ActionPerformed
+
+    private void boton3silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton3silabas2ActionPerformed
+
+    private void boton2silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton2silabas2ActionPerformed
+
+    private void boton1silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton1silabas2ActionPerformed
+
+    private void boton1silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton1silabas1ActionPerformed
+
+    private void mascota_nivel1fase10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase10ActionPerformed
+
+    private void mascota_nivel1fase11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase11ActionPerformed
+
+    private void mascota_nivel1fase12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase12ActionPerformed
+
+    private void mascota_nivel1fase13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase13ActionPerformed
 
     /**
      * Métodos de Javi.
@@ -9803,6 +9911,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JLabel letraUprimaria;
     private javax.swing.JButton letraZ_lapiz;
     private javax.swing.JList lista_nombres_alumnos;
+    private javax.swing.JButton mascota_nivel1fase10;
+    private javax.swing.JButton mascota_nivel1fase11;
+    private javax.swing.JButton mascota_nivel1fase12;
+    private javax.swing.JButton mascota_nivel1fase13;
+    private javax.swing.JButton mascota_nivel1fase4;
+    private javax.swing.JButton mascota_nivel1fase5;
+    private javax.swing.JButton mascota_nivel1fase6;
+    private javax.swing.JButton mascota_nivel1fase7;
+    private javax.swing.JButton mascota_nivel1fase8;
+    private javax.swing.JButton mascota_nivel1fase9;
     private javax.swing.JButton nivel1fase1;
     private javax.swing.JButton nivel1fase2;
     private javax.swing.JButton nivel1fase3;
