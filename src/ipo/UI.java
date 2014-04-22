@@ -9405,6 +9405,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void home_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase2ActionPerformed
         panel_nivel1fase2.setVisible(false);
         panel_fases.setVisible(true);
+        musica_isActive = true;
+        activarMusica();
     }//GEN-LAST:event_home_nivel1fase2ActionPerformed
 
     private void back_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase2ActionPerformed
