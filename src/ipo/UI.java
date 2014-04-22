@@ -549,9 +549,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -5649,6 +5647,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 ff11_palabra5MouseExited(evt);
             }
         });
+        ff11_palabra5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ff11_palabra5ActionPerformed(evt);
+            }
+        });
 
         back_nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase4.setBorderPainted(false);
@@ -5689,9 +5692,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 ff11_palabra6MouseExited(evt);
             }
         });
+        ff11_palabra6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ff11_palabra6ActionPerformed(evt);
+            }
+        });
 
         ff11_palabra7.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
-        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png"))); // NOI18N
+        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando_gris.png"))); // NOI18N
         ff11_palabra7.setBorder(null);
         ff11_palabra7.setBorderPainted(false);
         ff11_palabra7.setContentAreaFilled(false);
@@ -5704,6 +5712,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ff11_palabra7MouseExited(evt);
+            }
+        });
+        ff11_palabra7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ff11_palabra7ActionPerformed(evt);
             }
         });
 
@@ -5759,7 +5772,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         ff11_palabra11.setFont(new java.awt.Font("GinoSchoolScript", 1, 48)); // NOI18N
-        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png"))); // NOI18N
+        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna_gris.png"))); // NOI18N
         ff11_palabra11.setBorder(null);
         ff11_palabra11.setBorderPainted(false);
         ff11_palabra11.setContentAreaFilled(false);
@@ -5985,18 +5998,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(nivel2fase4)
                 .addGap(148, 148, 148))
             .addGroup(panel_fase4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(backFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(homeFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(nivel3fase4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panel_fase4Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(boton_sonido_fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120)
-                .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(200, 200, 200)
+                        .addComponent(nivel3fase4))
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(boton_sonido_fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
+                        .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_fase4Layout.setVerticalGroup(
@@ -8161,6 +8175,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseClicked
         ff11_palabra1.setEnabled(false);
+        ff11_palabra1.setForeground(Color.GRAY);
     }//GEN-LAST:event_ff11_palabra1MouseClicked
 
     private void ff11_palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseEntered
@@ -8179,7 +8194,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
         ff11_palabra2.setEnabled(false);
-        ff11_palabra11.setEnabled(true);
+        ff11_palabra2.setForeground(Color.GRAY);
+        ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_luna.png")));
         if (!ff11_palabra5.isEnabled()) {
             ;
         }
@@ -8201,6 +8217,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseClicked
         ff11_palabra3.setEnabled(false);
+        ff11_palabra3.setForeground(Color.GRAY);
     }//GEN-LAST:event_ff11_palabra3MouseClicked
 
     private void ff11_palabra3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra3MouseEntered
@@ -8215,6 +8232,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseClicked
         ff11_palabra4.setEnabled(false);
+        ff11_palabra4.setForeground(Color.GRAY);
     }//GEN-LAST:event_ff11_palabra4MouseClicked
 
     private void ff11_palabra4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra4MouseEntered
@@ -8229,7 +8247,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseClicked
         ff11_palabra5.setEnabled(false);
-        ff11_palabra7.setEnabled(true);
+        ff11_palabra5.setForeground(Color.GRAY);
+        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_perro_ladrando.png")));
         if (!ff11_palabra2.isEnabled()) {
             ;
         }
@@ -8870,6 +8889,18 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_back_nivel1fase5ActionPerformed
+
+    private void ff11_palabra6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ff11_palabra6ActionPerformed
+
+    private void ff11_palabra7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ff11_palabra7ActionPerformed
+
+    private void ff11_palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
     /**
      * Métodos de Javi.
