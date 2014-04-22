@@ -6,8 +6,8 @@
 package ipo;
 
 import JPanelsCustom.JPanelCustom;
-import JPanelsCustom.JPanelSopaLetras;
 import java.awt.Button;
+import javax.swing.JPanel;
 
 /**
  *
@@ -37,7 +37,7 @@ public class Nivel1Palabras extends javax.swing.JFrame {
     private void initComponents() {
 
         panelPalabrasNivel1 = new JPanelCustom("/img/fondoPiramide.png");
-        sopaLetras = new JPanelSopaLetras();
+        sopaLetras = new JPanel();
         letraG_gato = new javax.swing.JButton();
         letraA_gato = new javax.swing.JButton();
         letraT_gato = new javax.swing.JButton();
@@ -86,7 +86,6 @@ public class Nivel1Palabras extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         panelPalabrasNivel1.setMaximumSize(new java.awt.Dimension(800, 600));
         panelPalabrasNivel1.setMinimumSize(new java.awt.Dimension(800, 600));
