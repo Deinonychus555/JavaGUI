@@ -7593,6 +7593,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void solucionsilabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas1ActionPerformed
         // TODO add your handling code here:
         reproduceSonido("bien.mp3");
+        try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         panel_nivel1fase2.setVisible(false);
         panel_nivel2fase2.setVisible(true);
     }//GEN-LAST:event_solucionsilabas1ActionPerformed
@@ -7609,6 +7614,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void soluciónsilabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas2ActionPerformed
         // TODO add your handling code here:
         reproduceSonido("bien.mp3");
+        try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         panel_nivel2fase2.setVisible(false);
         panel_nivel3fase2.setVisible(true);
     }//GEN-LAST:event_soluciónsilabas2ActionPerformed
@@ -7620,6 +7630,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void solucionsilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas3ActionPerformed
         // TODO add your handling code here:
         reproduceSonido("bien.mp3");
+        try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         panel_nivel3fase2.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_solucionsilabas3ActionPerformed
@@ -8850,6 +8865,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseClicked
         palabra3.setEnabled(false);
+        try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         palabra10.setEnabled(true);
         palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
@@ -9107,6 +9127,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png")));
         if ((!palabra3.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
             reproduceSonido("bien.mp3");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             panel_nivel1fase5.setVisible(false);
             panel_fases.setVisible(true);
         }
@@ -9169,6 +9194,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png")));
         if ((!palabra9.isEnabled()) && (!palabra3.isEnabled()) && (!palabra4.isEnabled())) {
             reproduceSonido("bien.mp3");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             panel_nivel1fase5.setVisible(false);
             panel_fases.setVisible(true);
         }
@@ -9213,6 +9243,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra3.isEnabled())) {
             reproduceSonido("bien.mp3");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             panel_nivel1fase5.setVisible(false);
             panel_fases.setVisible(true);
         }
