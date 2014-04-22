@@ -8947,15 +8947,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void palabra3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_palabra3MouseClicked
         palabra3.setEnabled(false);
-        try {
-                Thread.sleep(5000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        
         palabra10.setEnabled(true);
         palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png")));
         if ((!palabra9.isEnabled()) && (!palabra6.isEnabled()) && (!palabra4.isEnabled())) {
             reproduceSonido("bien.mp3");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             panel_nivel1fase5.setVisible(false);
             panel_fases.setVisible(true);
         }
