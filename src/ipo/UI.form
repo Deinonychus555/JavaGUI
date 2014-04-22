@@ -3413,6 +3413,9 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="silabasImg1MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="solucionsilabas1">
           <Properties>
@@ -3422,6 +3425,7 @@
             <Property name="text" type="java.lang.String" value="Pe"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="solucionsilabas1MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="solucionsilabas1ActionPerformed"/>
           </Events>
         </Component>
@@ -3432,6 +3436,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ca"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton1silabas1MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="boton2silabas1">
           <Properties>
@@ -3441,6 +3448,7 @@
             <Property name="text" type="java.lang.String" value="To"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton2silabas1MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton2silabas1ActionPerformed"/>
           </Events>
         </Component>
@@ -3452,6 +3460,7 @@
             <Property name="text" type="java.lang.String" value="Me"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton3silabas1MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton3silabas1ActionPerformed"/>
           </Events>
         </Component>
@@ -3601,6 +3610,9 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="silabasImg2MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="soluci&#xf3;nsilabas2">
           <Properties>
@@ -3610,6 +3622,7 @@
             <Property name="text" type="java.lang.String" value="Ca"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="soluci&#xf3;nsilabas2MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soluci&#xf3;nsilabas2ActionPerformed"/>
           </Events>
         </Component>
@@ -3621,6 +3634,7 @@
             <Property name="text" type="java.lang.String" value="Pe"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton1silabas2MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton1silabas2ActionPerformed"/>
           </Events>
         </Component>
@@ -3632,6 +3646,7 @@
             <Property name="text" type="java.lang.String" value="Es"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton2silabas2MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton2silabas2ActionPerformed"/>
           </Events>
         </Component>
@@ -3642,6 +3657,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="San"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton3silabas2MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -3791,6 +3809,9 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="silabasImg3MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="boton1silabas3">
           <Properties>
@@ -3807,6 +3828,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Tro"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton2silabas3MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="solucionsilabas3">
           <Properties>
@@ -3816,6 +3840,7 @@
             <Property name="text" type="java.lang.String" value="Tre"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="solucionsilabas3MouseEntered"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="solucionsilabas3ActionPerformed"/>
           </Events>
         </Component>
@@ -3827,6 +3852,9 @@
             <Property name="text" type="java.lang.String" value="Bra"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton3silabas3MouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -5478,6 +5506,9 @@
               <Image iconType="3" name="/img/fl_a_minuscula.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="fl11_letraMouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="back_nivel1fase1">
           <Properties>
@@ -5894,6 +5925,9 @@
               <Image iconType="3" name="/img/fl_m_minuscula.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="fl31_letraMouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="back_nivel3fase1">
           <Properties>
@@ -6102,6 +6136,9 @@
               <Image iconType="3" name="/img/fl_r_minuscula.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="fl41_letraMouseEntered"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="back_nivel4fase1">
           <Properties>

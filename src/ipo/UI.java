@@ -3069,9 +3069,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         silabasImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/soccer_ball.png"))); // NOI18N
         silabasImg1.setBorderPainted(false);
         silabasImg1.setContentAreaFilled(false);
+        silabasImg1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                silabasImg1MouseEntered(evt);
+            }
+        });
 
         solucionsilabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         solucionsilabas1.setText("Pe");
+        solucionsilabas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                solucionsilabas1MouseEntered(evt);
+            }
+        });
         solucionsilabas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 solucionsilabas1ActionPerformed(evt);
@@ -3080,9 +3090,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton1silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas1.setText("Ca");
+        boton1silabas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton1silabas1MouseEntered(evt);
+            }
+        });
 
         boton2silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas1.setText("To");
+        boton2silabas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton2silabas1MouseEntered(evt);
+            }
+        });
         boton2silabas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton2silabas1ActionPerformed(evt);
@@ -3091,6 +3111,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton3silabas1.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas1.setText("Me");
+        boton3silabas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton3silabas1MouseEntered(evt);
+            }
+        });
         boton3silabas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton3silabas1ActionPerformed(evt);
@@ -3191,9 +3216,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         silabasImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/candy.png"))); // NOI18N
         silabasImg2.setBorderPainted(false);
         silabasImg2.setContentAreaFilled(false);
+        silabasImg2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                silabasImg2MouseEntered(evt);
+            }
+        });
 
         soluciónsilabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         soluciónsilabas2.setText("Ca");
+        soluciónsilabas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                soluciónsilabas2MouseEntered(evt);
+            }
+        });
         soluciónsilabas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 soluciónsilabas2ActionPerformed(evt);
@@ -3202,6 +3237,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton1silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas2.setText("Pe");
+        boton1silabas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton1silabas2MouseEntered(evt);
+            }
+        });
         boton1silabas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton1silabas2ActionPerformed(evt);
@@ -3210,6 +3250,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton2silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas2.setText("Es");
+        boton2silabas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton2silabas2MouseEntered(evt);
+            }
+        });
         boton2silabas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton2silabas2ActionPerformed(evt);
@@ -3218,6 +3263,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         boton3silabas2.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas2.setText("San");
+        boton3silabas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton3silabas2MouseEntered(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 0));
@@ -3313,15 +3363,30 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         silabasImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clover.png"))); // NOI18N
         silabasImg3.setBorderPainted(false);
         silabasImg3.setContentAreaFilled(false);
+        silabasImg3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                silabasImg3MouseEntered(evt);
+            }
+        });
 
         boton1silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton1silabas3.setText("Tri");
 
         boton2silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton2silabas3.setText("Tro");
+        boton2silabas3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton2silabas3MouseEntered(evt);
+            }
+        });
 
         solucionsilabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         solucionsilabas3.setText("Tre");
+        solucionsilabas3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                solucionsilabas3MouseEntered(evt);
+            }
+        });
         solucionsilabas3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 solucionsilabas3ActionPerformed(evt);
@@ -3331,6 +3396,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         boton3silabas3.setFont(new java.awt.Font("PalMeMim", 1, 36)); // NOI18N
         boton3silabas3.setText("Bra");
         boton3silabas3.setToolTipText("");
+        boton3silabas3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton3silabas3MouseEntered(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 153, 0));
@@ -4536,6 +4606,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_a_minuscula.png"))); // NOI18N
+        fl11_letra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fl11_letraMouseEntered(evt);
+            }
+        });
 
         back_nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase1.setBorderPainted(false);
@@ -4880,6 +4955,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl31_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_m_minuscula.png"))); // NOI18N
+        fl31_letra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fl31_letraMouseEntered(evt);
+            }
+        });
 
         back_nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel3fase1.setBorderPainted(false);
@@ -5043,6 +5123,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         });
 
         fl41_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_r_minuscula.png"))); // NOI18N
+        fl41_letra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fl41_letraMouseEntered(evt);
+            }
+        });
 
         back_nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel4fase1.setBorderPainted(false);
@@ -5562,11 +5647,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra3MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra3MouseExited(evt);
             }
         });
         panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
@@ -5611,11 +5696,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ff11_palabra1MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ff11_palabra1MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ff11_palabra1MouseEntered(evt);
             }
         });
         ff11_palabra1.addActionListener(new java.awt.event.ActionListener() {
@@ -9055,6 +9140,74 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void fl21_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_letraMouseEntered
         reproduceSonido("a_e.mp3");
     }//GEN-LAST:event_fl21_letraMouseEntered
+
+    private void boton1silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton1silabas1MouseEntered
+
+    private void boton2silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton2silabas1MouseEntered
+
+    private void boton3silabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton3silabas1MouseEntered
+
+    private void solucionsilabas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_solucionsilabas1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_solucionsilabas1MouseEntered
+
+    private void silabasImg1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_silabasImg1MouseEntered
+
+    private void silabasImg2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_silabasImg2MouseEntered
+
+    private void boton1silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton1silabas2MouseEntered
+
+    private void boton2silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton2silabas2MouseEntered
+
+    private void soluciónsilabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_soluciónsilabas2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_soluciónsilabas2MouseEntered
+
+    private void boton3silabas2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton3silabas2MouseEntered
+
+    private void silabasImg3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_silabasImg3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_silabasImg3MouseEntered
+
+    private void boton2silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2silabas3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton2silabas3MouseEntered
+
+    private void solucionsilabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_solucionsilabas3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_solucionsilabas3MouseEntered
+
+    private void boton3silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3silabas3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton3silabas3MouseEntered
+
+    private void fl11_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_letraMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl11_letraMouseEntered
+
+    private void fl31_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_letraMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl31_letraMouseEntered
+
+    private void fl41_letraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_letraMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl41_letraMouseEntered
 
     /**
      * Métodos de Javi.
