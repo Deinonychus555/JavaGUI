@@ -49,6 +49,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     ImageIcon fondo_inicio;
     BasicPlayer player = new BasicPlayer();
     BasicController control = (BasicController) player;
+    BasicPlayer sonidos = new BasicPlayer();  
     File array_musica;
     boolean control_pausado;
     String[] nombres_lista_alumnos = new String[8];
@@ -148,23 +149,33 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_pass_infantil.setVisible(false);
         panel_pass_primaria.setVisible(false);
         panel_fases.setVisible(false);
-        /** FASE 1. **/
+        /**
+         * FASE 1. *
+         */
         panel_fase1.setVisible(false);
         panel_nivel1fase1.setVisible(false);
         panel_nivel2fase1.setVisible(false);
         panel_nivel3fase1.setVisible(false);
         panel_nivel4fase1.setVisible(false);
-        /** FASE 2. **/
+        /**
+         * FASE 2. *
+         */
         panel_fase2.setVisible(false);
         panel_nivel1fase2.setVisible(false);
         panel_nivel2fase2.setVisible(false);
         panel_nivel3fase2.setVisible(false);
-        /** FASE 3. **/
+        /**
+         * FASE 3. *
+         */
         panel_fase3.setVisible(false);
-        /** FASE 4. **/
+        /**
+         * FASE 4. *
+         */
         panel_fase4.setVisible(false);
         panel_nivel1fase4.setVisible(false);
-        /** FASE 5. **/
+        /**
+         * FASE 5. *
+         */
         panel_nivel1fase5.setVisible(false);
         panelPalabrasNivel1.setVisible(false);
         panel_acertado.setVisible(false);
@@ -349,8 +360,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         sonido_LoginPrimaria = new javax.swing.JButton();
         panel_nivel1fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas1 = new com.alee.laf.label.WebLabel();
-        backSilabas1 = new javax.swing.JButton();
-        homeSilabas1 = new javax.swing.JButton();
+        back_nivel1fase2 = new javax.swing.JButton();
+        home_nivel1fase2 = new javax.swing.JButton();
         silabasImg1 = new javax.swing.JButton();
         solucionsilabas1 = new javax.swing.JButton();
         boton1silabas1 = new javax.swing.JButton();
@@ -359,8 +370,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jLabel9 = new javax.swing.JLabel();
         panel_nivel2fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas2 = new com.alee.laf.label.WebLabel();
-        backSilabas2 = new javax.swing.JButton();
-        homeSilabas2 = new javax.swing.JButton();
+        back_nivel2fase2 = new javax.swing.JButton();
+        home_nivel2fase2 = new javax.swing.JButton();
         silabasImg2 = new javax.swing.JButton();
         soluciónsilabas2 = new javax.swing.JButton();
         boton1silabas2 = new javax.swing.JButton();
@@ -369,8 +380,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         jLabel10 = new javax.swing.JLabel();
         panel_nivel3fase2 = new JPanelCustom("/img/fondoBarco.png");
         TituloSilabas3 = new com.alee.laf.label.WebLabel();
-        backSilabas3 = new javax.swing.JButton();
-        homeSilabas3 = new javax.swing.JButton();
+        back_nivel3fase2 = new javax.swing.JButton();
+        home_nivel3fase2 = new javax.swing.JButton();
         silabasImg3 = new javax.swing.JButton();
         boton1silabas3 = new javax.swing.JButton();
         boton2silabas3 = new javax.swing.JButton();
@@ -549,7 +560,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1008,6 +1021,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 nivel2fase1MouseReleased(evt);
+            }
+        });
+        nivel2fase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nivel2fase1ActionPerformed(evt);
             }
         });
 
@@ -3027,19 +3045,28 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         TituloSilabas1.setText("Selecciona la sílaba correcta");
         TituloSilabas1.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
 
-        backSilabas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
-        backSilabas1.setBorderPainted(false);
-        backSilabas1.setContentAreaFilled(false);
-        backSilabas1.addMouseListener(new java.awt.event.MouseAdapter() {
+        back_nivel1fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        back_nivel1fase2.setBorderPainted(false);
+        back_nivel1fase2.setContentAreaFilled(false);
+        back_nivel1fase2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backSilabas1MouseClicked(evt);
+                back_nivel1fase2MouseClicked(evt);
+            }
+        });
+        back_nivel1fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_nivel1fase2ActionPerformed(evt);
             }
         });
 
-        homeSilabas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
-        homeSilabas1.setBorderPainted(false);
-        homeSilabas1.setContentAreaFilled(false);
-        homeSilabas1.setEnabled(false);
+        home_nivel1fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        home_nivel1fase2.setBorderPainted(false);
+        home_nivel1fase2.setContentAreaFilled(false);
+        home_nivel1fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home_nivel1fase2ActionPerformed(evt);
+            }
+        });
 
         silabasImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/soccer_ball.png"))); // NOI18N
         silabasImg1.setBorderPainted(false);
@@ -3100,9 +3127,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(boton3silabas1))
             .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(backSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(back_nivel1fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(homeSilabas1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(home_nivel1fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panel_nivel1fase2Layout.setVerticalGroup(
             panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3110,7 +3137,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addGroup(panel_nivel1fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(homeSilabas1))
+                        .addComponent(home_nivel1fase2))
                     .addGroup(panel_nivel1fase2Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(jLabel9)
@@ -3125,7 +3152,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                             .addComponent(boton2silabas1)
                             .addComponent(boton3silabas1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                        .addComponent(backSilabas1)))
+                        .addComponent(back_nivel1fase2)))
                 .addGap(42, 42, 42))
         );
 
@@ -3140,19 +3167,28 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         TituloSilabas2.setText("Selecciona la sílaba correcta");
         TituloSilabas2.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
 
-        backSilabas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
-        backSilabas2.setBorderPainted(false);
-        backSilabas2.setContentAreaFilled(false);
-        backSilabas2.addMouseListener(new java.awt.event.MouseAdapter() {
+        back_nivel2fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        back_nivel2fase2.setBorderPainted(false);
+        back_nivel2fase2.setContentAreaFilled(false);
+        back_nivel2fase2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backSilabas2MouseClicked(evt);
+                back_nivel2fase2MouseClicked(evt);
+            }
+        });
+        back_nivel2fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_nivel2fase2ActionPerformed(evt);
             }
         });
 
-        homeSilabas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
-        homeSilabas2.setBorderPainted(false);
-        homeSilabas2.setContentAreaFilled(false);
-        homeSilabas2.setEnabled(false);
+        home_nivel2fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        home_nivel2fase2.setBorderPainted(false);
+        home_nivel2fase2.setContentAreaFilled(false);
+        home_nivel2fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home_nivel2fase2ActionPerformed(evt);
+            }
+        });
 
         silabasImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/candy.png"))); // NOI18N
         silabasImg2.setBorderPainted(false);
@@ -3212,9 +3248,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         .addComponent(boton3silabas2))
                     .addGroup(panel_nivel2fase2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(backSilabas2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(back_nivel2fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(homeSilabas2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(home_nivel2fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(97, 97, 97))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_nivel2fase2Layout.createSequentialGroup()
                 .addComponent(TituloSilabas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3237,8 +3273,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(boton3silabas2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(panel_nivel2fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(homeSilabas2)
-                    .addComponent(backSilabas2))
+                    .addComponent(home_nivel2fase2)
+                    .addComponent(back_nivel2fase2))
                 .addGap(42, 42, 42))
         );
 
@@ -3253,19 +3289,28 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         TituloSilabas3.setText("Selecciona la sílaba correcta");
         TituloSilabas3.setFont(new java.awt.Font("PalMeMim", 1, 42)); // NOI18N
 
-        backSilabas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
-        backSilabas3.setBorderPainted(false);
-        backSilabas3.setContentAreaFilled(false);
-        backSilabas3.addMouseListener(new java.awt.event.MouseAdapter() {
+        back_nivel3fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        back_nivel3fase2.setBorderPainted(false);
+        back_nivel3fase2.setContentAreaFilled(false);
+        back_nivel3fase2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backSilabas3MouseClicked(evt);
+                back_nivel3fase2MouseClicked(evt);
+            }
+        });
+        back_nivel3fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_nivel3fase2ActionPerformed(evt);
             }
         });
 
-        homeSilabas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
-        homeSilabas3.setBorderPainted(false);
-        homeSilabas3.setContentAreaFilled(false);
-        homeSilabas3.setEnabled(false);
+        home_nivel3fase2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        home_nivel3fase2.setBorderPainted(false);
+        home_nivel3fase2.setContentAreaFilled(false);
+        home_nivel3fase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home_nivel3fase2ActionPerformed(evt);
+            }
+        });
 
         silabasImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clover.png"))); // NOI18N
         silabasImg3.setBorderPainted(false);
@@ -3315,9 +3360,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(backSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(back_nivel3fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(homeSilabas3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(home_nivel3fase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_nivel3fase2Layout.createSequentialGroup()
                         .addGap(318, 318, 318)
                         .addComponent(silabasImg3))
@@ -3343,8 +3388,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                     .addComponent(boton3silabas3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(panel_nivel3fase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeSilabas3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(backSilabas3, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(home_nivel3fase2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(back_nivel3fase2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(42, 42, 42))
         );
 
@@ -4415,6 +4460,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         panel_nivel1fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase1.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_nivel1fase1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         fl11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         fl11_titulo.setForeground(new java.awt.Color(255, 255, 0));
@@ -6238,7 +6284,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_nivel3fase1MouseReleased
 
     private void nivel3fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase1ActionPerformed
-        // TODO add your handling code here:
+        panel_nivel3fase1.setVisible(true);
+        panel_fase1.setVisible(false);
     }//GEN-LAST:event_nivel3fase1ActionPerformed
 
     private void nivel4fase1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel4fase1MouseEntered
@@ -6262,7 +6309,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_nivel4fase1MouseReleased
 
     private void nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel4fase1ActionPerformed
-        // TODO add your handling code here:
+        panel_nivel4fase1.setVisible(true);
+        panel_fase1.setVisible(false);
     }//GEN-LAST:event_nivel4fase1ActionPerformed
 
     private void backFase1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backFase1MouseClicked
@@ -7324,9 +7372,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         }
     }//GEN-LAST:event_sonido_LoginPrimariaMouseReleased
 
-    private void backSilabas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backSilabas1MouseClicked
+    private void back_nivel1fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel1fase2MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_backSilabas1MouseClicked
+    }//GEN-LAST:event_back_nivel1fase2MouseClicked
 
     private void solucionsilabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas1ActionPerformed
         // TODO add your handling code here:
@@ -7338,10 +7386,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_boton3silabas1ActionPerformed
 
-    private void backSilabas2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backSilabas2MouseClicked
+    private void back_nivel2fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel2fase2MouseClicked
         panel_nivel2fase2.setVisible(false);
         panel_fase2.setVisible(true);
-    }//GEN-LAST:event_backSilabas2MouseClicked
+    }//GEN-LAST:event_back_nivel2fase2MouseClicked
 
     private void soluciónsilabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soluciónsilabas2ActionPerformed
         // TODO add your handling code here:
@@ -7357,9 +7405,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_boton2silabas2ActionPerformed
 
-    private void backSilabas3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backSilabas3MouseClicked
+    private void back_nivel3fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel3fase2MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_backSilabas3MouseClicked
+    }//GEN-LAST:event_back_nivel3fase2MouseClicked
 
     private void solucionsilabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionsilabas3ActionPerformed
         // TODO add your handling code here:
@@ -7387,7 +7435,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase2ActionPerformed
         panel_fase2.setVisible(false);
         panel_nivel1fase2.setVisible(true);
-        stopMusica();
+        pausarMusica();
     }//GEN-LAST:event_nivel1fase2ActionPerformed
 
     private void nivel2fase2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nivel2fase2MousePressed
@@ -7424,14 +7472,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel3fase2ActionPerformed
         panel_nivel3fase2.setVisible(true);
-        panel_nivel3fase2.setVisible(false);
-        stopMusica();
+        panel_fase2.setVisible(false);
+        pausarMusica();
     }//GEN-LAST:event_nivel3fase2ActionPerformed
 
     private void nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase2ActionPerformed
         panel_nivel2fase2.setVisible(true);
-        panel_fases.setVisible(false);
-        stopMusica();
+        panel_fase2.setVisible(false);
+        pausarMusica();
     }//GEN-LAST:event_nivel2fase2ActionPerformed
 
     private void boton2silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas1ActionPerformed
@@ -7831,7 +7879,8 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_alumno5ActionPerformed
 
     private void nivel1fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel1fase1ActionPerformed
-
+        panel_nivel1fase1.setVisible(true);
+        panel_fase1.setVisible(false);
     }//GEN-LAST:event_nivel1fase1ActionPerformed
 
     private void boton_sonido_fase3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_sonido_fase3MousePressed
@@ -8170,7 +8219,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void home_nivel4fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel4fase1ActionPerformed
         panel_nivel4fase1.setVisible(false);
-        panel_fases.setVisible(false);
+        panel_fases.setVisible(true);
     }//GEN-LAST:event_home_nivel4fase1ActionPerformed
 
     private void ff11_palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseClicked
@@ -8906,6 +8955,41 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         // TODO add your handling code here:
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
+    private void nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase1ActionPerformed
+        panel_nivel2fase1.setVisible(true);
+        panel_fase1.setVisible(false);
+    }//GEN-LAST:event_nivel2fase1ActionPerformed
+
+    private void home_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel1fase2ActionPerformed
+        panel_nivel1fase2.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_home_nivel1fase2ActionPerformed
+
+    private void back_nivel1fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel1fase2ActionPerformed
+        panel_nivel1fase2.setVisible(false);
+        panel_fase2.setVisible(true);
+    }//GEN-LAST:event_back_nivel1fase2ActionPerformed
+
+    private void back_nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel2fase2ActionPerformed
+        panel_nivel2fase2.setVisible(false);
+        panel_fase2.setVisible(true);
+    }//GEN-LAST:event_back_nivel2fase2ActionPerformed
+
+    private void home_nivel2fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel2fase2ActionPerformed
+        panel_nivel2fase2.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_home_nivel2fase2ActionPerformed
+
+    private void back_nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_nivel3fase2ActionPerformed
+        panel_nivel3fase2.setVisible(false);
+        panel_fase2.setVisible(true);
+    }//GEN-LAST:event_back_nivel3fase2ActionPerformed
+
+    private void home_nivel3fase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_nivel3fase2ActionPerformed
+        panel_nivel3fase2.setVisible(false);
+        panel_fases.setVisible(true);
+    }//GEN-LAST:event_home_nivel3fase2ActionPerformed
+
     /**
      * Métodos de Javi.
      */
@@ -9143,6 +9227,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             // Mensaje en caso de que falle
         }
     }
+    
+    public void reproduceSonido(String nombreSonido){
+        try{
+            sonidos.open(new File(System.getProperty("user.dir")+"/src/mp3/"+nombreSonido));
+            sonidos.play();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+    }
 
     /**
      * Fin métodos de Javi.
@@ -9225,15 +9318,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton backFase3;
     private javax.swing.JButton backFase3Nivel1;
     private javax.swing.JButton backFase4;
-    private javax.swing.JButton backSilabas1;
-    private javax.swing.JButton backSilabas2;
-    private javax.swing.JButton backSilabas3;
     private javax.swing.JButton back_login_primaria;
     private javax.swing.JButton back_nivel1fase1;
+    private javax.swing.JButton back_nivel1fase2;
     private javax.swing.JButton back_nivel1fase4;
     private javax.swing.JButton back_nivel1fase5;
     private javax.swing.JButton back_nivel2fase1;
+    private javax.swing.JButton back_nivel2fase2;
     private javax.swing.JButton back_nivel3fase1;
+    private javax.swing.JButton back_nivel3fase2;
     private javax.swing.JButton back_nivel4fase1;
     private javax.swing.JButton back_pass_infantil;
     private javax.swing.JButton barco;
@@ -9339,17 +9432,17 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private javax.swing.JButton homeFase3;
     private javax.swing.JButton homeFase3Nivel1;
     private javax.swing.JButton homeFase4;
-    private javax.swing.JButton homeSilabas1;
-    private javax.swing.JButton homeSilabas2;
-    private javax.swing.JButton homeSilabas3;
     private javax.swing.JButton home_login;
     private javax.swing.JButton home_login1;
     private javax.swing.JButton home_login_primaria;
     private javax.swing.JButton home_nivel1fase1;
+    private javax.swing.JButton home_nivel1fase2;
     private javax.swing.JButton home_nivel1fase4;
     private javax.swing.JButton home_nivel1fase5;
     private javax.swing.JButton home_nivel2fase1;
+    private javax.swing.JButton home_nivel2fase2;
     private javax.swing.JButton home_nivel3fase1;
+    private javax.swing.JButton home_nivel3fase2;
     private javax.swing.JButton home_nivel4fase1;
     private javax.swing.JButton home_pass_infantil;
     private javax.swing.JLabel imagenGato;
