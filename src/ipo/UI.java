@@ -943,7 +943,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                                 .addComponent(jButton3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(panel_loginLayout.createSequentialGroup()
-                                .addComponent(alumno4, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                .addComponent(alumno4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(51, 51, 51)))
                         .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -5226,18 +5226,23 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.add(palabra9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, -1));
 
         palabra10.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
-        palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato.png"))); // NOI18N
+        palabra10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gato_gris.png"))); // NOI18N
         palabra10.setBorderPainted(false);
         palabra10.setContentAreaFilled(false);
         palabra10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra10MouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra10MouseExited(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra10MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra10MouseExited(evt);
+        });
+        palabra10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra10ActionPerformed(evt);
             }
         });
         panel_nivel1fase5.add(palabra10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 128, 128));
@@ -5328,7 +5333,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.add(palabra15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
 
         palabra16.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
-        palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado.png"))); // NOI18N
+        palabra16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tejado_gris.png"))); // NOI18N
         palabra16.setText(".");
         palabra16.setBorderPainted(false);
         palabra16.setContentAreaFilled(false);
@@ -5339,11 +5344,16 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra16MouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra16MouseExited(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra16MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra16MouseExited(evt);
+        });
+        palabra16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                palabra16ActionPerformed(evt);
             }
         });
         panel_nivel1fase5.add(palabra16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 127, 126));
@@ -5400,7 +5410,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.add(palabra20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
 
         palabra21.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
-        palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta.png"))); // NOI18N
+        palabra21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carta_gris.png"))); // NOI18N
         palabra21.setBorderPainted(false);
         palabra21.setContentAreaFilled(false);
         palabra21.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5485,7 +5495,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.add(palabra25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
 
         palabra28.setFont(new java.awt.Font("GinoSchoolScript", 0, 36)); // NOI18N
-        palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado.png"))); // NOI18N
+        palabra28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/casado_gris.png"))); // NOI18N
         palabra28.setText(".");
         palabra28.setBorderPainted(false);
         palabra28.setContentAreaFilled(false);
@@ -5985,18 +5995,19 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 .addComponent(nivel2fase4)
                 .addGap(148, 148, 148))
             .addGroup(panel_fase4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(backFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(homeFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(nivel3fase4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panel_fase4Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(boton_sonido_fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120)
-                .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panel_fase4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(homeFase4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(200, 200, 200)
+                        .addComponent(nivel3fase4))
+                    .addGroup(panel_fase4Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(boton_sonido_fase4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
+                        .addComponent(TituloFase4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_fase4Layout.setVerticalGroup(
@@ -8870,6 +8881,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase5.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_back_nivel1fase5ActionPerformed
+
+    private void palabra10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra10ActionPerformed
+
+    private void palabra16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabra16ActionPerformed
 
     /**
      * Métodos de Javi.
