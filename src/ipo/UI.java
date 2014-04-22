@@ -8361,6 +8361,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra1ActionPerformed
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
+        
         ff11_palabra2.setEnabled(false);
         ff11_palabra2.setForeground(Color.GRAY);
         ff11_palabra11.setEnabled(true);
@@ -8424,14 +8425,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra4MouseExited
 
     private void ff11_palabra5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseClicked
-        ff11_palabra5.setEnabled(false);
-        ff11_palabra5.setForeground(Color.GRAY);
-        ff11_palabra7.setEnabled(true);
-        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_perro_ladrando.png")));
-        if (!ff11_palabra2.isEnabled()) {
-            ;
-        }
-        
+       
     }//GEN-LAST:event_ff11_palabra5MouseClicked
 
     private void ff11_palabra5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra5MouseEntered
@@ -9126,7 +9120,14 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra7ActionPerformed
 
     private void ff11_palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra5ActionPerformed
-        // TODO add your handling code here:
+         ff11_palabra5.setEnabled(false);
+        ff11_palabra5.setForeground(Color.GRAY);
+        ff11_palabra7.setEnabled(true);
+        ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff11_perro_ladrando.png")));
+        if (!ff11_palabra2.isEnabled()) {
+            ;
+        }
+        
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
     private void nivel2fase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivel2fase1ActionPerformed
