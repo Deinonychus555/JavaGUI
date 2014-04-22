@@ -570,9 +570,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplicación de lectura");
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -4072,7 +4070,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                                 .addComponent(mascota_nivel1fase10))
                             .addGroup(panelPalabrasNivel1Layout.createSequentialGroup()
                                 .addComponent(sopaLetras, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(panelPalabrasNivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(homeFase3Nivel1)
                                     .addComponent(backFase3Nivel1))))
@@ -4535,6 +4533,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen2MouseReleased(evt);
             }
         });
+        fl11_imagen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl11_imagen2ActionPerformed(evt);
+            }
+        });
 
         fl11_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_perro.png"))); // NOI18N
         fl11_imagen3.setBorder(null);
@@ -4555,6 +4558,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 fl11_imagen3MouseReleased(evt);
+            }
+        });
+        fl11_imagen3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl11_imagen3ActionPerformed(evt);
             }
         });
 
@@ -4715,6 +4723,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 fl21_imagen2MouseReleased(evt);
+            }
+        });
+        fl21_imagen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl21_imagen2ActionPerformed(evt);
             }
         });
 
@@ -4899,6 +4912,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl31_imagen2MouseReleased(evt);
             }
         });
+        fl31_imagen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl31_imagen2ActionPerformed(evt);
+            }
+        });
 
         fl31_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_moto.png"))); // NOI18N
         fl31_imagen3.setBorder(null);
@@ -5080,6 +5098,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl41_imagen2MouseReleased(evt);
             }
         });
+        fl41_imagen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl41_imagen2ActionPerformed(evt);
+            }
+        });
 
         fl41_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_conejo.png"))); // NOI18N
         fl41_imagen3.setBorder(null);
@@ -5100,6 +5123,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 fl41_imagen3MouseReleased(evt);
+            }
+        });
+        fl41_imagen3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fl41_imagen3ActionPerformed(evt);
             }
         });
 
@@ -7543,7 +7571,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_solucionsilabas1ActionPerformed
 
     private void boton3silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton3silabas1ActionPerformed
 
     private void back_nivel2fase2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_nivel2fase2MouseClicked
@@ -7635,7 +7663,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_nivel2fase2ActionPerformed
 
     private void boton2silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton2silabas1ActionPerformed
 
     private void letraPulsadaEvent(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letraPulsadaEvent
@@ -8204,7 +8232,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl21_imagen1MouseReleased
 
     private void fl21_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl21_imagen1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl21_imagen1ActionPerformed
 
     private void fl21_imagen2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen2MouseClicked
@@ -8275,7 +8303,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl31_imagen1MouseReleased
 
     private void fl31_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl31_imagen1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_fl31_imagen1ActionPerformed
 
     private void fl31_imagen2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen2MouseClicked
@@ -8417,7 +8445,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra1MouseExited
 
     private void ff11_palabra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_ff11_palabra1ActionPerformed
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
@@ -9297,7 +9325,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl41_letraMouseEntered
 
     private void palabra7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra7ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra7ActionPerformed
 
     private void boton1silabas3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1silabas3MouseEntered
@@ -9305,51 +9333,51 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_boton1silabas3MouseEntered
 
     private void palabra4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra4ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_palabra4ActionPerformed
 
     private void palabra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra2ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra2ActionPerformed
 
     private void palabra5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra5ActionPerformed
-        // TODO add your handling code here:
+       reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra5ActionPerformed
 
     private void palabra8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra8ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra8ActionPerformed
 
     private void palabra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabra1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_palabra1ActionPerformed
 
     private void ff11_palabra3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra3ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_ff11_palabra3ActionPerformed
 
     private void ff11_palabra4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff11_palabra4ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_ff11_palabra4ActionPerformed
 
     private void boton2silabas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas3ActionPerformed
-        // TODO add your handling code here:
+       reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton2silabas3ActionPerformed
 
     private void boton3silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3silabas2ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton3silabas2ActionPerformed
 
     private void boton2silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2silabas2ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton2silabas2ActionPerformed
 
     private void boton1silabas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas2ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton1silabas2ActionPerformed
 
     private void boton1silabas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1silabas1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("nonono.mp3");
     }//GEN-LAST:event_boton1silabas1ActionPerformed
 
     private void mascota_nivel1fase10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase10ActionPerformed
@@ -9367,6 +9395,30 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void mascota_nivel1fase13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase13ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mascota_nivel1fase13ActionPerformed
+
+    private void fl11_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen2ActionPerformed
+        reproduceSonido("nonono.mp3");
+    }//GEN-LAST:event_fl11_imagen2ActionPerformed
+
+    private void fl11_imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl11_imagen3ActionPerformed
+       reproduceSonido("nonono.mp3");
+    }//GEN-LAST:event_fl11_imagen3ActionPerformed
+
+    private void fl21_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl21_imagen2ActionPerformed
+        reproduceSonido("nonono.mp3");
+    }//GEN-LAST:event_fl21_imagen2ActionPerformed
+
+    private void fl31_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl31_imagen2ActionPerformed
+        reproduceSonido("nonono.mp3");
+    }//GEN-LAST:event_fl31_imagen2ActionPerformed
+
+    private void fl41_imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen3ActionPerformed
+       reproduceSonido("nonono.mp3");
+    }//GEN-LAST:event_fl41_imagen3ActionPerformed
+
+    private void fl41_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fl41_imagen2ActionPerformed
 
     /**
      * Métodos de Javi.
