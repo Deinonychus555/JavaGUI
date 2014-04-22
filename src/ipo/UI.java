@@ -8192,6 +8192,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl11_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl11_imagen1MouseClicked
         reproduceSonido("bien.mp3");
+        try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
         panel_nivel1fase1.setVisible(false);
         panel_nivel2fase1.setVisible(true);
     }//GEN-LAST:event_fl11_imagen1MouseClicked
@@ -8307,6 +8312,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl21_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl21_imagen3MouseClicked
         reproduceSonido("bien.mp3");
+        try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
         panel_nivel2fase1.setVisible(false);
         panel_nivel3fase1.setVisible(true);
     }//GEN-LAST:event_fl21_imagen3MouseClicked
@@ -8380,6 +8390,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl31_imagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseClicked
         reproduceSonido("bien.mp3");
+        try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
         panel_nivel3fase1.setVisible(false);
         panel_nivel4fase1.setVisible(true);
     }//GEN-LAST:event_fl31_imagen3MouseClicked
@@ -8407,6 +8422,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl41_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseClicked
         reproduceSonido("bien.mp3");
+        try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
         panel_nivel4fase1.setVisible(false);
         panel_fases.setVisible(true);
     }//GEN-LAST:event_fl41_imagen1MouseClicked
@@ -8429,11 +8449,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_fl41_imagen1MouseReleased
 
     private void fl41_imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen1ActionPerformed
-        // TODO add your handling code here:
+        reproduceSonido("a_nonono.mp3");
     }//GEN-LAST:event_fl41_imagen1ActionPerformed
 
     private void fl41_imagen2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen2MouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_fl41_imagen2MouseClicked
 
     private void fl41_imagen2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen2MouseEntered
@@ -8510,6 +8530,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna.png")));
         if (!ff11_palabra5.isEnabled()) {
             reproduceSonido("bien.mp3");
+            try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
             panel_nivel1fase4.setVisible(false);
             panel_fases.setVisible(true);
         }
@@ -9278,8 +9303,13 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando.png")));
         if (!ff11_palabra2.isEnabled()) {
             reproduceSonido("bien.mp3");
-            panel_nivel3fase1.setVisible(false);
-            panel_nivel4fase1.setVisible(true);
+            try{
+            Thread.sleep(5000);}
+        catch (Exception ex){
+            
+        }
+            panel_nivel1fase4.setVisible(false);
+            panel_fases.setVisible(true);
         }
     }//GEN-LAST:event_ff11_palabra5ActionPerformed
 
