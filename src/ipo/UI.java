@@ -8343,6 +8343,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra6MouseEntered
         ff11_palabra6.setForeground(Color.yellow);
+        reproduceSonido("a_el.mp3");
     }//GEN-LAST:event_ff11_palabra6MouseEntered
 
     private void ff11_palabra6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra6MouseExited
@@ -8356,7 +8357,9 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra7MouseEntered
         if (!ff11_palabra5.isEnabled()) {
             ff11_palabra7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_perro_ladrando_hover.png")));
+            reproduceSonido("a_perro.mp3");
         }
+       
     }//GEN-LAST:event_ff11_palabra7MouseEntered
 
     private void ff11_palabra7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra7MouseExited
@@ -8371,6 +8374,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra8MouseEntered
         ff11_palabra8.setForeground(Color.yellow);
+        reproduceSonido("a_ladra.mp3");
     }//GEN-LAST:event_ff11_palabra8MouseEntered
 
     private void ff11_palabra8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra8MouseExited
@@ -8383,6 +8387,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra9MouseEntered
         ff11_palabra9.setForeground(Color.yellow);
+        reproduceSonido("a_a.mp3");
     }//GEN-LAST:event_ff11_palabra9MouseEntered
 
     private void ff11_palabra9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra9MouseExited
@@ -8395,6 +8400,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void ff11_palabra10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra10MouseEntered
         ff11_palabra10.setForeground(Color.yellow);
+        reproduceSonido("a_la.mp3");
     }//GEN-LAST:event_ff11_palabra10MouseEntered
 
     private void ff11_palabra10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra10MouseExited
@@ -8408,6 +8414,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra11MouseEntered
         if (!ff11_palabra2.isEnabled()) {
             ff11_palabra11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ff_luna_hover.png")));
+            reproduceSonido("a_luna.mp3");
         }
     }//GEN-LAST:event_ff11_palabra11MouseEntered
 
