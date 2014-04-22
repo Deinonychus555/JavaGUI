@@ -49,6 +49,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     ImageIcon fondo_inicio;
     BasicPlayer player = new BasicPlayer();
     BasicController control = (BasicController) player;
+    BasicPlayer sonidos = new BasicPlayer();  
     File array_musica;
     boolean control_pausado;
     String[] nombres_lista_alumnos = new String[8];
@@ -4459,6 +4460,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
         panel_nivel1fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase1.setMinimumSize(new java.awt.Dimension(800, 600));
+        panel_nivel1fase1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         fl11_titulo.setFont(new java.awt.Font("Comic Sans MS", 1, 68)); // NOI18N
         fl11_titulo.setForeground(new java.awt.Color(255, 255, 0));
@@ -9223,6 +9225,15 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             Thread.sleep(milisegundos);
         } catch (Exception e) {
             // Mensaje en caso de que falle
+        }
+    }
+    
+    public void reproduceSonido(String nombreSonido){
+        try{
+            sonidos.open(new File(System.getProperty("user.dir")+"/src/mp3/"+nombreSonido));
+            sonidos.play();
+        }catch(Exception ex){
+            ex.printStackTrace();
         }
     }
 
