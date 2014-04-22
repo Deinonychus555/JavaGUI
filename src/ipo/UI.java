@@ -8100,6 +8100,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl31_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen1MouseEntered
         fl31_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_pajaro_hover.png")));
+        reproduceSonido("a_pajaro.mp3");
     }//GEN-LAST:event_fl31_imagen1MouseEntered
 
     private void fl31_imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen1MouseExited
@@ -8124,6 +8125,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl31_imagen2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen2MouseEntered
         fl31_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_tijeras_hover.png")));
+        reproduceSonido("a_tijeras.mp3");
     }//GEN-LAST:event_fl31_imagen2MouseEntered
 
     private void fl31_imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen2MouseExited
@@ -8144,6 +8146,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl31_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseEntered
         fl31_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_moto_hover.png")));
+        reproduceSonido("a_moto.mp3");
     }//GEN-LAST:event_fl31_imagen3MouseEntered
 
     private void fl31_imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl31_imagen3MouseExited
@@ -8168,6 +8171,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl41_imagen1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseEntered
         fl41_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_raton_hover.png")));
+        reproduceSonido("a_raton.mp3");
     }//GEN-LAST:event_fl41_imagen1MouseEntered
 
     private void fl41_imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen1MouseExited
@@ -8192,6 +8196,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl41_imagen2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen2MouseEntered
         fl41_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_lapiz_hover.png")));
+        reproduceSonido("a_lapiz.mp3");
     }//GEN-LAST:event_fl41_imagen2MouseEntered
 
     private void fl41_imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen2MouseExited
@@ -8212,6 +8217,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void fl41_imagen3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen3MouseEntered
         fl41_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_conejo_hover.png")));
+        reproduceSonido("a_conejo.mp3");
     }//GEN-LAST:event_fl41_imagen3MouseEntered
 
     private void fl41_imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fl41_imagen3MouseExited
