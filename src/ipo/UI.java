@@ -8399,6 +8399,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void ff11_palabra1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseClicked
         ff11_palabra1.setEnabled(false);
         ff11_palabra1.setForeground(Color.GRAY);
+        reproduceSonido("nono.m4a");
     }//GEN-LAST:event_ff11_palabra1MouseClicked
 
     private void ff11_palabra1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra1MouseEntered
@@ -8420,6 +8421,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     }//GEN-LAST:event_ff11_palabra1ActionPerformed
 
     private void ff11_palabra2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ff11_palabra2MouseClicked
+        
         ff11_palabra2.setEnabled(false);
         ff11_palabra2.setForeground(Color.GRAY);
         ff11_palabra11.setEnabled(true);
