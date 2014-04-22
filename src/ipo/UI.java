@@ -6322,6 +6322,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void escuelaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseEntered
         escuela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school_hover.png")));
+        reproduceSonido("a_laescueladelasletras.mp3");
     }//GEN-LAST:event_escuelaMouseEntered
 
     private void escuelaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaMouseExited
@@ -6343,6 +6344,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void barcoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseEntered
         barco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barco_hover.png")));
+        reproduceSonido("a_viajandoconlassilabas.mp3");
     }//GEN-LAST:event_barcoMouseEntered
 
     private void barcoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barcoMouseExited
@@ -6368,6 +6370,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void piramideMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseEntered
         piramide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/piramide_hover.png")));
+        reproduceSonido("a_descubriendolaspalabras.mp3");
     }//GEN-LAST:event_piramideMouseEntered
 
     private void piramideMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_piramideMouseExited
@@ -6389,6 +6392,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void selvaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseEntered
         selva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/selva_hover.png")));
+        reproduceSonido("a_explorandolasfrases.mp3");
     }//GEN-LAST:event_selvaMouseEntered
 
     private void selvaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selvaMouseExited
@@ -6405,6 +6409,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
 
     private void bibliotecaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseEntered
         biblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/biblioteca_hover.png")));
+        reproduceSonido("a_labiliotecadelostextos.mp3");
     }//GEN-LAST:event_bibliotecaMouseEntered
 
     private void bibliotecaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bibliotecaMouseExited
@@ -7503,7 +7508,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_gato.mp3");
                         /**/
                         imagenGato.setEnabled(false);
                     }
@@ -7514,7 +7519,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_goma.mp3");
                         /**/
                         imagenGoma.setEnabled(false);
                     }
@@ -7530,7 +7535,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_gato.mp3");
                         /**/
                         imagenGato.setEnabled(false);
                     }
@@ -7541,7 +7546,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_goma.mp3");
                         /**/
                         imagenGoma.setEnabled(false);
                     }
@@ -7552,7 +7557,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_lapiz.mp3");
                         /**/
                         imagenLapiz.setEnabled(false);
                     }
@@ -7568,7 +7573,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_goma.mp3");
                         /**/
                         imagenGoma.setEnabled(false);
                     }
@@ -7584,7 +7589,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_gato.mp3");
                         /**/
                         imagenGato.setEnabled(false);
                     }
@@ -7595,7 +7600,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_goma.mp3");
                         /**/
                         imagenGoma.setEnabled(false);
                     }
@@ -7606,7 +7611,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_sol.mp3");
                         /**/
                         imagenSol.setEnabled(false);
                     }
@@ -7622,7 +7627,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_lapiz.mp3");
                         /**/
                         imagenLapiz.setEnabled(false);
                     }
@@ -7633,7 +7638,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_sol.mp3");
                         /**/
                         imagenSol.setEnabled(false);
                     }
@@ -7649,7 +7654,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_lapiz.mp3");
                         /**/
                         imagenLapiz.setEnabled(false);
                     }
@@ -7665,7 +7670,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_lapiz.mp3");
                         /**/
                         imagenLapiz.setEnabled(false);
                     }
@@ -7681,7 +7686,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_lapiz.mp3");
                         /**/
                         imagenLapiz.setEnabled(false);
                     }
@@ -7697,7 +7702,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_gato.mp3");
                         /**/
                         imagenGato.setEnabled(false);
                     }
@@ -7713,7 +7718,7 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                         /**
                          * SONIDO BIEEEN.
                          */
-
+                        reproduceSonido("a_sol.mp3");
                         /**/
                         imagenSol.setEnabled(false);
                     }
