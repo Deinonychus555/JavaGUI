@@ -5231,16 +5231,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra10MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra10MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra10MouseEntered(evt);
             }
-        });
-        palabra10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                palabra10ActionPerformed(evt);
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra10MouseExited(evt);
             }
         });
         panel_nivel1fase5.add(palabra10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 128, 128));
@@ -5342,16 +5337,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra16MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra16MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra16MouseEntered(evt);
             }
-        });
-        palabra16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                palabra16ActionPerformed(evt);
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra16MouseExited(evt);
             }
         });
         panel_nivel1fase5.add(palabra16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 127, 126));
@@ -5523,16 +5513,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 palabra3MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                palabra3MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 palabra3MouseEntered(evt);
             }
-        });
-        palabra3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                palabra3ActionPerformed(evt);
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                palabra3MouseExited(evt);
             }
         });
         panel_nivel1fase5.add(palabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
