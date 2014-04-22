@@ -4600,6 +4600,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase9.setBorderPainted(false);
         mascota_nivel1fase9.setContentAreaFilled(false);
+        mascota_nivel1fase9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase9ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_nivel1fase1Layout = new javax.swing.GroupLayout(panel_nivel1fase1);
         panel_nivel1fase1.setLayout(panel_nivel1fase1Layout);
@@ -4787,6 +4792,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase8.setBorderPainted(false);
         mascota_nivel1fase8.setContentAreaFilled(false);
+        mascota_nivel1fase8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_nivel2fase1Layout = new javax.swing.GroupLayout(panel_nivel2fase1);
         panel_nivel2fase1.setLayout(panel_nivel2fase1Layout);
@@ -4974,6 +4984,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase7.setBorderPainted(false);
         mascota_nivel1fase7.setContentAreaFilled(false);
+        mascota_nivel1fase7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_nivel3fase1Layout = new javax.swing.GroupLayout(panel_nivel3fase1);
         panel_nivel3fase1.setLayout(panel_nivel3fase1Layout);
@@ -5160,6 +5175,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase6.setBorderPainted(false);
         mascota_nivel1fase6.setContentAreaFilled(false);
+        mascota_nivel1fase6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_nivel4fase1Layout = new javax.swing.GroupLayout(panel_nivel4fase1);
         panel_nivel4fase1.setLayout(panel_nivel4fase1Layout);
@@ -5726,6 +5746,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase5.setBorderPainted(false);
         mascota_nivel1fase5.setContentAreaFilled(false);
+        mascota_nivel1fase5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase5ActionPerformed(evt);
+            }
+        });
         panel_nivel1fase5.add(mascota_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 110, -1));
 
         getContentPane().add(panel_nivel1fase5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -5990,6 +6015,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         mascota_nivel1fase4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase4.setBorderPainted(false);
         mascota_nivel1fase4.setContentAreaFilled(false);
+        mascota_nivel1fase4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mascota_nivel1fase4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_nivel1fase4Layout = new javax.swing.GroupLayout(panel_nivel1fase4);
         panel_nivel1fase4.setLayout(panel_nivel1fase4Layout);
@@ -9431,6 +9461,30 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
     private void fl41_imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fl41_imagen2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fl41_imagen2ActionPerformed
+
+    private void mascota_nivel1fase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase4ActionPerformed
+
+    private void mascota_nivel1fase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase5ActionPerformed
+
+    private void mascota_nivel1fase6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase6ActionPerformed
+
+    private void mascota_nivel1fase7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase7ActionPerformed
+
+    private void mascota_nivel1fase8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase8ActionPerformed
+
+    private void mascota_nivel1fase9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascota_nivel1fase9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mascota_nivel1fase9ActionPerformed
 
     /**
      * Métodos de Javi.
