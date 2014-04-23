@@ -4488,12 +4488,10 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
         panel_nivel1fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase1.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel1fase1.setPreferredSize(new java.awt.Dimension(800, 600));
-        panel_nivel1fase1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fl11_titulo.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         fl11_titulo.setForeground(new java.awt.Color(51, 153, 0));
         fl11_titulo.setText("NIVEL 1");
-        panel_nivel1fase1.add(fl11_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, 300, -1));
 
         fl11_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_arbol.png"))); // NOI18N
         fl11_imagen1.setBorder(null);
@@ -4521,7 +4519,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen1ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(fl11_imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         fl11_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_coche.PNG"))); // NOI18N
         fl11_imagen2.setBorder(null);
@@ -4549,7 +4546,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen2ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(fl11_imagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
         fl11_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_perro.png"))); // NOI18N
         fl11_imagen3.setBorder(null);
@@ -4577,7 +4573,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_imagen3ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(fl11_imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, -1, -1));
 
         fl11_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_a_minuscula.png"))); // NOI18N
         fl11_letra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4585,7 +4580,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl11_letraMouseEntered(evt);
             }
         });
-        panel_nivel1fase1.add(fl11_letra, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, -1));
 
         back_nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel1fase1.setBorderPainted(false);
@@ -4600,7 +4594,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel1fase1ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(back_nivel1fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 511, 52, -1));
 
         home_nivel1fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel1fase1.setBorderPainted(false);
@@ -4610,13 +4603,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel1fase1ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(home_nivel1fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 511, 52, -1));
 
         ff11_subtitulo.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
         ff11_subtitulo.setForeground(new java.awt.Color(204, 0, 102));
         ff11_subtitulo.setText("Selecciona el dibujo correcto");
         ff11_subtitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panel_nivel1fase1.add(ff11_subtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 129, 386, -1));
 
         mascota_nivel1fase9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase9.setBorderPainted(false);
@@ -4626,19 +4617,74 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 mascota_nivel1fase9ActionPerformed(evt);
             }
         });
-        panel_nivel1fase1.add(mascota_nivel1fase9, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 445, -1, -1));
+
+        javax.swing.GroupLayout panel_nivel1fase1Layout = new javax.swing.GroupLayout(panel_nivel1fase1);
+        panel_nivel1fase1.setLayout(panel_nivel1fase1Layout);
+        panel_nivel1fase1Layout.setHorizontalGroup(
+            panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(fl11_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                .addGap(214, 214, 214)
+                .addComponent(ff11_subtitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                .addGap(340, 340, 340)
+                .addComponent(fl11_letra))
+            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(fl11_imagen1))
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addComponent(back_nivel1fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(home_nivel1fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(75, 75, 75)
+                .addComponent(fl11_imagen2)
+                .addGap(51, 51, 51)
+                .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fl11_imagen3)
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(mascota_nivel1fase9))))
+        );
+        panel_nivel1fase1Layout.setVerticalGroup(
+            panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(fl11_titulo)
+                .addGap(11, 11, 11)
+                .addComponent(ff11_subtitulo)
+                .addGap(9, 9, 9)
+                .addComponent(fl11_letra)
+                .addGap(15, 15, 15)
+                .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addComponent(fl11_imagen1)
+                        .addGap(74, 74, 74)
+                        .addGroup(panel_nivel1fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(back_nivel1fase1)
+                            .addComponent(home_nivel1fase1)))
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(fl11_imagen2))
+                    .addGroup(panel_nivel1fase1Layout.createSequentialGroup()
+                        .addComponent(fl11_imagen3)
+                        .addGap(10, 10, 10)
+                        .addComponent(mascota_nivel1fase9))))
+        );
 
         getContentPane().add(panel_nivel1fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         panel_nivel2fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel2fase1.setMinimumSize(new java.awt.Dimension(800, 600));
         panel_nivel2fase1.setPreferredSize(new java.awt.Dimension(800, 600));
-        panel_nivel2fase1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fl21_titulo.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         fl21_titulo.setForeground(new java.awt.Color(51, 153, 0));
         fl21_titulo.setText("NIVEL 2");
-        panel_nivel2fase1.add(fl21_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, -1, -1));
 
         fl21_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_planta.png"))); // NOI18N
         fl21_imagen1.setBorder(null);
@@ -4666,7 +4712,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl21_imagen1ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(fl21_imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
         fl21_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_tortuga.png"))); // NOI18N
         fl21_imagen2.setBorder(null);
@@ -4694,7 +4739,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl21_imagen2ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(fl21_imagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
 
         fl21_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_espejo.png"))); // NOI18N
         fl21_imagen3.setBorder(null);
@@ -4722,7 +4766,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl21_imagen3ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(fl21_imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 203, -1, -1));
 
         fl21_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_e_minuscula.png"))); // NOI18N
         fl21_letra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4730,7 +4773,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl21_letraMouseEntered(evt);
             }
         });
-        panel_nivel2fase1.add(fl21_letra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
 
         back_nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel2fase1.setBorderPainted(false);
@@ -4745,7 +4787,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel2fase1ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(back_nivel2fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 504, 58, -1));
 
         home_nivel2fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel2fase1.setBorderPainted(false);
@@ -4755,13 +4796,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel2fase1ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(home_nivel2fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 504, 53, -1));
 
         ff11_subtitulo1.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
         ff11_subtitulo1.setForeground(new java.awt.Color(204, 0, 102));
         ff11_subtitulo1.setText("Selecciona el dibujo correcto");
         ff11_subtitulo1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panel_nivel2fase1.add(ff11_subtitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 129, 386, -1));
 
         mascota_nivel1fase8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase8.setBorderPainted(false);
@@ -4771,18 +4810,77 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 mascota_nivel1fase8ActionPerformed(evt);
             }
         });
-        panel_nivel2fase1.add(mascota_nivel1fase8, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 438, -1, -1));
+
+        javax.swing.GroupLayout panel_nivel2fase1Layout = new javax.swing.GroupLayout(panel_nivel2fase1);
+        panel_nivel2fase1.setLayout(panel_nivel2fase1Layout);
+        panel_nivel2fase1Layout.setHorizontalGroup(
+            panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(fl21_titulo))
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(223, 223, 223)
+                .addComponent(ff11_subtitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(fl21_imagen1))
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addComponent(back_nivel2fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(home_nivel2fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(149, 149, 149)
+                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(fl21_letra))
+                    .addComponent(fl21_imagen2))
+                .addGap(75, 75, 75)
+                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(fl21_imagen3))
+                    .addComponent(mascota_nivel1fase8)))
+        );
+        panel_nivel2fase1Layout.setVerticalGroup(
+            panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(fl21_titulo)
+                .addGap(11, 11, 11)
+                .addComponent(ff11_subtitulo1)
+                .addGap(22, 22, 22)
+                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addComponent(fl21_imagen3)
+                        .addGap(6, 6, 6)
+                        .addComponent(mascota_nivel1fase8))
+                    .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                                .addComponent(fl21_imagen1)
+                                .addGap(53, 53, 53)
+                                .addGroup(panel_nivel2fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(back_nivel2fase1)
+                                    .addComponent(home_nivel2fase1)))
+                            .addGroup(panel_nivel2fase1Layout.createSequentialGroup()
+                                .addComponent(fl21_letra)
+                                .addGap(45, 45, 45)
+                                .addComponent(fl21_imagen2))))))
+        );
 
         getContentPane().add(panel_nivel2fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         panel_nivel3fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel3fase1.setMinimumSize(new java.awt.Dimension(800, 600));
-        panel_nivel3fase1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel_nivel3fase1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         fl31_titulo.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         fl31_titulo.setForeground(new java.awt.Color(51, 153, 0));
         fl31_titulo.setText("NIVEL 3");
-        panel_nivel3fase1.add(fl31_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 23, 303, -1));
 
         fl31_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_pajaro.png"))); // NOI18N
         fl31_imagen1.setBorder(null);
@@ -4811,7 +4909,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl31_imagen1ActionPerformed(evt);
             }
         });
-        panel_nivel3fase1.add(fl31_imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
 
         fl31_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_tijeras.png"))); // NOI18N
         fl31_imagen2.setBorder(null);
@@ -4839,7 +4936,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl31_imagen2ActionPerformed(evt);
             }
         });
-        panel_nivel3fase1.add(fl31_imagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, -1, -1));
 
         fl31_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_moto.png"))); // NOI18N
         fl31_imagen3.setBorder(null);
@@ -4862,7 +4958,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl31_imagen3MouseReleased(evt);
             }
         });
-        panel_nivel3fase1.add(fl31_imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         fl31_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_m_minuscula.png"))); // NOI18N
         fl31_letra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -4870,7 +4965,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl31_letraMouseEntered(evt);
             }
         });
-        panel_nivel3fase1.add(fl31_letra, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
         back_nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel3fase1.setBorderPainted(false);
@@ -4885,7 +4979,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel3fase1ActionPerformed(evt);
             }
         });
-        panel_nivel3fase1.add(back_nivel3fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 499, 58, -1));
 
         home_nivel3fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel3fase1.setBorderPainted(false);
@@ -4895,13 +4988,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel3fase1ActionPerformed(evt);
             }
         });
-        panel_nivel3fase1.add(home_nivel3fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 499, 52, -1));
 
         ff11_subtitulo2.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
         ff11_subtitulo2.setForeground(new java.awt.Color(204, 0, 102));
         ff11_subtitulo2.setText("Selecciona el dibujo correcto");
         ff11_subtitulo2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panel_nivel3fase1.add(ff11_subtitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 386, -1));
 
         mascota_nivel1fase7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase7.setBorderPainted(false);
@@ -4911,18 +5002,77 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 mascota_nivel1fase7ActionPerformed(evt);
             }
         });
-        panel_nivel3fase1.add(mascota_nivel1fase7, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 433, -1, -1));
+
+        javax.swing.GroupLayout panel_nivel3fase1Layout = new javax.swing.GroupLayout(panel_nivel3fase1);
+        panel_nivel3fase1.setLayout(panel_nivel3fase1Layout);
+        panel_nivel3fase1Layout.setHorizontalGroup(
+            panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(fl31_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ff11_subtitulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(300, 300, 300)
+                        .addComponent(fl31_letra))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(fl31_imagen3)
+                        .addGap(81, 81, 81)
+                        .addComponent(fl31_imagen1)
+                        .addGap(115, 115, 115)
+                        .addComponent(fl31_imagen2))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(back_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(home_nivel3fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(476, 476, 476)
+                        .addComponent(mascota_nivel1fase7)))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        panel_nivel3fase1Layout.setVerticalGroup(
+            panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fl31_titulo)
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(ff11_subtitulo2)))
+                .addGap(8, 8, 8)
+                .addComponent(fl31_letra)
+                .addGap(35, 35, 35)
+                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(fl31_imagen3))
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(fl31_imagen1))
+                    .addComponent(fl31_imagen2))
+                .addGap(12, 12, 12)
+                .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mascota_nivel1fase7)
+                    .addGroup(panel_nivel3fase1Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(panel_nivel3fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(back_nivel3fase1)
+                            .addComponent(home_nivel3fase1)))))
+        );
 
         getContentPane().add(panel_nivel3fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         panel_nivel4fase1.setMaximumSize(new java.awt.Dimension(800, 600));
         panel_nivel4fase1.setMinimumSize(new java.awt.Dimension(800, 600));
-        panel_nivel4fase1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fl41_titulo.setFont(new java.awt.Font("Comic Sans MS", 0, 68)); // NOI18N
         fl41_titulo.setForeground(new java.awt.Color(51, 153, 0));
         fl41_titulo.setText("NIVEL 4");
-        panel_nivel4fase1.add(fl41_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 19, 303, -1));
 
         fl41_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_raton.png"))); // NOI18N
         fl41_imagen1.setBorder(null);
@@ -4950,7 +5100,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl41_imagen1ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(fl41_imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, -1, -1));
 
         fl41_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_lapiz.png"))); // NOI18N
         fl41_imagen2.setBorder(null);
@@ -4978,7 +5127,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl41_imagen2ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(fl41_imagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, -1, -1));
 
         fl41_imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_conejo.png"))); // NOI18N
         fl41_imagen3.setBorder(null);
@@ -5006,7 +5154,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl41_imagen3ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(fl41_imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         fl41_letra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fl_r_minuscula.png"))); // NOI18N
         fl41_letra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5014,7 +5161,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 fl41_letraMouseEntered(evt);
             }
         });
-        panel_nivel4fase1.add(fl41_letra, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
 
         back_nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         back_nivel4fase1.setBorderPainted(false);
@@ -5024,7 +5170,6 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 back_nivel4fase1ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(back_nivel4fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 499, 57, -1));
 
         home_nivel4fase1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         home_nivel4fase1.setBorderPainted(false);
@@ -5034,13 +5179,11 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 home_nivel4fase1ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(home_nivel4fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 499, 54, -1));
 
         ff11_subtitulo3.setFont(new java.awt.Font("GinoSchoolScript", 1, 36)); // NOI18N
         ff11_subtitulo3.setForeground(new java.awt.Color(204, 0, 102));
         ff11_subtitulo3.setText("Selecciona el dibujo correcto");
         ff11_subtitulo3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panel_nivel4fase1.add(ff11_subtitulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 125, 386, -1));
 
         mascota_nivel1fase6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/0_mascota1.png"))); // NOI18N
         mascota_nivel1fase6.setBorderPainted(false);
@@ -5050,7 +5193,69 @@ public class UI extends javax.swing.JFrame implements BasicPlayerListener, ListS
                 mascota_nivel1fase6ActionPerformed(evt);
             }
         });
-        panel_nivel4fase1.add(mascota_nivel1fase6, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 433, -1, -1));
+
+        javax.swing.GroupLayout panel_nivel4fase1Layout = new javax.swing.GroupLayout(panel_nivel4fase1);
+        panel_nivel4fase1.setLayout(panel_nivel4fase1Layout);
+        panel_nivel4fase1Layout.setHorizontalGroup(
+            panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(270, 270, 270)
+                        .addComponent(fl41_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(237, 237, 237)
+                        .addComponent(ff11_subtitulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(350, 350, 350)
+                        .addComponent(fl41_letra))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(back_nivel4fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fl41_imagen3)
+                            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(home_nivel4fase1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(119, 119, 119)
+                        .addComponent(fl41_imagen1)
+                        .addGap(102, 102, 102)
+                        .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(fl41_imagen2))
+                            .addComponent(mascota_nivel1fase6))))
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+        panel_nivel4fase1Layout.setVerticalGroup(
+            panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(fl41_titulo)
+                .addGap(11, 11, 11)
+                .addComponent(ff11_subtitulo3)
+                .addGap(3, 3, 3)
+                .addComponent(fl41_letra)
+                .addGap(9, 9, 9)
+                .addGroup(panel_nivel4fase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(249, 249, 249)
+                        .addComponent(back_nivel4fase1))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addComponent(fl41_imagen3)
+                        .addGap(64, 64, 64)
+                        .addComponent(home_nivel4fase1))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(fl41_imagen1))
+                    .addGroup(panel_nivel4fase1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(fl41_imagen2)
+                        .addGap(12, 12, 12)
+                        .addComponent(mascota_nivel1fase6)))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
 
         getContentPane().add(panel_nivel4fase1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
